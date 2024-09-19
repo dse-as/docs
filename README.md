@@ -46,4 +46,6 @@ TBD
 
 ## License
 
-TBD
+* [vitepress](https://vitepress.dev/): MIT License, Copyright (c) 2019-present, Yuxi (Evan) You
+
+* [dse-as/docs](https://github.com/dse-as/docs): See [LICENSE](LICENSE)

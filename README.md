@@ -1,6 +1,6 @@
-# DSE-AS Documentation
+# dse-as Documentation
 
-This repository contains documentation for the Digital Scholarly Edition _Annemarie Schwarzenbach_ ([DSE-AS](https://annemarie-schwarzenbach.ch/)).
+This repository contains documentation for the Digital Scholarly Edition _Annemarie Schwarzenbach_ ([dse-as](https://annemarie-schwarzenbach.ch/)).
 
 Content is written in [Markdown](https://en.wikipedia.org/wiki/Markdown) and located in the `src` directory.
 

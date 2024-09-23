@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "DSE-AS"
+  name: "dse-as"
   text: "Documentation"
-  tagline: My great project tagline
+  tagline: Work in progress
   actions:
     - theme: brand
       text: Markdown Examples

@@ -43,6 +43,8 @@ jobs:
       - name: Install dependencies
         run: yarn install # or npm ci / pnpm install / bun install
       - name: Build with VitePress
+        env:
+          BASE: '/docs/'
         run: yarn run docs:build # or npm docs:build / pnpm docs:build / bun run docs:build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

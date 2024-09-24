@@ -6,7 +6,7 @@ export default defineConfig({
   description: "Documentation for dse-as",
   srcDir: 'src',
   outDir: 'docs/.vitepress/dist',
-  base: '/docs/',
+  // base: '/docs/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

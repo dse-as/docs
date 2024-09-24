@@ -1,7 +1,7 @@
 {
   "name": "dseas-docs",
   "version": "0.0.1",
-  "description": "Documentation for DSE-AS",
+  "description": "Documentation for dse-as",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vitepress dev",

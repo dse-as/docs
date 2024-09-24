@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "DSE-AS Docs",
-  description: "Documentation for DSE-AS",
+  description: "Documentation for dse-as",
   srcDir: 'src',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

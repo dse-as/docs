@@ -42,7 +42,7 @@ yarn docs:preview
 
 ## Deployment
 
-TBD
+Deployment on `git push` to the `main` branch. 
 
 ## License
 

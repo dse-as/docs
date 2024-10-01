@@ -24,6 +24,11 @@ export default defineConfig({
       }
     ],
 
+    editLink: {
+      pattern: 'https://github.com/dse-as/docs/edit/main/src/:path',
+      text: 'Suggest changes to this page',
+    },
+
     socialLinks: [
       { icon: 'github', link: 'https://github.com/dse-as/docs' },
       { icon: 'discord', link: 'https://discord.com/channels/1282268879128625186' },

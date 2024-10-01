@@ -25,7 +25,8 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/dse-as/docs' },
+      { icon: 'discord', link: 'https://discord.com/channels/1282268879128625186' },
     ]
   }
 })

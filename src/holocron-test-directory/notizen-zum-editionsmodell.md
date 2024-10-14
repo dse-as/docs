@@ -1,7 +1,7 @@
 # Digitale Edition der Kleinen Formen und Briefe Annemarie Schwarzenbachs TEST
 
 - [Digitale Edition der Kleinen Formen und Briefe Annemarie Schwarzenbachs](#digitale-deition-der-kleinen-formen-und-briefe-annemarie-schwarzenbachs)
-  - [Einführung](#einfuehrung)
+  - [Einführung](#einführung)
   - [Editionsgrundsätze](#editionsgrundsätze)
   - [Forschungszugänge](#forschungszugänge)
   - [Editionsmodell](#editionsmodell)

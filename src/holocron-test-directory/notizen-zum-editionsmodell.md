@@ -28,3 +28,9 @@
     - [Textstruktur Kleine Formen](#textstruktur-kleine-formen)
     - [Textstruktur Lange Formen](#textstruktur-lange-formen)
     - [Fotografie](#fotografie)
+
+## Einführung
+
+Die digitale Edition der Kleinen Formen und Briefe Annemarie Schwarzenbachs hat zum Ziel, die sogenannt Kleinen Formen, d.h. sämtliche unselbständig veröffentlichten und unveröffentlichten Reiseberichte, Feuilletons und Bildberichte sowie kurzen autobiographischen und fiktionalen Texte auf der einen Seite und die erhaltene Korrespondenz auf der anderen Seite digital zu veröffentlichen.\
+Die Kleinen Formen umfassen ungefähr 510 Texte, davon werden 340 postum zum ersten Mal ediert. Bei der Korrespondenz handelt es sich um circa 650 erhalten Briefe, wovon die meisten von Annemarie Schwarzenbach selbst stammen. Die Gegenbriefe sind nur zu einem kleinen Teil erhalten.\
+Ein wichtiger Bestandteil der Edition ist das fotographische Werk Annemarie Schwarzenbachs. Dieses ist dergestalt in die Edition der Kleinen Forme und Briefe eingebunden, dass alle im Zusammenhang mit den Texten stehenden Fotografien verlinkt und zusätzlich alle Fotografien einzeln erschlossen und zugänglich sind.

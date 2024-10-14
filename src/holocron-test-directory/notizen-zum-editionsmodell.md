@@ -1,4 +1,3 @@
-```
 # Digitale Edition der Kleinen Formen und Briefe Annemarie Schwarzenbachs TEST
 
 - [Digitale Edition der Kleinen Formen und Briefe Annemarie Schwarzenbachs](#digitale-deition-der-kleinen-formen-und-briefe-annemarie-schwarzenbachs)
@@ -29,4 +28,3 @@
     - [Textstruktur Kleine Formen](#textstruktur-kleine-formen)
     - [Textstruktur Lange Formen](#textstruktur-lange-formen)
     - [Fotografie](#fotografie)
-```

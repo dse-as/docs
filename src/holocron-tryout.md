@@ -6,4 +6,4 @@ Etwas gewöhnungsbedürftig scheint, dass Markdown-Syntax im Rendering-Modus esc
 
 Was im Editor nicht zu funktionieren scheint, ist die Umbenennung bestehender Dateien (extern würde das aber ziemlich sicher gehen).
 
-Was auch nicht geht: dokumentinterne Verlinkung
+Was auch nicht geht (oder doch?): dokumentinterne Verlinkung

@@ -5,3 +5,5 @@ Die Datei `holocron-test-directory/file1.md` habe ich extern angelegt (inkl. Ver
 Etwas gewöhnungsbedürftig scheint, dass Markdown-Syntax im Rendering-Modus escaped wird.
 
 Was im Editor nicht zu funktionieren scheint, ist die Umbenennung bestehender Dateien (extern würde das aber ziemlich sicher gehen).
+
+Was auch nicht geht: dokumentinterne Verlinkung

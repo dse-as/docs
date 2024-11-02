@@ -32,16 +32,13 @@ https://iiif.ub.unibe.ch/image/v3/dsl_dev/smallform_0007_001.png/info.json
 bzw.
 
 ```
-https://iiif.ub.unibe.ch/image/v3/dsl_dev/{Seiten-ID}}.png/info.json
+https://iiif.ub.unibe.ch/image/v3/dsl_dev/{Seiten-ID}.png/info.json
 ```
 
 [in absehbarer Zeit wird das Pfadsegment `dsl_dev` durch `schwarzenbach` ersetzt; letztlich voraussichtlich der Hostname `iiif.ub.unibe.ch` durch `iiif.annemarie-schwarzenbach.ch`].
 
-#### ethz
 
-TBD
-
-#### monacensia
+#### monacensia-digital.de/i3f
 
 Die Patrinum-Plattform bietet auf der Dokumentansicht einen Link zum zugehörigen IIIF Presentation Manifests an:
 
@@ -152,6 +149,10 @@ Output:
 ```
 
 </details>
+
+#### iiif.library.ethz.ch
+
+TBD
 
 ---
 

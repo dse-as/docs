@@ -48,7 +48,7 @@ jobs:
           rm dseas.zip
           mv dse-as-oxygen-framework-* dseas
           zip -r src/public/dseas.zip dseas
-          cp dseas/dseas.xml src/public # Copy descriptor file
+          cp dseas/dseas.xml src/public/dseas.xml # Copy descriptor file
           rm -r dseas
       - name: Install dependencies
         run: yarn install # or npm ci / pnpm install / bun install

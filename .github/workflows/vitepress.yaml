@@ -49,7 +49,7 @@ jobs:
           mv dse-as-oxygen-framework-* dseas
           zip -r src/public/dseas.zip dseas
           cp dseas/dseas.xml src/public # Copy descriptor file
-          rm dseas
+          rm -r dseas
       - name: Install dependencies
         run: yarn install # or npm ci / pnpm install / bun install
       - name: Build with VitePress

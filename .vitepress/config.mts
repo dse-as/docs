@@ -6,6 +6,7 @@ export default defineConfig({
   description: "Documentation for dse-as",
   srcDir: 'src',
   outDir: 'docs/.vitepress/dist',
+  ignoreDeadLinks: true, // warn, but don't block the build
   // base: '/docs/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

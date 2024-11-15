@@ -41,9 +41,8 @@ jobs:
         with:
           node-version: 20
           cache: yarn # or npm / pnpm
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Download and Prepare Oxygen Framework 
+      # Perparatory step: get framework files to provide them directly from the docu context
+      - name: Download and prepare oXygen framework 
         run: |
           release_url=$(curl -sL https://api.github.com/repos/dse-as/oxygen-framework/releases/latest | jq -r '.zipball_url')
           wget --quiet --no-check-certificate $release_url -O dseas.zip
@@ -53,6 +52,8 @@ jobs:
           zip -r src/public/dseas.zip dseas
           cp dseas/dseas.xml src/public/dseas.xml # Copy descriptor file
           rm -r dseas
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       - name: Install dependencies
         run: yarn install # or npm ci / pnpm install / bun install
       - name: Build with VitePress

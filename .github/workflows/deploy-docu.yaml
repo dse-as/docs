@@ -47,7 +47,7 @@ jobs:
           release_url=$(curl -sL https://api.github.com/repos/dse-as/oxygen-framework/releases/latest | jq -r '.zipball_url')
           wget --quiet --no-check-certificate $release_url -O src/public/dseas.zip
           unzip src/public/dseas.zip -d "src/public/dseas"
-          mv src/public/dseas/oxygen-framework-*/* src/public/dseas
+          mv src/public/dseas/oxygen-framework-* src/public/dseas
           cp src/public/dseas/dseas.xml src/public/
           rm -r src/public/dseas/oxygen-framework-* src/public/dseas.zip
       - name: Setup Pages

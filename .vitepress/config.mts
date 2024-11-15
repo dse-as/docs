@@ -7,7 +7,7 @@ export default defineConfig({
   srcDir: 'src',
   outDir: 'docs/.vitepress/dist',
   ignoreDeadLinks: [ 
-    '/LICENSE' 
+    '\./LICENSE' 
   ],
   // base: '/docs/',
   themeConfig: {

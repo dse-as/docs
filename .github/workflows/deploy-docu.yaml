@@ -50,7 +50,7 @@ jobs:
           mv src/public/dseas/dse-as-oxygen-framework-*/* src/public/dseas
           cp src/public/dseas/dseas.xml src/public/
           rm -r src/public/dseas/dse-as-oxygen-framework-*
-          zip -r - src/public/dseas >src/public/dseas.zip
+          cd src/public/dseas && zip -r - . >../dseas.zip
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies

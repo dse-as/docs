@@ -1,6 +1,6 @@
 # Workflow for building and deploying the VitePress documentation site to GitHub Pages
 #
-name: Documentation deployment
+name: Documentation deployment (test)
 
 on:
   # Runs on pushes targeting the `main` branch.
@@ -47,7 +47,8 @@ jobs:
           release_url=$(curl -sL https://api.github.com/repos/dse-as/oxygen-framework/releases/latest | jq -r '.zipball_url')
           wget --quiet --no-check-certificate $release_url -O src/public/dseas-test.zip
           cd src/public && unzip dseas-test.zip "oxygen-framework-*/dseas.xml" -d .
-          mv oxygen-framework-*/dseas.xml dseas-test.xml && rm -r oxygen-framework-*
+          ls -l
+        # mv oxygen-framework-*/dseas.xml dseas-test.xml && rm -r oxygen-framework-*
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies

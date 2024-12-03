@@ -24,6 +24,8 @@ Da die Adressstruktur der verschiedenen Institutionen/Server abweicht, können f
 
 #### iiif.ub.unibe.ch
 
+##### Uploads bis 30.11.2024
+
 Image URLs lauten (vorläufig) 
 
 ```
@@ -33,6 +35,19 @@ bzw.
 
 ```
 https://iiif.ub.unibe.ch/image/v3/dsl_dev/{Seiten-ID}.png/info.json
+```
+
+##### Uploads ab 01.12.2024
+
+Image URLs lauten (definitiv) 
+
+```
+https://iiif.ub.unibe.ch/image/v3/schwarzenbach/smallform_0007_001.png/info.json
+```
+bzw.
+
+```
+https://iiif.ub.unibe.ch/image/v3/schwarzenbach/{Seiten-ID}.png/info.json
 ```
 
 [in absehbarer Zeit wird das Pfadsegment `dsl_dev` durch `schwarzenbach` ersetzt; letztlich voraussichtlich der Hostname `iiif.ub.unibe.ch` durch `iiif.annemarie-schwarzenbach.ch`].

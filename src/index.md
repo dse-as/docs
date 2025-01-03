@@ -3,16 +3,16 @@
 layout: home
 
 hero:
-  name: "dse-as"
-  text: "Documentation"
-  tagline: Work in progress
+  name: "Digitale Edition"
+  text: "Annemarie Schwarzenbach"
+  tagline: Dokumentation
   actions:
     - theme: brand
       text: Markdown Examples
       link: /markdown-examples
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: GitHub
+      link: https://github.com/dse-as/docs
 
 features:
   - title: Feature A

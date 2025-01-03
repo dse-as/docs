@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "dse-as Documentation",
-  description: "Documentation for dse-as",
+  title: "Dokumentation dse-as",
+  description: "Dokumentation der Digitalen Edition Annemarie Schwarzenbach",
   srcDir: 'src',
   outDir: 'docs/.vitepress/dist',
   cleanUrls: true,

@@ -6,6 +6,7 @@ export default defineConfig({
   description: "Documentation for dse-as",
   srcDir: 'src',
   outDir: 'docs/.vitepress/dist',
+  cleanUrls: true,
   ignoreDeadLinks: [ 
     '\./LICENSE' 
   ],

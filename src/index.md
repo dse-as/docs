@@ -8,8 +8,8 @@ hero:
   tagline: Dokumentation
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Arbeitsschritte
+      link: /arbeitsschritte/IIIF-manifest-anlegen
     - theme: alt
       text: GitHub
       link: https://github.com/dse-as/docs

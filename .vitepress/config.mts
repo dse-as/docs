@@ -15,15 +15,15 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Arbeitsschritte', link: '/arbeitsschritte/IIIF-manifest-anlegen' }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: "Arbeitsschritte",
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          {text: "IIIF-Manifest anlegen", link: "/arbeitsschritte/IIIF-manifest-anlegen"},
+          {text: "Oxygen Framework installieren", link: "/arbeitsschritte/oxygen-framework-installieren"}
         ]
       }
     ],

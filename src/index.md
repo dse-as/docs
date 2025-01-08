@@ -8,10 +8,10 @@ hero:
   tagline: Dokumentation
   actions:
     - theme: brand
-      text: Arbeitsschritte
+      text: Arbeitsschritte →
       link: /arbeitsschritte/IIIF-manifest-anlegen
     - theme: alt
-      text: GitHub
+      text: GitHub ↗︎
       link: https://github.com/dse-as/docs
 
 features:
@@ -23,3 +23,14 @@ features:
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
+<style>
+
+.VPButton {
+  border-radius: 6px !important;
+}
+
+.VPHome .VPFeature {
+  border-radius: 6px;
+}
+
+</style>

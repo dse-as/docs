@@ -86,10 +86,6 @@
   --vp-button-brand-active-bg: var(--vp-c-brand-1);
 }
 
-.VPButton {
-  border-radius: 8px !important;
-}
-
 /**
  * Component: Home
  * -------------------------------------------------------------------------- */

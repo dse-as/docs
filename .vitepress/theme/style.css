@@ -44,15 +44,24 @@
  * -------------------------------------------------------------------------- */
 
  :root {
+  --vp-c-teal-1: #0f766e;
+  --vp-c-teal-2: #0d9488;
+  --vp-c-teal-3: #14b8a6;
+  --vp-c-teal-soft: #ccfbf1;
+
+  --vp-c-red-1: #fca5a5;
+  --vp-c-red-2: #fca5a5;
+  --vp-c-red-3: #fecaca;
+
   --vp-c-default-1: var(--vp-c-gray-1);
   --vp-c-default-2: var(--vp-c-gray-2);
   --vp-c-default-3: var(--vp-c-gray-3);
   --vp-c-default-soft: var(--vp-c-gray-soft);
 
-  --vp-c-brand-1: var(--vp-c-indigo-1);
-  --vp-c-brand-2: var(--vp-c-indigo-2);
-  --vp-c-brand-3: var(--vp-c-indigo-3);
-  --vp-c-brand-soft: var(--vp-c-indigo-soft);
+  --vp-c-brand-1: var(--vp-c-teal-1);
+  --vp-c-brand-2: var(--vp-c-teal-2);
+  --vp-c-brand-3: var(--vp-c-teal-3);
+  --vp-c-brand-soft: var(--vp-c-teal-soft);
 
   --vp-c-tip-1: var(--vp-c-brand-1);
   --vp-c-tip-2: var(--vp-c-brand-2);
@@ -68,6 +77,12 @@
   --vp-c-danger-2: var(--vp-c-red-2);
   --vp-c-danger-3: var(--vp-c-red-3);
   --vp-c-danger-soft: var(--vp-c-red-soft);
+}
+
+:root.dark {
+  --vp-c-teal-3: #115e59;
+  --vp-c-teal-2: #0f766e;
+  --vp-c-teal-1: #0d9488;
 }
 
 /**

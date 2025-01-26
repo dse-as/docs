@@ -1,0 +1,50 @@
+name: Create backup of hackmd notes bypassing the API
+
+on:
+  schedule:
+    - cron: "15 3/4 * * 0-6" # At 3:15, 7:15, 11:15, 15:15, 19:15, 23:15 on every day-of-week.
+  
+  workflow_dispatch:
+
+permissions: write-all
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - run: mkdir -p hackmd-backup/_fetched
+    - run: curl http://vrici.lojban.org/~cowan/tagsoup/tagsoup-1.2.1.jar -o hackmd-backup/tagsoup.jar
+    - run: curl -L https://hackmd.io/@DSE-AS/Editionsmodell/edit > hackmd-backup/_fetched/editionsmodell.html
+    - run: curl -L https://hackmd.io/@DSE-AS/Transkribus_Dokumentation/edit > hackmd-backup/_fetched/transkribus-dokumentation.html
+    - run: |
+        for f in hackmd-backup/_fetched/*.html; do
+          java -jar tagsoup.jar "$f" > "${f%.*}.xhtml";  
+        done
+    - name: process hackmd.io HTML (XSLT)
+      uses: pdaengeli/use-saxon-he-j@12.5
+      with:
+        args: -xsl:process-hackmd.xsl -it
+    - run: mkdir -p hackmd-backup/_fetched/transkribus-dokumentation hackmd-backup/_fetched/editionsmodell
+    - run: curl -L -K hackmd-backup/_fetched/img-urls.txt
+    - uses: actions/upload-pages-artifact@v3
+      with:
+        name: output
+        path: ./hackmd-backup
+      env:
+        RUNNER: ${{ toJson(runner) }}
+    - name: Set commit message
+      id: commit_message_step
+      run: |
+        delimiter='EOF'
+        {
+            echo "commit_message<<$delimiter"
+            sed -e '$a\' hackmd-backup/.commit-message.txt
+            echo "$delimiter"
+        } >> "$GITHUB_OUTPUT"
+        rm -r hackmd-backup/.commit-message.txt
+    - uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: ${{ steps.commit_message_step.outputs.commit_message }}
+        file_pattern: 'hackmd-backup/_fetched/*.md hackmd-backup/_fetched/**/*.png'
+        skip_fetch: true

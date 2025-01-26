@@ -31,7 +31,7 @@
           regex="\[.*\]\(http.*_uploads/(.*?\.(png|jpe?g))\)">
           <xsl:matching-substring>
             <xsl:text>url = https://hackmd.io/_uploads/{regex-group(1)}&#xA;</xsl:text>
-            <xsl:text>output = _fetched/{$filename}/{regex-group(1)}&#xA;</xsl:text>
+            <xsl:text>output = hackmd-backup/_fetched/{$filename}/{regex-group(1)}&#xA;</xsl:text>
             <xsl:text>&#xA;</xsl:text>
           </xsl:matching-substring>
         </xsl:analyze-string>

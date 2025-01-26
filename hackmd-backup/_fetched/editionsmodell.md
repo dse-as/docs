@@ -1,0 +1,414 @@
+# Editionsmodell Edition Annemarie Schwarzenbach
+
+[toc]
+
+
+
+## Einführung
+
+Die digitale Edition der Kleinen Formen und Briefe Annemarie Schwarzenbachs hat zum Ziel, die sogenannt Kleinen Formen, d.h. sämtliche unselbständig veröffentlichten und unveröffentlichten Reiseberichte, Feuilletons und Bildberichte sowie kurzen autobiographischen und fiktionalen Texte auf der einen Seite und die erhaltene Korrespondenz auf der anderen Seite digital zu veröffentlichen.  
+Die Kleinen Formen umfassen ungefähr 510 Texte, davon werden 340 postum zum ersten Mal ediert. Bei der Korrespondenz handelt es sich um circa 650 erhalten Briefe, wovon die meisten von Annemarie Schwarzenbach selbst stammen. Die Gegenbriefe sind nur zu einem kleinen Teil erhalten.  
+Ein wichtiger Bestandteil der Edition ist das fotographische Werk Annemarie Schwarzenbachs. Dieses ist dergestalt in die Edition der Kleinen Forme und Briefe eingebunden, dass alle im Zusammenhang mit den Texten stehenden Fotografien verlinkt und zusätzlich alle Fotografien einzeln erschlossen und zugänglich sind.
+
+Längerfristig ist die Ergänzung der digitalen Edition zu einer Gesamtausgabe um die Grossen Formen (Romane, Reportagebücher und Drama) geplant sowie der Druck der Gesamtausgabe als Studienausgabe. Im Folgenden wird zunächst die digitale Edition umrissen und ihre Codierung in einem Editionsmodell genau beschrieben. Weiterführende Überlegungen zur Lesefassung in der Studienausgabe erfolgen am Schluss. 
+
+## Editionsgrundsätze
+
+Die digitale Edition richtet sich sowohl an ein wissenschaftliches Expertenpublikum als auch an eine interessierte nicht-wissenschaftliche Leserschaft. Der Zugang zum originalen Text wird mithilfe einer diplomatischen Transkription in der DSE ermöglicht. Sowohl die Kleinen Formen wie auch die Briefe sind mit ausführlichen Kommentaren versehen. Die Kleinen Formen wie auch die Briefe werden soweit möglich nach einem generischen Modell transkribiert, das je nach Textsortenspezifika um die nötigen Elemente ergänzt wird.
+
+## Forschungszugänge
+
+Neben den Personen-, Orts-, Institutions-, Schlagwort- und Werkregistern bietet die Edition spezifisch markierte Einträge zu folgenden drei Forschungsperspektiven:
+
+- Reisetexte  
+- Intermedialität  
+- Netzwerke
+
+Diese Forschungsperspektiven werden unter anderem durch den drei Bereichen zugeordnete spezifische Schlagworte erschlossen, wobei die Verschlagwortung nicht auf diese Bereiche beschränkt ist.
+
+## Editionsmodell DSE-AS
+
+### Allgemeines
+
+Obschon es sich bereits bei den Kleinen Formen um heterogene Genres handelt und die Briefe wiederum eine andere Textsorte darstellen, ist das Editionsmodell so generisch wie möglich gehalten.
+
+### TEI-Header
+Der TEI-Header wird zwar im folgenden Editionsmodell wo relevant erwähnt, das gesamte, detailliert dokumentierte Modell des TEI-Headers wird jedoch in einem zusätzlichen Dokument beschrieben. 
+
+### Zeilen- und Seitenumbrüche, Paragraphen 
+- Grundsatz: linebeginnings `lb`, die am Anfang von sog. Block-Elementen (wie p, dateline) stehen, müssen möglichst innerhalb dieses Blockelements platziert werden. Negativ-Beispiel: 
+    ```
+    <lb xml:id="dummy_r_3_tl_1" break="no"/>
+    <p>Am 6. Juni 1939 kauften Ella Maillart und ich beim Bäcker ...
+     ```
+    Korrektes Beispiel: 
+    ```
+    <p><lb xml:id="dummy_r_3_tl_1" break="no"/>
+    Am 6. Juni 1939 kauften Ella Maillart und ich beim Bäcker ...
+    ```
+
+- zeilengenaue Transkription: 
+    - `<lb break="yes">`: Standardsituation: Zeilenbruch trennt bruchunabhängige, distinkte Wortbestandteile (z.B. Aktien-Gesellschaft). Das Hyphen bleibt immer bestehen.
+    - `<lb break="no">`: Ausnahme: Zeilenbruch trennt keine distinkte Wortbestandteile, sondern eine Zeilenbruch-Silbentrennung. Hyphens vor break "no" fallen weg/werden gelöscht [= gewollte Abweichung vom DTA Bf]
+        - In Transkribus werden Hyphens, die Wörter beim Zeilenbruch teilen, als Negationszeichen `¬` transkribiert. In der Transformation von PAGE XML zu TEI XML werden die Negationszeichen `¬` gelöscht und mit`<lb break="no">` ungewandelt.
+        - Für die diplomatische Ausgabe wird `<lb break="no">` wieder mit einem trennenden Hyphen ergänzt. 
+        - Beispiel aus dem TEI (https://tei-c.org/release/doc/tei-p5-doc/en/html/examples-lb.html#index-egXML-d39e39737):  
+    ```
+    <lb/>With Additions, ne-<lb break="no"/>ver before Printed.
+    ```
+    - Framework erlaubt bei Klick auf Pfeil am Anfang der Zeile die Auswahl break "no" oder "yes" 
+    - Geht die Silbentrennung oder das zusammengesetzte Wort über zwei Seiten hinweg, folgt nach dem `<pb>` das `<lb/>` mit dem enstprechenden Attribut "yes" oder "no"
+
+- Verszeilen: 
+```xml 
+<lg> 
+<l> Vers 1 </l>
+<l> Vers 2 </l>
+</lg>
+```
+
+- Paragraphen: 
+    `<p>` Das ist ein Paragraph `</p>`
+    
+  
+- Seitenumbruch: `<pb facs="???" n="1">`
+
+
+### Korrekturen
+
+- Sofortkorrekturen im handschriftlichen Text:
+
+`<p>Der <del rend="overstrike">f</del><add>r</add>eundliche Text.</p>`
+
+- eingefügte Korrekturen zwischen den Zeilen, am Rand, am Anfang oder am Ende der Seite werden am richtigen Platz eingefügt und mit der Angabe zum Ort, wo sie ursprünglich standen, getaggt. Einfügezeichen werden nicht wiedergegeben. Falls in einem gedruckten Text die handschriftliche Korrektur einer bestimmten Person nachweisbar ist, wird @hand verwendet:
+
+`<add place="above" hand="#person">`  
+`<add place="below"` `<add place="right"` `<add place="left"` `<add place="top"` `<add place="bottom>"`
+
+- Auslassungszeichen "..." werden stillschweigend um ein Leerzeichen zu Beginn ergänzt, falls noch nicht vorhanden.
+
+### Fehlerhafte Schreibweisen
+
+- Unkorrigierte Fehler werden im Sinne eines "sic" ausgezeichnet (siehe https://deutschestextarchiv.de/doku/basisformat/eeDruckfehler.html?hl=fehler). In Transkribus kann ein Statthalter, z.b. `[sic]`, eingefügt werden.
+```
+<choice>
+  <sic>[fehlerhafte Form]</sic>
+  <corr>[verbesserte Form]</corr>
+</choice>
+```
+    
+
+### Lücken/Unleserlicher Text 
+(framework)
+
+- `<gap />` Mit `@reason` werde die Gründe angegeben: "`illegible`" / "`lost`" (bei Textverlust)
+- Framework-Button, durch Doppelklick auf die Markierung lassen sich die Optionen auswählen. 
+
+### Unsichere Lesungen 
+(framework)
+
+- `<unclear>` parteiisch `<\unclear>`
+
+### Hervorhebungen im Text 
+(framework)
+
+`<hi rendition="#g">`gesperrter Text`</hi>`  
+`<hi rendition="#i">`kursiver Text`</hi>` 
+`<hi rendition="#u">`unterstrichener Text`</hi>`
+`<hi rendition="#b">`fetter Text`</hi>`
+
+-> Im Falle von weiteren notwendigen Rednitions (Kapitälchen, doppelt unterstrichen etc.) ergänzen mit DTA Bf Liste: 
+[https://www.deutschestextarchiv.de/doku/basisformat/typogrAllg.html](https://www.deutschestextarchiv.de/doku/basisformat/typogrAllg.html)
+
+### Abkürzungen 
+(framework)
+
+- `<abbr>`  
+  - Abkürzungen werden im Falle von Orts- und Eigennamen aufgelöst. 
+  - Gebräuchliche Abkürzungen (u., etc., z.B., Dr. Prof.) werden nicht aufgelöst 
+  - Im Zweifelsfall wird hier in Absprache mit Editionsteam (via Discord) angereichert.
+ 
+`<choice>` 
+`<abbr>`[Abkürzung entsprechend der Vorlag]`</abbr>`  
+`<expan>`[Vollständige Auflösung/Expansion der Abkürzung]`</expan>`  
+`</choice>`  
+    
+
+### Sprachen
+
+Wird innerhalb eines Dokuments nur kurz von der Ausgangssprache in einen andere gewechselt, wird der Sprachwechsel getaggt. Mehrsprachige Briefe werden im TEI-Header mit den entsprechenden Sprachen markiert.   
+Einzelne fremdsprachliche Wendungen (“Chère amie\!”) werden nicht ausgezeichnet.  
+
+- `<foreign xml:lang="fra">` (ita, deu, lat, eng / weitere Sprachen: https://en.wikipedia.org/wiki/IETF_language_tag)
+
+### Zitate 
+(framework)
+
+- Werden mit `<quote>` gekennzeichnet, Anführungszeichen in der Quelle werden dadurch ersetzt.  
+- ACHTUNG: Anführungszeichen können auch in anderem Sinne verwendet werden (z. B. Nennung eines Titels, Ironisierung etc.), dann kein `<quote>Zitat</quote>`, sondern normale Anführungszeichen.
+
+### Hochstellen, Tiefstellen 
+(framework)
+
+- Hochstellung von Einzelbuchstaben (oft in Abkürzungen, aber auch als Fehlerkorrekturen innerhalb eines Wortes)  
+    `<hi rendition="#sup">Flugfeld</hi>`  
+- Tiefstellung
+    `<hi rendition="#sub">Geläut</hi>`
+
+Geminationsstriche   
+[[https://fontane-nb.dariah.eu/doku.html?id=gesamtdokumentation\_verzeichnis\_der\_sonderzeichen](https://fontane-nb.dariah.eu/doku.html?id=gesamtdokumentation_verzeichnis_der_sonderzeichen)]  
+('combining macron' \= U+01404)
+
+- m̄= `<g ref="#mgem">mm</g>`   ko`<g ref="#mgem">mm</g>`en
+- n̄ = `<g ref="#ngem">nn</g>`
+
+### Textformen und Schreibwerkzeuge 
+
+- Auf Metadaten-Ebene, d.h. im Tei-Header, werden die Textformen mit kontrolliertem Vokabular angegeben. 
+    - Letter: "Brief", "Postkarte", "Telegramm".
+    - Smallform: "Typoskript", "Manuskript", "Feuilleton", "Rezension",  "Fotoreportage, "Fotografie" (= nur Fotografie publiziert, ggfls. mit Bildbeschrieb), "Zeitschriftenartikel", "Zeitungsartikel", "Sammelband" 
+        - Ergänzende Textform-Kategorie für smallform: "Serie" (kann mit allen anderen Formen kombiniert werden) 
+- Genauere Beschriebung der Schreibutensilien kann ebenfalls im Tei-header als Kommentar verzeichnet werden z.B. 'hs. verfasst in blauer Tinte, enthält Korrekturen in roter Tinte'. 
+- Auf eine Beschreibung der gedruckten Typen (Fraktur, Antiqua etc.) wird verzichtet. 
+- Wechsel im Schreibwerkzeug werden durch 'handshift' angezeigt:   
+  `And if the cattes skynne be slyk <handShift medium="black-ink"/> and gaye`
+
+### Listen und Tabellen
+
+Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben. Feinheiten der Darstellung werden nicht berücksichtigt.
+
+- Listen `<list>`, `<item>`  
+- Tabellen:
+
+```
+<p>
+<table rows="2" cols="2">
+    <row>
+        <cell>Pullover</cell><cell>1 Stück</cell>
+    <row>
+    </row>
+        <cell>Hosen</cell><cell>2 Stück</cell>
+    </row>
+</p>
+```
+
+\[Einfache Tabellen sind als Listen darzustellen\]
+
+### Normalisierungen
+
+- Horizontale Striche (Gedankenstriche, Spiegelstriche, Striche in Tabellen, von-bis-Striche) werden unabhängig von der Länge im Original als Halbgeviertstriche wiedergegeben (Unicode: U+2013)  
+- Anführungszeichen, die nicht als Zitat sowieso durch Codierung ersetzt werden, werden normalisiert zu "..." (hochgestellt 'englisch').
+  → Leerschlag vor Gedankenstrichen, wenn kein Leerschlag ist (im Typoskript kommt das sehr häufig vor)?  
+- Offensichtliche Druckfehler werden stillschweigend korrigiert (alle anderen belassen und taggen mit orig/reg/corr - [sic] automatisch generieren)  
+- Vergessene Umlaut-Punkte werden stillschweigend normalisiert.   
+- EZ: Wird "J", wo es in Typoskripten als I verwendet wird (was regelmässig vorkommt), stillschweigend normalisiert oder nur in in der Lesefassung?  
+  - Offenbar ist die Verwendung des Majuskels J für I eine verbreitete Praxis im deutschen Sprachraum bis weit ins 20. Jahrhundert, nicht nur in Typoskripten (so Wikipedia: [https://de.wikipedia.org/wiki/J](https://de.wikipedia.org/wiki/J)). Da es somit auch ein historisches Schriftbild markiert, würde ich es belassen.   
+  - Was für eine Normalisierung spricht: Der Volltextsuche entgehen - wenn der:die Suchende nicht das historische Wissen mitbringt - dadurch einige Resultate. Remedium: Man könnte die Suche ggfls. so einstellen, dass sie gegenüber der Differen I/J indifferent bleibt. Das könnte aber ggfls. die Nachnutzung der Daten erschweren (ausser natürlich die Nachnutzung zur Texterkennung, dort sollte gerade keine Normalisierung der J/I-Differenz stattfinden). 
+
+### Registereinträge (Personen, Organisationen, Orte, Werke) 
+(framework)
+
+- Möglichst kein "verschachteltes" Tagging. Werk vor Person, Institution vor Ort, Institution vor Person.
+
+#### Personen
+
+`<rs type="person" key="#id">`
+
+- Personennamen werden grundsätzlich getaggt. Familienname und Vornamen usw. werden nicht unterschieden.  
+- Pronomen werden in der Regel nicht getaggt. Ausnahme: Eine Person wird nie namentlich genannt oder die Stelle ist ohne Kontextwissen ambivalent.  
+- Übernamen sind zu taggen. Sie sind in der Datenbank als alternative Namen zu vermerken.  
+- Titel (z.B. 'der Prof.') ohne Namen werden getaggt.  
+- Christine: Informativer Mehrwert in Registereinträgen wäre die Stellung der Person vis-à-vis Schwarzenbach. Könnte man heterogen halten.
+
+#### Organisationen
+
+- `<rs type="org" key="#id">`  
+- Hier auch Verlage und Zeitschriften, wo sie als Organisation relevant sind.
+- Tagging orientiert sich an Personen.
+
+#### Orte
+
+`<rs type="place" key="#id">`
+
+- primär Städte/Gemeinden (Strassen werden weggelassen) 'populated place'  
+- «Örtlichkeiten», die eine besondere Bedeutung für Schwarzenbach hatten (Häuser, Farmen, Missionen etc.) \- in vielen Fällen projektspezifische ID vergeben, Geonames kann angereichert werden (nicht für schwer lokalisierbare oder fiktionale Orte).  
+- Ev. antike Orte auf Pelagio (o.ä.) referenzieren  
+- Tagging orientiert sich an Personen.
+
+#### Werke
+
+`<rs type=publication ref="#id">`
+
+- EZ: Nicht alle Werke v. AS die referenziert werden müssen, sind Publikationen/publications, einiges ist unpubliziert, z.T. sogar verschollen.  
+- Zotero zur Verwaltung und ggfls. zur ID-Vergabe (klärt Christian ab) verwenden (Tobias ist einverstanden). Die Zotero-ID wird jeweils in der Browser-Leiste angegeben (im Desktop-Client nicht sichtbar). Die kollaborative Zotero-Bibliothek “DSE AS BIBL-ID” wird zur Verwaltung genutzt; sie ist mit dem Oxygen-Framework verbunden.   
+- Tagging orientiert sich an Personen.
+- Publikationsmedien werden im TEI-header verzeichnet und erhalten einen eigenen Registereintrag, in dem die Einzelpublikationen (nicht die Vorkommnisse im Text) gesammelt werden
+
+### Schlagworte
+
+- `<rs type="keyword" xml:id="kw1">`  
+- Im Unterschied zu den anderen Verweisen nicht im Primärtext referenziert, sondern **im TEI-header** 
+- Offen, welche Thesauri (GND, OpenGender oder weitere) wie eingebunden werden. Möglich wäre es, mehrere Thesauri auf Geovistory zu kombinieren.  
+- Zurzeit besteht eine Schlagwortliste mit GND-ID (bzw. Link) auf Google-Drive: [https://docs.google.com/spreadsheets/d/18EHyX9-BlYbEy1KrGAlRURbvyNTiW8OSELYIdphftk4/edit?usp=sharing](https://docs.google.com/spreadsheets/d/18EHyX9-BlYbEy1KrGAlRURbvyNTiW8OSELYIdphftk4/edit?usp=sharing) 
+
+### Übersichtskommentare pro Dokument
+
+- Im TEI-header z.B. als `<global comment>`
+
+### Sachkommentare zu Wörtern oder Textabschnitten
+
+- `<w>Wort<note type="annotation">Dies ist ein Sachkommentar zu diesem Wort.</note></w>.`  
+    
+- Kommentare werden als 'Fussnote' an eine bestimmte Stelle geknüpft, wenn bestimmte Wortfolgen markiert werden sollen, wird an den Anfangspunkt ein Anker gelegt.
+
+	@spanTo: https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.spanning.html
+milestone: https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-milestone.html
+anchor: https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-anchor.html
+
+- Innerhalb des Kommentars sollen Referenzierungen möglich sein. 
+- AS wird nicht referenziert. Oder? EZ: Ja, scheint mir in den Briefen und auch den Kleinen Formen überflüssig, da ja sonst ‘all over the place’. 
+- In Kommentaren wird im Falle von AS von ‘Schwarzenbach’ geschrieben, weitere Familienmitglieder mit Vornamen ausgeführt. 
+
+### Kommentar/Fussnote in der Quelle
+
+- Eigene Textregion um die Fussnote setzen. Die Textregion ans Ende aller Textregionen verschieben. 
+- Muss in Transkribus mit eigenem tagging \fml\ markiert werden (s.u.). 
+- Codierung in Oxygen mit Textanker: 
+...
+
+### Transkribus-Tagging
+
+Die Anwendung des Transkribus-Taggings wird in der Transkribus-Dokumentation genauer erläutert.
+
+- Definition von Absatzumbrüchen müsste in Transkribus definiert werden als `\p\`..`\:p\`  
+- Im Falle von smallforms noch `\f\`...` \:f\` und `\fp\`... `\:fp\`  
+- Leerzeilen, die sich nicht löschen lassen in Transkribus `\del\`  
+- Wird vor Oxygen-Import automatisch geparst \-\> Das muss bis zum 28.10. getestet werden.  
+- Wie codieren wir Paragraphen, die nicht auf einer Seite enden, um keine Validierungsprobleme zu kriegen? [haben das am 25.10.24 besprochen, bis ein konkretes Tag erstellt ist, markiere ich die Vorkommnisse mit `\fml\` = fix me later]  
+- verwendete Transkribus-Tags, die in TEI XML konvertiert werden: unclear, gap, add, supplied, underlined, strikethrough, bold, italic, sic
+
+### Textstruktur Briefe
+
+- Briefkopf (`<opener>, <dateline>, <place>`, `<salute>`)  
+    
+  - `<salute>` kann auch inline in `<p>` verwendet werden (semantische verwendung, kein Absatz)
+
+
+- Hauptteil/Absätze (`<div type="main">`, `<p>`)  
+    
+- Briefschluss (`<closer>, <signed>, <dateline>, <salute>`)  
+    
+- Postscriptum (`<postscript><p>`)  
+    
+- Adresse (`<address>`, `<addrline>`)  
+    
+- Vorgedrucktes Briefpapier (Briefbogen und Briefcouvert):  
+  `<div type="letterhead">`  
+    `<address>`  
+      `<name>Firma<name/>`  
+      `<street>Länggassstrasse<street/>` etc.  
+    
+- Absendenamen sind in den Metadaten und müssen nicht also solche getaggt, alle auftauchenden Namen werden zur Vereindeutigung einfach als Namen ausgezeichnet.  
+    
+- Stempel werden so einfach wie möglich mit Datum und Ort ausgezeichnet; komplexere Beobachtungen an Stempeln (z.B. Bezüge zum Briefinhalt) werden als Kommentar hinterlegt . 
+
+### Textstruktur Kleine Formen
+
+- Titel: `<head>Überschrift des Artikels</head>`,   
+- `<byline>Von Autorname</byline>`,   
+- `<dateline>Ort,Datum</dateline>`  
+  \-\> EZ: Unklar, ob bei Autor:innen-Nennungen auf der ersten Zeile des eigentlichen Fliesstexts auch eine byline gesetzt werden soll. Problem: Im Author-Mode entsteht so eine neue Zeile, wo keine ist.  
+     
+- Hauptteil/Absätze (`<div type="main">`, `<p>`)  
+    
+- Spalten:  
+    
+  - Beginn des Spaltensatzes: `<cb type="start"/>`,  
+  - Ende des Spaltensatzes `<cb type="end"/>`.  
+  - Spaltenumbrüche innerhalb des Spaltensatzes werden mittels des leeren `<cb>`\-Elements wiedergegeben \[siehe [https://deutschestextarchiv.de/doku/basisformat/spalte.html?hl=spalten](https://deutschestextarchiv.de/doku/basisformat/spalte.html?hl=spalten)\]  
+  -  Textkasten in Bildberichten sind als Spalten zu behandeln
+
+- Bild und Bildunterschrift \[[https://deutschestextarchiv.de/doku/basisformat/abbVerschachtelt.html](https://deutschestextarchiv.de/doku/basisformat/abbVerschachtelt.html)\]:   
+    
+  - `<figure>`  
+    `<head>[ggf. von Herausgeber:innen verliehener Titel der Abbildung und Referenz auf Bild im Archiv]</head>`  
+    `<p>[Bildunterschrift von AS]</p>`  
+    `</figure>`    
+      
+  - Bild-Koordinaten werden in Transkribus zoniert und dadurch auch über Kommentare ansteuer- bzw. referenzierbar, kann eigener Block sein.  
+  - Bild in Transkribus als \\f\\  
+  - Bildunterschrift in Transkribus als  \\fp\\ (=figureparagraph)  
+    
+
+- Artikel- und Seitennummern, Fortsetzungsverweise ("Fortsetzung auf S. 7"/"Fortsetzung aus Nr. XY") \[[https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild](https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild)\]:  
+    
+  - `<fw type="tbd" place="top/inline/etc.">[tbd]</fw>`
+
+
+- Redaktionelle Einleitungen/Nachbemerkungen  
+  - Z.B. `<ab type = redactional, hand = XY>` \[muss von uns definiert werden\]
+
+### Textstruktur Grosse Formen
+Am textlogischen Modell von Lokalbericht orientieren (Peter lädt ein paar Beispiele auf drive). Hat noch keine Priorität. 
+
+### Textgenetische Auszeichnung
+
+- Wird nicht um jeden Preis angestrebt, aber könnte eine interessante Nebenschiene sein, auch für Patrick Sahle (tool 'streamreader')  
+- Frühestens ab Sommer 25 genauer anschaubar, wenn die Digitalisate des SLA vorliegen  
+- Interessante Abweichungen der Druckfassung von den Typoskripten (insgesamt 77 Vorstufen) können immer durch autoptische Vergleiche festgestellt und in Stellenkommentaren festgehalten werden  
+- Simler verwendet Lera-Editor, den man in dem Zusammenhang ausprobieren kann
+
+### Fotografien (SLA A-5)
+
+- Erst relevant, wenn die neuen Digitalisierungen des Fotobestandes im Archiv stattgefunden hat.   
+- Text, der sich auf die Fotografie bezieht, muss referenziert werden (bidirektional)
+- Anreicherung um Koordinaten-Metadaten 
+- EZ: Wie zeichnen wir Text oder Stempel auf Vorder- oder Rückseiten von Fotografien aus? Wir kommen wohl nicht um ein Stempel-Tag herum. (Das Transkribieren und Taggen von Foto-Beschriftungen wäre übrigens eine gute Hiwi-Arbeit, da eher repetitiv und zweitrangig, aber letztlich doch nötig - aber vermutlich erst, wenn wir die neuen Digitalisate haben, da wir bislang ja gar keine Rückseiten besitzen...) 
+- Bei den Karteikarten mit Bildunterschriften: Wie erfassen wir den Kontext? Sinnvoll wäre es meiner Meinung nach möglichst eine integrale Darstellung, keine Freistellung 
+- Diskussionsthema am 28.10., ev. auch am Intermedialitätsworkshop   
+- Dafür spricht die Homogenität der Darstellungsweise   
+- Die große Frage ist der Arbeitsaufwand \- Feststellung, ob es Texte aufweist, lässt sich automatisieren   
+- Grundsätzlich eignet sich die Fotografie-Bearbeitung für CrowdScience/CitzienScience   
+
+## Lesefassung Studienausgabe
+
+### Konversionsschritte
+
+Es ist zu unterscheiden zwischen der Lesefassung, wie sie im Frontend der DSE ausgegeben wird (DSE-Lesefassung), und der Lesefassung, wie sie voraussichtlich ab 2028 im Druck in einer Studienausgabe erscheint (SA-Lesefassung). Für erstere ist eine spezifische Ausgabe im Web-Interface nötig, letztere muss von ersterer ausgehend in einer Konversion (voraussichtlich TEI/XML -> InDesign) hergestellt werden. 
+
+### Mikrostruktur
+
+Die Hauptdifferenzen zwischen DSE- und SA-Lesefassung:
+
+- Transformation von Referenzierungsfunktionen
+    - Interaktives Register wird klassischer Register-Anhang ohne Verlinkungen
+    - Nicht alle Referenzierungen können ggfls. sinnvoll in Print übersetzet werden: Wegfall von Referenzen zu alleinstehenden Bildern, die nur online publiziert werden oder zu anderen DSE. 
+- Darstellung der Kommentare: Übersichts- und Stellenkommentare finden im Dokument-spezifischen Anhang Platz. 
+- Korrekturen und Eingriffe: Unmarkierter Druck der korrigierten Fassung und der Herausgebereingriffe, Widergabe der Korrekturen und Eingriffe im Dokument-spezifischen Anhang
+
+### Makrostruktur
+- 3 Grundgattungen: Grosse Formen (= monographisch intendierte Werke = Romane, Reportagebücher, Drama), Kleine Formen, Briefe
+- Reihenfolge der Texte und der Bände-Publikation: 
+    - Grundsätzlich wird die Chronologie der Niederschrift beachtet (Niederschrift vor Publikation). Gleichzeitige Publikation von Bänden unterschiedlicher Gattungen, die denselben Zeitraum umfassen, könnte attraktiv sein.
+        - Briefe: 
+            - 3 Bände: 
+                1. 1925-1931
+                2. 1932-1937
+                3. 1938-1942
+        - Kleine Formen: 
+            - 4 Bände: 
+                1. 1925-1936
+                2. 1936-1938 
+                3. 1938-1940
+                4. 1941-1942
+            - 1 Sonderband: grossformatige Fotoreportagen, chronologisch
+        - Grosse Formen
+            - 5 Bände: 
+                1. Die 3 frühen Romane (1931, 1933)
+                2. Die 2 Reportagebücher (1934, 1938)
+                3. Die 2 Persien-Romane (1935, 1940)
+                4. Die Erzählsammlungen (1935, 1939)
+                5. Die 2 Afrika-Texte (1941, 1942)
+- Textstufen Kleine Formen (von allen anderen Gattungen sind keine Stufen vorhanden!)
+    - Haupttext: Primat der letzten Textstufe: Publikation vor Typo- oder Manuskript
+    - Inhaltliche Abweichungen der Vorstufen (ab Wortebene, in Ausnahmen auch Schreibweisen desselben Wortes) werden im Dokument-spezfifischen Anhang abgebildet

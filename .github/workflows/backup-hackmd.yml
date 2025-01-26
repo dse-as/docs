@@ -26,6 +26,7 @@ jobs:
       with:
         args: -xsl:hackmd-backup/process-hackmd.xsl -it
     - run: mkdir -p hackmd-backup/_fetched/transkribus-dokumentation hackmd-backup/_fetched/editionsmodell
+    - run: tree hackmd-backup
     - run: curl -L -K hackmd-backup/_fetched/img-urls.txt
     - uses: actions/upload-pages-artifact@v3
       with:

@@ -16,22 +16,22 @@
   <xsl:template name="xsl:initial-template">
     
     <!-- extract markdown from html page and store as .md -->
-    <xsl:for-each select="uri-collection('hackmd-backup/_fetched/?select=*.xhtml')">
+    <xsl:for-each select="uri-collection('_fetched/?select=*.xhtml')">
       <xsl:variable name="filename" select=".=>replace('.*/(.*?)\.xhtml','$1')"/>
-      <xsl:result-document href="hackmd-backup/_fetched/{$filename}.md" method="text" encoding="UTF-8">
+      <xsl:result-document href="_fetched/{$filename}.md" method="text" encoding="UTF-8">
         <xsl:sequence select="doc(.)//*:div[contains-token(@class,'markdown-body')]/text() => replace('https://hackmd.io/_uploads/',$filename||'/')"/>
       </xsl:result-document>
     </xsl:for-each>
     
     <!-- gather image urls and set output paths -->
-    <xsl:result-document href="hackmd-backup/_fetched/img-urls.txt" method="text" encoding="UTF-8">
-      <xsl:for-each select="uri-collection('hackmd-backup/_fetched/?select=*.xhtml')">
+    <xsl:result-document href="_fetched/img-urls.txt" method="text" encoding="UTF-8">
+      <xsl:for-each select="uri-collection('_fetched/?select=*.xhtml')">
         <xsl:variable name="filename" select=".=>replace('.*/(.*?)\.xhtml','$1')"/>
         <xsl:analyze-string select="doc(.)//*:div[contains-token(@class,'markdown-body')]/text()" 
           regex="\[.*\]\(http.*_uploads/(.*?\.(png|jpe?g))\)">
           <xsl:matching-substring>
             <xsl:text>url = https://hackmd.io/_uploads/{regex-group(1)}&#xA;</xsl:text>
-            <xsl:text>output = hackmd-backup/_fetched/{$filename}/{regex-group(1)}&#xA;</xsl:text>
+            <xsl:text>output = _fetched/{$filename}/{regex-group(1)}&#xA;</xsl:text>
             <xsl:text>&#xA;</xsl:text>
           </xsl:matching-substring>
         </xsl:analyze-string>

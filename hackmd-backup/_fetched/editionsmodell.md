@@ -219,6 +219,8 @@ Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben
 - Übernamen sind zu taggen. Sie sind in der Datenbank als alternative Namen zu vermerken.  
 - Titel (z.B. 'der Prof.') ohne Namen werden getaggt.  
 - Christine: Informativer Mehrwert in Registereinträgen wäre die Stellung der Person vis-à-vis Schwarzenbach. Könnte man heterogen halten.
+- Absender:innen und Empfänger:innen in den Briefen werden nicht referenziert, da sie in den Metadaten sind. 
+
 
 #### Organisationen
 
@@ -291,10 +293,10 @@ Die Anwendung des Transkribus-Taggings wird in der Transkribus-Dokumentation gen
 
 Generelle Frage: Wieviele Divs (die oxygen transformation kommt ohne divs)? In Abstimmung mit small forms. Unterscheidung zwischen Brief und Postkarte im Div?
 (anstelle div type="main" div type="letter"/div type="postcard")
-Z. B.:
+Struktur:
 `<div type="letterhead"`> vordegrucktes Briefpapier
 `<div type=postcardBack>` Postkarten-Aufdruck 
-``<div type="main"``> Alles inkl. Postscript
+``<div type="letter/postcard"``> Alles inkl. Postscript
 `<div type="back"` Adresse, Poststempel. Was, wenn auch Couvert vorgedruckt ist?
 `<div type="attached">` Anhänge aller Art
 
@@ -319,7 +321,7 @@ Z. B.:
       `<name>Firma<name/>`  
       `<street>Länggassstrasse<street/>` etc.  
     
-- Absendenamen sind in den Metadaten und müssen nicht also solche getaggt, alle auftauchenden Namen werden zur Vereindeutigung einfach als Namen ausgezeichnet.  
+
     
 - Stempel werden so einfach wie möglich mit Datum und Ort ausgezeichnet; komplexere Beobachtungen an Stempeln (z.B. Bezüge zum Briefinhalt) werden als Kommentar hinterlegt . 
 
@@ -343,9 +345,9 @@ Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
 
 ```
 
-Postkarten-Vorderseite: Aufschriften/Text werden nicht transkribiert
+- Postkarten-Vorderseite: Aufschriften/Text werden nicht transkribiert
 
-Reihenfolge: alles Vorgedruckte (Briefpapier und Postkarte) immer am Anfang, abgeleitet von div type="letterhead"? Betrachtet man es von der Bedeutung her, müsste es am Schluss stehen
+- Reihenfolge: wenn  möglich diplomatisch. Gibt aber semantische Unklarheiten, z.B.,wenn auch dem Couvert auf der letzten Seite etwas Vorgedrucktes ist. Trotzdem div type="letterhead"? Bei Postkarte: Aufdruck nach Text.
 
 
 ### Textstruktur Kleine Formen

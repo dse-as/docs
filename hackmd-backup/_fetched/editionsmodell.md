@@ -289,9 +289,20 @@ Die Anwendung des Transkribus-Taggings wird in der Transkribus-Dokumentation gen
 
 ### Textstruktur Briefe
 
+Generelle Frage: Wieviele Divs (die oxygen transformation kommt ohne divs)? In Abstimmung mit small forms. Unterscheidung zwischen Brief und Postkarte im Div?
+(anstelle div type="main" div type="letter"/div type="postcard")
+Z. B.:
+`<div type="letterhead"`> vordegrucktes Briefpapier
+`<div type=postcardBack>` Postkarten-Aufdruck 
+``<div type="main"``> Alles inkl. Postscript
+`<div type="back"` Adresse, Poststempel. Was, wenn auch Couvert vorgedruckt ist?
+`<div type="attached">` Anhänge aller Art
+
 - Briefkopf (`<opener>, <dateline>, <place>`, `<salute>`)  
     
   - `<salute>` kann auch inline in `<p>` verwendet werden (semantische verwendung, kein Absatz)
+
+- `<dateline>` kann auch ausserhalb des `<closer>` verwendet werden, wenn Briefe über mehrere Tage hinweg geschrieben sind
 
 
 - Hauptteil/Absätze (`<div type="main">`, `<p>`)  
@@ -311,6 +322,31 @@ Die Anwendung des Transkribus-Taggings wird in der Transkribus-Dokumentation gen
 - Absendenamen sind in den Metadaten und müssen nicht also solche getaggt, alle auftauchenden Namen werden zur Vereindeutigung einfach als Namen ausgezeichnet.  
     
 - Stempel werden so einfach wie möglich mit Datum und Ort ausgezeichnet; komplexere Beobachtungen an Stempeln (z.B. Bezüge zum Briefinhalt) werden als Kommentar hinterlegt . 
+
+```
+<seg type="postmark">
+  <date>20. Januar 1935</date>
+  <placeName>Berlin</placeName>
+</seg>
+```
+
+Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
+
+- Postkarten-Aufruck auf der Rückseite
+
+```
+<div type="back">
+  <p>
+    Foto von Max Mustermann.
+  </p>
+</div>
+
+```
+
+Postkarten-Vorderseite: Aufschriften/Text werden nicht transkribiert
+
+Reihenfolge: alles Vorgedruckte (Briefpapier und Postkarte) immer am Anfang, abgeleitet von div type="letterhead"? Betrachtet man es von der Bedeutung her, müsste es am Schluss stehen
+
 
 ### Textstruktur Kleine Formen
 

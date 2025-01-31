@@ -79,6 +79,9 @@ Die Layout-Erkennung erfolgt mit dem Modell 'Universal Lines'. Danach sind die h
         2. ATR mit dem Modell 'The Text Titan I (Super model)'.
 
 Der **Korrekturaufwand** von Handschriften ist grundsätzlich höher als derjenige von Typoskripten oder gedruckten Publikationen. Typische Fehltranskriptionen sind Verwechslungen optisch ähnlicher Handschriftenlettern (v/r, n/r, m/n etc.). 
+:::info
+Die handschriftlichen Ergänzungen der Autorin (dabei kann es sich z.B. auch um Korrekturen handeln) werden von Transkribus je nach Position in eigenen Zeilen dargestellt. Diese Zeilen und ihr Inhalt werden in Transkribus stehengelassen, zusätzlich wird im ergänzten/korrigierten Text die Position der Ergänzung/Korrektur markiert.
+:::
 
 ### 3. Publikationen mit Spalten (Kleine Formen)
 Wie nicht-horizontale Zeilen kann Transkribus auch Spaltenunterbrüche zwischen Zeilen schwer erkennen. Aus einer direkten Anwendung von ATR auf Publikationen mit Spalten resultieren Transkriptionen, die Spaltenlinien auf derselben Höhe zusammenfasst oder chaotisch nur einzelne Ausschnitte aus den Spalten auswählt. Workaround: 

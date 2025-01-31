@@ -46,6 +46,10 @@ Die DSE-AS verfügt über vier Collections (Dokument-Ordner) auf Transkribus, zu
     -> 5 Formatierungs-tags können von Transkribus benutzt werden, sie werden automatisch beim Doppeklick auf einen transkribierten Text eingeblendet: bold, italics, strikethrough, underline und unclear. 
 ![Bildschirmfoto 2025-01-14 um 22.35.28](transkribus-dokumentation/Sk2SK8ND1g.png)
 
+:::info
+In Transkribus wird auch die richtige Reihenfolge der Seiten überprüft und ggfls. angepasst. Im Falle der Briefe ist dies 
+:::
+
 
 4. Nach erfolgreicher Verarbeitung wird das Dokument von 'as-dse_work' nach 'as-dse_finished' verschoben. Der **Export** erfolgt aus der Collection 'as-dse_finished' mithilfe des GitHub-[Issue: Transkribus export](https://github.com/dse-as/workflow_IIIF-ATR-TEI/issues/new?assignees=octocat&labels=task%3Atranskribus-export&projects=octo-org%2F1%2Cocto-org%2F44&template=transkribus-export.yml&title=%5BExport%5D%3A+). Im Gegensatz zum Upload kann jeweils nur ein Dokument exportiert werden. 
 

@@ -430,8 +430,8 @@ Die Hauptdifferenzen zwischen DSE- und SA-Lesefassung:
     - Grundsätzlich wird die Chronologie der Niederschrift beachtet (Niederschrift vor Publikation). Gleichzeitige Publikation von Bänden unterschiedlicher Gattungen, die denselben Zeitraum umfassen, könnte attraktiv sein.
         - Briefe: 
             - 3 Bände: 
-                1. 1925-1931
-                2. 1932-1937
+                1. 1925-1933
+                2. 1933-1937
                 3. 1938-1942
         - Kleine Formen: 
             - 4 Bände: 

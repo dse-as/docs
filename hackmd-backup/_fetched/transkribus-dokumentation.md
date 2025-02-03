@@ -10,7 +10,7 @@ Im Folgenden sind nur die relevanten Workflows für die DSE-AS dokumentiert.
 
 :::warning
 :warning: **Problemlösungen**
-Die Funktionen von Transkribus können sich sehr schnell ändern, ohne dass bei der Programmnutzung ausdrücklich auf diese Änderungen hingewiesen wird (keine Versionshinweise etc.). Es ist empfehlenswert, sich bei neu auftretenden Problemen mit Transkribus möglichst schnell mit den anderen Projektmitarbeitenden über unseren [Discord-Server](https://discord.gg/Bk4TsCSR) auszutauschen.  
+Die Funktionen von Transkribus können sich sehr schnell ändern, ohne dass bei der Programmnutzung ausdrücklich auf diese Änderungen hingewiesexn wird (keine Versionshinweise etc.). Es ist empfehlenswert, sich bei neu auftretenden Problemen mit Transkribus möglichst schnell mit den anderen Projektmitarbeitenden über unseren [Discord-Server](https://discord.gg/Bk4TsCSR) auszutauschen.  
 :::
 
 ## Webapp
@@ -65,6 +65,7 @@ Während der Erstkorrektur können auch bereits  **Vorbereitungen für die Codie
 1. Hyphen (Trennstriche), die eine Silbentrennung am Ende der Zeile vornehmen, werden als Negationsstriche geschrieben`¬`. Transkribus macht dies in vielen Fällen automatisch, kann jedoch nicht zwischen einer Silbentrennung und einer Trennung von Wortbestandteilen unterscheiden, weshalb jedes automatisch erzeugte `¬` überprüft werden muss. Das Negationszeichen wird beim Export in der Konversion zur Codierung `break= "no"` umgewandelt (das Hyphen wird gelöscht und nur in der diplomatischen Umschrift wieder eingeblendet). 
 2. Doppeltrennstriche bzw. Gleichzeichen mit der Funktion eines Trennstriches`=` werden zu Trennstrichen oder Negationszeichen (s.o.) normalisiert. 
 3. Anführungszeichen, die durch Transkribus nicht erkannt wurden, können bereits normalisiert als `"`...`"` (o.ä.) wiedergegeben werden, da Anführungszeichen in Oxygen sowieso normalisiert werden oder im Falle von Zitaten als `quote` ausgezeichnet werden. 
+4. `...` setzen wir normalisiert mit einem Spatium vom Text ab, d.h. "Wahltermin beibehalten ... " 
 
 
 
@@ -109,7 +110,7 @@ Die Layout-Erkennung erfolgt mit dem Modell 'Universal Lines'. Danach sind die h
 
 Der **Korrekturaufwand** von Handschriften ist grundsätzlich höher als derjenige von Typoskripten oder gedruckten Publikationen. Typische Fehltranskriptionen sind Verwechslungen optisch ähnlicher Handschriftenlettern (v/r, n/r, m/n etc.). 
 :::info
-Die handschriftlichen Ergänzungen der Autorin (dabei kann es sich z.B. auch um Korrekturen handeln) werden von Transkribus je nach Position in eigenen Zeilen dargestellt. Diese Zeilen und ihr Inhalt werden in Transkribus stehengelassen, zusätzlich wird im ergänzten/korrigierten Text die Position der Ergänzung/Korrektur markiert. Welche Form der Markierung zum Einsatz kommt (z.B. [*Ergaänzun]])
+Die handschriftlichen Ergänzungen der Autorin (dabei kann es sich z.B. auch um Korrekturen handeln) werden von Transkribus je nach Position in eigenen Zeilen dargestellt. Diese Zeilen und ihr Inhalt werden in Transkribus stehengelassen, zusätzlich wird im ergänzten/korrigierten Text die Position der Ergänzung/Korrektur markiert. Welche Form der Tetmarke zum Einsatz kommt (z.B. [*Ergänzung/Korrektur oben/unten/Seite]]), ist den Edierenden überlassen, da es in Oxygen händisch nachbearbeitet werden muss.
 :::
 
 ### 3. Publikationen mit Spalten (Kleine Formen)

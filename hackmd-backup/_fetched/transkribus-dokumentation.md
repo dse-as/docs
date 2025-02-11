@@ -153,7 +153,11 @@ Die meisten Publikationen, die Abbildungen und Abbildungsunterschriften enthalte
 Folgende Arbeitsschrite ergänzen die Bearbeitung von Spalten-Layouts im Falle von Abbildungen und Abbildungsunterschriften. Dies gilt auch für die wenigen Fälle, in denen die Publikationen nur aus einer Fotografie von AS mit Bildunterschrift bestehen: 
 1. Analog zum Umreissen der Spalten als Textregionen wird auch jede Abbildung und jede Abbildungsunterschrift von je einer Textregion umschlossen.  
 2. Auch ihre korrekte Reihenfolge muss überprüft werden. Besonders wichtig ist, dass Bildunterschriften immer auf die Abbildung folgen, auf die sie sich beziehen. 
-3. Nach der Layout- und Text-Erkennung (oben Schritte 3 und 4) werden Abbildungen und Bildunterschriften mit projekteigenen tags versehen. 
+    - Fürs erste schlage ich (ez) vor, die Reihenfolge der Text- und bildblöcke bzw. -spalten in den Fotoreportagen nach folgendem Schema zu gliedern: 
+        - 1. Titel und Byline
+        - 2. Haupttext (d.h. diejenigen Spalten, die sich nicht direkt auf eine Fotografie beziehen)
+        - 3. Fotografien und zugehörige Textspalten in der Lesereihenfolge (von links nach rechts) - hier wird es immer Fälle geben, die unklar bleiben und wo man sich einfach für eine Reihenfolge entscheiden muss 
+4. Nach der Layout- und Text-Erkennung (oben Schritte 3 und 4) werden Abbildungen und Bildunterschriften mit projekteigenen tags versehen. 
     - Da Abbildungen auch nach der ATR selbsverständlich leere Textregionen bleiben, muss mithilfe des Zeilen-Werkzeugs (Taste B) innerhalb des Bildes eine Textzeile hinzugefügt werden. Diese wird folgendermaßen gefüllt, wobei f für 'figure' steht: 
 `\f\` [projekteigener Abbildungstittel, z.B. "Karawane vor Perspolis"]`\:f\`
     - Bildunterschriften sind zwar durch die ATR transkribiert worden, müssen aber noch als Bildunterschriften getaggt werden, wobei fp für 'figureparagraph' steht: 

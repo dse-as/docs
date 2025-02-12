@@ -78,6 +78,22 @@ In Transkribus wird auch die **richtige Reihenfolge der Seiten** überprüft und
 ### 4. Export 
 Nach erfolgreicher Verarbeitung wird das Dokument von 'as-dse_work' nach 'as-dse_finished' verschoben. Der **Export** erfolgt aus der Collection 'as-dse_finished' mithilfe des GitHub-[Issue: Transkribus export](https://github.com/dse-as/workflow_IIIF-ATR-TEI/issues/new?assignees=octocat&labels=task%3Atranskribus-export&projects=octo-org%2F1%2Cocto-org%2F44&template=transkribus-export.yml&title=%5BExport%5D%3A+). Im Gegensatz zum Upload kann jeweils nur ein Dokument exportiert werden. 
 
+### [5. Ersetzen/Ergänzen eines Digitalisats]
+
+::: warning
+Dieser - hoffentlich selten nötige -Arbeitsschritt ist heikel und benötigt ggfls. das Wissen, wie toml-Dateien erzeugt/geändert werden können. Er sollte mit dem Gesamtteam abgesprochen bzw. durch erfahrene Mitarbeiter:innen überprüft werden. 
+:::
+
+Für den Fall, dass die hochgeladenen Dokumente fehlerhaft oder unvollständig sind, gibt es die Möglichkeit, manuell Einzelseiten zu ersetzen/ergänzen: Auf Dokumentebene "Seite Hinzufügen" anklicken:
+
+![grafik](transkribus-dokumentation/SkXRgIqY1l.png)
+
+Dann kann die korrekte/verbesserte Seite aus dem SwitchDrive-Ordner 'Digitalisate' hochgeladen werden. Es ist zu beachten, dass das Digitalisat denselben Namen tragen muss, das im spezifischen IIIF-Manifest (https://iiif.annemarie-schwarzenbach.ch/presentation/) dafür vorgesehen ist. 
+
+Wenn die Seite bislang nicht im IIIF-Manifest aufgeführt war (z.B. weil es vergessen wurde oder weil zunächst nicht klar war, dass ein Dokument fehlt) muss das IIIF-Manifest erneut mithilfe einer toml-Datei erzeugt werden.
+
+Wichtig ist, dass **auf Transkribus die Namen der Einzelseiten eines Dokumentes und ihre Reihenfolge mit ihrem IIIF-Manifest identisch sind**, auch wenn Einzelseiten nicht mihilfe des IIIF-Manifestes automatisiert hochgeladen worden sind. Ansonsten resultiert in einer späteren Darstellung der Digitalisate auf dem Web-Interface der DSE (die auf das IIIF-Manifest zurückgreift) eine falsche Abfolge/Präsentation. 
+
 ## Vorgehen nach spezifischen Dokumenttypen
 Transkribus ist noch wenig spezialisiert auf komplexe Darstellungstypen (insbesondere Spalten werden im default-modus sehr schlecht transkribiert), weshalb diese z.T. zusätzliche manuelle Anpassungen benötigen. Im Folgenden werden die Arbeitsschritte vom einfachen bis zu komplexen Dokumenttypen (und d.h.: wenig bis vielen manuellen Anpassungen)  erläutert. Für Editor:innen ist nicht jeder Dokumenttypus relevant.
 

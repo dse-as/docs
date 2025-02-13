@@ -92,7 +92,7 @@ Dann kann die korrekte/verbesserte Seite aus dem SwitchDrive-Ordner 'Digitalisat
 
 Wenn die Seite bislang nicht im IIIF-Manifest aufgeführt war (z.B. weil es vergessen wurde oder weil zunächst nicht klar war, dass ein Dokument fehlt) muss das IIIF-Manifest erneut mithilfe einer toml-Datei erzeugt werden.
 
-Wichtig ist, dass **auf Transkribus die Namen der Einzelseiten eines Dokumentes und ihre Reihenfolge mit ihrem IIIF-Manifest identisch sind**, auch wenn Einzelseiten nicht mihilfe des IIIF-Manifestes automatisiert hochgeladen worden sind. Ansonsten resultiert in einer späteren Darstellung der Digitalisate auf dem Web-Interface der DSE (die auf das IIIF-Manifest zurückgreift) eine falsche Abfolge/Präsentation. 
+Wichtig ist, dass **auf Transkribus die Namen der Einzelseiten eines Dokumentes und ihre Reihenfolge mit ihrem IIIF-Manifest identisch sind**, auch wenn Einzelseiten nicht mihilfe des IIIF-Manifestes automatisiert hochgeladen worden sind. Ansonsten werden den Seiten im Zuge des Exports/der TEI-Generierung falsche Digitalisate zugewiesen. Mögliche Folgen in der späteren Darstellung der Digitalisate auf dem Web-Interface der DSE (die auf das IIIF-Manifest zurückgreift) sind eine falsche Abfolge/Präsentation bzw. eine Diskrepanz von Transkription und angezeigtem Digitalisat. 
 
 ## Vorgehen nach spezifischen Dokumenttypen
 Transkribus ist noch wenig spezialisiert auf komplexe Darstellungstypen (insbesondere Spalten werden im default-modus sehr schlecht transkribiert), weshalb diese z.T. zusätzliche manuelle Anpassungen benötigen. Im Folgenden werden die Arbeitsschritte vom einfachen bis zu komplexen Dokumenttypen (und d.h.: wenig bis vielen manuellen Anpassungen)  erläutert. Für Editor:innen ist nicht jeder Dokumenttypus relevant.

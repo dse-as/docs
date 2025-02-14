@@ -70,7 +70,7 @@ Der TEI-Header wird zwar im folgenden Editionsmodell wo relevant erwähnt, das g
 - Paragraphen: 
     `<p>` Das ist ein Paragraph `</p>`
     
-- Leerzeile/Abstand zwischen Paragraphen
+- Grösserer Abstand zwischen Paragraphen
     Nach DTA (https://deutschestextarchiv.de/doku/basisformat/leerraum.html und https://deutschestextarchiv.de/doku/basisformat/absatz.html):
     
 ```xml
@@ -79,7 +79,7 @@ Der TEI-Header wird zwar im folgenden Editionsmodell wo relevant erwähnt, das g
 <p>
 ```
     
-Wo alle Paragraphen durch zusätzliche Leerzeilen getrennt werden, werden solche nicht codiert (da es eine graphische Eigenart des spezifischen Drucks ist und solche Eigenarten i.d.R. nicht in die eigene Edition übernommen werden). Oder in den Worten des DTA: "Größere Abstände zwischen Absätzen werden nur dann ausgezeichnet, wenn diesbezüglich innerhalb eines Buches eine Varianz festzustellen ist."(https://deutschestextarchiv.de/doku/basisformat/absatz.html).  
+Wo alle Paragraphen durch zusätzlichen Abstand getrennt werden, wird dieser nicht codiert (da es eine graphische Eigenart des spezifischen Drucks ist und solche Eigenarten i.d.R. nicht in die eigene Edition übernommen werden). Oder in den Worten des DTA: "Größere Abstände zwischen Absätzen werden nur dann ausgezeichnet, wenn diesbezüglich innerhalb eines Buches eine Varianz festzustellen ist."(https://deutschestextarchiv.de/doku/basisformat/absatz.html).  
 
     
   
@@ -210,6 +210,7 @@ Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben
 
 - Horizontale Striche (Gedankenstriche, Spiegelstriche, Striche in Tabellen, von-bis-Striche) werden unabhängig von der Länge im Original als Halbgeviertstriche wiedergegeben (Unicode: U+2013)  
 - Anführungszeichen, die nicht als Zitat sowieso durch Codierung ersetzt werden, werden normalisiert zu "..." (hochgestellt 'englisch').
+- Die handschriftlichen Anfangsbuchstaben eines Wortes sind oft sowohl von der Grösse als auch der Form her nicht eindeutig als Gross- oder Kleinbuchstaben zu identifizieren. Im Zweifelsfall wird nach den grammatikalischen Regeln entscheiden.
   → Leerschlag vor Gedankenstrichen, wenn kein Leerschlag ist (im Typoskript kommt das sehr häufig vor)?  
 - Offensichtliche Druckfehler werden stillschweigend korrigiert (alle anderen belassen und taggen mit orig/reg/corr - [sic] automatisch generieren)  
 - Vergessene Umlaut-Punkte werden stillschweigend normalisiert.   
@@ -369,14 +370,33 @@ Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
 - `<byline>Von Autorname</byline>`,   
 - `<dateline>Ort,Datum</dateline>`  
   \-\> EZ: Unklar, ob bei Autor:innen-Nennungen auf der ersten Zeile des eigentlichen Fliesstexts auch eine byline gesetzt werden soll. Problem: Im Author-Mode entsteht so eine neue Zeile, wo keine ist.
-  
+
+- Hauptteil/Absätze (`<div type="main">`, `<p>`)  
+
 - Absatzüberschriften
     -> Hier haben wir noch keine definitive Lösung
-    DTA schlägt die Verwendung von verschiedenen Ebenen in `div`vor: 
-    
-     
-- Hauptteil/Absätze (`<div type="main">`, `<p>`)  
-    
+    DTA schlägt die Verwendung von verschiedenen Ebenen in `div`vor (siehe https://www.deutschestextarchiv.de/doku/basisformat/div.html?hl=%C3%BCberschrift, mit dem Unterschied, dass wir nicht nur verschachtelte, sondern auch serielle Folgen von Überschriften benötigen): 
+```xml=
+<head>Überschrift des Artikels</head>`
+<byline>Von Autorname</byline>`,   
+<dateline>Ort,Datum</dateline>`
+<div type="main">
+    <div n="1">
+    <head>[Titel Kapitel 1]</head><!-- sofern vorhanden -->
+        <div n="1.1">
+        <head>[Titel Unterkapitel 1.1]</head><!-- sofern vorhanden -->
+        <p>[Text]</p>
+        <p>[Text]</p>
+    </div>
+    </div>
+    <div n="2">
+    <head>[Titel Unterkapitel 2]</head><!-- sofern vorhanden -->
+    ...
+</div>
+</div>
+```
+- Unklar: Benötigen wir ein `<div n="1"`, wenn wir gar keine Absatz-Überschriften benötigen? Verschachtelungen und mehr als zwei Ebenen sind wohl selten, wir können sie aber nicht ausschliessen. 
+  
 - Spalten:  
     
   - Beginn des Spaltensatzes: `<cb type="start"/>`,  

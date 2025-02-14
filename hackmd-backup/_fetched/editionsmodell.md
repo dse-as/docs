@@ -35,7 +35,7 @@ Obschon es sich bereits bei den Kleinen Formen um heterogene Genres handelt und 
 ### TEI-Header
 Der TEI-Header wird zwar im folgenden Editionsmodell wo relevant erwähnt, das gesamte, detailliert dokumentierte Modell des TEI-Headers wird jedoch in einem zusätzlichen Dokument beschrieben. 
 
-### Zeilen- und Seitenumbrüche, Paragraphen 
+### Zeilen- und Seitenumbrüche, Paragraphen, Leerzeilen 
 - Grundsatz: linebeginnings `lb`, die am Anfang von sog. Block-Elementen (wie p, dateline) stehen, müssen möglichst innerhalb dieses Blockelements platziert werden. Negativ-Beispiel: 
     ```
     <lb xml:id="dummy_r_3_tl_1" break="no"/>
@@ -59,7 +59,7 @@ Der TEI-Header wird zwar im folgenden Editionsmodell wo relevant erwähnt, das g
     - Framework erlaubt bei Klick auf Pfeil am Anfang der Zeile die Auswahl break "no" oder "yes" 
     - Geht die Silbentrennung oder das zusammengesetzte Wort über zwei Seiten hinweg, folgt nach dem `<pb>` das `<lb/>` mit dem enstprechenden Attribut "yes" oder "no"
 
-- Verszeilen: 
+- Verszeilen (noch unklar, wie das gewrapped werden muss): 
 ```xml 
 <lg> 
 <l> Vers 1 </l>
@@ -70,13 +70,25 @@ Der TEI-Header wird zwar im folgenden Editionsmodell wo relevant erwähnt, das g
 - Paragraphen: 
     `<p>` Das ist ein Paragraph `</p>`
     
+- Leerzeile/Abstand zwischen Paragraphen
+    Nach DTA (https://deutschestextarchiv.de/doku/basisformat/leerraum.html und https://deutschestextarchiv.de/doku/basisformat/absatz.html):
+    
+```xml
+</p>
+<space dim="vertical"/>
+<p>
+```
+    
+Wo alle Paragraphen durch zusätzliche Leerzeilen getrennt werden, werden solche nicht codiert (da es eine graphische Eigenart des spezifischen Drucks ist und solche Eigenarten i.d.R. nicht in die eigene Edition übernommen werden). Oder in den Worten des DTA: "Größere Abstände zwischen Absätzen werden nur dann ausgezeichnet, wenn diesbezüglich innerhalb eines Buches eine Varianz festzustellen ist."(https://deutschestextarchiv.de/doku/basisformat/absatz.html).  
+
+    
   
 - Seitenumbruch: `<pb facs="???" n="1">`
 
 
 ### Korrekturen
 
-- Sofortkorrekturen im handschriftlichen Text:
+- Sofortkorrekturen im Text über den korrigierten Text:
 
 `<p>Der <del rend="overstrike">f</del><add>r</add>eundliche Text.</p>`
 
@@ -356,7 +368,12 @@ Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
 - Titel: `<head>Überschrift des Artikels</head>`,   
 - `<byline>Von Autorname</byline>`,   
 - `<dateline>Ort,Datum</dateline>`  
-  \-\> EZ: Unklar, ob bei Autor:innen-Nennungen auf der ersten Zeile des eigentlichen Fliesstexts auch eine byline gesetzt werden soll. Problem: Im Author-Mode entsteht so eine neue Zeile, wo keine ist.  
+  \-\> EZ: Unklar, ob bei Autor:innen-Nennungen auf der ersten Zeile des eigentlichen Fliesstexts auch eine byline gesetzt werden soll. Problem: Im Author-Mode entsteht so eine neue Zeile, wo keine ist.
+  
+- Absatzüberschriften
+    -> Hier haben wir noch keine definitive Lösung
+    DTA schlägt die Verwendung von verschiedenen Ebenen in `div`vor: 
+    
      
 - Hauptteil/Absätze (`<div type="main">`, `<p>`)  
     

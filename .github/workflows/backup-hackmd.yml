@@ -21,7 +21,7 @@ jobs:
     - run: curl http://vrici.lojban.org/~cowan/tagsoup/tagsoup-1.2.1.jar -o hackmd-backup/tagsoup.jar
     - run: curl -L https://hackmd.io/@DSE-AS/Editionsmodell/edit > hackmd-backup/_fetched/editionsmodell.html
     - run: curl -L https://hackmd.io/@DSE-AS/Transkribus_Dokumentation/edit > hackmd-backup/_fetched/transkribus-dokumentation.html
-    - run: curl -L https://hackmd.io/@DSE-AS/ryMYDZtnA   # Interface-Modell DSE AS
+    - run: curl -L https://hackmd.io/@DSE-AS/ryMYDZtnA > hackmd-backup/_fetched/interface-model-dseas.html
     - run: |
         for f in hackmd-backup/_fetched/*.html; do
           java -jar hackmd-backup/tagsoup.jar "$f" > "${f%.*}.xhtml";  

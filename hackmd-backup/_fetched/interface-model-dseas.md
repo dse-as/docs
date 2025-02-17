@@ -14,7 +14,7 @@ Was sind die Bedingungen, die das Design des Interfaces bestimmen/begrenzen.
 
 ### 1.1 Nutzende/ Nutzergruppen
 
-**Forschende**
+**Wissenschaftlich Forschende**
 - Annemarie Schwarzenbach: 
     - Interesse an biographischen Ressourcen und Kontexten. Fokus auf (unveröffentlichte/schwer zugängliche) Briefe und Lebensdokumente.  
 - Print-Medien-Forschung: 
@@ -32,7 +32,7 @@ Was sind die Bedingungen, die das Design des Interfaces bestimmen/begrenzen.
         - Korrespondenz-Zusammenhang durch durchsuchbare Metadaten zum Verwendungszweck der Fotografie (Beilage Brief, Vorderseite Postkarte, zur Veröffentlichung bestimmt, aufgrund Wunsch d. Angeschriebenen, als Erinnerungsstück)
 - Reise(-literatur)-Forschung: 
     - Reisepraktiken und ihre (inter-)mediale Darstellung. 
-    - Nachvollziehbarkeit der Reisen (Geographie). 
+    - Nachvollziehbarkeit der Reisen (Geographie) 
 - Archäologie: 
     - (Inter-)mediale Darstellung von besuchten Ausgrabungsstätten, mediale Vermittlung von archäologischem Wissen der Zeit.
     - Ev. Verknüpfung mit Archäologie-Datenbanken?
@@ -41,7 +41,13 @@ Was sind die Bedingungen, die das Design des Interfaces bestimmen/begrenzen.
     - Korpuslinguistik (Gender, Sprachwandel, Pragmatik etc.): Interesse an 'rohen Texten' (ohne TEI/XML-Annotationen), verarbeiten m.W. Text selber weiter (keine bestimmte Ausgabemöglichkeiten nötig).  
 - Archive: 
     - Abgleich mit eigenem Material, schnelle Auffindbarkeit der Originaldokumente in ihren Archivstandorten (direkte Verlinkung mit Findmitteln - nice to have?). 
-- Kunst- und Fotogeschichte: tbd
+- Kunst- und Fotogeschichte: z.T. durch Intermeidalitätsforschung abgedeckt (s.o.), tbd
+
+**Literaturvermittler:innen und Journalist:innen**
+
+**Lehrpersonen**
+
+
 
 
 ### 1.2 Personelle und finanzielle Ressourcen
@@ -63,6 +69,8 @@ Was sind die Bedingungen, die das Design des Interfaces bestimmen/begrenzen.
 #### d. Fotografie
 
 ### 2.2 Referenzen
+
+Der Aufbau bzw. Inhalt der Register selbst wird unten beschrieben, die Anforderungen an die Register sind in einem anderen hackmd-Dokument (https://hackmd.io/@DSE-AS/SyjEFFl9yg) gesammelt. Hier geht es um die Darstellung der Referenzierungen, welche in die Register führen. 
 
 #### a. Ebene Einzeldokument = TEI-header
 

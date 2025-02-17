@@ -47,7 +47,8 @@ Was sind die Bedingungen, die das Design des Interfaces bestimmen/begrenzen.
 
 **Lehrpersonen**
 
-
+**Interessierte Öffentlichkeit**
+- Sehr einfache Zugangsmöglichkeiten zu den Inhalten
 
 
 ### 1.2 Personelle und finanzielle Ressourcen
@@ -82,7 +83,7 @@ Hier sind nur diejenigen Informationen im TEI-header aufgeführt, die als Refere
 - Archiverungsort (Verlinkung mit Findmitteln oder Digitalisaten, falls möglich)
 - IIIF-Manifest des Digitalisats
 - (Perma-)link des Digitalisats (falls nicht schon von Archivierungsort als Digitalisat z.V.g., s.o.); e-manuscripta, e-periodica, e-newpsaperarchive (u.ev.a.)
-- 
+
 
 **Kleine Formen**
 - 

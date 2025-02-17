@@ -23,19 +23,25 @@ Was sind die Bedingungen, die das Design des Interfaces bestimmen/begrenzen.
     - Historische Hintergründe der einzlenen Printmedien und der Medienlandschaft (primär der Schweiz) = Mediengeschichte.  
     - Unterinteressen: 
         - Feuilleton-Forschung.
-        - Schweizer Verlagsgeschichte (Projekt Rober Leucht) 
+        - Schweizer Verlagsgeschichte (z.B. Projekt Rober Leucht) 
 - Intermedialitäts-Forschung: 
     - Zusammenspiel von Bild und Text (hier besonders Fotografien von AS, vereinzelt Zeichnungen von anderer Hand)
+        - Werkgenetische Zusammenhänge durch Kommentare und Verweise (Referenzen innerhalb der Edition, idealerweise mit Einblendung des Bildes im Kommentar)
+        - Materielle Zusammenhänge durch Edition der Fotografien mitsamt allem Text (dieser muss durchsuchbar sein)
+        - Publizistischer Zusammenhang durch die Mit-Edition der Fotografien (’eigener’ Titel, Bildunterschriften zuordnen, auch publizierte Fotos ansteuerbar machen? = Register von Fotografien *in* Publikationen)
+        - Korrespondenz-Zusammenhang durch durchsuchbare Metadaten zum Verwendungszweck der Fotografie (Beilage Brief, Vorderseite Postkarte, zur Veröffentlichung bestimmt, aufgrund Wunsch d. Angeschriebenen, als Erinnerungsstück)
 - Reise(-literatur)-Forschung: 
     - Reisepraktiken und ihre (inter-)mediale Darstellung. 
     - Nachvollziehbarkeit der Reisen (Geographie). 
-- Archäologie: (Inter-)mediale Darstellung von besuchten Ausgrabungsstätten, mediale Vermittlung von archäologischem Wissen der Zeit.
+- Archäologie: 
+    - (Inter-)mediale Darstellung von besuchten Ausgrabungsstätten, mediale Vermittlung von archäologischem Wissen der Zeit.
+    - Ev. Verknüpfung mit Archäologie-Datenbanken?
 - Linguistik: 
-        - Medienlinguistik: Ähnliche Interessen wie die Print-Medien-Forschung. 
-        - Korpuslinguistik (Gender, Sprachwandel, Pragmatik etc.): Interesse an 'rohen Texten' (ohne TEI/XML-Annotationen), verarbeiten m.W. Text selber weiter (keine bestimmte Ausgabemöglichkeiten nötig).  
-- Archive: Abgleich mit eigenem Material, schnelle Auffindbarkeit der Originaldokumente in ihren Archivstandorten (direkte Verlinkung mit Findmitteln - nice to have?). 
+    - Medienlinguistik: Ähnliche Interessen wie die Print-Medien-Forschung. 
+    - Korpuslinguistik (Gender, Sprachwandel, Pragmatik etc.): Interesse an 'rohen Texten' (ohne TEI/XML-Annotationen), verarbeiten m.W. Text selber weiter (keine bestimmte Ausgabemöglichkeiten nötig).  
+- Archive: 
+    - Abgleich mit eigenem Material, schnelle Auffindbarkeit der Originaldokumente in ihren Archivstandorten (direkte Verlinkung mit Findmitteln - nice to have?). 
 - Kunst- und Fotogeschichte: tbd
-- 
 
 
 ### 1.2 Personelle und finanzielle Ressourcen

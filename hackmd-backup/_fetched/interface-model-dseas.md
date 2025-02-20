@@ -1,5 +1,10 @@
 # Interface-Modell DSE AS
 
+Dieses Dokument klärt die informationellen, editionsphilologischen und technischen Bedürfnisse (requirements) von zukünftigen Nutzenden der DSE AS und formuliert auf dieser Grundlage Funktionsaspekte des Interfaces (specifications), gegliedert nach ihrer Wichtigkeit und Notwndigkeit. Es beschreibt auf Konzeptebene, Details der Umsetzung werden in weiteren Dokumenten beschrieben, namentlich im: 
+- [Editionsmodell](https://hackmd.io/@DSE-AS/Editionsmodell) (Codierung in TEI/XML) 
+- [Registermodell](https://hackmd.io/@DSE-AS/SyjEFFl9yg) (Erarbeitung der Register und Register-Einzelseiten, div. tools)
+- [Transkribus-Dokumentation](https://hackmd.io/@DSE-AS/Transkribus_Dokumentation) (Erarbeitung der Transkriptionen, Transkriptionsregeln)
+
 Mögliche Tools zur Erweiterung dieses Dokumentes (z.B. für erste wireframes): 
 - https://asciiflow.com
 - https://monosketch.io
@@ -14,15 +19,18 @@ Was sind die Bedingungen, die das Design des Interfaces bestimmen/begrenzen.
 
 ### 1.1 Nutzende/ Nutzergruppen
 
-**Wissenschaftlich Forschende**
+#### **a. Wissenschaftlich Forschende/Nutzende**
+Für die wissenschftliche Forschung gilt grundsätzlich:
+- Zitierbarkeit des Primärtextes und Referenzierung relevanter Intertexte und Forschungsliteratur als Quellen
+
 - Annemarie Schwarzenbach: 
-    - Interesse an biographischen Ressourcen und Kontexten. Fokus auf (unveröffentlichte/schwer zugängliche) Briefe und Lebensdokumente.  
+    - Interesse an biographischen Ressourcen und Kontexten. Fokus auf (unveröffentlichte/schwer zugängliche) Briefe und Lebensdokumente  
 - Print-Medien-Forschung: 
-    - Interesse an Zeitschriften, Verlagen, Publizist:innen. 
-    - Möglicherweise mediale Praktiken (Interaktion von AS mit genannten Stakholdern). 
-    - Historische Hintergründe der einzlenen Printmedien und der Medienlandschaft (primär der Schweiz) = Mediengeschichte.  
+    - Interesse an Zeitschriften, Verlagen, Publizist:innen 
+    - Möglicherweise mediale Praktiken (Interaktion von AS mit genannten Stakholdern) 
+    - Historische Hintergründe der einzlenen Printmedien und der Medienlandschaft (primär der Schweiz) = Mediengeschichte  
     - Unterinteressen: 
-        - Feuilleton-Forschung.
+        - Feuilleton-Forschung
         - Schweizer Verlagsgeschichte (z.B. Projekt Rober Leucht) 
 - Intermedialitäts-Forschung: 
     - Zusammenspiel von Bild und Text (hier besonders Fotografien von AS, vereinzelt Zeichnungen von anderer Hand)
@@ -31,7 +39,7 @@ Was sind die Bedingungen, die das Design des Interfaces bestimmen/begrenzen.
         - Publizistischer Zusammenhang durch die Mit-Edition der Fotografien (’eigener’ Titel, Bildunterschriften zuordnen, auch publizierte Fotos ansteuerbar machen? = Register von Fotografien *in* Publikationen)
         - Korrespondenz-Zusammenhang durch durchsuchbare Metadaten zum Verwendungszweck der Fotografie (Beilage Brief, Vorderseite Postkarte, zur Veröffentlichung bestimmt, aufgrund Wunsch d. Angeschriebenen, als Erinnerungsstück)
 - Reise(-literatur)-Forschung: 
-    - Reisepraktiken und ihre (inter-)mediale Darstellung. 
+    - Reisepraktiken und ihre (inter-)mediale Darstellung 
     - Nachvollziehbarkeit der Reisen (Geographie) 
 - Archäologie: 
     - (Inter-)mediale Darstellung von besuchten Ausgrabungsstätten, mediale Vermittlung von archäologischem Wissen der Zeit.
@@ -43,15 +51,28 @@ Was sind die Bedingungen, die das Design des Interfaces bestimmen/begrenzen.
     - Abgleich mit eigenem Material, schnelle Auffindbarkeit der Originaldokumente in ihren Archivstandorten (direkte Verlinkung mit Findmitteln - nice to have?). 
 - Kunst- und Fotogeschichte: z.T. durch Intermeidalitätsforschung abgedeckt (s.o.), tbd
 
-**Literaturvermittler:innen und Journalist:innen**
+#### **b. Literaturvermittler:innen und Journalist:innen**
+- Schnell auffindbare Einleitungen, Kontaktangaben zum Team
+- Elemente des 'Storytellings', die ggfls. mit aktuellen Themen im Zusammenhang stehen
+- Ev. Angebote zur Zusammenarbeit prominent präsentiert
 
-**Lehrpersonen**
+#### **c. Lehrpersonen**
+- Elemente des 'Storytellings', die auf ein jüngeres Publikum zugeschnitten sind
+- - Ev. Angebote zur Zusammenarbeit prominent präsentiert
 
-**Interessierte Öffentlichkeit**
+#### **d. Interessierte Öffentlichkeit**
 - Sehr einfache Zugangsmöglichkeiten zu den Inhalten
+- Kommentierung mit minimaler - und dann erläuterter - wissenschaftlicher Fachterminologie
+- Kurze erläuternde und zusammenfassende Einleitungen ('readers digest') zu den versch. Editiongattungen (warum nennen wir es 'Kleine und Grosse Formen', was ist interessant an den Briefen?)
 
+#### **e. Nutzende einer zukünftigen Studienausgabe**
+Dies betrifft potentiell alle oben aufgeführten Nutzendengruppen. 
+- Identische Titel, deren schnelle Auffindbarkeit ggfls. nach Bänden (Studienausgabe-Register, das die Inhaltsverzeichnisse auf die DSE mapped?) 
+- Verweise von der DSE in die Studienausgabe (umgekehrt wäre abzuraten)
 
 ### 1.2 Personelle und finanzielle Ressourcen
+
+
 
 ### 1.3 Technische Wartbarkeit
 

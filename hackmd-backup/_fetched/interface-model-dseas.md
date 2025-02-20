@@ -15,9 +15,9 @@ Mögliche Tools zur Erweiterung dieses Dokumentes (z.B. für erste wireframes):
 [toc]
 
 ## 1. Voraussetzungen
-Was sind die Bedingungen, die das Design des Interfaces bestimmen/begrenzen. 
+Was sind die Bedingungen, die das Design des Interfaces bestimmen/begrenzen.? 
 
-### 1.1 Nutzende/ Nutzergruppen
+### 1.1 Nutzende/ Nutzendegruppen
 
 #### **a. Wissenschaftlich Forschende/Nutzende**
 Für die wissenschftliche Forschung gilt grundsätzlich:
@@ -70,8 +70,9 @@ Dies betrifft potentiell alle oben aufgeführten Nutzendengruppen.
 - Identische Titel, deren schnelle Auffindbarkeit ggfls. nach Bänden (Studienausgabe-Register, das die Inhaltsverzeichnisse auf die DSE mapped?) 
 - Verweise von der DSE in die Studienausgabe (umgekehrt wäre abzuraten)
 
-### 1.2 Personelle und finanzielle Ressourcen
+### 1.2 Zeitliche, personelle und finanzielle Ressourcen
 
+Bis 2028 werden im Rahmen des SNF-Projektes die Kleinen Formen und Briefe ediert. Erste Ergebnisse/Überlegungen zum Interface sollen am 5. September 2025 dem editorischen Beirat gezeigt werdne. 
 
 
 ### 1.3 Technische Wartbarkeit

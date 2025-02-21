@@ -10,7 +10,7 @@ Im Folgenden sind nur die relevanten Workflows für die DSE-AS dokumentiert.
 
 :::warning
 :warning: **Problemlösungen**
-Die Funktionen von Transkribus können sich sehr schnell ändern, ohne dass bei der Programmnutzung ausdrücklich auf diese Änderungen hingewiesexn wird (keine Versionshinweise etc.). Es ist empfehlenswert, sich bei neu auftretenden Problemen mit Transkribus möglichst schnell mit den anderen Projektmitarbeitenden über unseren [Discord-Server](https://discord.gg/Bk4TsCSR) auszutauschen.  
+Die Funktionen von Transkribus können sich sehr schnell ändern, ohne dass bei der Programmnutzung ausdrücklich auf diese Änderungen hingewiesen wird (keine Versionshinweise etc.). Es ist empfehlenswert, sich bei neu auftretenden Problemen mit Transkribus möglichst schnell mit den anderen Projektmitarbeitenden über unseren [Discord-Server](https://discord.gg/Bk4TsCSR) auszutauschen.  
 :::
 
 ## Webapp

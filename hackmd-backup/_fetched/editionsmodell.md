@@ -297,7 +297,7 @@ Die Anwendung des Transkribus-Taggings wird in der Transkribus-Dokumentation gen
 
 - Definition von Absatzumbrüchen müsste in Transkribus definiert werden als `\p\`..`\:p\`  
 - Im Falle von smallforms noch `\f\`...` \:f\` und `\fp\`... `\:fp\`  
-- Leerzeilen, die sich nicht löschen lassen in Transkribus `\del\`  
+- [Leerzeilen, die sich nicht löschen lassen in Transkribus `\del\`] - das ist (zurzeit) obsoloet geworden, Transkribus erlaubt Löschungen von Blöcken imn 'Layout-Modus' der Textseite.  
 - Gesperrter Text:`\g\`...`\:g\`
 - Wird vor Oxygen-Import automatisch geparst 
 - Wie codieren wir Paragraphen, die nicht auf einer Seite enden, um keine Validierungsprobleme zu kriegen? [haben das am 25.10.24 besprochen, bis ein konkretes Tag erstellt ist, markiere ich die Vorkommnisse mit `\fml\` = fix me later]  

@@ -366,6 +366,9 @@ Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
 
 ### Textstruktur Kleine Formen
 
+- Artikel-Wrapper: `<div type="jArticle">`
+    - Ein `<div>`-Tag scheint notwendig, um `<head>` (Titel, s.u.) zu setzen (https://www.tei-c.org/release/doc/tei-p5-doc/de/html/ref-head.html)
+    - Könnte auch noch genauer bezeichnet werden, ich würde das jedoch eher im TEI-Header machen
 - Titel: `<head>Überschrift des Artikels</head>`,   
 - `<byline>Von Autorname</byline>`,   
 - `<dateline>Ort,Datum</dateline>`  
@@ -377,6 +380,7 @@ Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
     -> Hier haben wir noch keine definitive Lösung
     DTA schlägt die Verwendung von verschiedenen Ebenen in `div`vor (siehe https://www.deutschestextarchiv.de/doku/basisformat/div.html?hl=%C3%BCberschrift, mit dem Unterschied, dass wir nicht nur verschachtelte, sondern auch serielle Folgen von Überschriften benötigen): 
 ```xml=
+<div type="jArticle">
 <head>Überschrift des Artikels</head>`
 <byline>Von Autorname</byline>`,   
 <dateline>Ort,Datum</dateline>`
@@ -392,6 +396,7 @@ Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
     <div n="2">
     <head>[Titel Unterkapitel 2]</head><!-- sofern vorhanden -->
     ...
+</div>
 </div>
 </div>
 ```

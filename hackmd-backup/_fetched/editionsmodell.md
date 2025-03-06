@@ -374,8 +374,8 @@ Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
 - `<dateline>Ort,Datum</dateline>`  
   \-\> EZ: Unklar, ob bei Autor:innen-Nennungen auf der ersten Zeile des eigentlichen Fliesstexts auch eine byline gesetzt werden soll. Problem: Im Author-Mode entsteht so eine neue Zeile, wo keine ist.
 
-- Hauptteil/Absätze (`<div type="main">`, `<p>`)  
-
+- Hauptteil/Absätze (`<div type="main">`, `<p>`)
+   
 - Absatzüberschriften
     -> Hier haben wir noch keine definitive Lösung
     DTA schlägt die Verwendung von verschiedenen Ebenen in `div`vor (siehe https://www.deutschestextarchiv.de/doku/basisformat/div.html?hl=%C3%BCberschrift, mit dem Unterschied, dass wir nicht nur verschachtelte, sondern auch serielle Folgen von Überschriften benötigen): 

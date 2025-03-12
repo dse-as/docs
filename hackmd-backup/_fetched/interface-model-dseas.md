@@ -1,9 +1,10 @@
 # Interface-Modell DSE AS
 
-Dieses Dokument klärt die informationellen, editionsphilologischen und technischen Bedürfnisse (requirements) von zukünftigen Nutzenden der DSE AS und formuliert auf dieser Grundlage Funktionsaspekte des Interfaces (specifications), gegliedert nach ihrer Wichtigkeit und Notwndigkeit. Es beschreibt auf Konzeptebene, Details der Umsetzung werden in weiteren Dokumenten beschrieben, namentlich im: 
+Dieses Dokument klärt die informationellen, editionsphilologischen und technischen Bedürfnisse (requirements) von zukünftigen Nutzenden der DSE AS und formuliert auf dieser Grundlage Funktionsaspekte des Interfaces (specifications), gegliedert nach ihrer Wichtigkeit und Notwendigkeit. Es beschreibt auf Konzeptebene, Details der Umsetzung werden in weiteren Dokumenten beschrieben, namentlich im: 
 - [Editionsmodell](https://hackmd.io/@DSE-AS/Editionsmodell) (Codierung in TEI/XML) 
 - [Registermodell](https://hackmd.io/@DSE-AS/SyjEFFl9yg) (Erarbeitung der Register und Register-Einzelseiten, div. tools)
 - [Transkribus-Dokumentation](https://hackmd.io/@DSE-AS/Transkribus_Dokumentation) (Erarbeitung der Transkriptionen, Transkriptionsregeln)
+- [Oxygen-Dokumentatio](https://hackmd.io/@DSE-AS/H1aXACCi1g) (Erarbeitung der codierten Daten, Codierungsregeln) - noch am Anfang des Entstehens
 
 Mögliche Tools zur Erweiterung dieses Dokumentes (z.B. für erste wireframes): 
 - https://asciiflow.com
@@ -27,13 +28,13 @@ Für die wissenschftliche Forschung gilt grundsätzlich:
     - Interesse an biographischen Ressourcen und Kontexten. Fokus auf (unveröffentlichte/schwer zugängliche) Briefe und Lebensdokumente  
 - Print-Medien-Forschung: 
     - Interesse an Zeitschriften, Verlagen, Publizist:innen 
-    - Möglicherweise mediale Praktiken (Interaktion von AS mit genannten Stakholdern) 
+    - Möglicherweise mediale Praktiken (Interaktion von AS mit genannten Stakeholdern) 
     - Historische Hintergründe der einzlenen Printmedien und der Medienlandschaft (primär der Schweiz) = Mediengeschichte  
     - Unterinteressen: 
         - Feuilleton-Forschung
-        - Schweizer Verlagsgeschichte (z.B. Projekt Rober Leucht) 
+        - Schweizer Verlagsgeschichte (z.B. Projekt Robert Leucht) 
 - Intermedialitäts-Forschung: 
-    - Zusammenspiel von Bild und Text (hier besonders Fotografien von AS, vereinzelt Zeichnungen von anderer Hand)
+    - Zusammenspiel von Bild und Text (hier besonders Fotografien von AS, vereinzelt Fotografien/Zeichnungen von anderer Hand)
         - Werkgenetische Zusammenhänge durch Kommentare und Verweise (Referenzen innerhalb der Edition, idealerweise mit Einblendung des Bildes im Kommentar)
         - Materielle Zusammenhänge durch Edition der Fotografien mitsamt allem Text (dieser muss durchsuchbar sein)
         - Publizistischer Zusammenhang durch die Mit-Edition der Fotografien (’eigener’ Titel, Bildunterschriften zuordnen, auch publizierte Fotos ansteuerbar machen? = Register von Fotografien *in* Publikationen)
@@ -79,6 +80,22 @@ Angesichts der Ressourcen (bislang keine externe Webdesign-Expert:innen vorgeseh
     - Idealerweise geschieht die Verfeinerung des Interfaces von 2028-2030 im Hinblick und Zuschnitt auf auf eine größere, von der SAGW (teil-)finanzierte DSE-Plattform (Schweizer Literatur der Ränder: Schwarzenbach, Ceresa, Becher, ev. Spiry oder andere ZB-Bestände). 
 
 ### 1.3 Technische Wartbarkeit
+
+Einfache Wartbarkeit, Zitat SNF-Antrag, S. 13f.: 
+"Die digitale Edition als Webanwendung: Die so erarbeiteten Metadaten und Transkriptionen bilden die Datengrundlage für die Webpräsentation der Edition, die in modularem Ansatz mit klar definierten internen Schnittstellen aufgebaut wird (Trennung von Backend, Frontend und Suchindex). Dabei wird der Ansatz ver folgt, möglichst viele Komponenten bzw. Repräsentationsformate vorzugenerieren, so dass nur sehr grundle-
+gende Anforderungen an die Serverinfrastruktur entstehen. Modellcharakter haben hier z.B. die Endings Principles for Digital Longevity (https://endings.uvic.ca/principles.html) oder die Sturm-Edition (https://sturm-
+edition.de/ressourcen/software.html).
+
+Indem der Wartungsaufwand in engen Grenzen bleibt und kaum anwendungsspezifische Sicherheitslücken entstehen können, lässt sich die langfristige Betreuung durch eine:n fachlich nicht-involvierte:n, nicht spezialisierte:n Webmaster:in leisten. Der skizzierte Ansatz harmoniert überdies gut mit einem auf Versionsständen basierenden Publikationsworkflow, wie er in der Webentwicklung in jüngerer Zeit grosse Verbreitung gefunden hat (CI/CD-Ansatz; continuous integration/continuous delivery). Als wesentliche Elemente der Präsentation sind zu nennen:
+    • die Ansichten zum Einstieg in das Material (chronologie- und kartenbasiert)
+• die eigentlichen Editionsansichten mit Transkription, Stellenkommentar, Objekt- und Entitätsverlinkung und Ver-
+linkung der Textencodings
+• Registeransichten mit Stellenverweisen
+• 
+• Ansichten zum Projektkontext und zur Dokumentation der konstituierenden Aspekte (insb. d. Editionsrichtlinien)
+• maschinenlesbare Schnittstellen zum Datenaustausch
+Diese Ansichten wie auch tiefer liegende Einheiten (z.B. einzelne Stellenkommentare) sind über stabile Adressen
+adressier- und zitierbar."
 
 ### 1.4 Accessibility 
 

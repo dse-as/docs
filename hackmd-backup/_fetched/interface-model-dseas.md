@@ -82,22 +82,22 @@ Angesichts der Ressourcen (bislang keine externe Webdesign-Expert:innen vorgeseh
 ### 1.3 Technische Wartbarkeit
 
 Einfache Wartbarkeit, Zitat SNF-Antrag, S. 13f.: 
-"Die digitale Edition als Webanwendung: Die so erarbeiteten Metadaten und Transkriptionen bilden die Datengrundlage für die Webpräsentation der Edition, die in modularem Ansatz mit klar definierten internen Schnittstellen aufgebaut wird (Trennung von Backend, Frontend und Suchindex). Dabei wird der Ansatz ver folgt, möglichst viele Komponenten bzw. Repräsentationsformate vorzugenerieren, so dass nur sehr grundle-
-gende Anforderungen an die Serverinfrastruktur entstehen. Modellcharakter haben hier z.B. die Endings Principles for Digital Longevity (https://endings.uvic.ca/principles.html) oder die Sturm-Edition (https://sturm-
-edition.de/ressourcen/software.html).
 
-Indem der Wartungsaufwand in engen Grenzen bleibt und kaum anwendungsspezifische Sicherheitslücken entstehen können, lässt sich die langfristige Betreuung durch eine:n fachlich nicht-involvierte:n, nicht spezialisierte:n Webmaster:in leisten. Der skizzierte Ansatz harmoniert überdies gut mit einem auf Versionsständen basierenden Publikationsworkflow, wie er in der Webentwicklung in jüngerer Zeit grosse Verbreitung gefunden hat (CI/CD-Ansatz; continuous integration/continuous delivery). Als wesentliche Elemente der Präsentation sind zu nennen:
-    • die Ansichten zum Einstieg in das Material (chronologie- und kartenbasiert)
-• die eigentlichen Editionsansichten mit Transkription, Stellenkommentar, Objekt- und Entitätsverlinkung und Ver-
-linkung der Textencodings
-• Registeransichten mit Stellenverweisen
-• 
-• Ansichten zum Projektkontext und zur Dokumentation der konstituierenden Aspekte (insb. d. Editionsrichtlinien)
-• maschinenlesbare Schnittstellen zum Datenaustausch
-Diese Ansichten wie auch tiefer liegende Einheiten (z.B. einzelne Stellenkommentare) sind über stabile Adressen
-adressier- und zitierbar."
+:::info
 
-### 1.4 Accessibility 
+
+Die digitale Edition als Webanwendung: Die so erarbeiteten Metadaten und Transkriptionen bilden die Datengrundlage für die Webpräsentation der Edition, die in modularem Ansatz mit klar definierten internen Schnittstellen aufgebaut wird (Trennung von Backend, Frontend und Suchindex). Dabei wird der Ansatz ver folgt, möglichst viele Komponenten bzw. Repräsentationsformate vorzugenerieren, so dass nur sehr grundle-
+gende Anforderungen an die Serverinfrastruktur entstehen. Modellcharakter haben hier z.B. die Endings Principles for Digital Longevity (https://endings.uvic.ca/principles.html) oder die Sturm-Edition (https://sturm-edition.de/ressourcen/software.html).
+
+Indem der Wartungsaufwand in engen Grenzen bleibt und kaum anwendungsspezifische Sicherheitslücken entstehen können, lässt sich die langfristige Betreuung durch eine:n fachlich nicht-involvierte:n, nicht spezialisierte:n Webmaster:in leisten. Der skizzierte Ansatz harmoniert überdies gut mit einem auf Versionsständen basierenden Publikationsworkflow, wie er in der Webentwicklung in jüngerer Zeit grosse Verbreitung gefunden hat (CI/CD-Ansatz; continuous integration/continuous delivery).
+:::
+
+
+### 1.4 Accessibility/Barrierefreiheit 
+
+Zur Frage der Accessibility für Menschen mit Einschränkungen/besonderen Bedüfnissen bestehen zurzeit noch keine konkreten Vorstellungen. Als nice-to-have ist eine Audio-Text-Ausgabe angedacht (s.u., 4.4.). 
+Handreichungen mit wichtigen Punkten für die Barrierefreiheit von DSE hat das ZDE erarbeitet: https://www.zde.uzh.ch/dam/jcr:c09a0418-1013-418e-bb06-3b960ecc468d/2024_UB_ZDE_KeyVisual_Handreich_A5_barrierefrei_digital.pdf
+
 
 ## 2. Präsentation des Edendums
 
@@ -145,6 +145,8 @@ Hier sind nur diejenigen Informationen im TEI-header aufgeführt, die als Refere
 ### 3.1 Einstieg / Startseite
 
 ### 3.2 Suchfunktionen
+
+Angestrebt wird (SNF-Antrag, S. 14): ein flexibles Suchinterface, mit dem sich neben Volltexten und Metadaten auch der Kommentar durchsuchen lässt. 
 
 ### 3.3 Register (und Registereinträge)
 

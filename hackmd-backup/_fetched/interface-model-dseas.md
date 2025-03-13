@@ -1,10 +1,10 @@
 # Interface-Modell DSE AS
 
-Dieses Dokument klärt die informationellen, editionsphilologischen und technischen Bedürfnisse (requirements) von zukünftigen Nutzenden der DSE AS und formuliert auf dieser Grundlage Funktionsaspekte des Interfaces (specifications), gegliedert nach ihrer Wichtigkeit und Notwendigkeit. Es beschreibt auf Konzeptebene, Details der Umsetzung werden in weiteren Dokumenten beschrieben, namentlich im: 
+Dieses Dokument klärt die informationellen, editionsphilologischen und technischen Bedürfnisse (*requirements*) von zukünftigen Nutzenden der DSE AS und formuliert auf dieser Grundlage Funktionsaspekte des Interfaces (*specifications*), gegliedert nach ihrer Wichtigkeit und Notwendigkeit. Es beschreibt auf Konzeptebene, Details der Umsetzung werden in weiteren Dokumenten beschrieben, namentlich im: 
 - [Editionsmodell](https://hackmd.io/@DSE-AS/Editionsmodell) (Codierung in TEI/XML) 
 - [Registermodell](https://hackmd.io/@DSE-AS/SyjEFFl9yg) (Erarbeitung der Register und Register-Einzelseiten, div. tools)
 - [Transkribus-Dokumentation](https://hackmd.io/@DSE-AS/Transkribus_Dokumentation) (Erarbeitung der Transkriptionen, Transkriptionsregeln)
-- [Oxygen-Dokumentatio](https://hackmd.io/@DSE-AS/H1aXACCi1g) (Erarbeitung der codierten Daten, Codierungsregeln) - noch am Anfang des Entstehens
+- [Oxygen-Dokumentation](https://hackmd.io/@DSE-AS/H1aXACCi1g) (Erarbeitung der codierten Daten, Codierungsregeln) - noch am Anfang des Entstehens
 
 Mögliche Tools zur Erweiterung dieses Dokumentes (z.B. für erste wireframes): 
 - https://asciiflow.com
@@ -47,7 +47,7 @@ Für die wissenschftliche Forschung gilt grundsätzlich:
     - Ev. Verknüpfung mit Archäologie-Datenbanken?
 - Linguistik: 
     - Medienlinguistik: Ähnliche Interessen wie die Print-Medien-Forschung. 
-    - Korpuslinguistik (Gender, Sprachwandel, Pragmatik etc.): Interesse an 'rohen Texten' (ohne TEI/XML-Annotationen), verarbeiten m.W. Text selber weiter (keine bestimmte Ausgabemöglichkeiten nötig).  
+    - Korpuslinguistik (Gender, Sprachwandel, Pragmatik etc.): Interesse an 'rohen Texten' (ohne TEI/XML-Annotationen), verarbeiten m.W. Text selber weiter (keine bestimmte Ausgabemöglichkeiten nötig). 
 - Archive: 
     - Abgleich mit eigenem Material, schnelle Auffindbarkeit der Originaldokumente in ihren Archivstandorten (direkte Verlinkung mit Findmitteln - nice to have?). 
     - Ev. ähnliche Funktionen wie sie für das Becher-Portal entwickelt werden?
@@ -74,7 +74,7 @@ Dies betrifft potentiell alle oben aufgeführten Nutzendengruppen.
 
 ### 1.2 Zeitliche, personelle und finanzielle Ressourcen
 
-Bis 2028 werden im Rahmen des SNF-Projektes die Kleinen Formen und Briefe ediert und mithilfe des DSL das Interface (weiter-)entwickelt. Erste Ergebnisse/Überlegungen zum Interface sollen am 5. September 2025 dem editorischen Beirat gezeigt werden. Erste Publikationen in der DSE im Verlaufe von 2026 wären ideal.  
+Bis 2028 werden im Rahmen des SNF-Projektes die Kleinen Formen und Briefe ediert und mithilfe des DSL das Interface (weiter-)entwickelt. Erste Ergebnisse/Überlegungen zum Interface sollen am 5. September 2025 dem editorischen Beirat gezeigt werden. Erste Publikationen in der DSE im Verlaufe von 2026 wären ideal. 
 
 Angesichts der Ressourcen (bislang keine externe Webdesign-Expert:innen vorgesehen) ist das Hauptziel bis 2028 ein funktionales Interface ohne letzten Feinschliff. Im Zug der Komplettierung der DSE um die Grossen Formen 2028-2030 (digitale Gesamtausgabe), für die laufend Gelder akquiriert werden, sollen weitere Ressourcen zur Verbesserung des Interfaces eingesetzt werden. 
     - Idealerweise geschieht die Verfeinerung des Interfaces von 2028-2030 im Hinblick und Zuschnitt auf auf eine größere, von der SAGW (teil-)finanzierte DSE-Plattform (Schweizer Literatur der Ränder: Schwarzenbach, Ceresa, Becher, ev. Spiry oder andere ZB-Bestände). 
@@ -100,6 +100,7 @@ Handreichungen mit wichtigen Punkten für die Barrierefreiheit von DSE hat das Z
 
 
 ## 2. Präsentation des Edendums
+Hier geht es nicht um inhaltliche Aspekte, sondern das angestrebte 'look and feel'
 
 ### 2.1 Darstellungsmodi nach Dokumenttyp
 
@@ -191,3 +192,4 @@ Div. Werkzeuge zu textgenetischen Vergleichen werden vermutlich im Zusammenhang 
 ### 4.4 Text to speech
 
 ### 4.4 DSE-AS-AI ('Frag die Edition')
+*evtl. eher ein Thema für einen Folgeantrag (projektübergreifend)*

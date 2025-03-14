@@ -316,7 +316,8 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 
 - Briefkopf (`<opener>, <dateline>, <place>`, `<salute>`)  
     
-  - `<salute>` kann auch inline in `<p>` verwendet werden (semantische verwendung, kein Absatz)
+  - Wen `<salute>` inline verwendet wird: 
+   `<seg type="salute">` (semantische verwendung, kein Absatz)
 
 - `<dateline>` kann auch ausserhalb des `<closer>` verwendet werden, wenn Briefe über mehrere Tage hinweg geschrieben sind
 
@@ -373,29 +374,28 @@ Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
 - Haupttitel: `<head>Überschrift des Artikels</head>`,   
 - `<byline>Von Autorname</byline>`,   
 - `<dateline>Ort,Datum</dateline>`  
-- Falls byline/dateline in derselben Zeile: 
-- - `<byline type="inline">Von Autorname</byline>`,   
-- `<dateline type="inline">Ort,Datum</dateline>
+- Falls byline/dateline in Zeile des Haupttextes: 
+    - `<seg type="byline">Von Autorname</seg>`,   
+    - `<seg type="byline">Ort,Datum</seg>`
 - Hauptteil/Absätze (`<div>`, `<p>`)
    
 - Absatzüberschriften
-    -> Hier haben wir noch keine definitive Lösung
-    DTA schlägt die Verwendung von verschiedenen Ebenen in `div`vor (siehe https://www.deutschestextarchiv.de/doku/basisformat/div.html?hl=%C3%BCberschrift, mit dem Unterschied, dass wir nicht nur verschachtelte, sondern auch serielle Folgen von Überschriften benötigen): 
+    DTA schlägt die Verwendung von verschiedenen Ebenen in `div`vor (siehe https://www.deutschestextarchiv.de/doku/basisformat/div.html?hl=%C3%BCberschrift, mit dem Unterschied, dass wir nicht nur verschachtelte, sondern auch serielle Folgen von Überschriften benötigen). Wir verwenden für jeden Zwischentitel ein neues `<div>`, nummerieren sie jedoch nicht.
+    
 ```xml=
 <div type="smallform">
 <head>Überschrift des Artikels</head>`
 <byline>Von Autorname</byline>`,   
 <dateline>Ort,Datum</dateline>`
-<div type="main">
-    <div n="1">
+<div> 
     <head>[Titel Kapitel 1]</head><!-- sofern vorhanden -->
-        <div n="1.1">
+        <div>
         <head>[Titel Unterkapitel 1.1]</head><!-- sofern vorhanden -->
         <p>[Text]</p>
         <p>[Text]</p>
     </div>
     </div>
-    <div n="2">
+    <div>
     <head>[Titel Unterkapitel 2]</head><!-- sofern vorhanden -->
     ...
 </div>
@@ -406,17 +406,20 @@ Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
   
 - Spalten:  
     
-  - Beginn des Spaltensatzes: `<cb type="start"/>`,  
-  - Ende des Spaltensatzes `<cb type="end"/>`.  
+  - Start des Spaltensatzes: `<cb type="start"/>`  
+  - Ende des Spaltensatzes`<cb type="end"/>`
   - Spaltenumbrüche innerhalb des Spaltensatzes werden mittels des leeren `<cb>`\-Elements wiedergegeben \[siehe [https://deutschestextarchiv.de/doku/basisformat/spalte.html?hl=spalten](https://deutschestextarchiv.de/doku/basisformat/spalte.html?hl=spalten)\]  
   -  Textkasten in Bildberichten sind als Spalten zu behandeln
 
 - Bild und Bildunterschrift \[[https://deutschestextarchiv.de/doku/basisformat/abbVerschachtelt.html](https://deutschestextarchiv.de/doku/basisformat/abbVerschachtelt.html)\]:   
     
   - `<figure>`  
-    `<head>[ggf. von Herausgeber:innen verliehener Titel der Abbildung und Referenz auf Bild im Archiv]</head>`  
+    `<head resp="editor">[Von Herausgeber:innen verliehener Titel der Abbildung]</head>`  
     `<p>[Bildunterschrift von AS]</p>`  
     `</figure>`    
+    
+- Im Fall von einer korrespondierenden Fotogografie: 
+ `<head resp="editor" corresp="image_0204">` 
       
   - Bild-Koordinaten werden in Transkribus zoniert und dadurch auch über Kommentare ansteuer- bzw. referenzierbar, kann eigener Block sein.  
   - Bild in Transkribus als \\f\\  
@@ -429,7 +432,7 @@ Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
 
 
 - Redaktionelle Einleitungen/Nachbemerkungen  
-  - Z.B. `<ab type = redactional, hand = XY>` \[muss von uns definiert werden\]
+  - Z.B. `<div type = redactional, hand = XY>`
 
 ### Textstruktur Grosse Formen
 Am textlogischen Modell von Lokalbericht orientieren (Peter lädt ein paar Beispiele auf drive). Hat noch keine Priorität. 

@@ -135,6 +135,13 @@ Hier sind nur diejenigen Informationen im TEI-header aufgeführt, die als Refere
 
 ### 2.4 Intermediale Verweisen
 
+##### In Texten ohne Fotografien
+
+##### In Fotoreportagen
+- Ev. selbstgesetzter figurehead als permanenter hoover-text 
+    - Muss die Möglichkeit geben, zur Fotografie in das digitale Foto-Archiv mit einem Klick zu gelangen. 
+- Alternative, ev. sogar besser: Darstellung des figureheads und seiner Verlinkung mit dem transkribierten Text der Autorin: Ggfls. schon mit Darsellung der Fotografie aus dem Foto-Archiv.
+
 ### 2.5 Zitierhinweis Einzeldokument
 
 ### 2.6 Downloadoptionen Einzeldokument

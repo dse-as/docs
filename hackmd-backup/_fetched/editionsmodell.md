@@ -305,14 +305,14 @@ Die Anwendung des Transkribus-Taggings wird in der Transkribus-Dokumentation gen
 
 ### Textstruktur Briefe
 
-Generelle Frage: Wieviele Divs (die oxygen transformation kommt ohne divs)? In Abstimmung mit small forms. Unterscheidung zwischen Brief und Postkarte im Div?
-(anstelle div type="main" div type="letter"/div type="postcard")
+
+
 Struktur:
-`<div type="letterhead"`> vordegrucktes Briefpapier
-`<div type=postcardBack>` Postkarten-Aufdruck 
-``<div type="letter/postcard"``> Alles inkl. Postscript
+Letter-Wrapper, wird automatisch in der Konversion erzeugt: 
+`<div type="letterhead"`> vordegrucktes Briefpapier`<div type="letter"`
 `<div type="back"` Adresse, Poststempel. Was, wenn auch Couvert vorgedruckt ist?
 `<div type="attached">` Anhänge aller Art
+--> -alle Divs auf einer Ebene, wenn möglich keine verschachtelten Divs
 
 - Briefkopf (`<opener>, <dateline>, <place>`, `<salute>`)  
     
@@ -366,21 +366,23 @@ Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
 
 ### Textstruktur Kleine Formen
 
-- Artikel-Wrapper: `<div type="jArticle">`
-    - Ein `<div>`-Tag scheint notwendig, um `<head>` (Titel, s.u.) zu setzen (https://www.tei-c.org/release/doc/tei-p5-doc/de/html/ref-head.html)
-    - Könnte auch noch genauer bezeichnet werden, ich würde das jedoch eher im TEI-Header machen
-- Titel: `<head>Überschrift des Artikels</head>`,   
+- Smallform-Wrapper (analog zu `<div type="letter"`): `<div type="smallform">`
+    - Dieser `<div>`-Tag ist notwendig, um `<head>` (Titel, s.u.) zu setzen (https://www.tei-c.org/release/doc/tei-p5-doc/de/html/ref-head.html)
+    - Der genaue Dokumenttyp (Feuilleton, Manuskript etc.) wird im TEI-Header festgehalten
+   
+- Haupttitel: `<head>Überschrift des Artikels</head>`,   
 - `<byline>Von Autorname</byline>`,   
 - `<dateline>Ort,Datum</dateline>`  
-  \-\> EZ: Unklar, ob bei Autor:innen-Nennungen auf der ersten Zeile des eigentlichen Fliesstexts auch eine byline gesetzt werden soll. Problem: Im Author-Mode entsteht so eine neue Zeile, wo keine ist.
-
-- Hauptteil/Absätze (`<div type="main">`, `<p>`)
+- Falls byline/dateline in derselben Zeile: 
+- - `<byline type="inline">Von Autorname</byline>`,   
+- `<dateline type="inline">Ort,Datum</dateline>
+- Hauptteil/Absätze (`<div>`, `<p>`)
    
 - Absatzüberschriften
     -> Hier haben wir noch keine definitive Lösung
     DTA schlägt die Verwendung von verschiedenen Ebenen in `div`vor (siehe https://www.deutschestextarchiv.de/doku/basisformat/div.html?hl=%C3%BCberschrift, mit dem Unterschied, dass wir nicht nur verschachtelte, sondern auch serielle Folgen von Überschriften benötigen): 
 ```xml=
-<div type="jArticle">
+<div type="smallform">
 <head>Überschrift des Artikels</head>`
 <byline>Von Autorname</byline>`,   
 <dateline>Ort,Datum</dateline>`

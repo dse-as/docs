@@ -284,7 +284,9 @@ anchor: https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-anchor.html
 - AS wird nicht referenziert. Oder? EZ: Ja, scheint mir in den Briefen und auch den Kleinen Formen überflüssig, da ja sonst ‘all over the place’. 
 - In Kommentaren wird im Falle von AS von ‘Schwarzenbach’ geschrieben, weitere Familienmitglieder mit Vornamen ausgeführt. 
 - Kommentare werden mit einem Punkt abgeschlossen.
-- Innerhalb der Kommentare soll kein rendering (z.B. kursiv) stattfinden
+- Innerhalb der Kommentare soll kein rendering (z.B. kursiv) stattfinden.
+- Sacherklärungen: können frei formuliert werden
+- Worterklärungen: ? Ev.: das zu erklärende Wort wird am Anfang der Note genau wiedergegeben, wie es im Text steht, gefolgt von : oder ] 
 
 ### Kommentar/Fussnote in der Quelle
 

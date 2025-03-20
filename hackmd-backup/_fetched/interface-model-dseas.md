@@ -99,10 +99,11 @@ Zur Frage der Accessibility für Menschen mit Einschränkungen/besonderen Bedüf
 Handreichungen mit wichtigen Punkten für die Barrierefreiheit von DSE hat das ZDE erarbeitet: https://www.zde.uzh.ch/dam/jcr:c09a0418-1013-418e-bb06-3b960ecc468d/2024_UB_ZDE_KeyVisual_Handreich_A5_barrierefrei_digital.pdf
 
 
-## 2. Präsentation des Edendums
+## 2. Präsentation der Edendum-Seite
 Hier geht es nicht um inhaltliche Aspekte, sondern das angestrebte 'look and feel'. 
+Der Aufbau bzw. Inhalt der Register wird unten (siehe [3.3](#33-Register-und-Registereinträge)) beschrieben, die Anforderungen an die Register sind in einem anderen hackmd-Dokument (https://hackmd.io/@DSE-AS/SyjEFFl9yg) gesammelt. Hier geht es u.a. um die Darstellung der Referenzierungen, welche in die Register führen. 
 
-**a. Anforderungen in der Präsentation des Edendums** 
+### 2.1 Anforderungen an die Präsentation des Edendums
 
 - Modularität der Darstellungsweise = freie Wahl der drei Darstellungsformen: 
     - Digitalisat + diplomatische Transkription (zeilengenau) + Lesefassung
@@ -110,29 +111,54 @@ Hier geht es nicht um inhaltliche Aspekte, sondern das angestrebte 'look and fee
 - Konkordanz/Highlighting der Zeile im Digitalisat und der Zeile in der diplomatischen Transkription (Vorbild: Escher-Briefedition).
     - Idealerweise auch ausschaltbar
     - Im Falle der Fotografien auch Konkordanzen von Regionen (s.u.) 
-- Referenzierungen im Edendum: 
+- **Referenzierungen** im Edendum: 
     - Sowohl in der diplomaptischen Transkription als auch in der Lesefassung default eingeblendet
     - Highlighting durch Hintergrundfarbe 
     - Popup beim Klicken auf den unterlegten Text (kein Hoovertext oder dann 'statischen Hoovertext', der aktiv weggeklickt werden muss)
     - Auf Wunsch ausblendbar
-- Stellenkommentare im Edendum
+- **Stellenkommentare** im Edendum
     - Sowohl in der diplomaptischen Transkription als auch in der Lesefassung default eingeblendet
     - Highlighting muss klar von Referenzierungen unterscheidbar sein, ggfls. weniger aufdringlich, da längere Passagen kommentiert werden können.
     - Beim Klicken auf das Highlighting kein Popup sondern Einblendung der Kommentarlaufleiste (s.u.) mit Hervorhebung des relevanten Kommentars 
 
-**b. Anforderungen in der Präsentation von Metadaten/Kommentare und Referenzierungen als Paratexte**
 
-Der Ort, wo und wie bestimmte Paratexte stehen, kann ggfls. nach Dokumenttyp variieren (s.u.). 
+### 2.2 Anforderungen an Präsentation der Paratexte (Metadaten, Kommentare und Referenzierungen)
 
+Der Ort, wo und wie bestimmte Paratexte stehen, kann ggfls. nach Dokumenttyp variieren (s.u., [2.3](#23-Darstellungsmodi-nach-Dokumenttyp)). 
+
+#### Metadaten
 - Einheitliche Darstellung der Metadaten über oder neben dem Edendum, ggfls. ausklappbar. 
-- Übersichtskommentare sollten unter den Metadaten eingeblendet werden, ggfls ab einer gewissen Länge ausklappbar
-- Stellenkommentare als Laufleiste neben dem Edendum (keine Hoover-Texte/Popups)
+- Metadaten: Hier sind nur diejenigen Informationen im TEI-header aufgeführt, die als Referenz in die Register oder aus der Edition herausführen. Im Normalfall sind dies auch Informationen, die im Interface ersichtlich werden müssen. 
+- **Gemeinsame Metadaten alle Dokumenttypen**
+    - Schlagworte
+    - Reise/Ereignis
+    - Ggfls. Zentraler Ort, um den sich der Text dreht (auch für Kleine Formen, falls bekannt!) (ist nicht immer identisch mit Abesendeort!)
+    - Archiverungsort (Verlinkung mit Findmitteln oder Digitalisaten, falls möglich)
+    - Download-Links (TEI, Bild, ggfls. andere Formate)
+    - IIIF-Manifest des Digitalisats
+    - (Perma-)link des Digitalisats (falls nicht schon von Archivierungsort als Digitalisat z.V.g., s.o.); e-manuscripta, e-periodica, e-newpsaperarchive (u.ev.a.)
+- **Metadaten der Briefe**
+    - Absende- und Empfangsort
+    - Absender:in und Empfänger:in
+- **Metadaten der Kleinen Formen**
+    - Publikationsmedium und Quellennachweis
+    - Verweis auf Vorstufen oder Publikationen des Dokuments
+
+#### Kommentare
+- **Übersichtskommentare** sollten unter den Metadaten eingeblendet werden, ggfls ab einer gewissen Länge ausklappbar
+- **Stellenkommentare** als Laufleiste neben dem Edendum (keine Hoover-Texte/Popups)
     - Vorbild: Microsoft Word, Kommentarmodus (dort zwei Darstellungmöglichkeiten: Liste oder Kontextbezogen - ev. liesse sich ein Kompromiss zwischne diesen Formen finden, z.B. eine scrollbare Liste, die sich auf knopfdruck wieder zurück zu den Kontexten ordnet?)
-- Übersicht über alle referenzierten Entitäten neben oder unter dem Edendum
-    - Idealerweise können referenzierte Orte in einer vergrösserbaren Karte neben oder unter dem Edendum eingeblendet werden. Das würde die räumliche Orientierung der oftmals sehr umfangreichen geographischen Nennungen im Text sehr erleichtern!
+
+#### Entitäten
+- Zu den Werk-Entitäten gehören neben Werken Dritter auch edierte Dokumente von AS (Briefe, Kleine und Lange Formen, Fotografien). 
+- **Übersichtsliste aller referenzierten Entitäten** neben oder unter dem Edendum
+    - Die Liste ist nach 5 Entitätsarten-Reiter gegliedert, die per default eingeklappt sind: Personen, Orte, Institutionen, Werke Dritter, Dokumente von Annemarie Schwarzenbach 
+    - Neben jeder aufgelisteten Entität befindet sich ein klickbarer Pfeil zum Registereintrag.
+    - Beim Klick _auf_ den Entitätslisteneintrag neben dem Edendum werden alle Vorkommnisse der Entitäten in der Transkription ausgeklappt; bei Klick auf eine Entität in dieser Unterliste wird die Textstelle angesteuert. Die Übersichtsliste sollte sichtbar bleiben, um sich durch die Vorkommnisse einer Entität 'hindurchklicken' zu können.  
+    - Idealerweise können referenzierte Orte in einer vergrösserbaren Karte neben oder unter dem Edendum eingeblendet werden. Das würde die räumliche Orientierung der oftmals sehr umfangreichen geographischen Nennungen im Text sehr erleichtern. 
 
 
-### 2.1 Darstellungsmodi nach Dokumenttyp
+### 2.3 Darstellungsmodi nach Dokumenttyp
 
 #### a. Typo- oder Manuskript
 In der Regel wird das Digitalisat gleich gross wie die Transkriptionen eingeblendet.
@@ -150,30 +176,14 @@ Fotoreportagen sind oftmals komplex aufgebaut; sie sollten zunächst immer ganz 
     - Wahrscheinlich die schwierigste und fehleranfälligste Darstellungsweise, aber reizvoll. 
 - Überblendung des Digitalisats mit Transkriptionen auf Wunsch
     - Auch das sehr komplex, könnte Lesbarkeit einschränken. Ist nur im Falle der diplomatischen Transkription sinnvoll. 
-
+- Einzelne Fotografien in Illustrierten sollten möglichst zusammen mit dem Kontext dargestellt werden, in dem sie verwendet wurden, d.h. wenn möglich die ganze Seite wie im Falle der Fotoreportage. Da wenig Text eingeblendet werden muss (in der Regel eine Bildunterschrift), ist dessen Anordnung zweitrangig. 
 
 #### d. Fotografie
 
-### 2.2 Referenzen
-
-Der Aufbau bzw. Inhalt der Register selbst wird unten beschrieben, die Anforderungen an die Register sind in einem anderen hackmd-Dokument (https://hackmd.io/@DSE-AS/SyjEFFl9yg) gesammelt. Hier geht es um die Darstellung der Referenzierungen, welche in die Register führen. 
-
-#### a. Ebene Einzeldokument = TEI-header
-
-Hier sind nur diejenigen Informationen im TEI-header aufgeführt, die als Referenz in die Register oder aus der Edition herausführen. Im Normalfall sind dies auch Informationen, die im Interface ersichtlich werden müssen. 
-
-**Alle Dokumenttypen**
-- Schlagworte
-- Schreibort (auch für Kleine Formen, falls bekannt!) (ist nicht Abesendeort!)
-- Archiverungsort (Verlinkung mit Findmitteln oder Digitalisaten, falls möglich)
-- IIIF-Manifest des Digitalisats
-- (Perma-)link des Digitalisats (falls nicht schon von Archivierungsort als Digitalisat z.V.g., s.o.); e-manuscripta, e-periodica, e-newpsaperarchive (u.ev.a.)
+Für die Darstellung der im Archiv vorliegenden Fotografien bzw. negative ist neben der Einblendung der 
 
 
-**Kleine Formen**
-- 
 
-### 2.3 Kommentare
 
 ### 2.4 Intermediale Verweisen
 

@@ -100,15 +100,57 @@ Handreichungen mit wichtigen Punkten für die Barrierefreiheit von DSE hat das Z
 
 
 ## 2. Präsentation des Edendums
-Hier geht es nicht um inhaltliche Aspekte, sondern das angestrebte 'look and feel'
+Hier geht es nicht um inhaltliche Aspekte, sondern das angestrebte 'look and feel'. 
+
+**a. Anforderungen in der Präsentation des Edendums** 
+
+- Modularität der Darstellungsweise = freie Wahl der drei Darstellungsformen: 
+    - Digitalisat + diplomatische Transkription (zeilengenau) + Lesefassung
+    -> Jedes einzeln oder frei kombinierbar
+- Konkordanz/Highlighting der Zeile im Digitalisat und der Zeile in der diplomatischen Transkription (Vorbild: Escher-Briefedition).
+    - Idealerweise auch ausschaltbar
+    - Im Falle der Fotografien auch Konkordanzen von Regionen (s.u.) 
+- Referenzierungen im Edendum: 
+    - Sowohl in der diplomaptischen Transkription als auch in der Lesefassung default eingeblendet
+    - Highlighting durch Hintergrundfarbe 
+    - Popup beim Klicken auf den unterlegten Text (kein Hoovertext oder dann 'statischen Hoovertext', der aktiv weggeklickt werden muss)
+    - Auf Wunsch ausblendbar
+- Stellenkommentare im Edendum
+    - Sowohl in der diplomaptischen Transkription als auch in der Lesefassung default eingeblendet
+    - Highlighting muss klar von Referenzierungen unterscheidbar sein, ggfls. weniger aufdringlich, da längere Passagen kommentiert werden können.
+    - Beim Klicken auf das Highlighting kein Popup sondern Einblendung der Kommentarlaufleiste (s.u.) mit Hervorhebung des relevanten Kommentars 
+
+**b. Anforderungen in der Präsentation von Metadaten/Kommentare und Referenzierungen als Paratexte**
+
+Der Ort, wo und wie bestimmte Paratexte stehen, kann ggfls. nach Dokumenttyp variieren (s.u.). 
+
+- Einheitliche Darstellung der Metadaten über oder neben dem Edendum, ggfls. ausklappbar. 
+- Übersichtskommentare sollten unter den Metadaten eingeblendet werden, ggfls ab einer gewissen Länge ausklappbar
+- Stellenkommentare als Laufleiste neben dem Edendum (keine Hoover-Texte/Popups)
+    - Vorbild: Microsoft Word, Kommentarmodus (dort zwei Darstellungmöglichkeiten: Liste oder Kontextbezogen - ev. liesse sich ein Kompromiss zwischne diesen Formen finden, z.B. eine scrollbare Liste, die sich auf knopfdruck wieder zurück zu den Kontexten ordnet?)
+- Übersicht über alle referenzierten Entitäten neben oder unter dem Edendum
+    - Idealerweise können referenzierte Orte in einer vergrösserbaren Karte neben oder unter dem Edendum eingeblendet werden. Das würde die räumliche Orientierung der oftmals sehr umfangreichen geographischen Nennungen im Text sehr erleichtern!
+
 
 ### 2.1 Darstellungsmodi nach Dokumenttyp
 
 #### a. Typo- oder Manuskript
+In der Regel wird das Digitalisat gleich gross wie die Transkriptionen eingeblendet.
 
 #### b. Zeitung / Zeitschrift
+In der Regel sollte per default auf den transkribierten Bereich gezoomt werden. Zeitungsseiten können sehr gross sein und der relevante Bereich nimmt z.T. nur inen Viertel oder Fünftel davon ein.
 
 #### c. Fotoreportage / Einzelbild(er) in Illustrierter
+Fotoreportagen sind oftmals komplex aufgebaut; sie sollten zunächst immer ganz eingeblendet sein und je nach Bildschirmgrösse mehr Raum einnehmen als die Transkriptionen, zumal der gedruckte Text oft sehr gut leserlich ist (keine Fraktur). Wie die Transkriptionen eingeblendet werden, muss noch festgelegt werden, ggfls. ist es sinnvoll, mehrere Optionen auszuprobieren und den Nutzenden je nach usecase zur Verfügung zu stellen. 
+- Einblendung der Transkription in einer Laufleiste, vergleichbar mit Kommentaren (dann hätten wir zwei Laufleisten, eine mit Transkriptionen und eine mit Stellenkommentaren)
+- Einblendung der Transkription je nach Seitenbreite: 
+    - Bei Centerfolds unter den Seiten
+    - Bei Hochformat auf der Seite
+- Einblendungen der Transkriptionen um das Digitalisat herum, abhängig von der Nähe zur transkribierten Textregion
+    - Wahrscheinlich die schwierigste und fehleranfälligste Darstellungsweise, aber reizvoll. 
+- Überblendung des Digitalisats mit Transkriptionen auf Wunsch
+    - Auch das sehr komplex, könnte Lesbarkeit einschränken. Ist nur im Falle der diplomatischen Transkription sinnvoll. 
+
 
 #### d. Fotografie
 

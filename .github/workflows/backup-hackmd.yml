@@ -24,7 +24,7 @@ jobs:
     - run: curl -L https://hackmd.io/@DSE-AS/Transkribus_Dokumentation/edit > hackmd-backup/_fetched/transkribus-dokumentation.html
     - run: curl -L https://hackmd.io/@DSE-AS/ryMYDZtnA > hackmd-backup/_fetched/interface-model-dseas.html
     - run: curl -L https://hackmd.io/@DSE-AS/SyjEFFl9yg > hackmd-backup/_fetched/register-model-dseas.html
-    - run: curl -L https://hackmd.io/@DSE-AS/H1aXACCi1g > hackmd-backup/_fetched/oxygen-docu.html
+    - run: curl -L https://hackmd.io/@DSE-AS/H1aXACCi1g/edit > hackmd-backup/_fetched/oxygen-docu.html
     - run: |
         for f in hackmd-backup/_fetched/*.html; do
           java -jar hackmd-backup/tagsoup.jar "$f" > "${f%.*}.xhtml";  

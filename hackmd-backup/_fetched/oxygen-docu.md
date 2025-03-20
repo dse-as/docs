@@ -4,14 +4,30 @@
 
 ## 0. Vorbildhafte TEI-Dokumente des Projektes
 
-Neben der Schritt-für-Schritt Anleitung in diesem Dokument bieten wir für jede Textform exemplarische TEI-Dokumente im WebDAV (zu diesem siehe [unten](#1-Verwendung-von-WebDAV) an, an denen sich die Editor:innen orientieren können (und denen wird die Code-Beispiele entnommen haben). Die Dokumente haben wir zusätzlich durch XML-Kommentare angereichert. Sie können bei Unklarheiten durch die [Oxygen-Kommentarfunktion](#Korrekturlesen-Autor-Editor) mit Rückfragen angereichert werden. 
+Neben der Schritt-für-Schritt Anleitung in diesem Dokument bieten wir für jede Textform exemplarische TEI-Dokumente im WebDAV (zu diesem siehe [unten](#1-Verwendung-von-WebDAV) an, an denen sich die Editor:innen hinsichtlich TEI-Header (soweit er manuell zu vervollständigen ist), Dokument-Struktur, Referenzierungen und Kommentierung orientieren können (und denen wird die Code-Beispiele entnommen haben). 
+
+Die Dokumente haben wir zusätzlich durch XML-Kommentare angereichert. Sie können bei Unklarheiten durch die [Oxygen-Kommentarfunktion](#Korrekturlesen-Autor-Editor) von Euch mit Rückfragen angereichert werden. 
 
 ### 0.1 Kleine Formen
-- Typoskript: 
-- Feuilleton (mit Spalten): 
-- Rezension (mit Spalten): 
-- Fotoreportage (mit Spalten): 
-- Fotografie in Illustrierter: 
+
+- **(Reise-)Feuilleton mit Zwischentitel**: _BEI STUDENTEN IN VIER LÄNDERN_ = smallform_0226
+    - Spalten 
+    - viele Ortreferenzen
+- **(Reise-)Feuilleton mit Untertitel**: _Baltisches Tagebuch I: Kaunas, die Hauptstadt einer „ersten Generation"._ = smallform_0227
+    - Spezialfall: Redaktioneller Text zwischen Titel und Untertitel
+- **Rezension**: 
+    - Spalten 
+    - viele Werk-Referenzen
+- **Fotoreportage**
+    -  Textblöcke = Spalten
+    -  Fotografien (mit Referenzierung auf Fotografien im Archiv)  
+    -  Bildunterschriften 
+- **Fotografie in Illustrierter**: 
+    - Spezialfall einer einzelnen Aufnahme
+- **Typoskript** : _Ruth_ = smallform_0607 
+    - enthält Prosa und Verse
+    - Zur Zeit (März 25) noch vernachlässigbar
+    -> Kleine Formen-Typoskripte werden voraussichtlich ab Sommer 25 in grösserer Zahl vorliegen 
 
 ### 0.2 Briefe 
 - Brief mit Umschlag: 
@@ -20,7 +36,10 @@ Neben der Schritt-für-Schritt Anleitung in diesem Dokument bieten wir für jede
 
 ## 1. Verwendung von WebDAV
 
+Neue Dokumente
+
 ### 1.1 Ordnerstruktur
+
 
 ### 1.2 Bearbeitungsregeln: Sperren von Dokumenten
 

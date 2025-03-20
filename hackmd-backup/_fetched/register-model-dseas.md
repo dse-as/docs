@@ -1,9 +1,10 @@
 # Register-Modell DSE AS
 
-Grundsätzliche Fragen: 
-- Lassen sich auf Geovistory halbautomatisiert Normdatenbanken abfragen?
-    - So wie es Anton kann?
-    - Metagrid?
+
+[toc]
+
+## Grundsätzliche Fragen 
+
 - Welche der unten angegebenen Ressourcen sind nötig/nice to have?
 
 
@@ -56,6 +57,11 @@ Orttypen:
 **Angaben**
 - Gründuungs- /Auflösungsjahr
 - Generelle Infos u. ev. Infos im Zusammenhang mit AS
+
+## Reisen/Ereignisse
+
+Werden im Projekt definiert und als XML erstellt auf Grundlage von Spalte C dieses Google-Sheets: https://docs.google.com/spreadsheets/d/1YhDLYxqzDs-s50DYhEx2zB9W9z-_H7ZJC7rO06izHRY/edit?usp=sharing
+
 
 
 

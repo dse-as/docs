@@ -124,7 +124,7 @@ Der Aufbau bzw. Inhalt der Register wird unten (siehe [3.3](#33-Register-und-Reg
 
 ### 2.2 Anforderungen an Präsentation der Paratexte (Metadaten, Kommentare und Referenzierungen)
 
-Der Ort, wo und wie bestimmte Paratexte stehen, kann ggfls. nach Dokumenttyp variieren (s.u., [2.3](#23-Darstellungsmodi-nach-Dokumenttyp)). 
+Der Platz, wo und wie bestimmte Paratexte stehen, kann ggfls. nach Dokumenttyp variieren (s.u., [2.3](#23-Darstellungsmodi-nach-Dokumenttyp)). 
 
 #### Metadaten
 - Einheitliche Darstellung der Metadaten über oder neben dem Edendum, ggfls. ausklappbar. 
@@ -132,7 +132,8 @@ Der Ort, wo und wie bestimmte Paratexte stehen, kann ggfls. nach Dokumenttyp var
 - **Gemeinsame Metadaten alle Dokumenttypen**
     - Schlagworte
     - Reise/Ereignis
-    - Ggfls. Zentraler Ort, um den sich der Text dreht (auch für Kleine Formen, falls bekannt!) (ist nicht immer identisch mit Abesendeort!)
+    - Ggfls. 'Hauptort', um den sich der Text dreht (ist im Falle der Briefe nicht zwingend identisch mit Abesendeort)
+        - Hinter diesen Orten müsste nicht ein distinkter Registereintrag stehen, der sich von den ‘normalen’ Ortsreferenzen unterscheidet. Es wäre aber gut, wenn die Dokumente, die diese ‘Hauptorte’ im TEI-Header führen im Ortsregister besonders hervorgehoben werden und in einer geographischen Karte einen spezifischen Status gegenüber den üblichen Orts-Referenzen erhalten.
     - Archiverungsort (Verlinkung mit Findmitteln oder Digitalisaten, falls möglich)
     - Download-Links (TEI, Bild, ggfls. andere Formate)
     - IIIF-Manifest des Digitalisats

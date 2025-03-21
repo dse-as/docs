@@ -4,28 +4,31 @@
 
 ## 0. Vorbildhafte TEI-Dokumente des Projektes
 
-Neben der Schritt-für-Schritt Anleitung in diesem Dokument bieten wir für jede Textform exemplarische TEI-Dokumente im WebDAV (zu diesem siehe [unten](#1-Verwendung-von-WebDAV) an, an denen sich die Editor:innen hinsichtlich TEI-Header (soweit er manuell zu vervollständigen ist), Dokument-Struktur, Referenzierungen und Kommentierung orientieren können (und denen wird die Code-Beispiele entnommen haben). 
+Neben der Schritt-für-Schritt Anleitung in diesem Dokument bieten wir für jede Textform exemplarische TEI-Dokumente im WebDAV (zur Verwendung des WebDAV siehe [unten](#1-Verwendung-von-WebDAV)). An diesen Dokumenten können sich die Editor:innen hinsichtlich TEI-Header (soweit er manuell zu vervollständigen ist), Dokument-Struktur, Referenzierungen und Kommentierung orientieren. Ihnen sind auch Code-Beispiele für die Dokumentation entnommen. 
 
 Die Dokumente haben wir zusätzlich durch XML-Kommentare angereichert. Sie können bei Unklarheiten durch die [Oxygen-Kommentarfunktion](#Korrekturlesen-Autor-Editor) von Euch mit Rückfragen angereichert werden. 
 
 ### 0.1 Kleine Formen
 
-- **(Reise-)Feuilleton mit Zwischentitel**: _BEI STUDENTEN IN VIER LÄNDERN_ = smallform_0226
+- **Zeitungsartikel mit Zwischentitel**: _BEI STUDENTEN IN VIER LÄNDERN_ = smallform_0226
     - Spalten 
     - viele Ortreferenzen
+    - historisch-politische Kommentierung
 - **(Reise-)Feuilleton mit Untertitel**: _Baltisches Tagebuch I: Kaunas, die Hauptstadt einer „ersten Generation"._ = smallform_0227
     - Spezialfall: Redaktioneller Text zwischen Titel und Untertitel
-- **Rezension**: 
+- **Rezension**: _ 
     - Spalten 
     - viele Werk-Referenzen
-- **Fotoreportage**
+    - Kommentierung von Intertextualität
+- **Fotoreportage**: _Studenten - in drei Ländern_ = smallform_0270
     -  Textblöcke = Spalten
     -  Fotografien (mit Referenzierung auf Fotografien im Archiv)  
     -  Bildunterschriften 
+    -  Kommentierung Intermedialität
 - **Fotografie in Illustrierter**: 
     - Spezialfall einer einzelnen Aufnahme
 - **Typoskript** : _Ruth_ = smallform_0607 
-    - enthält Prosa und Verse
+    - Spezialfall: enthält Prosa und Verse
     - Zur Zeit (März 25) noch vernachlässigbar
     -> Kleine Formen-Typoskripte werden voraussichtlich ab Sommer 25 in grösserer Zahl vorliegen 
 

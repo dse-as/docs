@@ -208,15 +208,24 @@ Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben
 
 ### Normalisierungen
 
+#### Satzzeichen 
+
 - Horizontale Striche (Gedankenstriche, Spiegelstriche, Striche in Tabellen, von-bis-Striche) werden unabhängig von der Länge im Original als Halbgeviertstriche wiedergegeben (Unicode: U+2013)  
-- Anführungszeichen, die nicht als Zitat sowieso durch Codierung ersetzt werden, werden normalisiert zu "..." (hochgestellt 'englisch').
+-  Leerschlag vor Gedankenstrichen, wenn kein Leerschlag ist (im Typoskript kommt das sehr häufig vor: fehlende oder überflüssige Leerschläge werden stillschweigend normalisiert.  
+- Doppelte Anführungszeichen, die nicht als Zitat sowieso durch Codierung ersetzt werden, werden normalisiert zu "..." (hochgestellt 'englisch').
+- Einfache Anführungszeichen werden zu Apostrophen normalisiert '...'. 
+- Zitate im Zitat, die doppelte Anführungszeichen verwenden, werden stillschweigend zu einfachen Anführungszeichen normalisiert. 
+
+#### Buchstaben
 - Die handschriftlichen Anfangsbuchstaben eines Wortes sind oft sowohl von der Grösse als auch der Form her nicht eindeutig als Gross- oder Kleinbuchstaben zu identifizieren. Im Zweifelsfall wird nach den grammatikalischen Regeln entscheiden.
-  → Leerschlag vor Gedankenstrichen, wenn kein Leerschlag ist (im Typoskript kommt das sehr häufig vor)?  
-- Offensichtliche Druckfehler werden stillschweigend korrigiert (alle anderen belassen und taggen mit orig/reg/corr - [sic] automatisch generieren)  
 - Vergessene Umlaut-Punkte werden stillschweigend normalisiert.   
-- EZ: Wird "J", wo es in Typoskripten als I verwendet wird (was regelmässig vorkommt), stillschweigend normalisiert oder nur in in der Lesefassung?  
+- Verwendung von "J" in Typoskripten, wo ein I erwartet wird wird (was regelmässig vorkommt): KEINE Normalisierung
   - Offenbar ist die Verwendung des Majuskels J für I eine verbreitete Praxis im deutschen Sprachraum bis weit ins 20. Jahrhundert, nicht nur in Typoskripten (so Wikipedia: [https://de.wikipedia.org/wiki/J](https://de.wikipedia.org/wiki/J)). Da es somit auch ein historisches Schriftbild markiert, würde ich es belassen.   
-  - Was für eine Normalisierung spricht: Der Volltextsuche entgehen - wenn der:die Suchende nicht das historische Wissen mitbringt - dadurch einige Resultate. Remedium: Man könnte die Suche ggfls. so einstellen, dass sie gegenüber der Differen I/J indifferent bleibt. Das könnte aber ggfls. die Nachnutzung der Daten erschweren (ausser natürlich die Nachnutzung zur Texterkennung, dort sollte gerade keine Normalisierung der J/I-Differenz stattfinden). 
+  - Volltextsuche des Interfaces muss so eingestellt sein, dass sie gegenüber der Differen I/J indifferent bleibt. 
+  - Die ungewohnte historisch Schreibweise könnte die Nachnutzung der Daten erschweren (ausser natürlich die Nachnutzung zur Texterkennung, dort sollte gerade keine Normalisierung der J/I-Differenz stattfinden). Deshalb sollte die Regel gut dokumentiert sien.  
+
+#### Druckfehler
+- Offensichtliche Druckfehler werden stillschweigend korrigiert (alle anderen belassen und taggen mit orig/reg/corr - [sic] automatisch generieren)  
 
 ### Registereinträge (Personen, Organisationen, Orte, Werke) 
 (framework)

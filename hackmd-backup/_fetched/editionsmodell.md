@@ -275,11 +275,17 @@ Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben
 - Offen, welche Thesauri (GND, OpenGender oder weitere) wie eingebunden werden. Möglich wäre es, mehrere Thesauri auf Geovistory zu kombinieren.  
 - Zurzeit besteht eine Schlagwortliste mit GND-ID (bzw. Link) auf Google-Drive: [https://docs.google.com/spreadsheets/d/18EHyX9-BlYbEy1KrGAlRURbvyNTiW8OSELYIdphftk4/edit?usp=sharing](https://docs.google.com/spreadsheets/d/18EHyX9-BlYbEy1KrGAlRURbvyNTiW8OSELYIdphftk4/edit?usp=sharing) 
 
-### Übersichtskommentare pro Dokument
+### Editor:innen-Kommentare
+
+Für alle Editor:innen-Kommentare (Überischtskommentare und Sachkommentare) gilt: 
+- Zitierte Werke sind kursiv und müssen als Werk-Entität getaggt werden (können aber auch nur umschrieben werden z.b. "Schwarzenbachs Saladin-Reportage" - Saladin-Reportage nicht kursiv, aber vertaggt). 
+- Alle andren Entitäten werden getaggt, aber nicht kursiviert. 
+
+#### Übersichtskommentare pro Dokument
 
 - Im TEI-header z.B. als `<global comment>`
 
-### Sachkommentare zu Wörtern oder Textabschnitten
+#### Sachkommentare zu Wörtern oder Textabschnitten
 
 - `<w>Wort<note type="annotation">Dies ist ein Sachkommentar zu diesem Wort.</note></w>.`  
     
@@ -295,7 +301,7 @@ anchor: https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-anchor.html
 - Kommentare werden mit einem Punkt abgeschlossen.
 - Innerhalb der Kommentare soll kein rendering (z.B. kursiv) stattfinden.
 - Sacherklärungen: können frei formuliert werden
-- Worterklärungen: ? Ev.: das zu erklärende Wort wird am Anfang der Note genau wiedergegeben, wie es im Text steht, gefolgt von : oder ] 
+- Worterklärungen: Das zu erklärende Wort wird am Anfang der Note genau wiedergegeben, wie es im Text steht, gefolgt von : 
 
 ### Kommentar/Fussnote in der Quelle
 

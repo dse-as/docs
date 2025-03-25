@@ -16,9 +16,9 @@ Die Dokumente haben wir zusätzlich durch XML-Kommentare angereichert. Sie könn
     - historisch-politische Kommentierung
 - **(Reise-)Feuilleton mit Untertitel**: _Baltisches Tagebuch I: Kaunas, die Hauptstadt einer „ersten Generation"._ = smallform_0227
     - Spezialfall: Redaktioneller Text zwischen Titel und Untertitel
-- **Rezension**: _ 
+- **Rezension**: _Abenteuer von Klaus Mann_ = smallform_0011  
     - Spalten 
-    - viele Werk-Referenzen
+    - Werk-Referenzen
     - Kommentierung von Intertextualität
 - **Fotoreportage**: _Studenten - in drei Ländern_ = smallform_0270
     -  Textblöcke = Spalten

@@ -32,6 +32,8 @@ Die Dokumente haben wir zusätzlich durch XML-Kommentare angereichert. Sie könn
     - Zur Zeit (März 25) noch vernachlässigbar
     -> Kleine Formen-Typoskripte werden voraussichtlich ab Sommer 25 in grösserer Zahl vorliegen 
 
+-> Wir brauchen auch noch ein Beispiel eines Textes mit Fussnoten im Original. 
+
 ### 0.2 Briefe 
 - Brief mit Umschlag: 
 - Postkarte:

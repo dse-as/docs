@@ -50,6 +50,28 @@ Neue Dokumente
 
 ## 2. TEI-Header
 
+Grundsätzlich gilt es, im Autor-Modus die Maske zu befüllen
+
+Im Falle von smallforms wird dem Header nicht automatisch ein msIdentifier hinzugegeben (weil über die Hälfte der smallforms publiziert sind und nicht aus Archiven stammen). Bei smallforms aus Archiven wird deshalb händisch folgender Code ganz zu Beginn von `<sourceDesc>` hinzugefügt (TEI verlang, dass es am Anfang steht): 
+
+```
+<sourceDesc> 
+    <msDesc> 
+       <msIdentifier> 
+          <repository/>
+           <collection/>
+           <idno/>
+        </msIdentifier>
+     </msDesc>
+
+     <!--other sourceDesc stuff goes here-->
+     
+</sourceDesc>
+```
+
+Unnötige Informationen im `<sourceDesc>`, wie etwa `<title level="j">...</title>` können gelöscht werden.Danach kann in den Autor-Modus gewechselt werden und die Archivinformationen können dort in der Maske ausgefüllt werden. 
+Eine Schematron-Regel überprüft zusätzlich, ob alle smallforms des Typs "Manuskript" und "Typoskript" ` den msIdentifier aufweisen. 
+
 ## 3. Strukturelle Auszeichnung (Text-Editor)
 
 ### 3.1 Grundstruktur Briefe 

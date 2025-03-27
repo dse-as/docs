@@ -50,9 +50,11 @@ Neue Dokumente
 
 ## 2. TEI-Header
 
-Grundsätzlich gilt es, im Autor-Modus die Maske zu befüllen
+Grundsätzlich gilt es, im Autor-Modus die Maske zu befüllen und kurz im Text-Mode bzw. im Code zu überprüfen, ob die Informationen auch dort korrekt auftauchen (z.B. keine Einträge verdoppelt sind, das kann in der Datumsmaske passieren). Für smallforms gibt es die folgende Ausnahme, die Ergänzungen im Code benötigen.
 
-Im Falle von smallforms wird dem Header nicht automatisch ein msIdentifier hinzugegeben (weil über die Hälfte der smallforms publiziert sind und nicht aus Archiven stammen). Bei smallforms aus Archiven wird deshalb händisch folgender Code ganz zu Beginn von `<sourceDesc>` hinzugefügt (TEI verlang, dass es am Anfang steht): 
+
+### smallforms als Typoksrip oder Manuskript (aus Archiv)
+Im Falle von smallforms aus dem Archiv wird dem Header nicht automatisch ein msIdentifier hinzugegeben (weil über die Hälfte der smallforms publiziert sind und nicht aus Archiven stammen). Bei smallforms aus Archiven wird deshalb händisch folgender Code ganz zu Beginn von `<sourceDesc>` hinzugefügt (TEI verlang, dass es am Anfang steht): 
 
 ```
 <sourceDesc> 
@@ -69,8 +71,12 @@ Im Falle von smallforms wird dem Header nicht automatisch ein msIdentifier hinzu
 </sourceDesc>
 ```
 
-Unnötige Informationen im `<sourceDesc>`, wie etwa `<title level="j">...</title>` können gelöscht werden.Danach kann in den Autor-Modus gewechselt werden und die Archivinformationen können dort in der Maske ausgefüllt werden. 
-Eine Schematron-Regel überprüft zusätzlich, ob alle smallforms des Typs "Manuskript" und "Typoskript" ` den msIdentifier aufweisen. 
+Weitere Informationen im `<sourceDesc>` bei Archiv-Material: 
+`<title level="u"/>`: steht für 'unpublished', damit ist die unpublizierte Textstufe gemeint (nicht, dass gar keine Textstufe publiziert wurde)
+`<biblScope></biblScope>`: hier wird gewöhnlich die Seitenzahl eingefügt, im Falle von Archivmaterial kann die Kollation eingefügt werden (z.B. 4 S. Ts. m. hs. Korr.)
+
+Danach kann in den Autor-Modus gewechselt werden und die Archivinformationen können dort in der Maske ausgefüllt werden. Das Feld "Zeitschrift" wird freigelassen. 
+Eine Schematron-Regel überprüft zusätzlich, ob alle smallforms des Typs "manuscipt" und "typoscript" den msIdentifier aufweisen. 
 
 ## 3. Strukturelle Auszeichnung (Text-Editor)
 

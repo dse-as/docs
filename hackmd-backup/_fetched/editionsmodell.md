@@ -59,7 +59,7 @@ Der TEI-Header wird zwar im folgenden Editionsmodell wo relevant erwähnt, das g
     - Framework erlaubt bei Klick auf Pfeil am Anfang der Zeile die Auswahl break "no" oder "yes" 
     - Geht die Silbentrennung oder das zusammengesetzte Wort über zwei Seiten hinweg, folgt nach dem `<pb>` das `<lb/>` mit dem enstprechenden Attribut "yes" oder "no"
 
-- Verszeilen (noch unklar, wie das gewrapped werden muss): 
+- Verszeilen (Beispiel: smallform_0011): 
 ```xml 
 <lg> 
 <l> Vers 1 </l>

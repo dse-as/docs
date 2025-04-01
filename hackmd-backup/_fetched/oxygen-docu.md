@@ -41,14 +41,14 @@ Die Dokumente haben wir zusätzlich durch XML-Kommentare angereichert. Sie könn
 
 ## 1. Verwendung von WebDAV
 
-Neue Dokumente
+Vor der Benutzung von Oxygen müssen die Dokumente aus Transkribus exportiert und konvertiert werden. Hierfür verwenden wir die entsprechende [Export-Github-Issue](https://github.com/dse-as/workflow_IIIF-ATR-TEI/issues). Das Resultat sind jeweils zwei XML-Dateien im Ordner https://github.com/dse-as/workflow_IIIF-ATR-TEI/blob/main/_generated/2-base-TEI: eine Datei mit der Form 'ProjektID.xml' (z.B. letter_00201.xml)
 
 ### 1.1 Ordnerstruktur
 
 
 ### 1.2 Bearbeitungsregeln: Sperren von Dokumenten
 
-## 2. TEI-Header
+## 2. Metadaten im TEI-Header
 
 Grundsätzlich gilt es, im Autor-Modus die Maske zu befüllen und kurz im Text-Mode bzw. im Code zu überprüfen, ob die Informationen auch dort korrekt auftauchen (z.B. keine Einträge verdoppelt sind, das kann in der Datumsmaske passieren). Für smallforms gibt es die folgende Ausnahme, die Ergänzungen im Code benötigen.
 

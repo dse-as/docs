@@ -10,6 +10,8 @@ Die Dokumente haben wir zusätzlich durch XML-Kommentare angereichert. Sie könn
 
 ### 0.1 Kleine Formen
 
+Alle Varianten des TEI-Headers: https://dav.annemarie-schwarzenbach.ch/sandbox/examples/teiheader_smallform.xml
+
 - **Zeitungsartikel mit Zwischentitel**: _BEI STUDENTEN IN VIER LÄNDERN_ = smallform_0226
     - Spalten 
     - viele Ortreferenzen
@@ -41,16 +43,49 @@ Die Dokumente haben wir zusätzlich durch XML-Kommentare angereichert. Sie könn
 
 ## 1. Verwendung von WebDAV
 
-Vor der Benutzung von Oxygen müssen die Dokumente aus Transkribus exportiert und konvertiert werden. Hierfür verwenden wir die entsprechende [Export-Github-Issue](https://github.com/dse-as/workflow_IIIF-ATR-TEI/issues). Das Resultat sind jeweils zwei XML-Dateien im Ordner https://github.com/dse-as/workflow_IIIF-ATR-TEI/blob/main/_generated/2-base-TEI: eine Datei mit der Form 'ProjektID.xml' (z.B. letter_00201.xml)
+### 1.0 Installation des WebDAV
 
-### 1.1 Ordnerstruktur
+Optionen -> Einstellungen -> Datenquellen -> Verbindungen -> + [NEU]
+![grafik](oxygen-docu/ryTJwOtpJg.png)
 
 
-### 1.2 Bearbeitungsregeln: Sperren von Dokumenten
+(Dataillierte WebDAV-Anleitung von Oxygen:https://www.oxygenxml.com/doc/versions/27.0/ug-editor/topics/configure-webdav-connection.html)
+
+Einstellungen bei der Generierung einer neuen Verbindung:
+
+- Hostname: https://dav.annemarie-schwarzenbach.ch  oder https://reverse-proxy.jcloud.ik-server.com/
+- Benutzer: `dseas-dav`
+- Passwort: `T0dInP3rsi3n`
+![grafik](oxygen-docu/SJxsGdYTyl.png)
+
+
+### 1.1 Export aus Transkribus
+Vor der Benutzung von Oxygen müssen die Dokumente aus Transkribus exportiert und konvertiert werden. Hierfür verwenden wir die entsprechende [Export-Github-Issue](https://github.com/dse-as/workflow_IIIF-ATR-TEI/issues). Das Resultat sind jeweils zwei XML-Dateien im Ordner https://github.com/dse-as/workflow_IIIF-ATR-TEI/blob/main/_generated/2-base-TEI: die eigentliche TEI-XML-Datei mit der Form 'ProjektID.xml' (z.B. letter_0201.xml) und eine Datei mit den Koordinaten, die zurück auf das Digitalisat verweist, mit der Form 'ProjektID_facs.xml' (z.B. letter_0201_facs.xml). 
+
+Beide Dateien müssen lokal (zwischen-)gespeichert werden (oder es gibt eine lokale Synchronisation via GitHub-Desktop, die das sicherstellt).
+
+### 1.2 Upload in WebDAV-Ordnerstruktur
+
+Beide auf GitHub erzeugten Dateien werden in entsprechende Ordner des WebDAV geladen, die analog aufgebaut sind: 
+- TEI-Datei: 
+    - Überordner aller TEI's: https://dav.annemarie-schwarzenbach.ch/data/sources/tei
+    - Unterordner für die smallform-TEI's: https://dav.annemarie-schwarzenbach.ch/data/sources/tei/smallforms/
+    - Unterordner für die letter-TEI's: https://dav.annemarie-schwarzenbach.ch/data/sources/tei/letters
+        ->Beide Unterordner sind weiter unterteilt in nummerierte Ordner, die jeweils 100 Dateien umfassen solle: smallform/00 = smallform_0001 - smallform_0099; smallform/01 = smallform_0100 - smallform_0199 etc. 
+- Faksimile-Datei: https://dav.annemarie-schwarzenbach.ch/data/sources/facs
+    -> Die restlichen Unterordner sind analog aufgebaut
+
+### 1.3 Bearbeitungsregeln: Sperren von Dokumenten etc.
+
+Bei der Arbeit im WebDAV ist zu beachten, dass in der Regel nur eine Person eine Datei auf Oxygen geöffnet haben kann (ist eine Datei - vom user selbst oder von jemand anderem - geöffnet, ist es mit einem Schloss-Symbol versehen. 
+
+- Achtung: Der Dateibaum aktualisiert sich nicht automatisch, sondern bildet Initialzustand ab; d.h. zuweilen sieht man das Schloss nicht. Man kann aber immer verzeichnisweise neu laden (markieren und `F5`)
+- Unabhängig davon, ob das Schloss-Symbol angezeigt wird, erscheint beim Öffnen eine Locking-Warnung. Die sollte nur ganz bewusst weggeklickt werden; normalerweise “Cancel” wählen und mit der Person, die in der Warnung angegegeben wurde, Kontakt aufnehmen (es kann sein, dass das Dokument nur aus Versehen noch geöffnet war und freigegeben werden kann).
+- Dasselbe gilt für das Entsperren im Kontextmenü - nur im Notfall machen und auch dann nur, wenn die sperrende Person informiert wird
 
 ## 2. Metadaten im TEI-Header
 
-Grundsätzlich gilt es, im Autor-Modus die Maske zu befüllen und kurz im Text-Mode bzw. im Code zu überprüfen, ob die Informationen auch dort korrekt auftauchen (z.B. keine Einträge verdoppelt sind, das kann in der Datumsmaske passieren). Für smallforms gibt es die folgende Ausnahme, die Ergänzungen im Code benötigen.
+Grundsätzlich gilt es, im Autor-Modus die Maske des TEI-Headers zu befüllen und kurz im Text-Mode bzw. im Code zu überprüfen, ob die Informationen auch dort korrekt auftauchen (z.B. keine Einträge verdoppelt sind, das kann in der Datumsmaske passieren). Für smallforms gibt es die folgende Ausnahme, die Ergänzungen im Code benötigen.
 
 
 ### smallforms als Typoksrip oder Manuskript (aus Archiv)

@@ -75,20 +75,41 @@ Beide auf GitHub erzeugten Dateien werden in entsprechende Ordner des WebDAV gel
 - Faksimile-Datei: https://dav.annemarie-schwarzenbach.ch/data/sources/facs
     -> Die restlichen Unterordner sind analog aufgebaut
 
+Mithilfe obiger Links lässt sich das WebDAV bzw. die darin enthaltenen Dateien übrigens auch über einen Browser durchsehen, jedoch nicht bearbeiten.  
+
 ### 1.3 Bearbeitungsregeln: Sperren von Dokumenten etc.
 
 Bei der Arbeit im WebDAV ist zu beachten, dass in der Regel nur eine Person eine Datei auf Oxygen geöffnet haben kann (ist eine Datei - vom user selbst oder von jemand anderem - geöffnet, ist es mit einem Schloss-Symbol versehen. 
 
 - Achtung: Der Dateibaum aktualisiert sich nicht automatisch, sondern bildet Initialzustand ab; d.h. zuweilen sieht man das Schloss nicht. Man kann aber immer verzeichnisweise neu laden (markieren und `F5`)
 - Unabhängig davon, ob das Schloss-Symbol angezeigt wird, erscheint beim Öffnen eine Locking-Warnung. Die sollte nur ganz bewusst weggeklickt werden; normalerweise “Cancel” wählen und mit der Person, die in der Warnung angegegeben wurde, Kontakt aufnehmen (es kann sein, dass das Dokument nur aus Versehen noch geöffnet war und freigegeben werden kann).
-- Dasselbe gilt für das Entsperren im Kontextmenü - nur im Notfall machen und auch dann nur, wenn die sperrende Person informiert wird
+- Dasselbe gilt für das Entsperren im Kontextmenü (d.h. nicht durch Doppelklick, sondern durch ) - nur im Notfall machen und auch dann nur, wenn die sperrende Person informiert wird
 
 ## 2. Metadaten im TEI-Header
 
-Grundsätzlich gilt es, im Autor-Modus die Maske des TEI-Headers zu befüllen und kurz im Text-Mode bzw. im Code zu überprüfen, ob die Informationen auch dort korrekt auftauchen (z.B. keine Einträge verdoppelt sind, das kann in der Datumsmaske passieren). Für smallforms gibt es die folgende Ausnahme, die Ergänzungen im Code benötigen.
+Für diesen und alle weiteren Editionsschritte ist es oftmals sinnvoll, das Digitalisat bzw. Faksimile zum Abgleich der vorhandenen (Meta-)Daten herbeizuziehen. Das Digitalisat kann mit folgendem Button im Autor-Modus in einem IIIF-Viewer im Browser aufgerufen werden: 
+![grafik](oxygen-docu/SJeDkAKTkl.png)
+Alternativ kann das Dokument auch auf Transkribus in der Collection dse-as_finished aufgerufen werden; es ist jedoch zu beachten, dass es dort nicht mehr bearbeitet werden sollte. 
+
+Grundsätzlich gilt es, im Autor-Modus die Maske des TEI-Headers auf der Grundlage des Digitalisates, des tranksribierten Textes und der bereits vorhandenen Metadaten im Index zu befüllen. Im Text-Mode, d.h. im Code, muss überprüft werden, ob die Informationen auch dort korrekt auftauchen (z.B. keine Einträge verdoppelt sind, das kann in der Datumsmaske passieren). 
+
+Folgende Regeln sind zu beachten: 
+
+Kleine Formen
+- Titel: Werktitel im Titel werden durch `<hi>[Werktitel]</hi>` hervorgehoben
+- Datum von Typoskripten und Manuskripten: Bei einem Entstehungszeitrum wird das Enddatum eingetragen
+
+Briefe
+- Poststempel werden wie Eigendatierungen behandelt und als "Schreibdatum" eingefügt 
+- Eruierte Absendedaten (die nicht aus einem Poststempel hervogehen) werden in eckigen Klammern eingefügt und im Übersichtskommentar erläutert
 
 
-### smallforms als Typoksrip oder Manuskript (aus Archiv)
+Mit dem Ausfüllen der Maske 'Übersichtskommentar', der keine normierten Metadaten, sondern freie philologische Ausführungen enthält, kann zwar schon begonnen werden. Jedoch ist es in den meisten Fällen nötig, nach Abschluss aller anderen Editionsschritte in Oxygen nochmals zum Übersichtskommentar zurückzukommen. Zu Grundregeln des Übersichtskommentars siehe unten, [5.4](#54-Übersichtskommentar-im-TEI-Header), dasselbe gilt für die Verschlagwortung im TEI-Header, s.u, [5.3](#54-Übersichtskommentar-im-TEI-Header).   
+
+Für smallforms gibt es die folgende Ausnahme, die Ergänzungen im Code benötigen:
+
+
+### 2.1 KLeine Formen als Typoksrip oder Manuskript (aus Archiv)
 Im Falle von smallforms aus dem Archiv wird dem Header nicht automatisch ein msIdentifier hinzugegeben (weil über die Hälfte der smallforms publiziert sind und nicht aus Archiven stammen). Bei smallforms aus Archiven wird deshalb händisch folgender Code ganz zu Beginn von `<sourceDesc>` hinzugefügt (TEI verlang, dass es am Anfang steht): 
 
 ```
@@ -115,31 +136,61 @@ Eine Schematron-Regel überprüft zusätzlich, ob alle smallforms des Typs "manu
 
 ## 3. Strukturelle Auszeichnung (Text-Editor)
 
-### 3.1 Grundstruktur Briefe 
-### 3.2 Grundstruktur Kleine Formen
+Nach Upload ins WebDAV und befüllen der Metadaten im TEI-Header wird im Code die Struktur des Textes festgehalten (auch der Autor-Modus, d.h. das Framework erlaubt punktuell eine Strukturierung, jedoch nur beschränkt). 
+
+### 3.1 Grundlegende Strukturen (für Briefe und Kleine Formen)
+#### Seiten
+#### Paragraphen
+#### Zeilen
+#### Verse
+
+Im Gegensatz zur [Auszeichnung von Renderings/Texteingriffen](#4-Auszeichnungen-von-Renderings-und-Texteingriffen-Text--oder-Autor-Editor) und [inhaltlichen Auszeichnungen](#5-Inhaltliche-Auszeichnung-Autor-Editor) ist die strukturelle Auszeichnung nach Textgattung unterschiedlich:  
+
+### 3.2 Grundstruktur Briefe 
+
+- Opener
+    - Dateline
+    - Salute
+- Salute im Paragraph
+- Closer
+    - Salute
+    - Postscriptum
+
+### 3.3 Grundstruktur Kleine Formen
 - Titel/Untertitel/Zwischentitel
 - Spalten
 - Bilder
-### Seiten
-### Paragraphen
-### Zeilen
-### Verse
+
+
 
 ## 4. Auszeichnungen von Renderings und Texteingriffen (Text- oder Autor-Editor)
 
-### Zeilenbrüche
+### 4.1 Zeilenbrüche
 
-### Kursivierung, fett, gesperrt, unterstrichen, hochgestellt
+### 4.2 Kursivierung, fett, gesperrt, unterstrichen, hochgestellt
 
-### Sofortkorrekturen durch Autorin
+### 4.3 Sofortkorrekturen durch Autorin
 
-### Unleserlicher Text (wegen Handschrift/Zerstörung)
+### 4.4 Unleserlicher Text (wegen Handschrift/Zerstörung)
 
-### Korrekturen/Emendation druch Editor:innen
+### 4.5 Korrekturen/Emendation druch Editor:innen
 
 ## 5. Inhaltliche Auszeichnung (Autor-Editor)
 
-### Übersichtskommentar im TEI-Header
+### 5.1 Referenzierung von Entitäten
+
+### 5.2 Textstellen-Kommentar
+
+Die Textstellen-Kommentare werden auch dazu verwendet, auf Fotografien im Archiv zu verweisen, die unmittelbar einen Bezug zu dieser Textstelle haben. 
+
+#### Referenzierungen im Textstellen-Kommentar
+Alle Entitäten im Übersichtskommentar werden konsequent referenziert. 
+
+#### Verschlagwortung eines Textstellen-Kommentars
+
+### 5.3 Verschlagwortung im TEI-Header
+
+### 5.4 Übersichtskommentar im TEI-Header
 
 Was der Übersichtskommentar NICHT ist: Kein Regest bzw. keine Zusammenfassung des Inhalts. Inhaltliche Aspekte können hervorgehoben werden, wenn sie für die Kontextualisierung notwendigerweise referiert werden müssen. 
 
@@ -147,28 +198,8 @@ Aufbau des Übersichtskommentars:
 - **Entstehungskontext**: In der Regel biographische Kontexte wie Reise/Lebenssituation/Konflikt/Thema/Freundschaft etc.  Ästhetische/literarischen Eigenarten, wenn relevant (z.B.: ästhetisierende/narrativierende Wiederaufnahme eines zuvor sachlich-journalistisch bearbeiteten Themas).
 - **Publikationskontext** (falls publiziert): Thematisch ähnliche Publikationen; Hintergründe, warum Publikation in diesem Medium/zu dieser Zeit.
 - **Historischer Kontext** (falls relevant): Breitere Einbettung in Zeitgeschichte (z.B.: Anschluss von Österreich).  
-
-#### Referenzierungen in Textstellen-Kommentar
-Alle Entitäten im Übersichtskommentar werden konsequent referenziert. 
-
-### Verschlagwortung im TEI-Header
-
-### Ortsangaben im TEI-Header
-
-#### Briefe
-
-#### Kleine Formen
-
-### Referenzierung von Entitäten
-
-### Kommentierung von Textstellen
-
-Die Textstellen-Kommentare werden auch dazu verwendet, auf Fotografien im Archiv zu verweisen, die unmittelbar einen Bezug zu dieser Textstelle haben. 
-
-#### Referenzierungen in Textstellen-Kommentar
-
-
-## Korrekturlesen (Autor-Editor)
+- 
+## 6. Korrekturlesen (Autor-Editor)
 Hierfür kann der Oxygen-eigene Korrektur- und Kommentarmodus im Autor-Editor verwendet werden. Er besitzt weitgehend dieselben Funktionalitäten wie der Korrekturmodus von Word. 
 ![grafik](oxygen-docu/BJSX2mkhJg.png)
 :::warning

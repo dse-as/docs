@@ -435,16 +435,18 @@ Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
 - Bild und Bildunterschrift \[[https://deutschestextarchiv.de/doku/basisformat/abbVerschachtelt.html](https://deutschestextarchiv.de/doku/basisformat/abbVerschachtelt.html)\]:   
     
   - `<figure>`  
-    `<head resp="editor">[Von Herausgeber:innen verliehener Titel der Abbildung]</head>`  
-    `<p>[Bildunterschrift von AS]</p>`  
+    `<head resp="editor">[Von Herausgeber:innen verliehener Titel der Abbildung]</head>`
+    `<byline>[Ggfls. Autor:in der Fotografie, wenn spezifisch für dieses Bild angegeben]</byline>`
+    `<p>[Bildunterschrift von AS]</p>`
+    `<p>[Ggfls. weitere, durch Paragraph abgesetzte Bildunterschrift von AS (z.T. auf Französisch)]</p>` 
     `</figure>`    
     
 - Im Fall von einer korrespondierenden Fotogografie: 
  `<head resp="editor" corresp="image_0204">` 
       
   - Bild-Koordinaten werden in Transkribus zoniert und dadurch auch über Kommentare ansteuer- bzw. referenzierbar, kann eigener Block sein.  
-  - Bild in Transkribus als \\f\\  
-  - Bildunterschrift in Transkribus als  \\fp\\ (=figureparagraph)  
+  - Bild in Transkribus als \f\  
+  - Bildunterschrift in Transkribus als  \fp\(=figureparagraph)  
     
 
 - Artikel- und Seitennummern, Fortsetzungsverweise ("Fortsetzung auf S. 7"/"Fortsetzung aus Nr. XY") \[[https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild](https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild)\]:  
@@ -453,7 +455,7 @@ Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
 
 
 - Redaktionelle Einleitungen/Nachbemerkungen  
-  - Z.B. `<div type = redactional, hand = XY>`
+  - `<div type = redactional, hand = XY>`
 
 ### Textstruktur Grosse Formen
 Am textlogischen Modell von Lokalbericht orientieren (Peter lädt ein paar Beispiele auf drive). Hat noch keine Priorität. 

@@ -87,20 +87,20 @@ Bei der Arbeit im WebDAV ist zu beachten, dass in der Regel nur eine Person eine
 
 ## 2. Metadaten im TEI-Header
 
-Für diesen und alle weiteren Editionsschritte ist es oftmals sinnvoll, das Digitalisat bzw. Faksimile zum Abgleich der vorhandenen (Meta-)Daten herbeizuziehen. Das Digitalisat kann mit folgendem Button im Autor-Modus in einem IIIF-Viewer im Browser aufgerufen werden: 
+Für diesen und alle weiteren Editionsschritte ist es oftmals sinnvoll, das Digitalisat bzw. Faksimile zum Abgleich der vorhandenen (Meta-)Daten herbeizuziehen (z.B. auf einem separaten Bildschirm). Das Digitalisat kann mit folgendem Button im Autor-Modus in einem IIIF-Viewer im Browser aufgerufen werden: 
 ![grafik](oxygen-docu/SJeDkAKTkl.png)
-Alternativ kann das Dokument auch auf Transkribus in der Collection dse-as_finished aufgerufen werden; es ist jedoch zu beachten, dass es dort nicht mehr bearbeitet werden sollte. 
+Alternativ kann das Dokument auch auf Transkribus in der Collection dse-as_finished aufgerufen werden; es ist jedoch zu beachten, dass es dort nicht mehr bearbeitet werden sollte, da der Arbeitsstand auf Transkribus nicht mehr abgerufen wird. 
 
 Grundsätzlich gilt es, im Autor-Modus die Maske des TEI-Headers auf der Grundlage des Digitalisates, des tranksribierten Textes und der bereits vorhandenen Metadaten im Index zu befüllen. Im Text-Mode, d.h. im Code, muss überprüft werden, ob die Informationen auch dort korrekt auftauchen (z.B. keine Einträge verdoppelt sind, das kann in der Datumsmaske passieren). 
 
-Folgende Regeln sind zu beachten: 
+Folgende **Regeln** sind zu beachten: 
 
-Kleine Formen
+### 2.1 Metadaten Kleine Formen
 - Titel: Werktitel im Titel werden durch `<hi>[Werktitel]</hi>` hervorgehoben
 - Datum von Typoskripten und Manuskripten: Bei einem Entstehungszeitrum wird das Enddatum eingetragen
 
-Briefe
-- Poststempel werden wie Eigendatierungen behandelt und als "Schreibdatum" eingefügt 
+### 2.2 Metadaten Briefe
+- Poststempel werden wie Datierung durch Absender:innen behandelt und in der Maske "Schreibdatum" eingefügt. Wo Poststempel und Datierung durch Absender:innen vorliegen und voneinander abweichen, ist letzteres Datum vorzuziehen  
 - Eruierte Absendedaten (die nicht aus einem Poststempel hervogehen) werden in eckigen Klammern eingefügt und im Übersichtskommentar erläutert
 
 
@@ -109,7 +109,7 @@ Mit dem Ausfüllen der Maske 'Übersichtskommentar', der keine normierten Metada
 Für smallforms gibt es die folgende Ausnahme, die Ergänzungen im Code benötigen:
 
 
-### 2.1 KLeine Formen als Typoksrip oder Manuskript (aus Archiv)
+### 2.1 Kleine Formen als Typoksript oder Manuskript (aus Archiv)
 Im Falle von smallforms aus dem Archiv wird dem Header nicht automatisch ein msIdentifier hinzugegeben (weil über die Hälfte der smallforms publiziert sind und nicht aus Archiven stammen). Bei smallforms aus Archiven wird deshalb händisch folgender Code ganz zu Beginn von `<sourceDesc>` hinzugefügt (TEI verlang, dass es am Anfang steht): 
 
 ```
@@ -138,13 +138,30 @@ Eine Schematron-Regel überprüft zusätzlich, ob alle smallforms des Typs "manu
 
 Nach Upload ins WebDAV und befüllen der Metadaten im TEI-Header wird im Code die Struktur des Textes festgehalten (auch der Autor-Modus, d.h. das Framework erlaubt punktuell eine Strukturierung, jedoch nur beschränkt). 
 
-### 3.1 Grundlegende Strukturen (für Briefe und Kleine Formen)
-#### Seiten
-#### Paragraphen
-#### Zeilen
-#### Verse
+### 3.1 Grundlegende Strukturen (für Briefe *und* Kleine Formen)
 
-Im Gegensatz zur [Auszeichnung von Renderings/Texteingriffen](#4-Auszeichnungen-von-Renderings-und-Texteingriffen-Text--oder-Autor-Editor) und [inhaltlichen Auszeichnungen](#5-Inhaltliche-Auszeichnung-Autor-Editor) ist die strukturelle Auszeichnung nach Textgattung unterschiedlich:  
+#### a. Seitenbeginn und Zeilenbrüche (Autor-Editor)
+
+**Seitenanfänge** sind in der Regegel schon aus dem Transkribus-Import vorhanden, können wenn nötig mit folgendem Framework-Button eingefügt werden: 
+![grafik](oxygen-docu/SJJa6Hc6Jx.png)
+
+Bei jedem Seitnbeginn erscheint im Fliesstext folgendes Zeichen mit befüllbarer Maske: 
+![grafik](oxygen-docu/BkZBCS56ke.png)
+Die Textmaske wird nur befüllt, wenn eine Seitenzahl auf dem Dokument lesbar ist (abgebildet wird also nicht die projekteigene Seitenzählung, die geht bereits aus der automatischen Zählung der Digitalisate hervor). 
+
+#### b. Paragraphen (Text-Editor)
+
+Paragraphen können zwar durch custom-taggings in Transkribus vorbereitet werden, an vielen Stellen müssen sie jedoch auch dann noch im Code angepasst werden.  
+- Bei custom-tagging von \p\ bzw. \:p\ mit \fml\, um paragraphen-tags bei Seitenumbrüchen als temporär zu markieren: Dort muss nun sowohl die FML-Warnung als auch der Paragraph selbst wieder gelöscht werden.
+- Wo in Transkribus keine customtagging für Paragraphen verwendet wurde (weil die Paragraphen-Struktur sehr einfach ist, und sich Paragraphen über mehrere Seiten hinziehen wie bei vielen Briefen, oder weil andere tags wie head, byline, dateline etc nötig werden): Hier umschliesst die Konversion automatisch alle unvertaggten Text mit einem temporären Paragraphen und FML-Wrapper. 
+    - Entweder muss nur die FML-Warnung gelöscht werden
+    - Oder der Absatz muss mit dem korrekte Wrapper umschlsosen werden (zu den diversen Taggings von spezifischen Grundstrukturen, s.u.)
+
+#### c. Zeilen
+
+#### d. Verse
+
+
 
 ### 3.2 Grundstruktur Briefe 
 
@@ -162,18 +179,21 @@ Im Gegensatz zur [Auszeichnung von Renderings/Texteingriffen](#4-Auszeichnungen-
 - Bilder
 
 
-
 ## 4. Auszeichnungen von Renderings und Texteingriffen (Text- oder Autor-Editor)
 
-### 4.1 Zeilenbrüche
 
-### 4.2 Kursivierung, fett, gesperrt, unterstrichen, hochgestellt
+### 4. Kursivierung, fett, gesperrt, unterstrichen, hochgestellt
 
-### 4.3 Sofortkorrekturen durch Autorin
+Alle diese Renderings können ebenfalls bereits aus Transkribus importiert werden, sind aber auch durch folgende Buttons im Framework einfügbar: 
+![grafik](oxygen-docu/Skn-yU9Tyg.png)
 
-### 4.4 Unleserlicher Text (wegen Handschrift/Zerstörung)
 
-### 4.5 Korrekturen/Emendation druch Editor:innen
+### 4. Sofortkorrekturen durch Autorin
+
+### 4. Unleserlicher Text (wegen Handschrift/Zerstörung)
+
+### 4. Korrekturen/Emendation druch Editor:innen
+
 
 ## 5. Inhaltliche Auszeichnung (Autor-Editor)
 

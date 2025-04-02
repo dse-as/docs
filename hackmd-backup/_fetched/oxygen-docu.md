@@ -83,7 +83,7 @@ Bei der Arbeit im WebDAV ist zu beachten, dass in der Regel nur eine Person eine
 
 - Achtung: Der Dateibaum aktualisiert sich nicht automatisch, sondern bildet Initialzustand ab; d.h. zuweilen sieht man das Schloss nicht. Man kann aber immer verzeichnisweise neu laden (markieren und `F5`)
 - Unabhängig davon, ob das Schloss-Symbol angezeigt wird, erscheint beim Öffnen eine Locking-Warnung. Die sollte nur ganz bewusst weggeklickt werden; normalerweise “Cancel” wählen und mit der Person, die in der Warnung angegegeben wurde, Kontakt aufnehmen (es kann sein, dass das Dokument nur aus Versehen noch geöffnet war und freigegeben werden kann).
-- Dasselbe gilt für das Entsperren im Kontextmenü (d.h. nicht durch Doppelklick, sondern durch ) - nur im Notfall machen und auch dann nur, wenn die sperrende Person informiert wird
+- Dasselbe gilt für das Entsperren im Kontextmenü (d.h. nicht durch Doppelklick, sondern durch Rechtsklick) - nur im Notfall machen und auch dann nur, wenn die sperrende Person informiert wird
 
 ## 2. Metadaten im TEI-Header
 

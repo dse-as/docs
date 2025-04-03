@@ -1,5 +1,10 @@
 # Dokumentation Oxygen
 
+Das vorliegende Dokument führt durch den Editionsprozess in Oxygen, in dem es versucht, dessen Arbeitsschritte chronologisch abzubilden. Der Ablauf folgt der Grundregel, dass strukturelle und formale Aspekte vor inhaltlichen Aspekten ediert sein müssen, um keine vorschnelle inhaltliche Schlüsse aus einer vermeintlichen Form zu treffen. 
+
+Die Anleitung führt in Untertiteln auf, ob der Editionsschritt in der Regel im Code (Text-Editor) oder in der Benutzeroberfläche (Autor-Editor bzw. Framework) geschieht. Damit ist primär die arbeitsergonomisch beste Editionsumgebung bezeichnet; abgesehen vom Referenzieren der meisten Entitäten (die nur im Autor-Editor geschehen kann, weil dort externe Ressourcn abgefragt werden können), sind alle Editionsschritte auch im Text-Editor möglich. Sind sie alos einfacher im Autor-Editor zu machen, wird der Code dahinter hier nicht ausgeführt, er findet sich jedoch immer im [Editionsmodell Edition Annemarie Schwarzenbach](/ccjyBww-TpSE6ivZjWDPig) dokumentiert. Der Einbezug dieses Dokuments erlaubt es - die Entitätenreferenzierung ausgenommen - bei Ausfall des Autor-Editors komplett im Text-Editor zu edieren.
+
+
 [toc]
 
 ## 0. Vorbildhafte TEI-Dokumente des Projektes
@@ -79,7 +84,10 @@ Mithilfe obiger Links lässt sich das WebDAV bzw. die darin enthaltenen Dateien 
 
 ### 1.3 Bearbeitungsregeln: Sperren von Dokumenten etc.
 
+:::warning
 Bei der Arbeit im WebDAV ist zu beachten, dass in der Regel nur eine Person eine Datei auf Oxygen geöffnet haben kann (ist eine Datei - vom user selbst oder von jemand anderem - geöffnet, ist es mit einem Schloss-Symbol versehen. 
+:::
+
 
 - Achtung: Der Dateibaum aktualisiert sich nicht automatisch, sondern bildet Initialzustand ab; d.h. zuweilen sieht man das Schloss nicht. Man kann aber immer verzeichnisweise neu laden (markieren und `F5`)
 - Unabhängig davon, ob das Schloss-Symbol angezeigt wird, erscheint beim Öffnen eine Locking-Warnung. Die sollte nur ganz bewusst weggeklickt werden; normalerweise “Cancel” wählen und mit der Person, die in der Warnung angegegeben wurde, Kontakt aufnehmen (es kann sein, dass das Dokument nur aus Versehen noch geöffnet war und freigegeben werden kann).
@@ -109,7 +117,7 @@ Mit dem Ausfüllen der Maske 'Übersichtskommentar', der keine normierten Metada
 Für smallforms gibt es die folgende Ausnahme, die Ergänzungen im Code benötigen:
 
 
-### 2.1 Kleine Formen als Typoksript oder Manuskript (aus Archiv)
+### 2.3 Spezialfall: Kleine Formen als Typoksript oder Manuskript (aus Archiv)
 Im Falle von smallforms aus dem Archiv wird dem Header nicht automatisch ein msIdentifier hinzugegeben (weil über die Hälfte der smallforms publiziert sind und nicht aus Archiven stammen). Bei smallforms aus Archiven wird deshalb händisch folgender Code ganz zu Beginn von `<sourceDesc>` hinzugefügt (TEI verlang, dass es am Anfang steht): 
 
 ```
@@ -134,7 +142,7 @@ Weitere Informationen im `<sourceDesc>` bei Archiv-Material:
 Danach kann in den Autor-Modus gewechselt werden und die Archivinformationen können dort in der Maske ausgefüllt werden. Das Feld "Zeitschrift" wird freigelassen. 
 Eine Schematron-Regel überprüft zusätzlich, ob alle smallforms des Typs "manuscipt" und "typoscript" den msIdentifier aufweisen. 
 
-## 3. Strukturelle Auszeichnung (Text-Editor)
+## 3. Strukturelle Auszeichnung
 
 Nach Upload ins WebDAV und befüllen der Metadaten im TEI-Header wird im Code die Struktur des Textes festgehalten (auch der Autor-Modus, d.h. das Framework erlaubt punktuell eine Strukturierung, jedoch nur beschränkt). 
 
@@ -153,14 +161,21 @@ Die Textmaske wird nur befüllt, wenn eine Seitenzahl auf dem Dokument lesbar is
 
 Paragraphen können zwar durch custom-taggings in Transkribus vorbereitet werden, an vielen Stellen müssen sie jedoch auch dann noch im Code angepasst werden.  
 - Bei custom-tagging von \p\ bzw. \:p\ mit \fml\, um paragraphen-tags bei Seitenumbrüchen als temporär zu markieren: Dort muss nun sowohl die FML-Warnung als auch der Paragraph selbst wieder gelöscht werden.
-- Wo in Transkribus keine customtagging für Paragraphen verwendet wurde (weil die Paragraphen-Struktur sehr einfach ist, und sich Paragraphen über mehrere Seiten hinziehen wie bei vielen Briefen, oder weil andere tags wie head, byline, dateline etc nötig werden): Hier umschliesst die Konversion automatisch alle unvertaggten Text mit einem temporären Paragraphen und FML-Wrapper. 
+- Wo in Transkribus keine customtagging für Paragraphen verwendet wurde (weil die Paragraphen-Struktur z.B. sehr einfach ist, und sich Paragraphen über mehrere Seiten hinziehen wie bei vielen Briefen, oder weil andere tags wie head, byline, dateline etc nötig werden): Hier umschliesst die Konversion automatisch alle unvertaggten Text mit einem temporären Paragraphen und FML-Wrapper. 
     - Entweder muss nur die FML-Warnung gelöscht werden
     - Oder der Absatz muss mit dem korrekte Wrapper umschlsosen werden (zu den diversen Taggings von spezifischen Grundstrukturen, s.u.)
 
-#### c. Zeilen
+#### c. Zeilen und Silbentrennung (Autor-Editor)
 
-#### d. Verse
+Zeilen werden direkt aus der automatisierten Zeilenerkennung von Transkribus importiert. Sollte bei der Korrektur in Tranksribus ein Fehler unterlaufen sein, können Zielen mit folgendem Buztton im Autor-Modus getrennt werden: 
+![grafik](oxygen-docu/r1_jgjs6Jx.png)
 
+Silbentrennungen, die in der Leseausgabe zusammen mit den diplomatischen Zeilenbrüchen tilgbar sind, werden aus der Konversion von Transkribus automatisch importiert, wo ein Negationszeichen `¬`steht. Sie werden am Zeilenbeginn im Autor-Modus durch pinke (statt schwarze) Pfeile markiert (der Silbentrenntstrich fällt weg und wird für die Leseausgabe wieder ergänzt).
+Wo in Transkribus das Negationszeichen vergessen ging, kann im Autor-Modus mit einem Klick auf den Zeilenbeginnpfeil 'break no' ausgewählt werden.
+![grafik](oxygen-docu/rkGE-jopyl.png)
+
+#### d. Verse (Text-Editor)
+Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin gebrochen, deshalb müssen sie gesonder ausgezeichnet werden. 
 
 
 ### 3.2 Grundstruktur Briefe 

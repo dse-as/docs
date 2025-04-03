@@ -197,7 +197,7 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 ## 4. Auszeichnungen von Renderings und Texteingriffen (Text- oder Autor-Editor)
 
 
-### 4. Kursivierung, fett, gesperrt, unterstrichen, hochgestellt
+### 4. Kursiv, fett, gesperrt, unterstrichen, hochgestellt, Zitate
 
 Alle diese Renderings können ebenfalls bereits aus Transkribus importiert werden, sind aber auch durch folgende Buttons im Framework einfügbar: 
 ![grafik](oxygen-docu/Skn-yU9Tyg.png)

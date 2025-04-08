@@ -103,7 +103,8 @@ Grundsätzlich gilt es, im Autor-Modus die Maske des TEI-Headers auf der Grundla
 
 :::info
 Zur Zeit sind noch nicht alle Masken für den TEI-Header im Framework. Für die bibliographischen Angaben der Dokumente, die mit dem Edendum zusammenhängen (publizierte Textstufe, Zweitpublikation zu Lebzeiten, posthume Editionen etc.) muss deshalb im Moment noch das jeweilige Code-Snippet im Text-Editor eingefügt und befüllt werden. 
-Der entsprechende Code findet sich für die smalforms in folgendem exemplarischen TEI: 
+Der entsprechende Code findet sich für die Kleinen Formen in folgendem exemplarischen TEI/XML: https://dav.annemarie-schwarzenbach.ch/sandbox/examples/teiheader_smallform.xml
+Für die Briefe ist nur der Code für posthume Editionen und Übersetzungen relevant, auch dieser kann aus obigem XML entnommen werden. 
 :::
 
 Folgende **Regeln** sind zu beachten: 
@@ -180,8 +181,13 @@ Wo in Transkribus das Negationszeichen vergessen ging, kann im Autor-Modus mit e
 ![grafik](oxygen-docu/rkGE-jopyl.png)
 
 #### d. Verse (Text-Editor)
-Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin gebrochen, deshalb müssen sie gesonder ausgezeichnet werden. 
-
+Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin gebrochen, deshalb müssen sie gesondert ausgezeichnet werden. Dabei sollte folgendes Code-Schema verwendet werden (vgl. auch smallform_0607):
+```xml 
+<lg> 
+<l> Vers 1 </l>
+<l> Vers 2 </l>
+</lg>
+```
 
 ### 3.2 Grundstruktur Briefe 
 
@@ -194,8 +200,14 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
     - Postscriptum
 
 ### 3.3 Grundstruktur Kleine Formen
-- Titel/Untertitel/Zwischentitel
-- Spalten
+
+Titel/Untertitel/Zwischentitel: `head`
+- Jeder (Unter-/Zwischne-)Titel wird von einem neuen `<div>`-Element eingefasst.
+- Das erste `<div>`-Element (`<div type="smallform">`) wird bereits durch die Konversion erzeugt, deshalb muss bei lediglich einem Titel darauf nicht geachtet werden. 
+
+Spalten können in der Regel dort angezeichnet werdne, wo eine neue, spaltenförmige Textregion
+- Spaltenbrüche: `</cb>`
+- Spaltenbeginn: `</cb type=>`
 - Bilder
 
 

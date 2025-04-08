@@ -118,13 +118,13 @@ Folgende **Regeln** sind zu beachten:
 - Eruierte Absendedaten (die nicht aus einem Poststempel hervogehen) werden in eckigen Klammern eingefügt und im Übersichtskommentar erläutert
 
 
-Mit dem Ausfüllen der Maske 'Übersichtskommentar', der keine normierten Metadaten, sondern freie philologische Ausführungen enthält, kann zwar schon begonnen werden. Jedoch ist es in den meisten Fällen nötig, nach Abschluss aller anderen Editionsschritte in Oxygen nochmals zum Übersichtskommentar zurückzukommen. Zu Grundregeln des Übersichtskommentars siehe unten, [5.4](#54-Übersichtskommentar-im-TEI-Header), dasselbe gilt für die Verschlagwortung im TEI-Header, s.u, [5.3](#54-Übersichtskommentar-im-TEI-Header).   
+Mit dem Ausfüllen der Maske 'Übersichtskommentar', der keine normierten Metadaten, sondern freie philologische Ausführungen enthält, kann zwar schon begonnen werden. Jedoch ist es in den meisten Fällen nötig, nach Abschluss aller anderen Editionsschritte in Oxygen nochmals zum Übersichtskommentar zurückzukommen. Zu Grundregeln des Übersichtskommentars siehe unten, [5.4](#54-Übersichtskommentar-im-TEI-Header), dasselbe gilt für die Verschlagwortung im TEI-Header, s.u, [5.3](#54-Übersichtskommentar-im-TEI-Header). 
 
 Für smallforms gibt es die folgende Ausnahme, die Ergänzungen im Code benötigen:
 
 
 ### 2.3 Spezialfall: Kleine Formen als Typoksript oder Manuskript (aus Archiv)
-Im Falle von smallforms aus dem Archiv wird dem Header nicht automatisch ein msIdentifier hinzugegeben (weil über die Hälfte der smallforms publiziert sind und nicht aus Archiven stammen). Bei smallforms aus Archiven wird deshalb händisch folgender Code ganz zu Beginn von `<sourceDesc>` hinzugefügt (TEI verlang, dass es am Anfang steht): 
+Im Falle von Kleinen Formen aus dem Archiv wird dem Header nicht automatisch ein msIdentifier hinzugegeben (weil über die Hälfte der smallforms publiziert sind und nicht aus Archiven stammen). Bei smallforms aus Archiven wird deshalb folgender Code ganz zu Beginn von `<sourceDesc>` hinzugefügt (TEI verlang, dass es am Anfang steht). Dies kann mithilfe eines 'quickfix' gemacht werden, d.h. das Einfüguen des folgenden Codes wird von Oxygen vorgeschlagen, sobald eine smallform vorliegt, die im TEI-Header als Manuskript oder Typoskript definiert wird.  
 
 ```
 <sourceDesc> 
@@ -159,7 +159,7 @@ Nach Upload ins WebDAV und befüllen der Metadaten im TEI-Header wird im Code di
 **Seitenanfänge** sind in der Regegel schon aus dem Transkribus-Import vorhanden, können wenn nötig mit folgendem Framework-Button eingefügt werden: 
 ![grafik](oxygen-docu/SJJa6Hc6Jx.png)
 
-Bei jedem Seitnbeginn erscheint im Fliesstext folgendes Zeichen mit befüllbarer Maske: 
+Bei jedem Seitenbeginn erscheint im Fliesstext folgendes Zeichen mit befüllbarer Maske: 
 ![grafik](oxygen-docu/BkZBCS56ke.png)
 Die Textmaske wird nur befüllt, wenn eine Seitenzahl auf dem Dokument lesbar ist (abgebildet wird also nicht die projekteigene Seitenzählung, die geht bereits aus der automatischen Zählung der Digitalisate hervor). 
 
@@ -205,10 +205,12 @@ Titel/Untertitel/Zwischentitel: `head`
 - Jeder (Unter-/Zwischne-)Titel wird von einem neuen `<div>`-Element eingefasst.
 - Das erste `<div>`-Element (`<div type="smallform">`) wird bereits durch die Konversion erzeugt, deshalb muss bei lediglich einem Titel darauf nicht geachtet werden. 
 
-Spalten können in der Regel dort angezeichnet werdne, wo eine neue, spaltenförmige Textregion
+Spalten können in der Regel dort angezeichnet werdne, wo eine neue, spaltenförmige Textregion beginn
 - Spaltenbrüche: `</cb>`
-- Spaltenbeginn: `</cb type=>`
-- Bilder
+- Beginn des Spaltenlayouts: `</cb type=>`
+- Spalten
+
+Bilder
 
 
 ## 4. Auszeichnungen von Renderings und Texteingriffen (Text- oder Autor-Editor)
@@ -248,9 +250,10 @@ Was der Übersichtskommentar NICHT ist: Kein Regest bzw. keine Zusammenfassung d
 
 Aufbau des Übersichtskommentars: 
 - **Entstehungskontext**: In der Regel biographische Kontexte wie Reise/Lebenssituation/Konflikt/Thema/Freundschaft etc.  Ästhetische/literarischen Eigenarten, wenn relevant (z.B.: ästhetisierende/narrativierende Wiederaufnahme eines zuvor sachlich-journalistisch bearbeiteten Themas).
+- Textträger (falls unpubliziert): Spezifika der Materialität oder der Schreibutensilien (z.B. auch Zustand des Papiers oder der Schrift, handelt es sich um ein Durchschlag etc.). 
 - **Publikationskontext** (falls publiziert): Thematisch ähnliche Publikationen; Hintergründe, warum Publikation in diesem Medium/zu dieser Zeit.
 - **Historischer Kontext** (falls relevant): Breitere Einbettung in Zeitgeschichte (z.B.: Anschluss von Österreich).  
-- 
+
 ## 6. Korrekturlesen (Autor-Editor)
 Hierfür kann der Oxygen-eigene Korrektur- und Kommentarmodus im Autor-Editor verwendet werden. Er besitzt weitgehend dieselben Funktionalitäten wie der Korrekturmodus von Word. 
 ![grafik](oxygen-docu/BJSX2mkhJg.png)

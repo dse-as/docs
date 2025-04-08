@@ -42,8 +42,8 @@ Alle Varianten des TEI-Headers: https://dav.annemarie-schwarzenbach.ch/sandbox/e
 -> Wir brauchen auch noch ein Beispiel eines Textes mit Fussnoten im Original. 
 
 ### 0.2 Briefe 
-- Brief mit Umschlag: 
-- Postkarte:
+- Brief mit Umschlag: letter_0003
+- Postkarte: letter_0001
 - Telegramm: 
 
 ## 1. Verwendung von WebDAV

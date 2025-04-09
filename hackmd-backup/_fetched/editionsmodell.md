@@ -280,12 +280,12 @@ Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben
 ### Editor:innen-Kommentare
 
 Für alle Editor:innen-Kommentare (Überischtskommentare und Sachkommentare) gilt: 
-- Zitierte Werke sind kursiv und müssen als Werk-Entität getaggt werden (können aber auch nur umschrieben werden z.b. "Schwarzenbachs Saladin-Reportage" - Saladin-Reportage nicht kursiv, aber vertaggt). 
-- Alle andren Entitäten werden getaggt, aber nicht kursiviert. 
+- Alle Entitäten werden referenziert. 
+- Zitierte Werke müssen als Werk-Entität getaggt werden (können aber auch nur umschrieben werden z.b. "Schwarzenbachs Saladin-Reportage" - Saladin-Reportage nicht kursiv, aber vertaggt). 
 
 #### Übersichtskommentare pro Dokument
 
-- Im TEI-header z.B. als `<global comment>`
+- Im TEI-header als `<global comment>`
 
 #### Sachkommentare zu Wörtern oder Textabschnitten
 

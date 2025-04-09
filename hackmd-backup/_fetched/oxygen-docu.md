@@ -191,17 +191,18 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 
 ### 3.2 Grundstruktur Briefe 
 
-- Opener
-    - Dateline
-    - Salute
-- Salute im Paragraph
-- Closer
-    - Salute
+- Opener: `<opener>...<opener/>` Diese Textstruktur enthält alle Informationen, die einen Brief eröffnen (Datum, Ort, Anrde ggfls. Adresse)
+    - Dateline:`<dateline>`: Umfasst auch Ortsangaben
+    - Salute = Begrüssungsformel (mit oder ohne Namen): `<salute>`
+- Salute im Paragraph: Findet sich die Anrede auf derselben Zeile oder sogar im selben Satz wie der eigentliche Briefbeginn, wird dies folgendermassen ausgezeichnet: `<seg type="salute">...<saliute/>
+- Closer: `<closer>`umfasst alle Informationen nach dem Haupttext:
+    - Salute = auch Abschiedsformel, ggfls. auch der einleitende Satz (z.B.: "Bitte grüße mir auch ganz herzlich Deine Mutter! Liebe Grüße,")
+    - Signed = Unterschrift
     - Postscriptum
 
 ### 3.3 Grundstruktur Kleine Formen
 
-**Titel/Untertitel/Zwischentitel**: `head`
+**Titel/Untertitel/Zwischentitel**: `<head>...</head>`
 - Jeder (Unter-/Zwischne-)Titel wird von einem neuen `<div>`-Element eingefasst.
 - Das erste `<div>`-Element (`<div type="smallform">`) wird bereits durch die Konversion erzeugt, deshalb muss bei lediglich einem Titel darauf nicht geachtet werden. 
 
@@ -216,37 +217,104 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 
 
 
-Bilder
+**Bilder**: Zur Struktur-Codierung von Bildern und Bildunterschriften: 
+```
+<milestone unit="textregion" xml:id="p001_r_8"/>
+<figure>
+    <head resp="editor"> [Projekteigener Titel für das Bild]</head>
+         <milestone unit="textregion" xml:id="p001_r_4"/>
+                 <p>
+                 [Absätze mit der Bildbeschriftung im Edendum]   
+                 </p>
+</figure>
+```
+
+- In der Konversion werden die Paragraphen der Bildunterschriften und ihre dazugehörigen milestones ausserhalb des Figure-Elements abgelegt, jedoch miten einem FML-Tag als nachzubearbeiten markiert. 
+
+Die Codierun ganzer Fotoreportagen ist Stand 9. April 2025 noch nicht fertig festgelegt. 
 
 
 ## 4. Auszeichnungen von Renderings und Texteingriffen (Text- oder Autor-Editor)
 
 
-### 4. Kursiv, fett, gesperrt, unterstrichen, hochgestellt, Zitate
+- Kursiv, fett, gesperrt, unterstrichen, hochgestellt, Zitate
 
-Alle diese Renderings können ebenfalls bereits aus Transkribus importiert werden, sind aber auch durch folgende Buttons im Framework einfügbar: 
+    - Alle diese Renderings können ebenfalls bereits aus Transkribus importiert werden, sind aber auch durch folgende Buttons im Framework einfügbar: 
 ![grafik](oxygen-docu/Skn-yU9Tyg.png)
 
-
-### 4. Sofortkorrekturen durch Autorin
-
-### 4. Unleserlicher Text (wegen Handschrift/Zerstörung)
-
-### 4. Korrekturen/Emendation druch Editor:innen
-
+Weitere Renderings, hier jeweils mit dem Editionsmodell verknpüpft: 
+- [Sofortkorrekturen durch Autorin](https://hackmd.io/ccjyBww-TpSE6ivZjWDPig?view=&stext=5845%3A53%3A0%3A1744201074%3A7Mv6bN)
+- [Korrekturen/Emendation druch Editor:innen](https://hackmd.io/ccjyBww-TpSE6ivZjWDPig?view=&stext=6596%3A25%3A0%3A1744201140%3A1mrn48)
+- [Unleserlicher Text (wegen Handschrift/Zerstörung)](https://hackmd.io/ccjyBww-TpSE6ivZjWDPig?view=&stext=6946%3A25%3A0%3A1744201180%3AW71eAr)
+- [Abkürzungen](https://hackmd.io/ccjyBww-TpSE6ivZjWDPig?view=&stext=7736%3A11%3A0%3A1744201296%3AQySIP_) werden in der Regel in der Codierung aufgelöst
 
 ## 5. Inhaltliche Auszeichnung (Autor-Editor)
 
 ### 5.1 Referenzierung von Entitäten
 
+Die Referenzierung von Entitäten erfolgt im Falle der "externen" normalerweise komplett über das Framework, kann aber auch immer händisch nachgetragen werden: 
+`<rs type="person" key="#id" xml:id="#xml-id">`
+`<rs type="place" key="#id" xml:id="#xml-id">`
+`<rs type="person" key="#id" xml:id="#xml-id">` etc.
+Die XML-ID kann durch einen 'Quickfix' hinzugefügt werden (rote Warnung anklicken und Quickfix auswählen). 
+
+#### a. "Externe" Entitäten (= keine eigenen Edenda)
+Für all diese Entitäten gilt, dass sie normalerweise aus einer bestehenden Liste im Framework ausgewählt werden können. Fehlt dort eine gewünschte Entität, können Sie selbst angereichert werden. Bevor fälschlich Duplikate erzeugt werden (insbesondere bei Ortnamensvarianten!) kurz zu überprüfen, ob Sie in de projekteigenen Datensammlung (Google-Sheet oder XML-Datei) unter anderem Namen vorhanden sind.
+"Externe" Entitäten werden auf drei verschiedene Weisen verwaltet:
+
+- **Im [Google-Sheet](https://docs.google.com/spreadsheets/d/1pzY0f-4SyWGZEd3-kF2E-djY54qsr9HrRIljVDG5gkc/edit?usp=sharing)** -> wird direkt im Framework durch folgende Buttons integriert: ![grafik](oxygen-docu/ByRJHx4CJe.png)
+
+    - Orte: Daten aus [Geonames](https://www.geonames.org/) 
+    - Personen: Daten aus der [GND](https://swb.bsz-bw.de) 
+    - Intitutionen: 'Organisationen'-Daten aus der [GND](https://swb.bsz-bw.de) 
+        - GND-Personen- und Institutionen-Daten können gemäß Workshop der ZB Zürich selbst angereichert werden. Wenn weitere Schlagwörter gewünscht sind, kann Elias diese in der GND-Redaktion Zürich beantragen. 
+- **In [Zotero](https://www.zotero.org/groups/5746334/dse_as_bibl-id/library)**: Werke, die nicht von uns edier werden. -> Werden im Framework über folgenden Button integriert:
+![grafik](oxygen-docu/H1qQBg40yg.png)
+Hierzu zählen:
+    - Zweitpublikationen zu Lebzeiten (Ordner "surrogate")
+    - Posthume Editionen (Ordner "edition")
+    - Posthume Übersetzungen (Ordner "translation")
+    - Forschungsliteratur
+        - Die genannten Ordner sind nicht-topologisch, sondern funktionieren wie ein Label; Einträge können in mehreren Ordnern erschienen und 'fliessen' immer in der Hauptcollection zusammen
+- **In XML-Dateien auf dem WebDAV** (Ordner data/meta/lists) -> Können aus Dropdown-Menüs im TEI-header ausgewählt werden (später ggfls. auch per Button): ![grafik](oxygen-docu/Hy28ZeN0yx.png)
+    - Schlagwörter = keywords.xml: 'Sachbegriffe' aus der [GND](https://swb.bsz-bw.de) 
+    - Reisen und Events = events.xml: Selbsterstellte Daten, die aber wiederum mit "externen" Entitäten wie Orten und Personen angereichert im XML werden. 
+
+
+#### b. "Interne" Entitäten (= eigene Edenda)
+
+Wenn auf projekteigene smallforms, letters oder images verwiesen werden soll, muss dies händisch geschehen: 
+`<rs type="smallform" key="smallform_0240" xml:id="f3x_4yj_y2c">`
+Der key wird jeweils dem entsprechenden Google-Sheet-Index entnommen, die XML-ID kann via Quickfix erzeugt werden (s.o.).
+
+
+
+#### c. Verwendung der Entitäten
+- Grundsätzlich wird jede namentlich genannte Entität (= Ort, Institution, Person, Werk) im Autor-Editor referenziert, selbst wenn sie im selben Satz mehrfach vorkommt. 
+- Wo eine Entität nur als Pronomen oder Präposition ("er", "dort") auftaucht, wird sie in der Regel nicht referenziert. Ausnahme: Wenn sich die Entität nicht ohne weiteres aus dem Kontext des vorliegenden Dokumentes erschliessen lässt, d.h. das Wissen über andere Dokumente vorausgesetzt wird, kann die Entität auch im Falle von indirekter Nennung referenziert werden. Es empfiehlt sich in diesem Fall jedoch, zusätzlich in einem Stellenkommentar zu erläutern, warum hier welche Entität verwendet wurde (d.h. auch auf das kontexualisierende Dokument zu verweisen). 
+
 ### 5.2 Textstellen-Kommentar
 
-Die Textstellen-Kommentare werden auch dazu verwendet, auf Fotografien im Archiv zu verweisen, die unmittelbar einen Bezug zu dieser Textstelle haben. 
+- Die Textstellen-Kommentare sollten über die Erklärung von wenig bekannten Worten und Einzelsachverhalten hinausgehen, sondern ein tieferes Verständnis der Texte ermöglichen. 
+- Stellenkommentare sollten nicht hinter die Kommentierung durch die bestehenden Editionen (insbesondere Perrets sowie Fähnders/Schaffers/Decock) zurückfallen. Ihre Stellenkommentare können zwar nicht 1:1 übernommen, sollten aber sinngemäß aufgenommen werden (können durch die Verknüpfung mit Entitäten oft kürzer ausfallen!). 
+- Sie Edenda sollen durch Kommentare untereinander und wo nötig mit Intertexten oder Sekundärtexten verbunden werden (Verweise auf andere smallforms/letters, s.o.). 
+
+Sie werden auch dazu verwendet, auf Fotografien im Archiv zu verweisen, die unmittelbar einen Bezug zu dieser Textstelle haben. 
 
 #### Referenzierungen im Textstellen-Kommentar
-Alle Entitäten im Übersichtskommentar werden konsequent referenziert. 
+Alle Entitäten im Kommentar werden konsequent wie im Primärtext referenziert. 
 
 #### Verschlagwortung eines Textstellen-Kommentars
+
+Die Verschlagwortung findet entweder im Stellen-Kommentar oder im TEI-Header statt. Textstellen können also nicht ohne zeitgleiche Kommentierung Verschlagwortet werden, was eine Übermässige Verschlagwortung vorbeugen soll. 
+Im Stellen-Kommentar werden Schlagworte pro Kommentar durch einen 'Pointer' am Ende des Kommentars eingefügt, sie gelten für den ganzen Kommentar: 
+```
+<ptr type="keywords" target="4114051-5" ana="Nationalität"/>    
+```
+- Das Attribut 'ana' ist lediglich für das Verständnis durch die anderen Editor:innen einzufügen. 
+- Für jedes Schlagwort wird ein neues
+
+- "Meta-Verschlagwortung": Stellenkommentare können auch bezüglich ihrer inhaltlichen Funktion verschlagwortet werden, z.B. um hervorzuheben, dass
 
 ### 5.3 Verschlagwortung im TEI-Header
 

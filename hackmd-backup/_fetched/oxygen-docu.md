@@ -1,15 +1,15 @@
 # Dokumentation Oxygen
 
-Das vorliegende Dokument führt durch den Editionsprozess in Oxygen, in dem es versucht, dessen Arbeitsschritte chronologisch abzubilden. Der Ablauf folgt der Grundregel, dass strukturelle und formale Aspekte vor inhaltlichen Aspekten ediert sein müssen, um keine vorschnelle inhaltliche Schlüsse aus einer vermeintlichen Form zu treffen. 
+Das vorliegende Dokument führt durch den Editionsprozess in Oxygen, indem es versucht, dessen Arbeitsschritte chronologisch abzubilden. Der Ablauf folgt der Grundregel, dass strukturelle und formale Aspekte vor inhaltlichen Aspekten ediert sein müssen, um keine vorschnelle inhaltliche Schlüsse aus einer vermeintlichen Form zu treffen. 
 
-Die Anleitung führt in Untertiteln auf, ob der Editionsschritt in der Regel im Code (Text-Editor) oder in der Benutzeroberfläche (Autor-Editor bzw. Framework) geschieht. Damit ist primär die arbeitsergonomisch beste Editionsumgebung bezeichnet; abgesehen vom Referenzieren der meisten Entitäten (die nur im Autor-Editor geschehen kann, weil dort externe Ressourcn abgefragt werden können), sind alle Editionsschritte auch im Text-Editor möglich. Sind sie alos einfacher im Autor-Editor zu machen, wird der Code dahinter hier nicht ausgeführt, er findet sich jedoch immer im [Editionsmodell Edition Annemarie Schwarzenbach](/ccjyBww-TpSE6ivZjWDPig) dokumentiert. Der Einbezug dieses Dokuments erlaubt es - die Entitätenreferenzierung ausgenommen - bei Ausfall des Autor-Editors komplett im Text-Editor zu edieren.
+Die Anleitung führt in Untertiteln auf, ob der Editionsschritt in der Regel im Code (Text-Editor) oder in der Benutzeroberfläche (Autor-Editor bzw. Framework) geschieht. Damit ist primär die arbeitsergonomisch beste Editionsumgebung bezeichnet; abgesehen vom Referenzieren der meisten "externen" Entitäten (die nur im Autor-Editor geschehen kann, weil dort externe Ressourcen abgefragt werden können), sind alle Editionsschritte auch im Text-Editor möglich. Sind sie also einfacher im Autor-Editor zu machen, wird der Code dahinter hier nicht konsequent aufgeführt, er findet sich jedoch immer im [Editionsmodell Edition Annemarie Schwarzenbach](/ccjyBww-TpSE6ivZjWDPig) dokumentiert. Der Einbezug dieses Dokuments erlaubt es bei Ausfall des Autor-Editors komplett im Text-Editor zu edieren.
 
 
 [toc]
 
 ## 0. Vorbildhafte TEI-Dokumente des Projektes
 
-Neben der Schritt-für-Schritt Anleitung in diesem Dokument bieten wir für jede Textform exemplarische TEI-Dokumente im WebDAV (zur Verwendung des WebDAV siehe [unten](#1-Verwendung-von-WebDAV)). An diesen Dokumenten können sich die Editor:innen hinsichtlich TEI-Header (soweit er manuell zu vervollständigen ist), Dokument-Struktur, Referenzierungen und Kommentierung orientieren. Ihnen sind auch Code-Beispiele für die Dokumentation entnommen. 
+Neben der Schritt-für-Schritt Anleitung in diesem Dokument bieten wir für jede Textform exemplarische TEI-Dokumente im WebDAV an (zur Verwendung des WebDAV siehe [unten](#1-Verwendung-von-WebDAV)). An diesen Dokumenten können sich die Editor:innen hinsichtlich TEI-Header (soweit er manuell zu vervollständigen ist), Dokument-Struktur, Referenzierungen und Kommentierung orientieren. 
 
 Die Dokumente haben wir zusätzlich durch XML-Kommentare angereichert. Sie können bei Unklarheiten durch die [Oxygen-Kommentarfunktion](#Korrekturlesen-Autor-Editor) von Euch mit Rückfragen angereichert werden. 
 
@@ -24,22 +24,21 @@ Alle Varianten des TEI-Headers: https://dav.annemarie-schwarzenbach.ch/sandbox/e
 - **(Reise-)Feuilleton mit Untertitel**: _Baltisches Tagebuch I: Kaunas, die Hauptstadt einer „ersten Generation"._ = smallform_0227
     - Spezialfall: Redaktioneller Text zwischen Titel und Untertitel
 - **Rezension**: _Abenteuer von Klaus Mann_ = smallform_0011  
-    - Spalten 
     - Werk-Referenzen
     - Kommentierung von Intertextualität
 - **Fotoreportage**: _Studenten - in drei Ländern_ = smallform_0270
-    -  Textblöcke = Spalten
     -  Fotografien (mit Referenzierung auf Fotografien im Archiv)  
     -  Bildunterschriften 
     -  Kommentierung Intermedialität
 - **Fotografie in Illustrierter**: 
     - Spezialfall einer einzelnen Aufnahme
 - **Typoskript** : _Ruth_ = smallform_0607 
+    - TEI-Header mit Archiv-Informationen (msDesc/msIdentifier) 
     - Spezialfall: enthält Prosa und Verse
     - Zur Zeit (März 25) noch vernachlässigbar
     -> Kleine Formen-Typoskripte werden voraussichtlich ab Sommer 25 in grösserer Zahl vorliegen 
 
--> Wir brauchen auch noch ein Beispiel eines Textes mit Fussnoten im Original. 
+-> Wir brauchen ggfls. auch noch ein Beispiel eines Textes mit Fussnoten im Original, Fussnoten-Codierung ist jedoch noch nicht fixiert.  
 
 ### 0.2 Briefe 
 - Brief mit Umschlag: letter_0003
@@ -65,7 +64,7 @@ Einstellungen bei der Generierung einer neuen Verbindung:
 
 
 ### 1.1 Export aus Transkribus
-Vor der Benutzung von Oxygen müssen die Dokumente aus Transkribus exportiert und konvertiert werden. Hierfür verwenden wir die entsprechende [Export-Github-Issue](https://github.com/dse-as/workflow_IIIF-ATR-TEI/issues). Das Resultat sind jeweils zwei XML-Dateien im Ordner https://github.com/dse-as/workflow_IIIF-ATR-TEI/blob/main/_generated/2-base-TEI: die eigentliche TEI-XML-Datei mit der Form 'ProjektID.xml' (z.B. letter_0201.xml) und eine Datei mit den Koordinaten, die zurück auf das Digitalisat verweist, mit der Form 'ProjektID_facs.xml' (z.B. letter_0201_facs.xml). 
+Vor der Benutzung von Oxygen müssen die Dokumente aus Transkribus exportiert und konvertiert werden. Hierfür verwenden wir das entsprechende [Export-Github-Issue](https://github.com/dse-as/workflow_IIIF-ATR-TEI/issues). Das Resultat sind jeweils zwei XML-Dateien im Ordner https://github.com/dse-as/workflow_IIIF-ATR-TEI/blob/main/_generated/2-base-TEI: die eigentliche TEI-XML-Datei mit der Form 'ProjektID.xml' (z.B. letter_0201.xml) und eine Datei mit den Koordinaten, die zurück auf das Digitalisat verweist, mit der Form 'ProjektID_facs.xml' (z.B. letter_0201_facs.xml). 
 
 Beide Dateien müssen lokal (zwischen-)gespeichert werden (oder es gibt eine lokale Synchronisation via GitHub-Desktop, die das sicherstellt).
 
@@ -76,7 +75,7 @@ Beide auf GitHub erzeugten Dateien werden in entsprechende Ordner des WebDAV gel
     - Überordner aller TEI's: https://dav.annemarie-schwarzenbach.ch/data/sources/tei
     - Unterordner für die smallform-TEI's: https://dav.annemarie-schwarzenbach.ch/data/sources/tei/smallforms/
     - Unterordner für die letter-TEI's: https://dav.annemarie-schwarzenbach.ch/data/sources/tei/letters
-        ->Beide Unterordner sind weiter unterteilt in nummerierte Ordner, die jeweils 100 Dateien umfassen solle: smallform/00 = smallform_0001 - smallform_0099; smallform/01 = smallform_0100 - smallform_0199 etc. 
+        ->Beide Unterordner sind weiter unterteilt in nummerierte Ordner, die jeweils 100 Dateien umfassen sollen: smallform/00 = smallform_0001 - smallform_0099; smallform/01 = smallform_0100 - smallform_0199 etc. 
 - Faksimile-Datei: https://dav.annemarie-schwarzenbach.ch/data/sources/facs
     -> Die restlichen Unterordner sind analog aufgebaut
 
@@ -85,13 +84,13 @@ Mithilfe obiger Links lässt sich das WebDAV bzw. die darin enthaltenen Dateien 
 ### 1.3 Bearbeitungsregeln: Sperren von Dokumenten etc.
 
 :::warning
-Bei der Arbeit im WebDAV ist zu beachten, dass in der Regel nur eine Person eine Datei auf Oxygen geöffnet haben kann (ist eine Datei - vom user selbst oder von jemand anderem - geöffnet, ist es mit einem Schloss-Symbol versehen. 
+Bei der Arbeit im WebDAV ist zu beachten, dass in der Regel nur eine Person eine Datei auf Oxygen geöffnet haben kann (ist eine Datei - vom user selbst oder von jemand anderem - geöffnet, ist es mit einem Schloss-Symbol versehen). 
 :::
 
 
-- Achtung: Der Dateibaum aktualisiert sich nicht automatisch, sondern bildet Initialzustand ab; d.h. zuweilen sieht man das Schloss nicht. Man kann aber immer verzeichnisweise neu laden (markieren und `F5`)
+- Achtung: Der Dateibaum aktualisiert sich nicht automatisch, sondern bildet den Initialzustand ab; d.h. zuweilen sieht man das Schloss nicht. Man kann aber immer verzeichnisweise neu laden (markieren und `F5`).
 - Unabhängig davon, ob das Schloss-Symbol angezeigt wird, erscheint beim Öffnen eine Locking-Warnung. Die sollte nur ganz bewusst weggeklickt werden; normalerweise “Cancel” wählen und mit der Person, die in der Warnung angegegeben wurde, Kontakt aufnehmen (es kann sein, dass das Dokument nur aus Versehen noch geöffnet war und freigegeben werden kann).
-- Dasselbe gilt für das Entsperren im Kontextmenü (d.h. nicht durch Doppelklick, sondern durch Rechtsklick) - nur im Notfall machen und auch dann nur, wenn die sperrende Person informiert wird
+- Dasselbe gilt für das Entsperren im Kontextmenü (d.h. entsperren nicht durch Doppelklick, sondern durch Rechtsklick): Nur im Notfall machen und auch dann nur, wenn die sperrende Person informiert wird
 
 ## 2. Metadaten im TEI-Header
 
@@ -110,7 +109,9 @@ Für die Briefe ist nur der Code für posthume Editionen und Übersetzungen rele
 Folgende **Regeln** sind zu beachten: 
 
 ### 2.1 Metadaten Kleine Formen
-- Titel: Werktitel im Titel werden durch `<hi>[Werktitel]</hi>` hervorgehoben
+- Titel: 
+    - Werktitel im Titel werden durch `<hi>[Werktitel]</hi>` hervorgehoben
+    - Kleine Formen ohne erkennbaren Titel werden der verbreiteten Konvention gemäß durch einen sinnvoll langen Ausschnitt des Textbeginns betitelt und mit drei PUnkten abgeschlossen (z.B. smallform_609: "Herr! wie sich mich nähren, deine Himmelsvögel... "). Ausnahmen sind in der Schwarzenbach-Forschung etablierte Titel wie "Eine FRau zu sehen".
 - Datum von Typoskripten und Manuskripten: Bei einem Entstehungszeitrum wird das Enddatum eingetragen
 
 ### 2.2 Metadaten Briefe
@@ -124,9 +125,9 @@ Für smallforms gibt es die folgende Ausnahme, die Ergänzungen im Code benötig
 
 
 ### 2.3 Spezialfall: Kleine Formen als Typoksript oder Manuskript (aus Archiv)
-Im Falle von Kleinen Formen aus dem Archiv wird dem Header nicht automatisch ein msIdentifier hinzugegeben (weil über die Hälfte der smallforms publiziert sind und nicht aus Archiven stammen). Bei smallforms aus Archiven wird deshalb folgender Code ganz zu Beginn von `<sourceDesc>` hinzugefügt (TEI verlang, dass es am Anfang steht). Dies kann mithilfe eines 'quickfix' gemacht werden, d.h. das Einfüguen des folgenden Codes wird von Oxygen vorgeschlagen, sobald eine smallform vorliegt, die im TEI-Header als Manuskript oder Typoskript definiert wird.  
+Im Falle von Kleinen Formen aus dem Archiv wird dem Header nicht automatisch ein msIdentifier hinzugegeben (weil über die Hälfte der smallforms publiziert sind und nicht aus Archiven stammen). Bei smallforms aus Archiven wird deshalb folgender Code ganz zu Beginn von `<sourceDesc>` hinzugefügt (TEI verlang, dass es am Anfang steht). Dies kann mithilfe eines 'quickfix' gemacht werden, d.h. das Einfüguen des folgenden Codes wird von Oxygen vorgeschlagen, sobald eine smallform vorliegt, die im TEI-Header als Manuskript oder Typoskript definiert wird (Stand 9. April 2025 funktioniert dieser quickfix noch nicht).  
 
-```
+```xml=
 <sourceDesc> 
     <msDesc> 
        <msIdentifier> 
@@ -146,7 +147,7 @@ Weitere Informationen im `<sourceDesc>` bei Archiv-Material:
 `<biblScope></biblScope>`: hier wird gewöhnlich die Seitenzahl eingefügt, im Falle von Archivmaterial kann die Kollation eingefügt werden (z.B. 4 S. Ts. m. hs. Korr.)
 
 Danach kann in den Autor-Modus gewechselt werden und die Archivinformationen können dort in der Maske ausgefüllt werden. Das Feld "Zeitschrift" wird freigelassen. 
-Eine Schematron-Regel überprüft zusätzlich, ob alle smallforms des Typs "manuscipt" und "typoscript" den msIdentifier aufweisen. 
+Eine Schematron-Regel überprüft zusätzlich, ob alle smallforms des Typs "Manuskript" und "Typoskript" den msIdentifier aufweisen. 
 
 ## 3. Strukturelle Auszeichnung
 
@@ -169,11 +170,11 @@ Paragraphen können zwar durch custom-taggings in Transkribus vorbereitet werden
 - Bei custom-tagging von \p\ bzw. \:p\ mit \fml\, um paragraphen-tags bei Seitenumbrüchen als temporär zu markieren: Dort muss nun sowohl die FML-Warnung als auch der Paragraph selbst wieder gelöscht werden.
 - Wo in Transkribus keine customtagging für Paragraphen verwendet wurde (weil die Paragraphen-Struktur z.B. sehr einfach ist, und sich Paragraphen über mehrere Seiten hinziehen wie bei vielen Briefen, oder weil andere tags wie head, byline, dateline etc nötig werden): Hier umschliesst die Konversion automatisch alle unvertaggten Text mit einem temporären Paragraphen und FML-Wrapper. 
     - Entweder muss nur die FML-Warnung gelöscht werden
-    - Oder der Absatz muss mit dem korrekte Wrapper umschlsosen werden (zu den diversen Taggings von spezifischen Grundstrukturen, s.u.)
+    - Oder der Absatz muss mit dem korrekte Wrapper umschlossen werden (zu den diversen Taggings von spezifischen Grundstrukturen, s.u.)
 
 #### c. Zeilen und Silbentrennung (Autor-Editor)
 
-Zeilen werden direkt aus der automatisierten Zeilenerkennung von Transkribus importiert. Sollte bei der Korrektur in Tranksribus ein Fehler unterlaufen sein, können Zielen mit folgendem Buztton im Autor-Modus getrennt werden: 
+Zeilen werden direkt aus der automatisierten Zeilenerkennung von Transkribus importiert. Sollte bei der Korrektur in Tranksribus ein Fehler unterlaufen sein, können Zeilen mit folgendem Buztton im Autor-Modus getrennt werden: 
 ![grafik](oxygen-docu/r1_jgjs6Jx.png)
 
 Silbentrennungen, die in der Leseausgabe zusammen mit den diplomatischen Zeilenbrüchen tilgbar sind, werden aus der Konversion von Transkribus automatisch importiert, wo ein Negationszeichen `¬`steht. Sie werden am Zeilenbeginn im Autor-Modus durch pinke (statt schwarze) Pfeile markiert (der Silbentrenntstrich fällt weg und wird für die Leseausgabe wieder ergänzt).
@@ -182,7 +183,7 @@ Wo in Transkribus das Negationszeichen vergessen ging, kann im Autor-Modus mit e
 
 #### d. Verse (Text-Editor)
 Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin gebrochen, deshalb müssen sie gesondert ausgezeichnet werden. Dabei sollte folgendes Code-Schema verwendet werden (vgl. auch smallform_0607):
-```xml 
+```xml= 
 <lg> 
 <l> Vers 1 </l>
 <l> Vers 2 </l>
@@ -194,17 +195,44 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 - Opener: `<opener>...<opener/>` Diese Textstruktur enthält alle Informationen, die einen Brief eröffnen (Datum, Ort, Anrde ggfls. Adresse)
     - Dateline:`<dateline>`: Umfasst auch Ortsangaben
     - Salute = Begrüssungsformel (mit oder ohne Namen): `<salute>`
-- Salute im Paragraph: Findet sich die Anrede auf derselben Zeile oder sogar im selben Satz wie der eigentliche Briefbeginn, wird dies folgendermassen ausgezeichnet: `<seg type="salute">...<saliute/>
+- Salute oder dateline im Paragraph: Findet sich die Anrede auf derselben Zeile oder sogar im selben Satz wie der eigentliche Briefbeginn, wird dies folgendermassen ausgezeichnet: `<seg type="salute">...<seg/>` bzw. `<seg type="dateline">...<seg/>`
 - Closer: `<closer>`umfasst alle Informationen nach dem Haupttext:
     - Salute = auch Abschiedsformel, ggfls. auch der einleitende Satz (z.B.: "Bitte grüße mir auch ganz herzlich Deine Mutter! Liebe Grüße,")
-    - Signed = Unterschrift
-    - Postscriptum
+    - Signed = Unterschrift: `<signed>`
+- Postscriptum: `<postscript>`
+    - Bei mehrerem Postscripten ist es nötig, diese in einen neuen `<div>`-Wrapper zu packen. 
+- Briefumschläge und Adress-Seiten von Postkarten: `<div type="back">`
+- Postmarken: 
+```xml=
+ <seg type="postmark">
+          <date></date>
+          <placeName/>
+        </seg>
+```
+- Adress-Blöcke (z.B. auf Umschlägen) werden von einem 'anonymous block' `<ab>`umgeben und dann Linie für Linie codiert und jeweils später referenziert: 
+```xml=
+<ab>
+    <address>
+        <addrLine><lb xml:id="p001_l_276"/>M. <rs type="person" key="person_0006" xml:id="r7">Claude Bourdet</rs></addrLine>
+        <addrLine><lb xml:id="p001_tr_1_tl_21"/>Boleystr. 34</addrLine>       
+        <addrLine><lb xml:id="p001_tr_1_tl_25"/><rs type="place" key="place_0088" xml:id="r9">Zurich</rs></addrLine>     
+        <addrLine><lb xml:id="p001_tr_1_tl_28"/><rs type="place" key="place_0110" xml:id="r8">Schweiz</rs></addrLine>
+    </address>
+</ab>
+```
+
+
+
+
 
 ### 3.3 Grundstruktur Kleine Formen
 
 **Titel/Untertitel/Zwischentitel**: `<head>...</head>`
-- Jeder (Unter-/Zwischne-)Titel wird von einem neuen `<div>`-Element eingefasst.
+- Jeder (Unter-/Zwischen-)Titel wird von einem neuen `<div>`-Element eingefasst. Zur genauen Codierung siehe [hier im Editionsmodell](https://hackmd.io/ccjyBww-TpSE6ivZjWDPig?view=&stext=21148%3A19%3A0%3A1744213033%3Au4jDfh).
 - Das erste `<div>`-Element (`<div type="smallform">`) wird bereits durch die Konversion erzeugt, deshalb muss bei lediglich einem Titel darauf nicht geachtet werden. 
+
+**Autorennamen"**: `<byline>Von Annemarie SCharzenbach<byline/>`
+- Falls die byline im Fliesstext ist, kann analog zum salute vorgegangen werden: `<seg type="byline">...<seg/>` 
 
 **Spalten** werden dort ausgezeichnet, wo eine spaltenförmige Textregion beginnt und wo das Spaltenlayout (d.h. alle Textregionen mit Spalten) endet. Dazwischen werden Spaltenbrüche ausgezeichnet.
 - Beginn des Spaltenlayouts: `<cb type="start"/>`
@@ -215,10 +243,8 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 - Spalten können zwar nicht über das Framework hinzugefügt werden, erscheinen dort jedoch als folgendes Zeichen, das angeklickt werden kann, um es in ein Spaltenbeginn oder -ende umzuwandeln: 
     ![grafik](oxygen-docu/B16oxjXCkx.png)
 
-
-
 **Bilder**: Zur Struktur-Codierung von Bildern und Bildunterschriften: 
-```
+```xml=
 <milestone unit="textregion" xml:id="p001_r_8"/>
 <figure>
     <head resp="editor"> [Projekteigener Titel für das Bild]</head>
@@ -231,7 +257,7 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 
 - In der Konversion werden die Paragraphen der Bildunterschriften und ihre dazugehörigen milestones ausserhalb des Figure-Elements abgelegt, jedoch miten einem FML-Tag als nachzubearbeiten markiert. 
 
-Die Codierun ganzer Fotoreportagen ist Stand 9. April 2025 noch nicht fertig festgelegt. 
+Die Codierung ganzer Fotoreportagen ist Stand 9. April 2025 noch nicht fertig festgelegt. 
 
 
 ## 4. Auszeichnungen von Renderings und Texteingriffen (Text- oder Autor-Editor)
@@ -256,7 +282,7 @@ Die Referenzierung von Entitäten erfolgt im Falle der "externen" normalerweise 
 `<rs type="person" key="#id" xml:id="#xml-id">`
 `<rs type="place" key="#id" xml:id="#xml-id">`
 `<rs type="person" key="#id" xml:id="#xml-id">` etc.
-Die XML-ID kann durch einen 'Quickfix' hinzugefügt werden (rote Warnung anklicken und Quickfix auswählen). 
+Die XML-ID kann durch einen 'Quickfix' hinzugefügt werden (rote Warnung anklicken und Quickfix auswählen). Stand 9. April 2025 funktionieren die quickfixes jedoch noch nicht zuverlässig. 
 
 #### a. "Externe" Entitäten (= keine eigenen Edenda)
 Für all diese Entitäten gilt, dass sie normalerweise aus einer bestehenden Liste im Framework ausgewählt werden können. Fehlt dort eine gewünschte Entität, können Sie selbst angereichert werden. Bevor fälschlich Duplikate erzeugt werden (insbesondere bei Ortnamensvarianten!) kurz zu überprüfen, ob Sie in de projekteigenen Datensammlung (Google-Sheet oder XML-Datei) unter anderem Namen vorhanden sind.
@@ -285,8 +311,7 @@ Hierzu zählen:
 
 Wenn auf projekteigene smallforms, letters oder images verwiesen werden soll, muss dies händisch geschehen: 
 `<rs type="smallform" key="smallform_0240" xml:id="f3x_4yj_y2c">`
-Der key wird jeweils dem entsprechenden Google-Sheet-Index entnommen, die XML-ID kann via Quickfix erzeugt werden (s.o.).
-
+Der key wird jeweils dem entsprechenden Google-Sheet-Index entnommen, die XML-ID kann via Quickfix erzeugt werden (s.o.). Wenn es den Editorinn:en sinnvoll erscheint, kann der Werktitel in einem 'ana'-Attribut zur Verständigung mit den anderen Editor:innen hinzugefügt werden. 
 
 
 #### c. Verwendung der Entitäten
@@ -311,12 +336,13 @@ Im Stellen-Kommentar werden Schlagworte pro Kommentar durch einen 'Pointer' am E
 ```
 <ptr type="keywords" target="4114051-5" ana="Nationalität"/>    
 ```
-- Das Attribut 'ana' ist lediglich für das Verständnis durch die anderen Editor:innen einzufügen. 
-- Für jedes Schlagwort wird ein neues
-
-- "Meta-Verschlagwortung": Stellenkommentare können auch bezüglich ihrer inhaltlichen Funktion verschlagwortet werden, z.B. um hervorzuheben, dass
+- Das Attribut 'ana' ist lediglich für das Verständnis durch die anderen Editor:innen einzufügen, es hat keinen technischen Nutzen. 
+- Für jedes Schlagwort wird ein neues `<ptr`-Element eingefügt.
+- "Meta-Verschlagwortung": Stellenkommentare können auch bezüglich ihrer inhaltlichen Funktion verschlagwortet werden, z.B. um hervorzuheben, dass es sich beim Kommentar um das Thema "Intertexutlaität", "Intermedialität" oder um ein "Interpretament" (quasi-lexikalische Sachworterkärung) handelt. 
 
 ### 5.3 Verschlagwortung im TEI-Header
+
+Bei der Verschlagwortung ganzer Dokumente ist darauf zu achten, dass eine allzu lange Liste der Schlagwörter zu Beliebigkeit führen kann. Längere Texte können mehr Schlagwörter aufweisen (5-8), kürzere sollten sich auf 4-5 begnügen. 
 
 ### 5.4 Übersichtskommentar im TEI-Header
 
@@ -324,7 +350,7 @@ Was der Übersichtskommentar NICHT ist: Kein Regest bzw. keine Zusammenfassung d
 
 Aufbau des Übersichtskommentars: 
 - **Entstehungskontext**: In der Regel biographische Kontexte wie Reise/Lebenssituation/Konflikt/Thema/Freundschaft etc.  Ästhetische/literarischen Eigenarten, wenn relevant (z.B.: ästhetisierende/narrativierende Wiederaufnahme eines zuvor sachlich-journalistisch bearbeiteten Themas).
-- Textträger (falls unpubliziert): Spezifika der Materialität oder der Schreibutensilien (z.B. auch Zustand des Papiers oder der Schrift, handelt es sich um ein Durchschlag etc.). 
+- **Textträger** (falls unpubliziert): Spezifika der Materialität oder der Schreibutensilien (z.B. auch Zustand des Papiers oder der Schrift, handelt es sich um ein Durchschlag etc.). 
 - **Publikationskontext** (falls publiziert): Thematisch ähnliche Publikationen; Hintergründe, warum Publikation in diesem Medium/zu dieser Zeit.
 - **Historischer Kontext** (falls relevant): Breitere Einbettung in Zeitgeschichte (z.B.: Anschluss von Österreich).  
 

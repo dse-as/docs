@@ -423,7 +423,6 @@ Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
 </div>
 </div>
 ```
-- Unklar: Benötigen wir ein `<div n="1"`, wenn wir gar keine Absatz-Überschriften benötigen? Verschachtelungen und mehr als zwei Ebenen sind wohl selten, wir können sie aber nicht ausschliessen. 
   
 - Spalten:  
     

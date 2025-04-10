@@ -92,6 +92,8 @@ Bei der Arbeit im WebDAV ist zu beachten, dass in der Regel nur eine Person eine
 - Unabhängig davon, ob das Schloss-Symbol angezeigt wird, erscheint beim Öffnen eine Locking-Warnung. Die sollte nur ganz bewusst weggeklickt werden; normalerweise “Cancel” wählen und mit der Person, die in der Warnung angegegeben wurde, Kontakt aufnehmen (es kann sein, dass das Dokument nur aus Versehen noch geöffnet war und freigegeben werden kann).
 - Dasselbe gilt für das Entsperren im Kontextmenü (d.h. entsperren nicht durch Doppelklick, sondern durch Rechtsklick): Nur im Notfall machen und auch dann nur, wenn die sperrende Person informiert wird
 
+Sobald das Dokument in Oxygen hochgeladen wurde, sollte dessen Bearbeitungsstatus im Index auf 'ttf_o' geändert werden (mit entsprechendem Namenskürzel voran, z.B. dk_ttf_o). 
+
 ## 2. Metadaten im TEI-Header
 
 Für diesen und alle weiteren Editionsschritte ist es oftmals sinnvoll, das Digitalisat bzw. Faksimile zum Abgleich der vorhandenen (Meta-)Daten herbeizuziehen (z.B. auf einem separaten Bildschirm). Das Digitalisat kann mit folgendem Button im Autor-Modus in einem IIIF-Viewer im Browser aufgerufen werden: 
@@ -255,7 +257,7 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 </figure>
 ```
 
-- In der Konversion werden die Paragraphen der Bildunterschriften und ihre dazugehörigen milestones ausserhalb des Figure-Elements abgelegt, jedoch miten einem FML-Tag als nachzubearbeiten markiert. 
+- In der Konversion werden die Paragraphen der Bildunterschriften und ihre dazugehörigen milestones ausserhalb des Figure-Elements abgelegt, jedoch mit einem FML-Tag als nachzubearbeiten markiert. 
 
 Die Codierung ganzer Fotoreportagen ist Stand 9. April 2025 noch nicht fertig festgelegt. 
 
@@ -320,7 +322,7 @@ Der key wird jeweils dem entsprechenden Google-Sheet-Index entnommen, die XML-ID
 
 ### 5.2 Textstellen-Kommentar
 
-- Die Textstellen-Kommentare sollten über die Erklärung von wenig bekannten Worten und Einzelsachverhalten hinausgehen, sondern ein tieferes Verständnis der Texte ermöglichen. 
+- Die Textstellen-Kommentare sollten über die Erklärung von wenig bekannten Worten und Einzelsachverhalten hinausgehen und idealierweise ein tieferes Verständnis der biographischen, historischen und literarischen Kontexte der Texte ermöglichen. 
 - Stellenkommentare sollten nicht hinter die Kommentierung durch die bestehenden Editionen (insbesondere Perrets sowie Fähnders/Schaffers/Decock) zurückfallen. Ihre Stellenkommentare können zwar nicht 1:1 übernommen, sollten aber sinngemäß aufgenommen werden (können durch die Verknüpfung mit Entitäten oft kürzer ausfallen!). 
 - Sie Edenda sollen durch Kommentare untereinander und wo nötig mit Intertexten oder Sekundärtexten verbunden werden (Verweise auf andere smallforms/letters, s.o.). 
 
@@ -333,7 +335,7 @@ Alle Entitäten im Kommentar werden konsequent wie im Primärtext referenziert.
 
 Die Verschlagwortung findet entweder im Stellen-Kommentar oder im TEI-Header statt. Textstellen können also nicht ohne zeitgleiche Kommentierung Verschlagwortet werden, was eine Übermässige Verschlagwortung vorbeugen soll. 
 Im Stellen-Kommentar werden Schlagworte pro Kommentar durch einen 'Pointer' am Ende des Kommentars eingefügt, sie gelten für den ganzen Kommentar: 
-```
+```xml
 <ptr type="keywords" target="4114051-5" ana="Nationalität"/>    
 ```
 - Das Attribut 'ana' ist lediglich für das Verständnis durch die anderen Editor:innen einzufügen, es hat keinen technischen Nutzen. 
@@ -355,7 +357,9 @@ Aufbau des Übersichtskommentars:
 - **Historischer Kontext** (falls relevant): Breitere Einbettung in Zeitgeschichte (z.B.: Anschluss von Österreich).  
 
 ## 6. Korrekturlesen (Autor-Editor)
-Hierfür kann der Oxygen-eigene Korrektur- und Kommentarmodus im Autor-Editor verwendet werden. Er besitzt weitgehend dieselben Funktionalitäten wie der Korrekturmodus von Word. 
+Nach Abschluss der Edition in Oxygen wird der Bearbeitungsstatus des Dokuemntes im Index auf 'ttf_of' (of=oxygen finished) gesetzt und ein:e Editor:in (in der Anfangsphase Elias für die Kleinen Formen und Daniela für die Briefe) gebeten, den Text Korrektur zu lesen.
+
+Für das Korrekturlesen kann der Oxygen-eigene Korrektur- und Kommentarmodus im Autor-Editor verwendet werden. Er besitzt weitgehend dieselben Funktionalitäten wie der Korrekturmodus von Word. 
 ![grafik](oxygen-docu/BJSX2mkhJg.png)
 :::warning
 Nach dem Korrekturlesen müssen alle in diesem Modus erstellten Kommentare/Korrekturen angenommen/verworfen werden!

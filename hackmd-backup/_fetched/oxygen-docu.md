@@ -290,13 +290,13 @@ Die XML-ID kann durch einen 'Quickfix' hinzugefügt werden (rote Warnung anklick
 Für all diese Entitäten gilt, dass sie normalerweise aus einer bestehenden Liste im Framework ausgewählt werden können. Fehlt dort eine gewünschte Entität, können Sie selbst angereichert werden. Bevor fälschlich Duplikate erzeugt werden (insbesondere bei Ortnamensvarianten!) kurz zu überprüfen, ob Sie in de projekteigenen Datensammlung (Google-Sheet oder XML-Datei) unter anderem Namen vorhanden sind.
 "Externe" Entitäten werden auf drei verschiedene Weisen verwaltet:
 
-- **Im [Google-Sheet](https://docs.google.com/spreadsheets/d/1pzY0f-4SyWGZEd3-kF2E-djY54qsr9HrRIljVDG5gkc/edit?usp=sharing)** -> wird direkt im Framework durch folgende Buttons integriert: ![grafik](oxygen-docu/ByRJHx4CJe.png)
+1. **Im [Google-Sheet](https://docs.google.com/spreadsheets/d/1pzY0f-4SyWGZEd3-kF2E-djY54qsr9HrRIljVDG5gkc/edit?usp=sharing)** -> wird direkt im Framework durch folgende Buttons integriert: ![grafik](oxygen-docu/ByRJHx4CJe.png)
 
     - Orte: Daten aus [Geonames](https://www.geonames.org/) 
     - Personen: Daten aus der [GND](https://swb.bsz-bw.de) 
     - Intitutionen: 'Organisationen'-Daten aus der [GND](https://swb.bsz-bw.de) 
         - GND-Personen- und Institutionen-Daten können gemäß Workshop der ZB Zürich selbst angereichert werden. Wenn weitere Schlagwörter gewünscht sind, kann Elias diese in der GND-Redaktion Zürich beantragen. 
-- **In [Zotero](https://www.zotero.org/groups/5746334/dse_as_bibl-id/library)**: Werke, die nicht von uns edier werden. -> Werden im Framework über folgenden Button integriert:
+2. **In [Zotero](https://www.zotero.org/groups/5746334/dse_as_bibl-id/library)**: Werke, die nicht von uns edier werden. -> Werden im Framework über folgenden Button integriert:
 ![grafik](oxygen-docu/H1qQBg40yg.png)
 Hierzu zählen:
     - Zweitpublikationen zu Lebzeiten (Ordner "surrogate")
@@ -304,34 +304,37 @@ Hierzu zählen:
     - Posthume Übersetzungen (Ordner "translation")
     - Forschungsliteratur
         - Die genannten Ordner sind nicht-topologisch, sondern funktionieren wie ein Label; Einträge können in mehreren Ordnern erschienen und 'fliessen' immer in der Hauptcollection zusammen
-- **In XML-Dateien auf dem WebDAV** (Ordner data/meta/lists) -> Können aus Dropdown-Menüs im TEI-header ausgewählt werden (später ggfls. auch per Button): ![grafik](oxygen-docu/Hy28ZeN0yx.png)
+3. **In XML-Dateien auf dem WebDAV** (Ordner data/meta/lists) -> Können aus Dropdown-Menüs im TEI-header ausgewählt werden (später ggfls. auch per Button): ![grafik](oxygen-docu/Hy28ZeN0yx.png)
     - Schlagwörter = keywords.xml: 'Sachbegriffe' aus der [GND](https://swb.bsz-bw.de) 
     - Reisen und Events = events.xml: Selbsterstellte Daten, die aber wiederum mit "externen" Entitäten wie Orten und Personen angereichert im XML werden. 
 
 
 #### b. "Interne" Entitäten (= eigene Edenda)
 
-Wenn auf projekteigene smallforms, letters oder images verwiesen werden soll, muss dies händisch geschehen: 
-`<rs type="smallform" key="smallform_0240" xml:id="f3x_4yj_y2c">`
-Der key wird jeweils dem entsprechenden Google-Sheet-Index entnommen, die XML-ID kann via Quickfix erzeugt werden (s.o.). Wenn es den Editorinn:en sinnvoll erscheint, kann der Werktitel in einem 'ana'-Attribut zur Verständigung mit den anderen Editor:innen hinzugefügt werden. 
+Wenn auf projekteigene smallforms, letters oder images verwiesen werden soll, muss dies händisch geschehen. Hierfür wird die Dokuemntart (smallform, letter, image) als type und seine spezifische ID als key eingefügt: 
+`<rs type="smallform" key="smallform_0240" xml:id="f3x_4yj_y2c">...</rs>`
+Der ID-key wird jeweils dem entsprechenden Google-Sheet-Index entnommen, die XML-ID kann via Quickfix erzeugt werden (s.o.). Wenn es den Editorinn:en sinnvoll erscheint, kann der Werktitel in einem 'ana'-Attribut zur Verständigung mit den anderen Editor:innen hinzugefügt werden.
 
 
-#### c. Verwendung der Entitäten
-- Grundsätzlich wird jede namentlich genannte Entität (= Ort, Institution, Person, Werk) im Autor-Editor referenziert, selbst wenn sie im selben Satz mehrfach vorkommt. 
-- Wo eine Entität nur als Pronomen oder Präposition ("er", "dort") auftaucht, wird sie in der Regel nicht referenziert. Ausnahme: Wenn sich die Entität nicht ohne weiteres aus dem Kontext des vorliegenden Dokumentes erschliessen lässt, d.h. das Wissen über andere Dokumente vorausgesetzt wird, kann die Entität auch im Falle von indirekter Nennung referenziert werden. Es empfiehlt sich in diesem Fall jedoch, zusätzlich in einem Stellenkommentar zu erläutern, warum hier welche Entität verwendet wurde (d.h. auch auf das kontexualisierende Dokument zu verweisen). 
+
+#### c. Regeln zur Referenzierung der Entitäten
+- **Verschachtelungen** bzw. doppeltes Referenzieren sind zu vermeiden, da es im Frontend schwer darstellbar ist. Daumenregel: Das Spezifischere geht vor: Werk vor Person, Institution vor Ort, Institution vor Person. 
+    - Empfohlen wird jedoch ein 'gestaffeltes' Referenzieren. Am Beispiel  der Erwähnung von "Thomas Manns Zauberberg" soll 'Thomas Manns' als Person, 'Zauberberg' als das Werk referenziert werden.
+- Grundsätzlich wird jede **namentlich genannte Entität** (= Ort, Institution, Person, Werk) im Autor-Editor referenziert, selbst wenn sie im selben Satz mehrfach vorkommt. 
+- Wo eine Entität nur als **Pronomen oder Präposition** ("er", "dort") auftaucht, wird sie in der Regel nicht referenziert. Ausnahme: Wenn sich die Entität nicht ohne weiteres aus dem Kontext des vorliegenden Dokumentes erschliessen lässt, d.h. das Wissen über andere Dokumente vorausgesetzt wird, kann die Entität auch im Falle von indirekter Nennung referenziert werden. Es empfiehlt sich in diesem Fall jedoch, zusätzlich in einem Stellenkommentar zu erläutern, warum hier welche Entität referenziert wurde (d.h. auch auf das kontexualisierende Dokument zu verweisen). 
 
 ### 5.2 Textstellen-Kommentar
 
-- Die Textstellen-Kommentare sollten über die Erklärung von wenig bekannten Worten und Einzelsachverhalten hinausgehen und idealierweise ein tieferes Verständnis der biographischen, historischen und literarischen Kontexte der Texte ermöglichen. 
+- Die Textstellen-Kommentare sollten über die Erklärung von wenig bekannten Worten und Einzelsachverhalten hinausgehen und idealierweise ein tieferes Verständnis der biographischen, historischen und literarischen Kontexte der Edenda ermöglichen. 
 - Stellenkommentare sollten nicht hinter die Kommentierung durch die bestehenden Editionen (insbesondere Perrets sowie Fähnders/Schaffers/Decock) zurückfallen. Ihre Stellenkommentare können zwar nicht 1:1 übernommen, sollten aber sinngemäß aufgenommen werden (können durch die Verknüpfung mit Entitäten oft kürzer ausfallen!). 
-- Sie Edenda sollen durch Kommentare untereinander und wo nötig mit Intertexten oder Sekundärtexten verbunden werden (Verweise auf andere smallforms/letters, s.o.). 
+- Die Edenda sollen durch Kommentare untereinander und wo nötig mit Intertexten oder Sekundärtexten verbunden werden (Verweise auf andere smallforms/letters, s.o.). 
 
-Sie werden auch dazu verwendet, auf Fotografien im Archiv zu verweisen, die unmittelbar einen Bezug zu dieser Textstelle haben. 
+Stellen-Kommentare werden auch dazu verwendet, auf Fotografien im Archiv zu verweisen ("interne" Entität: type="image"), die unmittelbar einen Bezug zu dieser Textstelle haben. Damit wird der Forschungsfokus des Projektes auf **Intermedialität** unterstützt (der Kommentar wird entsprechend mit dem "Meta"-Schlagwort 'Intermedialität' versehen). 
 
-#### Referenzierungen im Textstellen-Kommentar
+#### a. Referenzierungen im Textstellen-Kommentar
 Alle Entitäten im Kommentar werden konsequent wie im Primärtext referenziert. 
 
-#### Verschlagwortung eines Textstellen-Kommentars
+#### b. Verschlagwortung eines Textstellen-Kommentars
 
 Die Verschlagwortung findet entweder im Stellen-Kommentar oder im TEI-Header statt. Textstellen können also nicht ohne zeitgleiche Kommentierung Verschlagwortet werden, was eine Übermässige Verschlagwortung vorbeugen soll. 
 Im Stellen-Kommentar werden Schlagworte pro Kommentar durch einen 'Pointer' am Ende des Kommentars eingefügt, sie gelten für den ganzen Kommentar: 
@@ -339,27 +342,35 @@ Im Stellen-Kommentar werden Schlagworte pro Kommentar durch einen 'Pointer' am E
 <ptr type="keywords" target="4114051-5" ana="Nationalität"/>    
 ```
 - Das Attribut 'ana' ist lediglich für das Verständnis durch die anderen Editor:innen einzufügen, es hat keinen technischen Nutzen. 
-- Für jedes Schlagwort wird ein neues `<ptr`-Element eingefügt.
-- "Meta-Verschlagwortung": Stellenkommentare können auch bezüglich ihrer inhaltlichen Funktion verschlagwortet werden, z.B. um hervorzuheben, dass es sich beim Kommentar um das Thema "Intertexutlaität", "Intermedialität" oder um ein "Interpretament" (quasi-lexikalische Sachworterkärung) handelt. 
+- Für jedes Schlagwort wird ein neues `<ptr>`-Element eingefügt.
+- "Meta-Verschlagwortung": Stellenkommentare können auch bezüglich ihrer inhaltlichen Funktion verschlagwortet werden, z.B. um hervorzuheben, dass es sich beim Kommentar um das Thema "Intertextualität", "Intermedialität" oder um ein "Interpretament" (quasi-lexikalische Sachworterkärung) handelt. 
 
 ### 5.3 Verschlagwortung im TEI-Header
 
-Bei der Verschlagwortung ganzer Dokumente ist darauf zu achten, dass eine allzu lange Liste der Schlagwörter zu Beliebigkeit führen kann. Längere Texte können mehr Schlagwörter aufweisen (5-8), kürzere sollten sich auf 4-5 begnügen. 
+Bei der Verschlagwortung ganzer Dokumente ist darauf zu achten, dass eine allzu lange Liste der Schlagwörter zu Beliebigkeit führen kann. Längere Texte können mehr Schlagwörter aufweisen (5-8), kürzere sollten sich auf 4-5 begnügen.
+
+Es ist im Sinne des Projektes, dass die Header-Verschlagwortung den einzelnen Forschungsinteressen der Editor:innen dient, eine 'objektive' Verschlagwortung kann deshalb nur graduell angestrebt werden.  
 
 ### 5.4 Übersichtskommentar im TEI-Header
 
 Was der Übersichtskommentar NICHT ist: Kein Regest bzw. keine Zusammenfassung des Inhalts. Inhaltliche Aspekte können hervorgehoben werden, wenn sie für die Kontextualisierung notwendigerweise referiert werden müssen. 
 
-Aufbau des Übersichtskommentars: 
+Möglicher aufbau des Übersichtskommentars: 
 - **Entstehungskontext**: In der Regel biographische Kontexte wie Reise/Lebenssituation/Konflikt/Thema/Freundschaft etc.  Ästhetische/literarischen Eigenarten, wenn relevant (z.B.: ästhetisierende/narrativierende Wiederaufnahme eines zuvor sachlich-journalistisch bearbeiteten Themas).
 - **Textträger** (falls unpubliziert): Spezifika der Materialität oder der Schreibutensilien (z.B. auch Zustand des Papiers oder der Schrift, handelt es sich um ein Durchschlag etc.). 
-- **Publikationskontext** (falls publiziert): Thematisch ähnliche Publikationen; Hintergründe, warum Publikation in diesem Medium/zu dieser Zeit.
+- **Publikationskontext** (falls publiziert): Thematisch ähnliche Publikationen; Hintergründe, warum Publikation in diesem Medium/zu dieser Zeit erschien. Ggfls. Verweis auf Kommunikation/Vereinbarungen mit den entsprechenden Redaktionen.  
 - **Historischer Kontext** (falls relevant): Breitere Einbettung in Zeitgeschichte (z.B.: Anschluss von Österreich).  
 
-## 6. Korrekturlesen (Autor-Editor)
-Nach Abschluss der Edition in Oxygen wird der Bearbeitungsstatus des Dokuemntes im Index auf 'ttf_of' (of=oxygen finished) gesetzt und ein:e Editor:in (in der Anfangsphase Elias für die Kleinen Formen und Daniela für die Briefe) gebeten, den Text Korrektur zu lesen.
+-> Diese Liste möglicher Aspekte des Übersichtskommentars ist nicht abschliessend und kann erweitert werden.
 
-Für das Korrekturlesen kann der Oxygen-eigene Korrektur- und Kommentarmodus im Autor-Editor verwendet werden. Er besitzt weitgehend dieselben Funktionalitäten wie der Korrekturmodus von Word. 
+Auch in der Verfassung des Übersichtskommentars dürfen die eigenen Forschungsinteressen einfliessen. Wichtig ist, dass grundlegendes Wissen über Schwarzenbach oder die Zeit nicht vorausgesetzt wird (supponierbarer Wissensstand: Schweizer Maturand:in). 
+
+## 6. Korrekturlesen (Text und Autor-Editor)
+Nach Abschluss der Edition in Oxygen wird der Bearbeitungsstatus des Dokumentes im Index auf 'ttf_of' (of=oxygen finished) gesetzt und ein:e Editor:in (in der Anfangsphase Elias für die Kleinen Formen und Daniela für die Briefe) gebeten, den Text Korrektur zu lesen (via Discord oder Mail). Der:Die Korrektor:in setzt danach ihr Kürzel mit dem Status'p' an. Z.B. 'jsg_ttf_of ez_p'. Bei Abschluss der Korrektur wird es um 'f' (für finished) ergänzt: 'jsg_ttf_of ez_pf' 
+
+Strukturelle Korrekturen oder Ergänzungen  werden bei Kleinigkeiten stillschweigend im Text-Editor gemacht. Bei größeren Änderungen im Text-Editor kann ein XML-Kommenatr eingerügt werden (s.u.). 
+
+Für das inhaltliche Korrekturlesen kann der Oxygen-eigene Korrektur- und Kommentarmodus im Autor-Editor verwendet werden. Er besitzt weitgehend dieselben Funktionalitäten wie der Korrekturmodus von Word. 
 ![grafik](oxygen-docu/BJSX2mkhJg.png)
 :::warning
 Nach dem Korrekturlesen müssen alle in diesem Modus erstellten Kommentare/Korrekturen angenommen/verworfen werden!

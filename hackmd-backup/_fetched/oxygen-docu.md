@@ -155,6 +155,12 @@ Eine Schematron-Regel überprüft zusätzlich, ob alle smallforms des Typs "Manu
 
 Nach Upload ins WebDAV und befüllen der Metadaten im TEI-Header wird im Code die Struktur des Textes festgehalten (auch der Autor-Modus, d.h. das Framework erlaubt punktuell eine Strukturierung, jedoch nur beschränkt). 
 
+Für alle Auszeichnungen von Text bzw. Textblöcken im Text-Editor ist das Aufrufen des integrierten Schemas von größter Nützlichkeit. Es erlaubt, nachdem Text via Maus ausgewählt wurde, einen tag per Suche aus der Liste aller schema-gerechten tags auszuwählen oder selbst einen tag zu schreiben und den Text damit zu umgeben.
+Shortcuts:
+- Mac: CMD + E
+- Windwos: CTRL + E
+    
+
 ### 3.1 Grundlegende Strukturen (für Briefe *und* Kleine Formen)
 
 #### a. Seitenbeginn und Zeilenbrüche (Autor-Editor)
@@ -270,6 +276,10 @@ Die Codierung ganzer Fotoreportagen ist Stand 9. April 2025 noch nicht fertig fe
     - Alle diese Renderings können ebenfalls bereits aus Transkribus importiert werden, sind aber auch durch folgende Buttons im Framework einfügbar: 
 ![grafik](oxygen-docu/Skn-yU9Tyg.png)
 
+- Für Handschriften, insbesondere Briefe: Geminationen (d.h. Verdoppelungsstriche über m oder n): 
+![grafik](oxygen-docu/BkXpcDSRkx.png)
+
+
 Weitere Renderings, hier jeweils mit dem Editionsmodell verknpüpft: 
 - [Sofortkorrekturen durch Autorin](https://hackmd.io/ccjyBww-TpSE6ivZjWDPig?view=&stext=5845%3A53%3A0%3A1744201074%3A7Mv6bN)
 - [Korrekturen/Emendation druch Editor:innen](https://hackmd.io/ccjyBww-TpSE6ivZjWDPig?view=&stext=6596%3A25%3A0%3A1744201140%3A1mrn48)
@@ -296,7 +306,9 @@ Für all diese Entitäten gilt, dass sie normalerweise aus einer bestehenden Lis
     - Personen: Daten aus der [GND](https://swb.bsz-bw.de) 
     - Intitutionen: 'Organisationen'-Daten aus der [GND](https://swb.bsz-bw.de) 
         - GND-Personen- und Institutionen-Daten können gemäß Workshop der ZB Zürich selbst angereichert werden. Wenn weitere Schlagwörter gewünscht sind, kann Elias diese in der GND-Redaktion Zürich beantragen. 
-2. **In [Zotero](https://www.zotero.org/groups/5746334/dse_as_bibl-id/library)**: Werke, die nicht von uns edier werden. -> Werden im Framework über folgenden Button integriert:
+        - Zeitungen und Zeitschriften werden als Organisation (type 'periodkikum') aufgenommen, obschon sie im `<bibl corresp="ProjektID"`-Element des TEI Headers als Werk aufgeführt werden. Mit der Entität wird immer sowohl die Institution (Redaktion) als auch das 'Werk' bezeichnet. 
+            - GND bietet Zeitungen und Zeitschriften zum Teil sowohl als Werk wie auch als Organisation (Redaktion) an. Da jedoch kleinere Periodika nur als Wekr aufgeführt sind, soll konsequent nur auf die GND-Werk-Normdatei verwiesen (bzw. solche ins Google-Sheet aufgenommen) werden.   
+2. **In [Zotero](https://www.zotero.org/groups/5746334/dse_as_bibl-id/library)**: Werke, die nicht von uns ediert werden. -> Werden im Framework über folgenden Button integriert:
 ![grafik](oxygen-docu/H1qQBg40yg.png)
 Hierzu zählen:
     - Zweitpublikationen zu Lebzeiten (Ordner "surrogate")

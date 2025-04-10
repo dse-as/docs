@@ -236,7 +236,7 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 **Autorennamen"**: `<byline>Von Annemarie SCharzenbach<byline/>`
 - Falls die byline im Fliesstext ist, kann analog zum salute vorgegangen werden: `<seg type="byline">...<seg/>` 
 
-**Spalten** werden dort ausgezeichnet, wo eine spaltenförmige Textregion beginnt und wo das Spaltenlayout (d.h. alle Textregionen mit Spalten) endet. Dazwischen werden Spaltenbrüche ausgezeichnet.
+**Spalten** werden dort ausgezeichnet, wo eine spaltenförmige Textregion beginnt und wo das Spaltenlayout (d.h. alle Textregionen mit Spalten) endet. Dazwischen werden Spaltenbrüche ausgezeichnet. Texblöcke in Fotoreportagen, die keine mehrspaltige Form haben, werden nicht als Spalten ausgezeichnet. 
 - Beginn des Spaltenlayouts: `<cb type="start"/>`
 - Spaltenbrüche: `<cb/>` 
 - Da Spalten auf Transkribus meist Textregionen sind, kann der Spaltenbeginn/-bruch einfach erkannt werden und die Textregion, die zunächst noch als 'milestone' codiert ist, in ein `<cb/>`-Element unbenannt werden: 
@@ -320,7 +320,8 @@ Der ID-key wird jeweils dem entsprechenden Google-Sheet-Index entnommen, die XML
 #### c. Regeln zur Referenzierung der Entitäten
 - **Verschachtelungen** bzw. doppeltes Referenzieren sind zu vermeiden, da es im Frontend schwer darstellbar ist. Daumenregel: Das Spezifischere geht vor: Werk vor Person, Institution vor Ort, Institution vor Person. 
     - Empfohlen wird jedoch ein 'gestaffeltes' Referenzieren. Am Beispiel  der Erwähnung von "Thomas Manns Zauberberg" soll 'Thomas Manns' als Person, 'Zauberberg' als das Werk referenziert werden.
-- Grundsätzlich wird jede **namentlich genannte Entität** (= Ort, Institution, Person, Werk) im Autor-Editor referenziert, selbst wenn sie im selben Satz mehrfach vorkommt. 
+- Grundsätzlich wird jede **namentlich genannte Entität** (= Ort, Institution, Person, Werk) im Autor-Editor referenziert, selbst wenn sie im selben Satz mehrfach vorkommt.
+    - Zu namentlichen Nennungen zählen wir auch Abkürzungen (die in der Codierung normalisiert werden), Spitznamen (die im Registereintrag als Namensvarianten aufgeführt sein sollten) oder Berufsbezeichnungen ("der Professor").  
 - Wo eine Entität nur als **Pronomen oder Präposition** ("er", "dort") auftaucht, wird sie in der Regel nicht referenziert. Ausnahme: Wenn sich die Entität nicht ohne weiteres aus dem Kontext des vorliegenden Dokumentes erschliessen lässt, d.h. das Wissen über andere Dokumente vorausgesetzt wird, kann die Entität auch im Falle von indirekter Nennung referenziert werden. Es empfiehlt sich in diesem Fall jedoch, zusätzlich in einem Stellenkommentar zu erläutern, warum hier welche Entität referenziert wurde (d.h. auch auf das kontexualisierende Dokument zu verweisen). 
 
 ### 5.2 Textstellen-Kommentar

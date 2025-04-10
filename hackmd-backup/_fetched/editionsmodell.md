@@ -429,7 +429,6 @@ Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
   - Start des Spaltensatzes: `<cb type="start"/>`  
   - Ende des Spaltensatzes`<cb type="end"/>`
   - Spaltenumbrüche innerhalb des Spaltensatzes werden mittels des leeren `<cb>`\-Elements wiedergegeben \[siehe [https://deutschestextarchiv.de/doku/basisformat/spalte.html?hl=spalten](https://deutschestextarchiv.de/doku/basisformat/spalte.html?hl=spalten)\]  
-  -  Textkasten in Bildberichten sind als Spalten zu behandeln
 
 - Bild und Bildunterschrift \[[https://deutschestextarchiv.de/doku/basisformat/abbVerschachtelt.html](https://deutschestextarchiv.de/doku/basisformat/abbVerschachtelt.html)\]:   
     

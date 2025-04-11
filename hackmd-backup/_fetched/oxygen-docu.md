@@ -118,7 +118,6 @@ Folgende **Regeln** sind zu beachten:
 
 ### 2.2 Metadaten Briefe
 - Poststempel werden wie Datierung durch Absender:innen behandelt und in der Maske "Schreibdatum" eingefügt. Wo Poststempel und Datierung durch Absender:innen vorliegen und voneinander abweichen, ist letzteres Datum vorzuziehen  
-- Eruierte Absendedaten (die nicht aus einem Poststempel hervogehen) werden in eckigen Klammern eingefügt und im Übersichtskommentar erläutert
 
 
 Mit dem Ausfüllen der Maske 'Übersichtskommentar', der keine normierten Metadaten, sondern freie philologische Ausführungen enthält, kann zwar schon begonnen werden. Jedoch ist es in den meisten Fällen nötig, nach Abschluss aller anderen Editionsschritte in Oxygen nochmals zum Übersichtskommentar zurückzukommen. Zu Grundregeln des Übersichtskommentars siehe unten, [5.4](#54-Übersichtskommentar-im-TEI-Header), dasselbe gilt für die Verschlagwortung im TEI-Header, s.u, [5.3](#54-Übersichtskommentar-im-TEI-Header). 
@@ -370,7 +369,14 @@ Es ist im Sinne des Projektes, dass die Header-Verschlagwortung den einzelnen Fo
 
 Was der Übersichtskommentar NICHT ist: Kein Regest bzw. keine Zusammenfassung des Inhalts. Inhaltliche Aspekte können hervorgehoben werden, wenn sie für die Kontextualisierung notwendigerweise referiert werden müssen. 
 
-Möglicher aufbau des Übersichtskommentars: 
+#### a. Übersichtskommentar Briefe
+
+Briefe werden primär in einem Über
+
+#### b. Übersichtskommentar Kleine Formen
+
+Möglicher Aufbau des Übersichtskommentars der Kleinen Forme:
+
 - **Entstehungskontext**: In der Regel biographische Kontexte wie Reise/Lebenssituation/Konflikt/Thema/Freundschaft etc.  Ästhetische/literarischen Eigenarten, wenn relevant (z.B.: ästhetisierende/narrativierende Wiederaufnahme eines zuvor sachlich-journalistisch bearbeiteten Themas).
 - **Textträger** (falls unpubliziert): Spezifika der Materialität oder der Schreibutensilien (z.B. auch Zustand des Papiers oder der Schrift, handelt es sich um ein Durchschlag etc.). 
 - **Publikationskontext** (falls publiziert): Thematisch ähnliche Publikationen; Hintergründe, warum Publikation in diesem Medium/zu dieser Zeit erschien. Ggfls. Verweis auf Kommunikation/Vereinbarungen mit den entsprechenden Redaktionen.  

@@ -371,7 +371,9 @@ Was der Übersichtskommentar NICHT ist: Kein Regest bzw. keine Zusammenfassung d
 
 #### a. Übersichtskommentar Briefe
 
-Briefe werden primär in einem Über
+Briefe werden primär in einem Übersichtskommentar pro Korrespondenz-Partner:in kommentiert bzw. in den Stellenkommentaren erklärt. Nur in Ausnahmefälle sind Übersichtskommentare pro Dokument geplant, insbesondere zum Zustand des Textträgers und der Schrift. 
+
+Provisorisch können jedoch im Moment Übersichtskommentare auf Dokumentebene erstellt werden, die dann im Korrespondenz-Kommentar übertragen/zusammengefasst werden.  
 
 #### b. Übersichtskommentar Kleine Formen
 

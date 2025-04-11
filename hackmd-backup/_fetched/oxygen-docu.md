@@ -92,7 +92,7 @@ Bei der Arbeit im WebDAV ist zu beachten, dass in der Regel nur eine Person eine
 - Unabhängig davon, ob das Schloss-Symbol angezeigt wird, erscheint beim Öffnen eine Locking-Warnung. Die sollte nur ganz bewusst weggeklickt werden; normalerweise “Cancel” wählen und mit der Person, die in der Warnung angegegeben wurde, Kontakt aufnehmen (es kann sein, dass das Dokument nur aus Versehen noch geöffnet war und freigegeben werden kann).
 - Dasselbe gilt für das Entsperren im Kontextmenü (d.h. entsperren nicht durch Doppelklick, sondern durch Rechtsklick): Nur im Notfall machen und auch dann nur, wenn die sperrende Person informiert wird
 
-Sobald das Dokument in Oxygen hochgeladen wurde, sollte dessen Bearbeitungsstatus im Index auf 'ttf_o' geändert werden (mit entsprechendem Namenskürzel voran, z.B. dk_ttf_o). 
+**Bevor** das Dokument in Oxygen hochgeladen wird, sollte dessen Bearbeitungsstatus im Index auf 'ttf_o' geändert werden (mit entsprechendem Namenskürzel voran, z.B. dk_ttf_o). 
 
 ## 2. Metadaten im TEI-Header
 
@@ -210,6 +210,8 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 - Postscriptum: `<postscript>`
     - Bei mehrerem Postscripten ist es nötig, diese in einen neuen `<div>`-Wrapper zu packen. 
 - Briefumschläge und Adress-Seiten von Postkarten: `<div type="back">`
+- Vorgedrucktes Briefpapier (Briefbogen und Briefcouvert):
+`<div type="letterhead">`- sowie ggfls. Adresszeilen, siehe [Editionsmodell](https://hackmd.io/ccjyBww-TpSE6ivZjWDPig?view=&stext=19489%3A56%3A0%3A1744352502%3AArj7W7)
 - Postmarken: 
 ```xml=
  <seg type="postmark">

@@ -240,6 +240,11 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 - Jeder (Unter-/Zwischen-)Titel wird von einem neuen `<div>`-Element eingefasst. Zur genauen Codierung siehe [hier im Editionsmodell](https://hackmd.io/ccjyBww-TpSE6ivZjWDPig?view=&stext=21148%3A19%3A0%3A1744213033%3Au4jDfh).
 - Das erste `<div>`-Element (`<div type="smallform">`) wird bereits durch die Konversion erzeugt, deshalb muss bei lediglich einem Titel darauf nicht geachtet werden. 
 
+**Orts- und Datumsangaben**, die als Paratext Teil der Kleinen Form selbst sind (z.B. neben dem Autor:innenamen oder im Stil eines Tagebucheintrags nach dem Haupttitel, aber vor dem Beginn des Haupttextes, siehe smallform_0055): 
+`<dateline>Konstantinopel, im November</dateline>`
+- Spezifalfall: die Dateline ist auf derselben Zeile wie der Haupttext (aber z.B. nur durch einen Punkt davon getrennt):
+`<p><seg type="dateline">Afghanistan, Anfang September.</seg> Es gibt[...]</p>`
+
 **Autorennamen"**: `<byline>Von Annemarie SCharzenbach<byline/>`
 - Falls die byline im Fliesstext ist, kann analog zum salute vorgegangen werden: `<seg type="byline">...<seg/>` 
 

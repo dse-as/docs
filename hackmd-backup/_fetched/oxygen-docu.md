@@ -156,8 +156,8 @@ Nach Upload ins WebDAV und befüllen der Metadaten im TEI-Header wird im Code di
 
 Für alle Auszeichnungen von Text bzw. Textblöcken im Text-Editor ist das Aufrufen des integrierten Schemas von größter Nützlichkeit. Es erlaubt, nachdem Text via Maus ausgewählt wurde, einen tag per Suche aus der Liste aller schema-gerechten tags auszuwählen oder selbst einen tag zu schreiben und den Text damit zu umgeben.
 Shortcuts:
-- Mac: CMD + E
-- Windwos: CTRL + E
+- Mac: `CMD` + `E`
+- Windwos: `CTRL` + `E`
     
 
 ### 3.1 Grundlegende Strukturen (für Briefe *und* Kleine Formen)
@@ -312,7 +312,7 @@ Für all diese Entitäten gilt, dass sie normalerweise aus einer bestehenden Lis
     - Personen: Daten aus der [GND](https://swb.bsz-bw.de) 
     - Intitutionen: 'Organisationen'-Daten aus der [GND](https://swb.bsz-bw.de) 
         - GND-Personen- und Institutionen-Daten können gemäß Workshop der ZB Zürich selbst angereichert werden. Wenn weitere Schlagwörter gewünscht sind, kann Elias diese in der GND-Redaktion Zürich beantragen. 
-        - Zeitungen und Zeitschriften werden als Organisation (type 'periodkikum') aufgenommen, obschon sie im `<bibl corresp="ProjektID"`-Element des TEI Headers als Werk aufgeführt werden. Mit der Entität wird immer sowohl die Institution (Redaktion) als auch das 'Werk' bezeichnet. 
+        - Zeitungen und Zeitschriften werden als Organisation (type 'periodikum') aufgenommen, obschon sie im `<bibl corresp="ProjektID"`-Element des TEI Headers als Werk aufgeführt werden. Mit der Entität wird immer sowohl die Institution (Redaktion) als auch das 'Werk' bezeichnet. 
             - GND bietet Zeitungen und Zeitschriften zum Teil sowohl als Werk wie auch als Organisation (Redaktion) an. Da jedoch kleinere Periodika nur als Wekr aufgeführt sind, soll konsequent nur auf die GND-Werk-Normdatei verwiesen (bzw. solche ins Google-Sheet aufgenommen) werden.   
 2. **In [Zotero](https://www.zotero.org/groups/5746334/dse_as_bibl-id/library)**: Werke, die nicht von uns ediert werden. -> Werden im Framework über folgenden Button integriert:
 ![grafik](oxygen-docu/H1qQBg40yg.png)
@@ -323,13 +323,13 @@ Hierzu zählen:
     - Forschungsliteratur
         - Die genannten Ordner sind nicht-topologisch, sondern funktionieren wie ein Label; Einträge können in mehreren Ordnern erschienen und 'fliessen' immer in der Hauptcollection zusammen
 3. **In XML-Dateien auf dem WebDAV** (Ordner data/meta/lists) -> Können aus Dropdown-Menüs im TEI-header ausgewählt werden (später ggfls. auch per Button): ![grafik](oxygen-docu/Hy28ZeN0yx.png)
-    - Schlagwörter = keywords.xml: 'Sachbegriffe' aus der [GND](https://swb.bsz-bw.de) 
-    - Reisen und Events = events.xml: Selbsterstellte Daten, die aber wiederum mit "externen" Entitäten wie Orten und Personen angereichert im XML werden. 
+    - Schlagwörter = `keywords.xml`: 'Sachbegriffe' aus der [GND](https://swb.bsz-bw.de) 
+    - Reisen und Events = `events.xml`: Selbsterstellte Daten, die aber wiederum mit "externen" Entitäten wie Orten und Personen angereichert im XML werden. 
 
 
 #### b. "Interne" Entitäten (= eigene Edenda)
 
-Wenn auf projekteigene smallforms, letters oder images verwiesen werden soll, muss dies händisch geschehen. Hierfür wird die Dokuemntart (smallform, letter, image) als type und seine spezifische ID als key eingefügt: 
+Wenn auf projekteigene *smallforms*, *letters* oder *images* verwiesen werden soll, muss dies händisch geschehen. Hierfür wird die Dokuemntart (*smallform*, *letter*, *image*) als `@type` und seine spezifische ID als `@key` eingefügt: 
 `<rs type="smallform" key="smallform_0240" xml:id="f3x_4yj_y2c">...</rs>`
 Der ID-key wird jeweils dem entsprechenden Google-Sheet-Index entnommen, die XML-ID kann via Quickfix erzeugt werden (s.o.). Wenn es den Editorinn:en sinnvoll erscheint, kann der Werktitel in einem 'ana'-Attribut zur Verständigung mit den anderen Editor:innen hinzugefügt werden.
 

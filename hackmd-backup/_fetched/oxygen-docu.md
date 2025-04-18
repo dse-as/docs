@@ -59,7 +59,7 @@ Einstellungen bei der Generierung einer neuen Verbindung:
 
 - Hostname: https://dav.annemarie-schwarzenbach.ch  oder https://reverse-proxy.jcloud.ik-server.com/
 - Benutzer: `dseas-dav`
-- Passwort: `T0dInP3rsi3n`
+- Passwort: `*********`
 ![grafik](oxygen-docu/SJxsGdYTyl.png)
 
 

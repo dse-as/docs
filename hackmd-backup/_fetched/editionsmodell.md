@@ -94,7 +94,8 @@ Wo alle Paragraphen durch zusätzlichen Abstand getrennt werden, wird dieser nic
 
 `<p>Der <del rend="overstrike">f</del><add>r</add>eundliche Text.</p>`
 
-- eingefügte Korrekturen zwischen den Zeilen, am Rand, am Anfang oder am Ende der Seite werden am richtigen Platz eingefügt und mit der Angabe zum Ort, wo sie ursprünglich standen, getaggt. Einfügezeichen werden nicht wiedergegeben. Falls in einem gedruckten Text die handschriftliche Korrektur einer bestimmten Person nachweisbar ist, wird @hand verwendet:
+- eingefügte Korrekturen zwischen den Zeilen, am Rand, am Anfang oder am Ende der Seite werden am richtigen Platz eingefügt und mit der Angabe zum Ort, wo sie ursprünglich standen, getaggt. Einfügezeichen werden nicht wiedergegeben. Falls in einem gedruckten Text die 
+schriftliche Korrektur einer bestimmten Person nachweisbar ist, wird @hand verwendet:
 
 `<add place="above" hand="#person">`  
 `<add place="below"` `<add place="right"` `<add place="left"` `<add place="top"` `<add place="bottom>"`

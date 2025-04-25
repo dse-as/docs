@@ -337,19 +337,19 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 
 - Briefkopf (`<opener>, <dateline>, <place>`, `<salute>`)  
     
-  - Wen `<salute>` inline verwendet wird: 
+  - Wenn `<salute>` inline verwendet wird: 
    `<seg type="salute">` (semantische verwendung, kein Absatz)
 
 - `<dateline>` kann auch ausserhalb des `<closer>` verwendet werden, wenn Briefe über mehrere Tage hinweg geschrieben sind
 
 
-- Hauptteil/Absätze (`<div type="main">`, `<p>`)  
+- Hauptteil/Absätze (`<p>`)  
     
 - Briefschluss (`<closer>, <signed>, <dateline>, <salute>`)  
     
 - Postscriptum (`<postscript><p>`)  
     
-- Adresse (`<address>`, `<addrline>`)  
+- Adresse (`<ab>`,`<address>`, `<addrline>`)  
     
 - Vorgedrucktes Briefpapier (Briefbogen und Briefcouvert):  
   `<div type="letterhead">`  
@@ -359,7 +359,8 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
     
 
     
-- Stempel werden so einfach wie möglich mit Datum und Ort ausgezeichnet; komplexere Beobachtungen an Stempeln (z.B. Bezüge zum Briefinhalt) werden als Kommentar hinterlegt . 
+- Stempel werden so einfach wie möglich mit Datum und Ort ausgezeichnet; komplexere Beobachtungen an Stempeln (z.B. Bezüge zum Briefinhalt) werden als Kommentar hinterlegt.
+- Stempel werden in `<ab/>` nach der Adresse getaggt 
 
 ```
 <seg type="postmark">
@@ -370,7 +371,7 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 
 Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
 
-- Postkarten-Aufruck auf der Rückseite
+- Postkarten-Aufruck auf der Rückseite: wird nur transkribiert, wenn es in irgend einer Form von Bedeutung ist
 
 ```
 <div type="back">

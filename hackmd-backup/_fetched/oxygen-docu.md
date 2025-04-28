@@ -94,6 +94,14 @@ Bei der Arbeit im WebDAV ist zu beachten, dass in der Regel nur eine Person eine
 
 **Bevor** das Dokument in Oxygen hochgeladen wird, sollte dessen Bearbeitungsstatus im Index auf 'ttf_o' geändert werden (mit entsprechendem Namenskürzel voran, z.B. dk_ttf_o). 
 
+### 1.4 Voreinstellung zur korrekten Validierung
+
+Da die erste Zeile nach dem TEI-Header (`<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="smallform_0002_facs.xml"/>`) vorerst noch nicht die facs.xml-Datei korekt ansteurt, kann der dadurch entstehende Validierungsfehler die Validierung aller nachfolgenden Fehler verhindern. Um dieses Problem zu umgehen müssen xi:include-Validierungen grundsätzlich ausgeschaltet werden. Dies kann einfach in den diesbezüglichen Einstellungen geschehen, die sich hier finden: 
+Optionen/Einstellungen/XML/XML-Parser [P]/XInclude-Verarbeitung einschalten -> letzteres Kästchen muss deaktiviert werden. 
+![grafik](oxygen-docu/ryX-Ikpyel.png)
+
+
+
 ## 2. Metadaten im TEI-Header
 
 Für diesen und alle weiteren Editionsschritte ist es oftmals sinnvoll, das Digitalisat bzw. Faksimile zum Abgleich der vorhandenen (Meta-)Daten herbeizuziehen (z.B. auf einem separaten Bildschirm). Das Digitalisat kann mit folgendem Button im Autor-Modus in einem IIIF-Viewer im Browser aufgerufen werden: 

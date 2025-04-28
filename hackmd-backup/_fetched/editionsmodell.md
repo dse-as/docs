@@ -370,8 +370,7 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 </seg>
 ```
 
-Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
-
+- Unleserlicher Poststempel wird nicht erwähnt
 - Postkarten-Aufruck auf der Rückseite: wird nur transkribiert, wenn es in irgend einer Form von Bedeutung ist
 
 ```
@@ -386,6 +385,10 @@ Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
 - Postkarten-Vorderseite: Aufschriften/Text werden nicht transkribiert
 
 - Reihenfolge: wenn  möglich diplomatisch. Gibt aber semantische Unklarheiten, z.B.,wenn auch dem Couvert auf der letzten Seite etwas Vorgedrucktes ist. Trotzdem div type="letterhead"? Bei Postkarte: Aufdruck nach Text.
+- Zusatz von fremder Hand, z. B. Grüsse einer anderen Person, werden in einem weiteren `<closer` mit dem Zusatz der Hand codiert:
+`<closer hand="person_ID">`
+- Langer Zusatz, der nich als Gruss gilt:
+`<div type="attached" hand="peron_ID">`
 
 
 ### Textstruktur Kleine Formen
@@ -455,7 +458,9 @@ Was, wenn Poststempel nicht lesbar ist? Leere Elemente?
 
 
 - Redaktionelle Einleitungen/Nachbemerkungen  
-  - `<div type = redactional, hand = XY>`
+  - `<div type="redactional", hand="XY">` - es wird unter hand eine personen-ID angegeben (falls undbkannt kein hand)
+- Replik
+  -`<div type="attached", hand="XY">`  
 
 ### Textstruktur Grosse Formen
 Am textlogischen Modell von Lokalbericht orientieren (Peter lädt ein paar Beispiele auf drive). Hat noch keine Priorität. 

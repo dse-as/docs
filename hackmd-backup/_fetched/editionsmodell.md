@@ -151,10 +151,11 @@ schriftliche Korrektur einer bestimmten Person nachweisbar ist, wird @hand verwe
 
 ### Sprachen
 
-Wird innerhalb eines Dokuments nur kurz von der Ausgangssprache in einen andere gewechselt, wird der Sprachwechsel getaggt. Mehrsprachige Briefe werden im TEI-Header mit den entsprechenden Sprachen markiert.   
-Einzelne fremdsprachliche Wendungen (“Chère amie\!”) werden nicht ausgezeichnet.  
+Wird innerhalb eines Dokuments nur kurz von der Ausgangssprache in einen andere gewechselt (Einzelworte und Phrasen), wird der Sprachwechsel getaggt. Mehrsprachige Briefe werden im TEI-Header mit den entsprechenden Sprachen markiert.   
+- Einzelne fremdsprachliche Wendungen, die aber auch in der Ausgangssprache üblich sind, (“Chère amie!”) werden nicht ausgezeichnet.  
 
 - `<foreign xml:lang="fra">` (ita, deu, lat, eng / weitere Sprachen: https://en.wikipedia.org/wiki/IETF_language_tag)
+-> Ganze Passagen/Textblöcke etc. werden nicht mit dem foreign-Element ausgezeichnet, sondern die Verwendung der Sprache nur im TEI-Header verzeichnet.
 
 ### Zitate 
 (framework)
@@ -428,12 +429,7 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 </div>
 </div>
 ```
-  
-- Spalten:  
-    
-  - Start des Spaltensatzes: `<cb type="start"/>`  
-  - Ende des Spaltensatzes`<cb type="end"/>`
-  - Spaltenumbrüche innerhalb des Spaltensatzes werden mittels des leeren `<cb>`\-Elements wiedergegeben \[siehe [https://deutschestextarchiv.de/doku/basisformat/spalte.html?hl=spalten](https://deutschestextarchiv.de/doku/basisformat/spalte.html?hl=spalten)\]  
+
 
 - Bild und Bildunterschrift \[[https://deutschestextarchiv.de/doku/basisformat/abbVerschachtelt.html](https://deutschestextarchiv.de/doku/basisformat/abbVerschachtelt.html)\]:   
     
@@ -455,6 +451,26 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 - Artikel- und Seitennummern, Fortsetzungsverweise ("Fortsetzung auf S. 7"/"Fortsetzung aus Nr. XY") \[[https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild](https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild)\]:  
     
   - `<fw type="tbd" place="top/inline/etc.">[tbd]</fw>`
+
+- Textblock, der einen fortlaufenden Paragraphen unterbricht 
+    - mehrheitlich in Fotoreportagen zu erwartendes Phänomen 
+    - betrifft nicht Unterschriften in einem figure-Element, dieses darf direkt in einem unabgeschlossesnen Paragraphen stehen
+    - Codierung: 
+```xml=
+
+<p> Haupttext, wird unterbrochen
+
+<floatingText>
+    <body>
+        <div>
+            <p>Unterbrechender Text</p>
+        </div>
+    </body>
+</floatingText>
+
+    Haupttext, wird fortgesetzt </p>
+    
+```
 
 
 - Redaktionelle Einleitungen/Nachbemerkungen  

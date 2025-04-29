@@ -28,6 +28,7 @@ Alle Varianten des TEI-Headers: https://dav.annemarie-schwarzenbach.ch/sandbox/e
 - **Fotoreportage**: _Studenten - in drei Ländern_ = smallform_0270
     -  Fotografien (mit Referenzierung auf Fotografien im Archiv)  
     -  Bildunterschriften 
+    -  Von Textblock unterbrochener Haupttext (vgl. [Editionsmodell](https://hackmd.io/ccjyBww-TpSE6ivZjWDPig?view=&stext=23757%3A58%3A0%3A1745934050%3AqDgUrb))
     -  Kommentierung Intermedialität
 - **Fotografie in Illustrierter**: 
     - Spezialfall einer einzelnen Aufnahme

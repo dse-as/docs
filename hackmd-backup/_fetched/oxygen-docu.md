@@ -17,8 +17,7 @@ Die Dokumente haben wir zusätzlich durch XML-Kommentare angereichert. Sie könn
 
 Alle Varianten des TEI-Headers: https://dav.annemarie-schwarzenbach.ch/sandbox/examples/teiheader_smallform.xml
 
-- **Zeitungsartikel mit Zwischentitel**: _BEI STUDENTEN IN VIER LÄNDERN_ = smallform_0226
-    - Spalten 
+- **Zeitungsartikel mit Zwischentitel**: _BEI STUDENTEN IN VIER LÄNDERN_ = smallform_022
     - viele Ortreferenzen
     - historisch-politische Kommentierung
 - **(Reise-)Feuilleton mit Untertitel**: _Baltisches Tagebuch I: Kaunas, die Hauptstadt einer „ersten Generation"._ = smallform_0227
@@ -238,10 +237,6 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 </ab>
 ```
 
-
-
-
-
 ### 3.3 Grundstruktur Kleine Formen
 
 **Titel/Untertitel/Zwischentitel**: `<head>...</head>`
@@ -255,15 +250,6 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 
 **Autorennamen"**: `<byline>Von Annemarie SCharzenbach<byline/>`
 - Falls die byline im Fliesstext ist, kann analog zum salute vorgegangen werden: `<seg type="byline">...<seg/>` 
-
-**Spalten** werden dort ausgezeichnet, wo eine spaltenförmige Textregion beginnt und wo das Spaltenlayout (d.h. alle Textregionen mit Spalten) endet. Dazwischen werden Spaltenbrüche ausgezeichnet. Texblöcke in Fotoreportagen, die keine mehrspaltige Form haben, werden nicht als Spalten ausgezeichnet. 
-- Beginn des Spaltenlayouts: `<cb type="start"/>`
-- Spaltenbrüche: `<cb/>` 
-- Da Spalten auf Transkribus meist Textregionen sind, kann der Spaltenbeginn/-bruch einfach erkannt werden und die Textregion, die zunächst noch als 'milestone' codiert ist, in ein `<cb/>`-Element unbenannt werden: 
-    -`<milestone unit="textregion" xml:id="p001_r_79"/` => `<cb type="start" xml:id="p001_r_79"/>` oder bei Spaltenbruch `<cb xml:id="p001_r_79"/>`
-- Ende des Spaltenlayouts (meist am Ende eines Artikels, d.h. am Ende einer Textregion): `<cb type="end"/>`
-- Spalten können zwar nicht über das Framework hinzugefügt werden, erscheinen dort jedoch als folgendes Zeichen, das angeklickt werden kann, um es in ein Spaltenbeginn oder -ende umzuwandeln: 
-    ![grafik](oxygen-docu/B16oxjXCkx.png)
 
 **Bilder**: Zur Struktur-Codierung von Bildern und Bildunterschriften: 
 ```xml=
@@ -279,7 +265,9 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 
 - In der Konversion werden die Paragraphen der Bildunterschriften und ihre dazugehörigen milestones ausserhalb des Figure-Elements abgelegt, jedoch mit einem FML-Tag als nachzubearbeiten markiert. 
 
-Die Codierung ganzer Fotoreportagen ist Stand 9. April 2025 noch nicht fertig festgelegt. 
+**Codierung ganzer Fotoreportagen**
+- Das figure-Element kann inmitten des Fliesstextes (p-Elemente) auftauchen und diesen unterbrechen (ohne dass davor ein `</p>`-Endtag gesetzt werden muss). 
+- Auf der Seite (pb) steht in der Regel der Fliesstext immer vor den figure-Elementen, auch wenn die Reihenfolge/Anordnung auf dem Faksimile eine andere ist.  
 
 
 ## 4. Auszeichnungen von Renderings und Texteingriffen (Text- oder Autor-Editor)

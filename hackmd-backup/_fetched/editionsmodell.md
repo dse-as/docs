@@ -226,7 +226,8 @@ Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben
 - Verwendung von "J" in Typoskripten, wo ein I erwartet wird wird (was regelmässig vorkommt): KEINE Normalisierung
   - Offenbar ist die Verwendung des Majuskels J für I eine verbreitete Praxis im deutschen Sprachraum bis weit ins 20. Jahrhundert, nicht nur in Typoskripten (so Wikipedia: [https://de.wikipedia.org/wiki/J](https://de.wikipedia.org/wiki/J)). Da es somit auch ein historisches Schriftbild markiert, würde ich es belassen.   
   - Volltextsuche des Interfaces muss so eingestellt sein, dass sie gegenüber der Differen I/J indifferent bleibt. 
-  - Die ungewohnte historisch Schreibweise könnte die Nachnutzung der Daten erschweren (ausser natürlich die Nachnutzung zur Texterkennung, dort sollte gerade keine Normalisierung der J/I-Differenz stattfinden). Deshalb sollte die Regel gut dokumentiert sien.  
+  - Die ungewohnte historisch Schreibweise könnte die Nachnutzung der Daten erschweren (ausser natürlich die Nachnutzung zur Texterkennung, dort sollte gerade keine Normalisierung der J/I-Differenz stattfinden). Deshalb sollte die Regel gut dokumentiert sien.
+ - Fehlende Leerzeichen vor und nach Gedankenstrichen in Typoskrypten werden zur Leserfreundlichkeit stillschweigend ergänzt 
 
 #### Druckfehler
 - Offensichtliche Druckfehler werden stillschweigend korrigiert (alle anderen belassen und taggen mit orig/reg/corr - [sic] automatisch generieren)  

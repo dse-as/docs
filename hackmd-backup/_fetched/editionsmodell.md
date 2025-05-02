@@ -334,7 +334,7 @@ Die Anwendung des Transkribus-Taggings wird in der Transkribus-Dokumentation gen
 Struktur:
 Letter-Wrapper, wird automatisch in der Konversion erzeugt: 
 `<div type="letterhead"`> vordegrucktes Briefpapier`<div type="letter"`
-`<div type="back"` Adresse, Poststempel. Was, wenn auch Couvert vorgedruckt ist?
+`<div type="back"` Adresse, Poststempel.
 `<div type="attached">` Anhänge aller Art
 --> -alle Divs auf einer Ebene, wenn möglich keine verschachtelten Divs
 
@@ -352,13 +352,13 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
     
 - Postscriptum (`<postscript><p>`)  
     
-- Adresse (`<ab>`,`<address>`, `<addrline>`)  
+- Adresse (`<ab>`,`<address>`, `<addrLine>`)  
     
 - Vorgedrucktes Briefpapier (Briefbogen und Briefcouvert):  
   `<div type="letterhead">`  
     `<address>`  
-      `<name>Firma<name/>`  
-      `<street>Länggassstrasse<street/>` etc.  
+      `<addrLine>Firma<name/>`  
+      `<addrLine>Länggassstrasse<street/>` etc.  
     
 
     
@@ -386,9 +386,10 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 
 - Postkarten-Vorderseite: Aufschriften/Text werden nicht transkribiert
 
-- Reihenfolge: wenn  möglich diplomatisch. Gibt aber semantische Unklarheiten, z.B.,wenn auch dem Couvert auf der letzten Seite etwas Vorgedrucktes ist. Trotzdem div type="letterhead"? Bei Postkarte: Aufdruck nach Text.
+- Reihenfolge: wenn  möglich diplomatisch. Gibt aber semantische Unklarheiten, z.B.,wenn auch dem Couvert auf der letzten Seite etwas Vorgedrucktes ist. Trotzdem div type="letterhead". Bei Postkarte: Aufdruck nach Text.
 - Zusatz von fremder Hand, z. B. Grüsse einer anderen Person, werden in einem weiteren `<closer` mit dem Zusatz der Hand codiert:
 `<closer hand="person_ID">`
+
 - Langer Zusatz, der nich als Gruss gilt:
 `<div type="attached" hand="peron_ID">`
 

@@ -358,7 +358,7 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
   `<div type="letterhead">`  
     `<address>`  
       `<addrLine>Firma<name/>`  
-      `<addrLine>Länggassstrasse<street/>` etc.  
+      `<addrLine>Länggassstrasse<addrLine/>` etc.  
     
 
     

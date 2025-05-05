@@ -254,6 +254,7 @@ Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben
 - `<rs type="org" key="#id">`  
 - Hier auch Verlage und Zeitschriften, wo sie als Organisation relevant sind.
 - Tagging orientiert sich an Personen.
+- Hotels werden ebenfalls als Organisationen aufgenommen
 
 #### Orte
 
@@ -357,7 +358,7 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 - Vorgedrucktes Briefpapier (Briefbogen und Briefcouvert):  
   `<div type="letterhead">`  
     `<address>`  
-      `<addrLine>Firma<name/>`  
+      `<addrLine>Firma<addrLine/>`  
       `<addrLine>Länggassstrasse<addrLine/>` etc.  
     
 

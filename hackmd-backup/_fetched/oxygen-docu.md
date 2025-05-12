@@ -110,6 +110,8 @@ Alternativ kann das Dokument auch auf Transkribus in der Collection dse-as_finis
 
 Grundsätzlich gilt es, im Autor-Modus die Maske des TEI-Headers auf der Grundlage des Digitalisates, des tranksribierten Textes und der bereits vorhandenen Metadaten im Index zu befüllen. Im Text-Mode, d.h. im Code, muss überprüft werden, ob die Informationen auch dort korrekt auftauchen (z.B. keine Einträge verdoppelt sind, das kann in der Datumsmaske passieren). 
 
+#### Zu
+
 :::info
 Zur Zeit sind noch nicht alle Masken für den TEI-Header im Framework. Für die bibliographischen Angaben der Dokumente, die mit dem Edendum zusammenhängen (publizierte Textstufe, Zweitpublikation zu Lebzeiten, posthume Editionen etc.) muss deshalb im Moment noch das jeweilige Code-Snippet im Text-Editor eingefügt und befüllt werden. 
 Der entsprechende Code findet sich für die Kleinen Formen in folgendem exemplarischen TEI/XML: https://dav.annemarie-schwarzenbach.ch/sandbox/examples/teiheader_smallform.xml

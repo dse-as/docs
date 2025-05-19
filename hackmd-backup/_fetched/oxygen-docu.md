@@ -321,9 +321,18 @@ Hierzu zählen:
     - Posthume Übersetzungen (Ordner "translation")
     - Forschungsliteratur
         - Die genannten Ordner sind nicht-topologisch, sondern funktionieren wie ein Label; Einträge können in mehreren Ordnern erschienen und 'fliessen' immer in der Hauptcollection zusammen
-3. **In XML-Dateien auf dem WebDAV** (Ordner data/meta/lists) -> Können aus Dropdown-Menüs im TEI-header ausgewählt werden (später ggfls. auch per Button): ![grafik](oxygen-docu/Hy28ZeN0yx.png)
+3. **In XML-Dateien auf dem WebDAV** (Ordner data/meta/lists) 
     - Schlagwörter = `keywords.xml`: 'Sachbegriffe' aus der [GND](https://swb.bsz-bw.de) 
+        -> Können aus Dropdown-Menüs im TEI-header ausgewählt werden (später ggfls. auch per Button): ![grafik](oxygen-docu/Hy28ZeN0yx.png)
     - Reisen und Events = `events.xml`: Selbsterstellte Daten, die aber wiederum mit "externen" Entitäten wie Orten und Personen angereichert im XML werden. 
+        - Reisen:
+    ```xml
+    <rs type='event' key='travel_001'>Nennung der Reise</rs>
+    ```
+    - Events:
+    ```xml
+    <rs type='event' key='event_001'>Nennung des Events</rs>
+    ```
 
 
 #### b. "Interne" Entitäten (= eigene Edenda)

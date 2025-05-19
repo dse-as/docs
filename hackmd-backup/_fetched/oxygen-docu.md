@@ -180,6 +180,9 @@ Shortcuts:
 Bei jedem Seitenbeginn erscheint im Fliesstext folgendes Zeichen mit befüllbarer Maske: 
 ![grafik](oxygen-docu/BkZBCS56ke.png)
 Die Textmaske wird nur befüllt, wenn eine Seitenzahl auf dem Dokument lesbar ist (abgebildet wird also nicht die projekteigene Seitenzählung, die geht bereits aus der automatischen Zählung der Digitalisate hervor). 
+:::warning
+Diverse Digitalisate sind doppelseitig, hier muss der Seitenbeginn hinzugefügt werden!
+:::
 
 #### b. Paragraphen (Text-Editor)
 

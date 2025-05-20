@@ -315,7 +315,7 @@ Für all diese Entitäten gilt, dass sie normalerweise aus einer bestehenden Lis
     - Intitutionen: 'Organisationen'-Daten aus der [GND](https://swb.bsz-bw.de) 
         - GND-Personen- und Institutionen-Daten können gemäß Workshop der ZB Zürich selbst angereichert werden. Wenn weitere Schlagwörter gewünscht sind, kann Elias diese in der GND-Redaktion Zürich beantragen. 
         - Zeitungen und Zeitschriften werden als Organisation (type 'periodikum') aufgenommen, obschon sie im `<bibl corresp="ProjektID"`-Element des TEI Headers als Werk aufgeführt werden. Mit der Entität wird immer sowohl die Institution (Redaktion) als auch das 'Werk' bezeichnet. 
-            - GND bietet Zeitungen und Zeitschriften zum Teil sowohl als Werk wie auch als Organisation (Redaktion) an. Da jedoch kleinere Periodika nur als Wekr aufgeführt sind, soll konsequent nur auf die GND-Werk-Normdatei verwiesen (bzw. solche ins Google-Sheet aufgenommen) werden.   
+            - GND bietet Zeitungen und Zeitschriften zum Teil sowohl als Werk wie auch als Organisation (Redaktion) an. Da jedoch kleinere Periodika nur als Wekr aufgeführt sind, soll konsequent nur auf die GND-Werk-Normdatei verwiesen (bzw. solche ins Google-Sheet aufgenommen) werden
 2. **In [Zotero](https://www.zotero.org/groups/5746334/dse_as_bibl-id/library)**: Werke, die nicht von uns ediert werden. -> Werden im Framework über folgenden Button integriert:
 ![grafik](oxygen-docu/H1qQBg40yg.png)
 Hierzu zählen:
@@ -324,6 +324,18 @@ Hierzu zählen:
     - Posthume Übersetzungen (Ordner "translation")
     - Forschungsliteratur
         - Die genannten Ordner sind nicht-topologisch, sondern funktionieren wie ein Label; Einträge können in mehreren Ordnern erschienen und 'fliessen' immer in der Hauptcollection zusammen
+
+    :::info 
+    Spezialfall der bibliographischen Referenzierung mit Zotero: Abstrakte Werke
+    - Während normalerweise die Metadaten in Zotero-Masken für Verlag, Erscheinungsort etc. eingefüllt werden können (oder mithilfe des [Zotero-Browser-Plugins](https://www.zotero.org/download/connectors) automatisiert aus Bibliotheks-Katalogen importiert werden können), ist dies bei 'abstrakteren' Werken nicht möglich. So verweist AS z.B. auf Wagners *Ring des Nibelungen* und meint damit kein bestimmtes Libretto und auch keine bestimmte Aufführung des Opernzyklus.
+    - Unser Workaround besteht in einem minimalen Zotero-Eintrag, der auf das abstraktere Werk als GND-Werk-Datensatz verweist. 
+    - Konkret wird ein Bucheintrag (auch wenn es sich nicht um ein [bestimmtes] Buch handelt) erstellt. Eingefüllt werden nur 
+        - Werktitel, ergänzt um den Zusatz `[WORK]` ('Ring des Nibelungen [WORK]') 
+        - Autor ('Richard Wagner') 
+        -  Entstehungs- oder Publikationszeitraum aus dem GND-Eintrag ('1853-1874')
+        - URL des Werk-Datensatzes in der GND ('http://d-nb.info/gnd/300170319')
+    :::
+
 3. **In XML-Dateien auf dem WebDAV** (Ordner data/meta/lists) 
     - Schlagwörter = `keywords.xml`: 'Sachbegriffe' aus der [GND](https://swb.bsz-bw.de) 
         -> Können aus Dropdown-Menüs im TEI-header ausgewählt werden (später ggfls. auch per Button): ![grafik](oxygen-docu/Hy28ZeN0yx.png)

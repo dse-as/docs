@@ -122,8 +122,11 @@ Folgende **Regeln** sind zu beachten:
 
 ### 2.1 Metadaten Kleine Formen
 - Titel: 
-    - Werktitel im Titel werden durch `<hi>[Werktitel]</hi>` hervorgehoben
-    - Kleine Formen ohne erkennbaren Titel werden der verbreiteten Konvention gemäß durch einen sinnvoll langen Ausschnitt des Textbeginns betitelt und mit drei PUnkten abgeschlossen (z.B. smallform_609: "Herr! wie sich mich nähren, deine Himmelsvögel... "). Ausnahmen sind in der Schwarzenbach-Forschung etablierte Titel wie "Eine FRau zu sehen".
+    - Werktitel im Titel werden durch `<hi>[Werktitel]</hi>` hervorgehoben.
+    - Der Titel wird normalisiert: Punkte am Titelende und Anführungszeichen um Werktitel werden entfernt. 
+    - Offensichtliche Fehler werden korrigiert und im Übersichtskommentar kommentiert. 
+    - Durch Zeilenbruch getrennte Ober- und Untertitel (z.B. "Der grosse Kamerad/Roman von Alain-Fornier") werden durch ein Punkt unterteil ("Der grosse Kamerad. Roman von Alain-Fornier"). Im Fliesstext wird der Titel in  zwei distinkte Head-Tags gelegt. 
+    - Kleine Formen ohne erkennbaren Titel werden der verbreiteten Konvention gemäß durch einen sinnvoll langen Ausschnitt des Textbeginns betitelt und mit drei PUnkten abgeschlossen (z.B. smallform_609: "Herr! wie sich mich nähren, deine Himmelsvögel... "). Ausnahmen sind in der Schwarzenbach-Forschung etablierte Titel wie "Eine Frau zu sehen".
 - Datum von Typoskripten und Manuskripten: Bei einem Entstehungszeitrum wird das Enddatum eingetragen
 
 ### 2.2 Metadaten Briefe

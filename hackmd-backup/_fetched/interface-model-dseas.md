@@ -11,7 +11,7 @@ Mögliche Tools zur Erweiterung dieses Dokumentes (z.B. für erste wireframes):
 - https://monosketch.io
 - https://www.archimetric.com
 
-**Inhalt**
+**Inhalt** 
 
 [toc]
 
@@ -108,6 +108,7 @@ Der Aufbau bzw. Inhalt der Register wird unten (siehe [3.3](#33-Register-und-Reg
 - Modularität der Darstellungsweise = freie Wahl der drei Darstellungsformen: 
     - Digitalisat + diplomatische Transkription (zeilengenau) + Lesefassung
     -> Jedes einzeln oder frei kombinierbar
+- Jedes Edendum muss per Cmd+F komplett durchsuchbar sein
 - Konkordanz/Highlighting der Zeile im Digitalisat und der Zeile in der diplomatischen Transkription (Vorbild: Escher-Briefedition).
     - Vice-Versa: Klicken auf eine Textstelle im Faksimile zeigt die Stelle in der Transkription an (das wäre tatsächlich weitgehend neu).
     - Idealerweise auch ausschaltbar
@@ -133,9 +134,9 @@ Der Platz, wo und wie bestimmte Paratexte stehen, kann ggfls. nach Dokumenttyp v
 - Einheitliche Darstellung der Metadaten über oder neben dem Edendum, ggfls. ausklappbar. 
 - Metadaten: Hier sind nur diejenigen Informationen im TEI-header aufgeführt, die als Referenz in die Register oder aus der Edition herausführen. Im Normalfall sind dies auch Informationen, die im Interface ersichtlich werden müssen. 
 - **Gemeinsame Metadaten alle Dokumenttypen**
-    - Schlagworte
+    - Schlagworte (Sachbegriffe)
     - Reise/Ereignis
-    - Ggfls. 'Hauptort', um den sich der Text dreht (ist im Falle der Briefe nicht zwingend identisch mit Abesendeort)
+    - Ggfls. 'Hauptort', um den sich der Text dreht (ist im Falle der Briefe nicht zwingend identisch mit Absendeort)
         - Hinter diesen Orten müsste nicht ein distinkter Registereintrag stehen, der sich von den ‘normalen’ Ortsreferenzen unterscheidet. Es wäre aber gut, wenn die Dokumente, die diese ‘Hauptorte’ im TEI-Header führen im Ortsregister besonders hervorgehoben werden und in einer geographischen Karte einen spezifischen Status gegenüber den üblichen Orts-Referenzen erhalten.
     - Archiverungsort (Verlinkung mit Findmitteln oder Digitalisaten, falls möglich)
     - Download-Links (TEI, Bild, ggfls. andere Formate)
@@ -147,6 +148,8 @@ Der Platz, wo und wie bestimmte Paratexte stehen, kann ggfls. nach Dokumenttyp v
 - **Metadaten der Kleinen Formen**
     - Publikationsmedium und Quellennachweis
     - Verweis auf Vorstufen oder Publikationen des Dokuments
+- **Metadaten Bilder**
+    - tbd, wenn Digitalisate vorhanden sind
 
 #### Kommentare
 - **Übersichtskommentare** sollten unter den Metadaten eingeblendet werden, ggfls ab einer gewissen Länge ausklappbar
@@ -156,11 +159,12 @@ Der Platz, wo und wie bestimmte Paratexte stehen, kann ggfls. nach Dokumenttyp v
 
 #### Entitäten
 - Zu den Werk-Entitäten gehören neben Werken Dritter auch edierte Dokumente von AS (Briefe, Kleine und Lange Formen, Fotografien). 
-- **Übersichtsliste aller referenzierten Entitäten** neben oder unter dem Edendum
-    - Die Liste ist nach 5 Entitätsarten-Reiter gegliedert, die per default eingeklappt sind: Personen, Orte, Institutionen, Werke Dritter, Dokumente von Annemarie Schwarzenbach 
+- **Übersichtsliste aller referenzierten Entitäten** tendenziell neben oder unter dem Edendum (abhängig von der Breite des Faksimiles) als stabile Sidebar
+    - Die Liste ist nach 6 Entitätsarten-Reiter gegliedert, die ggfls eingeklappt werden können: Personen, Orte, Institutionen, Werke Dritter, Dokumente (Briefe, Kleine Formen, Fotografien, Grosse Formen) von Annemarie Schwarzenbach (Edenda), Events 
     - Neben jeder aufgelisteten Entität befindet sich ein klickbarer Pfeil zum Registereintrag.
-    - Beim Klick _auf_ den Entitätslisteneintrag neben dem Edendum werden alle Vorkommnisse der Entitäten in der Transkription ausgeklappt; bei Klick auf eine Entität in dieser Unterliste wird die Textstelle angesteuert. Die Übersichtsliste sollte sichtbar bleiben, um sich durch die Vorkommnisse einer Entität 'hindurchklicken' zu können.  
+    - Beim Klick _auf_ den Entitätslisteneintrag neben dem Edendum werden alle Vorkommnisse der Entitäten in der Transkription ausgeklappt; bei Klick auf eine Entität in dieser Unterliste wird die Textstelle angesteuert. Die Übersichtsliste sollte sichtbar bleiben, um sich durch die Vorkommnisse einer Entität 'hindurchklicken' zu können.  -> Tooltips, die diese Funktionen erklären!
     - Idealerweise können referenzierte Orte in einer vergrösserbaren Karte neben oder unter dem Edendum eingeblendet werden. Das würde die räumliche Orientierung der oftmals sehr umfangreichen geographischen Nennungen im Text sehr erleichtern. 
+        - Nice to have: Heat-Map:  besonders oft erwähnte Orte werden stärker hervorgehoben auf der Karte, das könnte das (z.T. schwierige) Definieren eines 'Hauptortes'(s.o.) teilweise erübrigen.
 
 
 ### 2.3 Darstellungsmodi nach Dokumenttyp
@@ -257,3 +261,5 @@ Div. Werkzeuge zu textgenetischen Vergleichen werden vermutlich im Zusammenhang 
 
 ### 4.4 DSE-AS-AI ('Frag die Edition')
 *evtl. eher ein Thema für einen Folgeantrag (projektübergreifend)*
+
+### 4.5 Reiserouten als Visual storytelling (siehe sunset over sunset)

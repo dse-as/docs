@@ -21,7 +21,7 @@ Was sind die Bedingungen, die das Design des Interfaces bestimmen/begrenzen.?
 ### 1.1 Nutzende/ Nutzendegruppen
 
 #### **a. Wissenschaftlich Forschende/Nutzende**
-Für die wissenschftliche Forschung gilt grundsätzlich:
+Für die wissenschaftliche Forschung gilt grundsätzlich:
 - Zitierbarkeit des Primärtextes und Referenzierung relevanter Intertexte und Forschungsliteratur als Quellen
 
 - Annemarie Schwarzenbach: 
@@ -109,14 +109,17 @@ Der Aufbau bzw. Inhalt der Register wird unten (siehe [3.3](#33-Register-und-Reg
     - Digitalisat + diplomatische Transkription (zeilengenau) + Lesefassung
     -> Jedes einzeln oder frei kombinierbar
 - Konkordanz/Highlighting der Zeile im Digitalisat und der Zeile in der diplomatischen Transkription (Vorbild: Escher-Briefedition).
+    - Vice-Versa: Klicken auf eine Textstelle im Faksimile zeigt die Stelle in der Transkription an (das wäre tatsächlich weitgehend neu).
     - Idealerweise auch ausschaltbar
     - Im Falle der Fotografien auch Konkordanzen von Regionen (s.u.) 
 - **Referenzierungen** im Edendum: 
     - Sowohl in der diplomaptischen Transkription als auch in der Lesefassung default eingeblendet
+    - Bei Wiederholung derseleb Entität in der Referenzierung: Ausblenden, wenn im selben Paragraphen mehrfach (die Einheit des Paragraphen scheint mir die sinnvollste, weil übersichtlichste, Seite scheint mir keine sinnvolle Größe)? 
     - Highlighting durch Hintergrundfarbe 
     - Popup beim Klicken auf den unterlegten Text (kein Hoovertext oder dann 'statischen Hoovertext', der aktiv weggeklickt werden muss)
     - Auf Wunsch ausblendbar
-- **Stellenkommentare** im Edendum
+    - Problem von schönen, aber für Sehbehinderte schwer lesbare Highlights: Ev. Disability-Mode (v.a. falls es schon einfach implementierbare Modelle gibt)?
+- Markierung der **Stellenkommentare** im Edendum
     - Sowohl in der diplomaptischen Transkription als auch in der Lesefassung default eingeblendet
     - Highlighting muss klar von Referenzierungen unterscheidbar sein, ggfls. weniger aufdringlich, da längere Passagen kommentiert werden können.
     - Beim Klicken auf das Highlighting kein Popup sondern Einblendung der Kommentarlaufleiste (s.u.) mit Hervorhebung des relevanten Kommentars 
@@ -149,6 +152,7 @@ Der Platz, wo und wie bestimmte Paratexte stehen, kann ggfls. nach Dokumenttyp v
 - **Übersichtskommentare** sollten unter den Metadaten eingeblendet werden, ggfls ab einer gewissen Länge ausklappbar
 - **Stellenkommentare** als Laufleiste neben dem Edendum (keine Hoover-Texte/Popups)
     - Vorbild: Microsoft Word, Kommentarmodus (dort zwei Darstellungmöglichkeiten: Liste oder Kontextbezogen - ev. liesse sich ein Kompromiss zwischne diesen Formen finden, z.B. eine scrollbare Liste, die sich auf knopfdruck wieder zurück zu den Kontexten ordnet?)
+    - Problem der Laufleiste: Einschränkungen bei Mobiltelefonen. Dort könnte man sich am Google-Docs orientieren, die Kommentare in der unteren Bildhälfte einblendet (hier gibt es schon CSS-Skripts). 
 
 #### Entitäten
 - Zu den Werk-Entitäten gehören neben Werken Dritter auch edierte Dokumente von AS (Briefe, Kleine und Lange Formen, Fotografien). 
@@ -181,7 +185,7 @@ Fotoreportagen sind oftmals komplex aufgebaut; sie sollten zunächst immer ganz 
 
 #### d. Fotografie
 
-Für die Darstellung der im Archiv vorliegenden Fotografien bzw. negative ist neben der Einblendung der 
+Für die Darstellung der im Archiv vorliegenden Fotografien bzw. Negative ist neben der Einblendung der 
 
 
 

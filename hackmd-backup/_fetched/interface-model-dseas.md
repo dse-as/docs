@@ -11,6 +11,10 @@ Mögliche Tools zur Erweiterung dieses Dokumentes (z.B. für erste wireframes):
 - https://monosketch.io
 - https://www.archimetric.com
 
+Usability/interface best practices:
+
+* https://www.dialogdesign.dk/nielsens-heuristics-1994
+
 **Inhalt** 
 
 [toc]

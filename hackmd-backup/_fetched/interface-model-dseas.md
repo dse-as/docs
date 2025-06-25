@@ -121,7 +121,7 @@ Der Aufbau bzw. Inhalt der Register wird unten (siehe [3.3](#33-Register-und-Reg
     - Sowohl in der diplomaptischen Transkription als auch in der Lesefassung default eingeblendet
     - Bei Wiederholung derseleb Entität in der Referenzierung: Ausblenden, wenn im selben Paragraphen mehrfach (die Einheit des Paragraphen scheint mir die sinnvollste, weil übersichtlichste, Seite scheint mir keine sinnvolle Größe)? 
     - Highlighting durch Hintergrundfarbe 
-    - Popup beim Klicken auf den unterlegten Text (kein Hoovertext oder dann 'statischen Hoovertext', der aktiv weggeklickt werden muss)
+    - Popup beim Klicken auf den unterlegten Text (kein Hovertext oder dann 'statischen Hovertext', der aktiv weggeklickt werden muss)
     - Auf Wunsch ausblendbar
     - Problem von schönen, aber für Sehbehinderte schwer lesbare Highlights: Ev. Disability-Mode (v.a. falls es schon einfach implementierbare Modelle gibt)?
 - Markierung der **Stellenkommentare** im Edendum
@@ -157,7 +157,7 @@ Der Platz, wo und wie bestimmte Paratexte stehen, kann ggfls. nach Dokumenttyp v
 
 #### Kommentare
 - **Übersichtskommentare** sollten unter den Metadaten eingeblendet werden, ggfls ab einer gewissen Länge ausklappbar
-- **Stellenkommentare** als Laufleiste neben dem Edendum (keine Hoover-Texte/Popups)
+- **Stellenkommentare** als Laufleiste neben dem Edendum (keine Hover-Texte/Popups)
     - Vorbild: Microsoft Word, Kommentarmodus (dort zwei Darstellungmöglichkeiten: Liste oder Kontextbezogen - ev. liesse sich ein Kompromiss zwischne diesen Formen finden, z.B. eine scrollbare Liste, die sich auf knopfdruck wieder zurück zu den Kontexten ordnet?)
     - Problem der Laufleiste: Einschränkungen bei Mobiltelefonen. Dort könnte man sich am Google-Docs orientieren, die Kommentare in der unteren Bildhälfte einblendet (hier gibt es schon CSS-Skripts). 
 
@@ -203,7 +203,7 @@ Für die Darstellung der im Archiv vorliegenden Fotografien bzw. Negative ist ne
 ##### In Texten ohne Fotografien
 
 ##### In Fotoreportagen
-- Ev. selbstgesetzter figurehead als permanenter hoover-text 
+- Ev. selbstgesetzter figurehead als permanenter hover-text 
     - Muss die Möglichkeit geben, zur Fotografie in das digitale Foto-Archiv mit einem Klick zu gelangen. 
 - Alternative, ev. sogar besser: Darstellung des figureheads und seiner Verlinkung mit dem transkribierten Text der Autorin: Ggfls. schon mit Darsellung der Fotografie aus dem Foto-Archiv.
 

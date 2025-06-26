@@ -8,19 +8,28 @@ hero:
   tagline: Dokumentation
   actions:
     - theme: brand
-      text: Arbeitsschritte →
-      link: /arbeitsschritte/IIIF-manifest-anlegen
+      text: Zum Inhalt →
+      link: /editionsmodell
     - theme: alt
-      text: GitHub ↗︎
-      link: https://github.com/dse-as/docs
+      text: Projektwebseite ↗︎
+      link: https://annemarie-schwarzenbach.ch
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Editionsmodell
+    details: Prinzipien und Regeln der digitalen Edition, inklusive Codierungsrichtlinien und Kommentierungsmodelle.
+    link: /editionsmodell
+  - title: Interface-Modell
+    details: Anforderungen und Konzepte für die Präsentation, Navigation und Funktionalität.
+    link: /interface-model-dseas
+  - title: Registermodell
+    details: Struktur und Erfassung von Personen-, Orts- und Werkregistereinträgen.
+    link: /register-model-dseas
+  - title: Transkribus-Dokumentation
+    details: Leitfaden für den Workflow in Transkribus (Upload, Transkription, Korrektur und Export).
+    link: /transkribus-dokumentation
+  - title: Oxygen-Dokumentation
+    details: Codierung und Bearbeitung der TEI/XML-Daten mit Oxygen XML Editor.
+    link: /oxygen-docu
 ---
 
 <style>

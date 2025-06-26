@@ -6,7 +6,11 @@ export default defineConfig({
   title: "Dokumentation dse-as",
   description: "Dokumentation der Digitalen Edition Annemarie Schwarzenbach",
   srcDir: 'src',
+  rewrites: {
+    '_fetched/:slug*': ':slug*'
+  },
   outDir: 'docs/.vitepress/dist',
+  srcExclude: ['**/README.md'],
   cleanUrls: true,
   ignoreDeadLinks: [ 
     '\./LICENSE' 
@@ -16,15 +20,18 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Arbeitsschritte', link: '/arbeitsschritte/IIIF-manifest-anlegen' }
+      { text: 'Inhalt', link: '/editionsmodell' }
     ],
 
     sidebar: [
       {
-        text: "Arbeitsschritte",
+        text: "Inhalt",
         items: [
-          {text: "IIIF-Manifest anlegen", link: "/arbeitsschritte/IIIF-manifest-anlegen"},
-          {text: "Oxygen Framework installieren", link: "/arbeitsschritte/oxygen-framework-installieren"}
+          { text: "Editionsmodell", link: "/editionsmodell" },
+          { text: "Interface-Modell", link: "/interface-model-dseas" },
+          { text: "Registermodell", link: "/register-model-dseas" },
+          { text: "Transkribus-Dokumentation", link: "/transkribus-dokumentation" },
+          { text: "Oxygen-Dokumentation", link: "/oxygen-docu" }
         ]
       }
     ],

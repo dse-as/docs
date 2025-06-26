@@ -12,8 +12,9 @@ export default defineConfig({
   outDir: 'docs/.vitepress/dist',
   srcExclude: ['**/README.md'],
   cleanUrls: true,
-  ignoreDeadLinks: [ 
-    '\./LICENSE' 
+  ignoreDeadLinks: [
+    /^\/_fetched\//,
+    '\./LICENSE',
   ],
   // base: '/docs/',
   themeConfig: {

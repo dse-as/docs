@@ -2,7 +2,7 @@
 
 Das vorliegende Dokument führt durch den Editionsprozess in Oxygen, indem es versucht, dessen Arbeitsschritte chronologisch abzubilden. Der Ablauf folgt der Grundregel, dass strukturelle und formale Aspekte vor inhaltlichen Aspekten ediert sein müssen, um keine vorschnelle inhaltliche Schlüsse aus einer vermeintlichen Form zu treffen. 
 
-Die Anleitung führt in Untertiteln auf, ob der Editionsschritt in der Regel im Code (Text-Editor) oder in der Benutzeroberfläche (Autor-Editor bzw. Framework) geschieht. Damit ist primär die arbeitsergonomisch beste Editionsumgebung bezeichnet; abgesehen vom Referenzieren der meisten "externen" Entitäten (die nur im Autor-Editor geschehen kann, weil dort externe Ressourcen abgefragt werden können), sind alle Editionsschritte auch im Text-Editor möglich. Sind sie also einfacher im Autor-Editor zu machen, wird der Code dahinter hier nicht konsequent aufgeführt, er findet sich jedoch immer im [Editionsmodell Edition Annemarie Schwarzenbach](/ccjyBww-TpSE6ivZjWDPig) dokumentiert. Der Einbezug dieses Dokuments erlaubt es bei Ausfall des Autor-Editors komplett im Text-Editor zu edieren.
+Die Anleitung führt in Untertiteln auf, ob der Editionsschritt in der Regel im Code (Text-Editor) oder in der Benutzeroberfläche (Autor-Editor bzw. Framework) geschieht. Damit ist primär die arbeitsergonomisch beste Editionsumgebung bezeichnet; abgesehen vom Referenzieren der meisten "externen" Entitäten (die nur im Autor-Editor geschehen kann, weil dort externe Ressourcen abgefragt werden können), sind alle Editionsschritte auch im Text-Editor möglich. Sind sie also einfacher im Autor-Editor zu machen, wird der Code dahinter hier nicht konsequent aufgeführt, er findet sich jedoch immer im [Editionsmodell Edition Annemarie Schwarzenbach](https://hackmd.io/@DSE-AS/Editionsmodell) dokumentiert. Der Einbezug dieses Dokuments erlaubt es bei Ausfall des Autor-Editors komplett im Text-Editor zu edieren.
 
 
 [toc]
@@ -208,8 +208,8 @@ Wo in Transkribus das Negationszeichen vergessen ging, kann im Autor-Modus mit e
 Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin gebrochen, deshalb müssen sie gesondert ausgezeichnet werden. Dabei sollte folgendes Code-Schema verwendet werden (vgl. auch smallform_0607):
 ```xml= 
 <lg> 
-<l> Vers 1 </l>
-<l> Vers 2 </l>
+    <l> Vers 1 </l>
+    <l> Vers 2 </l>
 </lg>
 ```
 
@@ -229,10 +229,10 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 `<div type="letterhead">`- sowie ggfls. Adresszeilen, siehe [Editionsmodell](https://hackmd.io/ccjyBww-TpSE6ivZjWDPig?view=&stext=19489%3A56%3A0%3A1744352502%3AArj7W7)
 - Postmarken: 
 ```xml=
- <seg type="postmark">
-          <date></date>
-          <placeName/>
-        </seg>
+<seg type="postmark">
+  <date></date>
+  <placeName/>
+</seg>
 ```
 - Adress-Blöcke (z.B. auf Umschlägen) werden von einem 'anonymous block' `<ab>`umgeben und dann Linie für Linie codiert und jeweils später referenziert: 
 ```xml=

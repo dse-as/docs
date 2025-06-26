@@ -33,7 +33,7 @@ jobs:
       uses: pdaengeli/use-saxon-he-j@12.7
       with:
         args: -xsl:hackmd-backup/process-hackmd.xsl -it
-    - run: mkdir -p hackmd-backup/_fetched/transkribus-dokumentation hackmd-backup/_fetched/editionsmodell hackmd-backup/_fetched/interface-model-dseas hackmd-backup/_fetched/register-model-dseas hackmd-backup/_fetched/oxygen-docu
+    - run: mkdir -p src/_fetched/transkribus-dokumentation src/_fetched/editionsmodell src/_fetched/interface-model-dseas src/_fetched/register-model-dseas src/_fetched/oxygen-docu
     - run: tree hackmd-backup
     - run: cat hackmd-backup/_fetched/img-urls.txt
     - run: curl -L -K hackmd-backup/_fetched/img-urls.txt
@@ -56,5 +56,5 @@ jobs:
     - uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: ${{ steps.commit_message_step.outputs.commit_message }}
-        file_pattern: 'hackmd-backup/_fetched/*.md hackmd-backup/_fetched/**/*.png'
+        file_pattern: 'src/_fetched/*.md src/_fetched/**/*.png'
         skip_fetch: true

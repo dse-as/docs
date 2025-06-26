@@ -36,15 +36,15 @@ Obschon es sich bereits bei den Kleinen Formen um heterogene Genres handelt und 
 Der TEI-Header wird zwar im folgenden Editionsmodell wo relevant erwähnt, das gesamte, detailliert dokumentierte Modell des TEI-Headers wird jedoch in einem zusätzlichen Dokument beschrieben. 
 
 ### Zeilen- und Seitenumbrüche, Paragraphen, Leerzeilen 
-- Grundsatz: linebeginnings `lb`, die am Anfang von sog. Block-Elementen (wie p, dateline) stehen, müssen möglichst innerhalb dieses Blockelements platziert werden. Negativ-Beispiel: 
-    ```
+- Grundsatz: linebeginnings `lb`, die am Anfang von sog. Block-Elementen (wie p, dateline) stehen, müssen möglichst innerhalb dieses Blockelements platziert werden. Negativ-Beispiel:
+    ```xml
     <lb xml:id="dummy_r_3_tl_1" break="no"/>
-    <p>Am 6. Juni 1939 kauften Ella Maillart und ich beim Bäcker ...
+    <p>Am 6. Juni 1939 kauften Ella Maillart und ich beim Bäcker ...</p>
      ```
     Korrektes Beispiel: 
-    ```
+    ```xml
     <p><lb xml:id="dummy_r_3_tl_1" break="no"/>
-    Am 6. Juni 1939 kauften Ella Maillart und ich beim Bäcker ...
+        Am 6. Juni 1939 kauften Ella Maillart und ich beim Bäcker ...</p>
     ```
 
 - zeilengenaue Transkription: 
@@ -53,7 +53,7 @@ Der TEI-Header wird zwar im folgenden Editionsmodell wo relevant erwähnt, das g
         - In Transkribus werden Hyphens, die Wörter beim Zeilenbruch teilen, als Negationszeichen `¬` transkribiert. In der Transformation von PAGE XML zu TEI XML werden die Negationszeichen `¬` gelöscht und mit`<lb break="no">` ungewandelt.
         - Für die diplomatische Ausgabe wird `<lb break="no">` wieder mit einem trennenden Hyphen ergänzt. 
         - Beispiel aus dem TEI (https://tei-c.org/release/doc/tei-p5-doc/en/html/examples-lb.html#index-egXML-d39e39737):  
-    ```
+    ```xml
     <lb/>With Additions, ne-<lb break="no"/>ver before Printed.
     ```
     - Framework erlaubt bei Klick auf Pfeil am Anfang der Zeile die Auswahl break "no" oder "yes" 
@@ -62,8 +62,8 @@ Der TEI-Header wird zwar im folgenden Editionsmodell wo relevant erwähnt, das g
 - Verszeilen (Beispiel: smallform_0011): 
 ```xml 
 <lg> 
-<l> Vers 1 </l>
-<l> Vers 2 </l>
+    <l> Vers 1 </l>
+    <l> Vers 2 </l>
 </lg>
 ```
 
@@ -74,9 +74,9 @@ Der TEI-Header wird zwar im folgenden Editionsmodell wo relevant erwähnt, das g
     Nach DTA (https://deutschestextarchiv.de/doku/basisformat/leerraum.html und https://deutschestextarchiv.de/doku/basisformat/absatz.html):
     
 ```xml
-</p>
-<space dim="vertical"/>
-<p>
+<p/>
+    <space dim="vertical"/>
+<p/>
 ```
     
 Wo alle Paragraphen durch zusätzlichen Abstand getrennt werden, wird dieser nicht codiert (da es eine graphische Eigenart des spezifischen Drucks ist und solche Eigenarten i.d.R. nicht in die eigene Edition übernommen werden). Oder in den Worten des DTA: "Größere Abstände zwischen Absätzen werden nur dann ausgezeichnet, wenn diesbezüglich innerhalb eines Buches eine Varianz festzustellen ist."(https://deutschestextarchiv.de/doku/basisformat/absatz.html).  
@@ -105,7 +105,7 @@ schriftliche Korrektur einer bestimmten Person nachweisbar ist, wird @hand verwe
 ### Fehlerhafte Schreibweisen
 
 - Unkorrigierte Fehler werden im Sinne eines "sic" ausgezeichnet (siehe https://deutschestextarchiv.de/doku/basisformat/eeDruckfehler.html?hl=fehler). In Transkribus kann ein Statthalter, z.b. `[sic]`, eingefügt werden.
-```
+```xml
 <choice>
   <sic>[fehlerhafte Form]</sic>
   <corr>[verbesserte Form]</corr>
@@ -196,15 +196,16 @@ Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben
 - Listen `<list>`, `<item>`  
 - Tabellen:
 
-```
+```xml
 <p>
-<table rows="2" cols="2">
-    <row>
-        <cell>Pullover</cell><cell>1 Stück</cell>
-    <row>
-    </row>
-        <cell>Hosen</cell><cell>2 Stück</cell>
-    </row>
+    <table rows="2" cols="2">
+        <row>
+            <cell>Pullover</cell><cell>1 Stück</cell>
+        <row>
+        </row>
+            <cell>Hosen</cell><cell>2 Stück</cell>
+        </row>
+    </table>
 </p>
 ```
 
@@ -239,7 +240,9 @@ Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben
 
 #### Personen
 
-`<rs type="person" key="#id">`
+```xml
+<rs type="person" key="#id"/>
+```
 
 - Personennamen werden grundsätzlich getaggt. Familienname und Vornamen usw. werden nicht unterschieden.  
 - Pronomen werden in der Regel nicht getaggt. Ausnahme: Eine Person wird nie namentlich genannt oder die Stelle ist ohne Kontextwissen ambivalent.  
@@ -251,14 +254,19 @@ Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben
 
 #### Organisationen
 
-- `<rs type="org" key="#id">`  
+```xml
+<rs type="org" key="#id"/>
+```
+
 - Hier auch Verlage und Zeitschriften, wo sie als Organisation relevant sind.
 - Tagging orientiert sich an Personen.
 - Hotels werden ebenfalls als Organisationen aufgenommen
 
 #### Orte
 
-`<rs type="place" key="#id">`
+```xml
+<rs type="place" key="#id"/>
+```
 
 - primär Städte/Gemeinden (Strassen werden weggelassen) 'populated place'  
 - «Örtlichkeiten», die eine besondere Bedeutung für Schwarzenbach hatten (Häuser, Farmen, Missionen etc.) \- in vielen Fällen projektspezifische ID vergeben, Geonames kann angereichert werden (nicht für schwer lokalisierbare oder fiktionale Orte).  
@@ -267,7 +275,9 @@ Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben
 
 #### Werke
 
-`<rs type=publication ref="#id">`
+```xml
+<rs type=publication ref="#id"/>
+```
 
 - EZ: Nicht alle Werke v. AS die referenziert werden müssen, sind Publikationen/publications, einiges ist unpubliziert, z.T. sogar verschollen.  
 - Zotero zur Verwaltung und ggfls. zur ID-Vergabe (klärt Christian ab) verwenden (Tobias ist einverstanden). Die Zotero-ID wird jeweils in der Browser-Leiste angegeben (im Desktop-Client nicht sichtbar). Die kollaborative Zotero-Bibliothek “DSE AS BIBL-ID” wird zur Verwaltung genutzt; sie ist mit dem Oxygen-Framework verbunden.   
@@ -276,7 +286,10 @@ Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben
 
 ### Schlagworte
 
-- `<rs type="keyword" xml:id="kw1">`  
+```xml
+<rs type="keyword" xml:id="kw1"/>
+```
+
 - Im Unterschied zu den anderen Verweisen nicht im Primärtext referenziert, sondern **im TEI-header** 
 - Offen, welche Thesauri (GND, OpenGender oder weitere) wie eingebunden werden. Möglich wäre es, mehrere Thesauri auf Geovistory zu kombinieren.  
 - Zurzeit besteht eine Schlagwortliste mit GND-ID (bzw. Link) auf Google-Drive: [https://docs.google.com/spreadsheets/d/18EHyX9-BlYbEy1KrGAlRURbvyNTiW8OSELYIdphftk4/edit?usp=sharing](https://docs.google.com/spreadsheets/d/18EHyX9-BlYbEy1KrGAlRURbvyNTiW8OSELYIdphftk4/edit?usp=sharing) 
@@ -297,9 +310,9 @@ Für alle Editor:innen-Kommentare (Überischtskommentare und Sachkommentare) gil
     
 - Kommentare werden als 'Fussnote' an eine bestimmte Stelle geknüpft, wenn bestimmte Wortfolgen markiert werden sollen, wird an den Anfangspunkt ein Anker gelegt.
 
-	@spanTo: https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.spanning.html
-milestone: https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-milestone.html
-anchor: https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-anchor.html
+	`@spanTo`: https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-att.spanning.html
+`<milestone/>`: https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-milestone.html
+`<anchor/>`: https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-anchor.html
 
 - Innerhalb des Kommentars sollen Referenzierungen möglich sein. 
 - AS wird nicht referenziert. Oder? EZ: Ja, scheint mir in den Briefen und auch den Kleinen Formen überflüssig, da ja sonst ‘all over the place’. 
@@ -339,7 +352,7 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 `<div type="attached">` Anhänge aller Art
 --> -alle Divs auf einer Ebene, wenn möglich keine verschachtelten Divs
 
-- Briefkopf (`<opener>, <dateline>, <place>`, `<salute>`)  
+- Briefkopf (`<opener>`, `<dateline>`, `<place>`, `<salute>`)  
     
   - Wenn `<salute>` inline verwendet wird: 
    `<seg type="salute">` (semantische verwendung, kein Absatz)
@@ -349,7 +362,7 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 
 - Hauptteil/Absätze (`<p>`)  
     
-- Briefschluss (`<closer>, <signed>, <dateline>, <salute>`)  
+- Briefschluss (`<closer>`, `<signed>`, `<dateline>`, `<salute>`)  
     
 - Postscriptum (`<postscript><p>`)  
     
@@ -366,7 +379,7 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 - Stempel werden so einfach wie möglich mit Datum und Ort ausgezeichnet; komplexere Beobachtungen an Stempeln (z.B. Bezüge zum Briefinhalt) werden als Kommentar hinterlegt.
 - Stempel werden in `<ab/>` nach der Adresse getaggt 
 
-```
+```xml
 <seg type="postmark">
   <date>20. Januar 1935</date>
   <placeName>Berlin</placeName>
@@ -376,13 +389,12 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 - Unleserlicher Poststempel wird nicht erwähnt
 - Postkarten-Aufruck auf der Rückseite: wird nur transkribiert, wenn es in irgend einer Form von Bedeutung ist
 
-```
+```xml
 <div type="back">
   <p>
     Foto von Max Mustermann.
   </p>
 </div>
-
 ```
 
 - Postkarten-Vorderseite: Aufschriften/Text werden nicht transkribiert
@@ -460,19 +472,19 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
     - betrifft nicht Unterschriften in einem figure-Element, dieses darf direkt in einem unabgeschlossesnen Paragraphen stehen
     - Codierung: 
 ```xml=
+<p>
+    Haupttext, wird unterbrochen
 
-<p> Haupttext, wird unterbrochen
-
-<floatingText>
-    <body>
-        <div>
-            <p>Unterbrechender Text</p>
-        </div>
-    </body>
-</floatingText>
-
-    Haupttext, wird fortgesetzt </p>
+    <floatingText>
+        <body>
+            <div>
+                <p>Unterbrechender Text</p>
+            </div>
+        </body>
+    </floatingText>
     
+    Haupttext, wird fortgesetzt
+</p>
 ```
 
 

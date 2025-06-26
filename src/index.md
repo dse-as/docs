@@ -71,6 +71,12 @@ onMounted(() => {
   if (!p || !s) return;
   while (p.lastChild) p.lastChild.remove();
   p.append(s);
+
+  const p2 = document.querySelector(".VPNavBarTitle .title");
+  const s2 = document.querySelector("#title-text");
+  if (!p2 || !s2) return;
+  while (p2.lastChild) p2.lastChild.remove();
+  p2.append(s2);
 });
 
 </script>
@@ -78,4 +84,5 @@ onMounted(() => {
 <template>
   <div id="hero-text"><span style="display: inline-block; position: relative;">Dokumentation<svg style="color: var(--vp-c-red-1); position: absolute; z-index: -1; top: 1.22em; left: 0.05em; width: calc(100% - 0.1em);" width="220" height="12" viewBox="0 0 220 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><pattern id="hatch" patternUnits="userSpaceOnUse" patternTransform="rotate(45)" width="4" height="4"><rect width="1" height="4" style="stroke:currentColor" /></pattern><rect x="0" y="0" width="220" height="12" fill="url(#hatch)"/></svg>
   </span></div>
+  <div id="title-text"><span style="display: inline-block; position: relative;">DSE-AS</span></div>
 </template>

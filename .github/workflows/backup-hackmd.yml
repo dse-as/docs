@@ -30,7 +30,7 @@ jobs:
           java -jar hackmd-backup/tagsoup.jar "$f" > "${f%.*}.xhtml";  
         done
     - name: process hackmd.io HTML (XSLT)
-      uses: pdaengeli/use-saxon-he-j@12.7
+      uses: pdaengeli/use-saxon-he-j@12.8
       with:
         args: -xsl:hackmd-backup/process-hackmd.xsl -it
     - run: mkdir -p src/_fetched/transkribus-dokumentation src/_fetched/editionsmodell src/_fetched/interface-model-dseas src/_fetched/register-model-dseas src/_fetched/oxygen-docu

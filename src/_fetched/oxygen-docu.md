@@ -265,6 +265,9 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 <milestone unit="textregion" xml:id="p001_r_8"/>
 <figure>
     <head resp="editor"> [Projekteigener Titel für das Bild]</head>
+     <bibl>
+        <persName><rs type="person" key="person_0082" xml:id="r6">Schwarzenbach, Annemarie</rs></persName>
+    </bibl>
          <milestone unit="textregion" xml:id="p001_r_4"/>
                  <p>
                  [Absätze mit der Bildbeschriftung im Edendum]   
@@ -273,6 +276,7 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 ```
 
 - In der Konversion werden die Paragraphen der Bildunterschriften und ihre dazugehörigen milestones ausserhalb des Figure-Elements abgelegt, jedoch mit einem FML-Tag als nachzubearbeiten markiert. Die Paragrpahen müssen in das figure-Element verschoben werden.  
+- Die Urheberschaft des Bildes (Verschachtelung von persName- in bibl-Element) wird bei der Konversion automatisch als AS ausgegeben, kann jedoch einfach über das framework durch Neureferenzierung geändert werden.
 
 **Codierung ganzer Fotoreportagen**
 - Die Reihenfolge der Elemente pro Seite folgt nicht ihrer topographischen Anordnung (diese kann durch die Regionen-Koordinaten im Frontend nachvollziehbar gemacht werden)
@@ -285,16 +289,16 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
         - von pagebeginnings 
     6.  Figure-Element(e)
         - können von pagebeginnings unterbrochen werden, wenn z.B. ein Seitenbruch zwischen Bild und Bildunterschrift stattfindet
-        - wo das figurelement in der Mitte durchteilt ist, wird es in der Regel der ersten Seite, auf der es auftaucht, zugeschlagen
+        - wo das figurelement in der Mitte durchteilt ist (d.h. auch der figureparagraph-Text sich nicht sinnvoll zweiteilen lässt), wird es in der Regel der ersten Seite, auf der es auftaucht, zugeschlagen
 - Das figure-Element kann inmitten des Fliesstextes (p-Elemente) auftauchen und diesen unterbrechen (ohne dass davor ein `</p>`-Endtag gesetzt werden muss). 
-- Auf der Seite (pb) steht in der Regel der Fliesstext immer vor den figure-Elementen, auch wenn die Reihenfolge/Anordnung auf dem Faksimile eine andere ist.  
-- - Im Fall von einer korrespondierenden Fotogografie: 
+ 
+- Im Fall von einer korrespondierenden Fotogografie: 
  `<head resp="editor" corresp="image_0204">`
 - Artikel- und Seitennummern, Fortsetzungsverweise ("Fortsetzung auf S. 7"/"Fortsetzung aus Nr. XY") \[[https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild](https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild)\]:  
     
   - `<fw type="tbd" place="top/inline/etc.">[tbd]</fw>`
 
-- Textblock, der einen fortlaufenden Paragraphen unterbricht 
+**Textblock, der einen fortlaufenden Paragraphen unterbricht**
     - mehrheitlich in Fotoreportagen zu erwartendes Phänomen 
     - betrifft nicht Unterschriften in einem figure-Element, dieses darf direkt in einem unabgeschlossesnen Paragraphen stehen
     - Codierung: 

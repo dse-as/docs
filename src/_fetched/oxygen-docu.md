@@ -272,9 +272,20 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 </figure>
 ```
 
-- In der Konversion werden die Paragraphen der Bildunterschriften und ihre dazugehörigen milestones ausserhalb des Figure-Elements abgelegt, jedoch mit einem FML-Tag als nachzubearbeiten markiert. 
+- In der Konversion werden die Paragraphen der Bildunterschriften und ihre dazugehörigen milestones ausserhalb des Figure-Elements abgelegt, jedoch mit einem FML-Tag als nachzubearbeiten markiert. Die Paragrpahen müssen in das figure-Element verschoben werden.  
 
 **Codierung ganzer Fotoreportagen**
+- Die Reihenfolge der Elemente pro Seite folgt nicht ihrer topographischen Anordnung (diese kann durch die Regionen-Koordinaten im Frontend nachvollziehbar gemacht werden)
+    1.  Titel
+        -  falls über mehrere Seiten reichend:Im Normalfall, in dem ein Titel eine Doppelseite überspannt, wird er der ersten Seite zugeschlagen
+        - wenn der Titel jedoch eher wie mehrere Untertitel funktioniert, werden mehrere `<head>`-Elemente in `<div>`-Abschnitte gelegt. 
+    3.  Byline (falls vorhanden)
+    4.  Haupt-Fliesstext; wenn über mehrere Seiten kann er  unterbrochen werden 
+        - von figure-Elementen  
+        - von pagebeginnings 
+    6.  Figure-Element(e)
+        - können von pagebeginnings unterbrochen werden, wenn z.B. ein Seitenbruch zwischen Bild und Bildunterschrift stattfindet
+        - wo das figurelement in der Mitte durchteilt ist, wird es in der Regel der ersten Seite, auf der es auftaucht, zugeschlagen
 - Das figure-Element kann inmitten des Fliesstextes (p-Elemente) auftauchen und diesen unterbrechen (ohne dass davor ein `</p>`-Endtag gesetzt werden muss). 
 - Auf der Seite (pb) steht in der Regel der Fliesstext immer vor den figure-Elementen, auch wenn die Reihenfolge/Anordnung auf dem Faksimile eine andere ist.  
 - - Im Fall von einer korrespondierenden Fotogografie: 

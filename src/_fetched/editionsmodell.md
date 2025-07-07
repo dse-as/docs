@@ -403,6 +403,9 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 - Zusatz von fremder Hand, z. B. Grüsse einer anderen Person, werden in einem weiteren `<closer` mit dem Zusatz der Hand codiert:
 `<closer hand="person_ID">`
 
+- Zusatz von fremder Hand, z. B. in der Adresse:
+- `<addrLine hand=unknown">`
+
 - Langer Zusatz, der nich als Gruss gilt:
 `<div type="attached" hand="peron_ID">`
 

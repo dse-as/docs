@@ -76,7 +76,7 @@ Der TEI-Header wird zwar im folgenden Editionsmodell wo relevant erwähnt, das g
 ```xml
 <p/>
     <space dim="vertical"/>
-<p/>
+<p>
 ```
     
 Wo alle Paragraphen durch zusätzlichen Abstand getrennt werden, wird dieser nicht codiert (da es eine graphische Eigenart des spezifischen Drucks ist und solche Eigenarten i.d.R. nicht in die eigene Edition übernommen werden). Oder in den Worten des DTA: "Größere Abstände zwischen Absätzen werden nur dann ausgezeichnet, wenn diesbezüglich innerhalb eines Buches eine Varianz festzustellen ist."(https://deutschestextarchiv.de/doku/basisformat/absatz.html).  

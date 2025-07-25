@@ -257,17 +257,22 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 - Spezifalfall: die Dateline ist auf derselben Zeile wie der Haupttext (aber z.B. nur durch einen Punkt davon getrennt):
 `<p><seg type="dateline">Afghanistan, Anfang September.</seg> Es gibt[...]</p>`
 
-**Autorennamen"**: `<byline>Von Annemarie SCharzenbach<byline/>`
+**Autorennamen"**: `<byline>Von Annemarie Schwarzenbach<byline/>`
 - Falls die byline im Fliesstext ist, kann analog zum salute vorgegangen werden: `<seg type="byline">...<seg/>` 
 
-**Bilder**: Zur Struktur-Codierung von Bildern und Bildunterschriften: 
+**Bilder**: Zur Struktur-Codierung von Bildern und Bildunterschriften:
 ```xml=
 <milestone unit="textregion" xml:id="p001_r_8"/>
 <figure>
     <head resp="editor"> [Projekteigener Titel für das Bild]</head>
      <bibl>
-        <persName><rs type="person" key="person_0082" xml:id="r6">Schwarzenbach, Annemarie</rs></persName>
-    </bibl>
+        <persName>
+            <rs type="person" key="person_0082" xml:id="r6">Schwarzenbach, Annemarie</rs>
+        </persName>
+      </bibl>    
+    <note type="figure_note">[Hier wird eine allfällige Notiz zum Bild eingefügt]
+    </note>
+   
          <milestone unit="textregion" xml:id="p001_r_4"/>
                  <p>
                  [Absätze mit der Bildbeschriftung im Edendum]   
@@ -277,6 +282,9 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 
 - In der Konversion werden die Paragraphen der Bildunterschriften und ihre dazugehörigen milestones ausserhalb des Figure-Elements abgelegt, jedoch mit einem FML-Tag als nachzubearbeiten markiert. Die Paragrpahen müssen in das figure-Element verschoben werden.  
 - Die Urheberschaft des Bildes (Verschachtelung von persName- in bibl-Element) wird bei der Konversion automatisch als AS ausgegeben, kann jedoch einfach über das framework durch Neureferenzierung geändert werden.
+:::warning
+Das Einfügungen eines rs-Elementes zwecks Zuordnung der Bild-Urheberschaft ist nicht best practice, da rs-Elemente nicht Metadaten referenzieren sollten. Die Lösung ist pragmatisch, um Urheberschaft auch auf der Ebene eines Einzelbildes in einer Fotoreportage schnell im Framework referenzieren zu können. Gegen Ende des Projektes sollten die rs-Elemente darum noch konvertiert werden in nur ein persName-Element.
+:::
 
 **Codierung ganzer Fotoreportagen**
 - Die Reihenfolge der Elemente pro Seite folgt nicht ihrer topographischen Anordnung (diese kann durch die Regionen-Koordinaten im Frontend nachvollziehbar gemacht werden)
@@ -294,7 +302,18 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
  
 - Im Fall von einer korrespondierenden Fotogografie: 
  `<head resp="editor" corresp="image_0204">`
-- Artikel- und Seitennummern, Fortsetzungsverweise ("Fortsetzung auf S. 7"/"Fortsetzung aus Nr. XY") \[[https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild](https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild)\]:  
+- Falls das Bild ausserhalb der Edition eine Online-Quelle hat (z.B. in einem Bildarchiv), wird nach der Referenzierung der Urheberschaft auf die Quelle verwiesen: 
+```xml=
+  <listBibl type="external" subtype="online"> 
+                        <bibl source="link">
+                     </listBibl>
+```
+:::warning
+Das listBibl-Element hat eher Metadaten-Charakter und wird hier der Einfachheit halber verwendet. Es könnte gegen Ende des Projektes in ein corresp-attribut umgewandelt werden. 
+:::
+
+**Artikel- und Seitennummern, Fortsetzungsverweise**
+("Fortsetzung auf S. 7"/"Fortsetzung aus Nr. XY") \[[https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild](https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild)\]:  
     
   - `<fw type="tbd" place="top/inline/etc.">[tbd]</fw>`
 

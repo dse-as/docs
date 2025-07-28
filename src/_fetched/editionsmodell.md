@@ -369,10 +369,16 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 - Adresse (`<ab>`,`<address>`, `<addrLine>`)  
     
 - Vorgedrucktes Briefpapier (Briefbogen und Briefcouvert):  
-  `<div type="letterhead">`  
-    `<address>`  
-      `<addrLine>Firma<addrLine/>`  
-      `<addrLine>Länggassstrasse<addrLine/>` etc.  
+  ```
+  <div type="letterhead">
+      <ab>
+        <address> 
+          <addrLine>Firma<addrLine/>  
+          <addrLine>Länggassstrasse<addrLine/>
+         </address>
+        </ab>
+    </div>
+```
     
 
     
@@ -407,7 +413,7 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 - `<addrLine hand=unknown">`
 
 - Langer Zusatz, der nich als Gruss gilt:
-`<div type="attached" hand="peron_ID">`
+`<div type="attached" hand="person_ID">`
 
 
 ### Textstruktur Kleine Formen

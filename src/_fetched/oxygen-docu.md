@@ -215,6 +215,7 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 
 ### 3.2 Grundstruktur Briefe 
 
+- Grundeinheit innerhalb von `<text>` und `<body>`: `<div type="letter>`, umfasst den Brieftext. Je nachdem gibt es mögliche andere Einheiten: `<div type="letterhead">`, `<div type="letter">`, `<div type="back">`, `<div type="attached">` --> keine Verschachtelung, jedes `<div>` muss ein `</div>` haben, bevor ein neues `<div>` beginnt. 
 - Opener: `<opener>...<opener/>` Diese Textstruktur enthält alle Informationen, die einen Brief eröffnen (Datum, Ort, Anrde ggfls. Adresse)
     - Dateline:`<dateline>`: Umfasst auch Ortsangaben
     - Salute = Begrüssungsformel (mit oder ohne Namen): `<salute>`
@@ -222,17 +223,17 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
 - Closer: `<closer>`umfasst alle Informationen nach dem Haupttext:
     - Salute = auch Abschiedsformel, ggfls. auch der einleitende Satz (z.B.: "Bitte grüße mir auch ganz herzlich Deine Mutter! Liebe Grüße,")
     - Signed = Unterschrift: `<signed>`
-- Postscriptum: `<postscript>`
-    - Bei mehrerem Postscripten ist es nötig, diese in einen neuen `<div>`-Wrapper zu packen. 
+- Postscriptum: `<postscript>` 
 - Briefumschläge und Adress-Seiten von Postkarten: `<div type="back">`
-- Vorgedrucktes Briefpapier (Briefbogen und Briefcouvert):
-`<div type="letterhead">`- sowie ggfls. Adresszeilen, siehe [Editionsmodell](https://hackmd.io/ccjyBww-TpSE6ivZjWDPig?view=&stext=19489%3A56%3A0%3A1744352502%3AArj7W7)
-- Postmarken: 
+- Vorgedrucktes Briefpapier (nur Briefbogen):
+`<div type="letterhead">`, `<ab>`, `<address>`, `<addrline>`- siehe [Editionsmodell](https://hackmd.io/ccjyBww-TpSE6ivZjWDPig?view=&stext=19489%3A56%3A0%3A1744352502%3AArj7W7)
+- Postmarken innerhalb des `<ab>`, in dem auch die Adresse ist, und immer nach der Adresse: 
 ```xml=
 <seg type="postmark">
   <date></date>
   <placeName/>
 </seg>
+</ab>
 ```
 - Adress-Blöcke (z.B. auf Umschlägen) werden von einem 'anonymous block' `<ab>`umgeben und dann Linie für Linie codiert und jeweils später referenziert: 
 ```xml=
@@ -243,6 +244,7 @@ Im Gegensatz zu Prosa-Zeilen, werden Verszeilen auch in Leseausgaben weiterhin g
         <addrLine><lb xml:id="p001_tr_1_tl_25"/><rs type="place" key="place_0088" xml:id="r9">Zurich</rs></addrLine>     
         <addrLine><lb xml:id="p001_tr_1_tl_28"/><rs type="place" key="place_0110" xml:id="r8">Schweiz</rs></addrLine>
     </address>
+    <seg type="postmark"><date>xy</date></seg>
 </ab>
 ```
 

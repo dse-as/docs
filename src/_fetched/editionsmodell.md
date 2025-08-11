@@ -347,7 +347,8 @@ Die Anwendung des Transkribus-Taggings wird in der Transkribus-Dokumentation gen
 
 Struktur:
 Letter-Wrapper, wird automatisch in der Konversion erzeugt: 
-`<div type="letterhead"`> vordegrucktes Briefpapier`<div type="letter"`
+`<div type="letterhead"`> vordegrucktes Briefpapier
+`<div type="letter"`: Brief
 `<div type="back"` Adresse, Poststempel.
 `<div type="attached">` Anhänge aller Art
 --> -alle Divs auf einer Ebene, wenn möglich keine verschachtelten Divs
@@ -380,7 +381,7 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
     </div>
 ```
     
-
+- Gibt es auf jeder Briefseite einen Letterhead: `<seg type=letterhead">`. Die einzelnen Zeilen müssen nicht mehr ausgezeichnet werden
     
 - Stempel werden so einfach wie möglich mit Datum und Ort ausgezeichnet; komplexere Beobachtungen an Stempeln (z.B. Bezüge zum Briefinhalt) werden als Kommentar hinterlegt.
 - Stempel werden in `<ab/>` nach der Adresse getaggt 
@@ -405,7 +406,8 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 
 - Postkarten-Vorderseite: Aufschriften/Text werden nicht transkribiert
 
-- Reihenfolge: wenn  möglich diplomatisch. Gibt aber semantische Unklarheiten, z.B.,wenn auch dem Couvert auf der letzten Seite etwas Vorgedrucktes ist. Trotzdem div type="letterhead". Bei Postkarte: Aufdruck nach Text.
+- Manuelle Nummerierung/Seitenzahl:
+- `<fw type="pageNum" place="top/bottom etc."></fw>`
 - Zusatz von fremder Hand, z. B. Grüsse einer anderen Person, werden in einem weiteren `<closer` mit dem Zusatz der Hand codiert:
 `<closer hand="person_ID">`
 

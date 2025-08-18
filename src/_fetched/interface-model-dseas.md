@@ -149,9 +149,13 @@ Der Platz, wo und wie bestimmte Paratexte stehen, kann ggfls. nach Dokumenttyp v
 - **Metadaten der Briefe**
     - Absende- und Empfangsort
     - Absender:in und Empfänger:in
+    - Chronologisch vorhergehender Brief/Folgebrief 
+    - in Korrespondenz vorhergehender Brief/Folgebrief
 - **Metadaten der Kleinen Formen**
     - Publikationsmedium und Quellennachweis
     - Verweis auf Vorstufen oder Publikationen des Dokuments
+    - Chronologisch vorhergehende/nächste Kleine Form 
+    - vorhergehende/nächste Kleine Form in einer Serie
 - **Metadaten Bilder**
     - tbd, wenn Digitalisate vorhanden sind
 

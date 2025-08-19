@@ -109,12 +109,10 @@ Der Aufbau bzw. Inhalt der Register wird unten (siehe [3.3](#33-Register-und-Reg
 
 ### 2.1 Anforderungen an die Präsentation des Edendums
 
-- <del>Modularität der Darstellungsweise = freie Wahl der drei Darstellungsformen: 
-    - Digitalisat + diplomatische Transkription (zeilengenau) + Lesefassung
-    -> Jedes einzeln oder frei kombinierbar</del>
+
     <!-- Ideenlab 18.08.25: Konzept geändert -->
 - Grundsatz: Primat des Transkripts
-- Es gibt zwei Ansichten, und eine Leseansicht diplomatische(re). Beide sind über eine Schaltfläche anwählbar (mit Default Leseansicht).
+- Es gibt zwei Ansichten, eine Leseansicht und eine diplomatische(re). Beide sind über eine Schaltfläche anwählbar (mit Default Leseansicht).
     - Initial lädt die **Leseansicht**. Sie zeigt im linken Bereich des Viewports das Transkript mit Digitalisatminiaturen/Thumbnails und im rechten Bereich den Kommentar. Die Kommentare werden im Transkript als Anmerkungsziffern (*"cues"*/*"reference numbers"*) relativ diskret angedeutet, heben bei Interaktion (hover) jedoch die ganze annotierte Stelle hervor. Zugleich scrollt auf der rechten Seite der betroffene Kommentar in den Fokus. Verlinkte Entitäten werden im Text dargestellt (z.B. farbliche Unterstreichung; eher keine typspezifische Icons). Dargestellt werden zudem Seitenumbrüche (z.B. Pipe-Symbol).
 Registereinträge 
         - Mögliche Adressmuster der Leseansicht sind 
@@ -147,11 +145,12 @@ Registereinträge
     - Problem von schönen, aber für Sehbehinderte schwer lesbare Highlights: Ev. Disability-Mode (v.a. falls es schon einfach implementierbare Modelle gibt)?
 - Markierung der **Stellenkommentare** im Edendum
     - Sowohl in der diplomaptischen Transkription als auch in der Lesefassung default eingeblendet
-    - Ideenlab 18.08.25: in der diplomatischen Ansicht können Kommentare evtl. nur stilisiert angedeutet werden, z.B. mit einem "K" neben der Zeile, auf der ein Kommentar beginnt/endet (wiederum mit Highlighting der Stelle bei hover)
+    - Ideenlab 18.08.25: in der diplomatischen Ansicht können Kommentare evtl. nur stilisiert angedeutet werden, z.B. mit einem "K" <!-- Unicode &#55356 or similar might be an option --> neben der Zeile, auf der ein Kommentar beginnt/endet (wiederum mit Highlighting der Stelle bei hover)
     - Highlighting muss klar von Referenzierungen unterscheidbar sein, ggfls. weniger aufdringlich, da längere Passagen kommentiert werden können.
     - Beim Klicken auf das Highlighting kein Popup sondern Einblendung der Kommentarlaufleiste (s.u.) mit Hervorhebung des relevanten Kommentars 
 - Dokumentkontext/Sequentialisierung (Ideenlab 18.08.25)
     - Dokumente können Teil einer oder mehrere Sequenzen sein, ein Brief z.B. Teil einer bestimmten Korrespondenz und zugleich Teil der Gesamtkorrespondenz. Solche Zugehörigkeiten werden in Listen festgelegt. Für solche Listen ist eine eigene Ansicht vorgesehen, sie dienen vor allem aber als Rückgrat für eine Navigationsfunktionalität auf der Edendum-Ansicht. Für jedes angezeigte Dokument wird ermittelt, Teil welcher Listen es ist, und in Abhängigkeit davon eine Blätter-Navigation angeboten. Über ein Dropdown o.ä. lässt sich auswählen, wohin ein Klick auf einen Navigations-Pfeil führt (vor/zurück). Wählt man eine bestimmte Korrespondenz, führen die Pfeile zu den vorhergehenden und folgenden Briefen dieser Korrespondenz. Wählt man die Gesamtkorrespondenz oder das gesamte Korpus, ändern die Linkziele entsprechend.
+    - Die grösste Liste ist ein Verzeichnis aller Materialien der Edition. Sie ist hierarchisch gegliedert und wird als Inhaltsverzeichnis (ggf. mit gewissen zusätzlichen Funktionen für clientseitiges Filtern/Facettieren) dargestellt.
 
 
 ### 2.2 Anforderungen an Präsentation der Paratexte (Metadaten, Kommentare und Referenzierungen)

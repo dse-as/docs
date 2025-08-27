@@ -26,7 +26,7 @@ jobs:
     - run: curl -L https://hackmd.io/@DSE-AS/SyjEFFl9yg/edit > hackmd-backup/_fetched/register-model-dseas.html
     - run: curl -L https://hackmd.io/@DSE-AS/H1aXACCi1g/edit > hackmd-backup/_fetched/oxygen-docu.html
 
-    - run: cat hackmd-backup/_fetched/interface-model-dseas.htm
+    - run: cat hackmd-backup/_fetched/interface-model-dseas.html
     - name: Install pup
       run: |
         go install github.com/ericchiang/pup@latest

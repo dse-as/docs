@@ -35,7 +35,8 @@ jobs:
       run: |
         for f in hackmd-backup/_fetched/*.html; do
           pup 'div#doc' < "$f" > "${f%.*}.htm" || echo "No div#doc found in $f"
-        done    
+        done
+    - run: cat hackmd-backup/_fetched/interface-model-dseas.htm
     - run: |
         for f in hackmd-backup/_fetched/*.html; do
           java -jar hackmd-backup/tagsoup.jar "$f" > "${f%.*}.xhtml";  

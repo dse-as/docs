@@ -29,9 +29,11 @@ jobs:
         for f in hackmd-backup/_fetched/*.html; do
           java -jar hackmd-backup/tagsoup.jar "$f" > "${f%.*}.xhtml";  
         done
-    - name: Escape illegal XML codepoints
+    - name: Convert XML from UTF-16 to UTF-8
       run: |
-        perl -CS -pe 's/([^\x09\x0A\x0D\x20-\x{D7FF}\x{E000}-\x{FFFD}])/sprintf("_ILLEGAL_%d_", ord($1))/ge' hackmd-backup/_fetched/*.xhtml > "${f%.*}.xhtml"
+        for f in hackmd-backup/_fetched/*.xhtml; do
+          iconv -f UTF-16 -t UTF-8 "$f" > "${f%.*}.xhtml";
+        done
     - run: tree hackmd-backup && ls -l hackmd-backup
     - run: |
         sudo apt-get update -qq

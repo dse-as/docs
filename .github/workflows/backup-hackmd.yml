@@ -38,11 +38,6 @@ jobs:
         for f in hackmd-backup/_fetched/*.xhtml; do
           pup 'div#doc' < "$f" > "${f%.*}.xhtml" || echo "No div#doc found in $f"
         done
-    - name: Convert XML from UTF-16 to UTF-8
-      run: |
-        for f in hackmd-backup/_fetched/*.xhtml; do
-          iconv -f UTF-16 -t UTF-8 "$f" > "${f%.*}.xhtml";
-        done
     - run: tree hackmd-backup && ls -l hackmd-backup
     - run: |
         sudo apt-get update -qq

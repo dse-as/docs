@@ -29,9 +29,10 @@ jobs:
         for f in hackmd-backup/_fetched/*.html; do
           java -jar hackmd-backup/tagsoup.jar "$f" > "${f%.*}.xhtml";  
         done
-    - run: |
-        sudo apt-get update
-        sudo apt-get install -y pup    
+    - name: Install pup
+      run: |
+        go install github.com/ericchiang/pup@latest
+        echo "$HOME/go/bin" >> $GITHUB_PATH  
     - name: Extract doc div using pup (to get rid of illegal characters in XML 1.0)
       run: |
         for f in hackmd-backup/_fetched/*.xhtml; do

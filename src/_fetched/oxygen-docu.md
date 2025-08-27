@@ -1,4 +1,5 @@
-# Dokumentation Oxygen
+
+ # Dokumentation Oxygen
 
 Das vorliegende Dokument führt durch den Editionsprozess in Oxygen, indem es versucht, dessen Arbeitsschritte chronologisch abzubilden. Der Ablauf folgt der Grundregel, dass strukturelle und formale Aspekte vor inhaltlichen Aspekten ediert sein müssen, um keine vorschnelle inhaltliche Schlüsse aus einer vermeintlichen Form zu treffen. 
 
@@ -497,8 +498,4 @@ Alternativ können auch XML-Kommentare folgendermaßen eingefügt werden:
   <!--Das ist ein XML-Kommentar-->
 ```
 
-Bei Problemen/Unklarheiten, die auch im Korrekturlesen nicht gelöst werden konnten, empfiehlt es sich im Notfall, diese Form des Kommentars stehen zu lassen. 
-
-
-
-
+Bei Problemen/Unklarheiten, die auch im Korrekturlesen nicht gelöst werden konnten, empfiehlt es sich im Notfall, diese Form des Kommentars stehen zu lassen.

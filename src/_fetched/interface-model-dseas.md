@@ -1,4 +1,5 @@
-# Interface-Modell DSE AS
+
+ # Interface-Modell DSE AS
 
 Dieses Dokument klärt die informationellen, editionsphilologischen und technischen Bedürfnisse (*requirements*) von zukünftigen Nutzenden der DSE AS und formuliert auf dieser Grundlage Funktionsaspekte des Interfaces (*specifications*), gegliedert nach ihrer Wichtigkeit und Notwendigkeit. Es beschreibt auf Konzeptebene, Details der Umsetzung werden in weiteren Dokumenten beschrieben, namentlich im: 
 - [Editionsmodell](https://hackmd.io/@DSE-AS/Editionsmodell) (Codierung in TEI/XML) 
@@ -145,7 +146,7 @@ Registereinträge
     - Problem von schönen, aber für Sehbehinderte schwer lesbare Highlights: Ev. Disability-Mode (v.a. falls es schon einfach implementierbare Modelle gibt)?
 - Markierung der **Stellenkommentare** im Edendum
     - Sowohl in der diplomaptischen Transkription als auch in der Lesefassung default eingeblendet
-    - Ideenlab 18.08.25: in der diplomatischen Ansicht können Kommentare evtl. nur stilisiert angedeutet werden, z.B. mit einem "K" <!-- Unicode &#55356 or similar might be an option --> neben der Zeile, auf der ein Kommentar beginnt/endet (wiederum mit Highlighting der Stelle bei hover)
+    - Ideenlab 18.08.25: in der diplomatischen Ansicht können Kommentare evtl. nur stilisiert angedeutet werden, z.B. mit einem "K" neben der Zeile, auf der ein Kommentar beginnt/endet (wiederum mit Highlighting der Stelle bei hover)
     - Highlighting muss klar von Referenzierungen unterscheidbar sein, ggfls. weniger aufdringlich, da längere Passagen kommentiert werden können.
     - Beim Klicken auf das Highlighting kein Popup sondern Einblendung der Kommentarlaufleiste (s.u.) mit Hervorhebung des relevanten Kommentars 
 - Dokumentkontext/Sequentialisierung (Ideenlab 18.08.25)

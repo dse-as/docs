@@ -1,4 +1,5 @@
-# Register-Modell DSE AS
+
+ # Register-Modell DSE AS
 
 
 [toc]
@@ -61,9 +62,3 @@ Orttypen:
 ## Reisen/Ereignisse
 
 Werden im Projekt definiert und als XML erstellt auf Grundlage von Spalte C dieses Google-Sheets: https://docs.google.com/spreadsheets/d/1YhDLYxqzDs-s50DYhEx2zB9W9z-_H7ZJC7rO06izHRY/edit?usp=sharing
-
-
-
-
-
-

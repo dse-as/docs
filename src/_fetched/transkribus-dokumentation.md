@@ -1,4 +1,5 @@
-# Dokumentation Transkribus
+
+ # Dokumentation Transkribus
 
 [toc]
 
@@ -178,5 +179,3 @@ Folgende Arbeitsschrite ergänzen die Bearbeitung von Spalten-Layouts im Falle v
 `\f\` [projekteigener Abbildungstittel, z.B. "Karawane vor Perspolis"]`\:f\`
     - Bildunterschriften sind zwar durch die ATR transkribiert worden, müssen aber noch als Bildunterschriften getaggt werden, wobei fp für 'figureparagraph' steht: 
 `\fp\` [Bildunterschrift der Originalquelle] `\:fp\`
-
-

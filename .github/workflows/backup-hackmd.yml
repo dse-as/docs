@@ -25,18 +25,18 @@ jobs:
     - run: curl -L https://hackmd.io/@DSE-AS/ryMYDZtnA/edit > hackmd-backup/_fetched/interface-model-dseas.html
     - run: curl -L https://hackmd.io/@DSE-AS/SyjEFFl9yg/edit > hackmd-backup/_fetched/register-model-dseas.html
     - run: curl -L https://hackmd.io/@DSE-AS/H1aXACCi1g/edit > hackmd-backup/_fetched/oxygen-docu.html
-    - run: |
-        for f in hackmd-backup/_fetched/*.html; do
-          java -jar hackmd-backup/tagsoup.jar "$f" > "${f%.*}.xhtml";  
-        done
     - name: Install pup
       run: |
         go install github.com/ericchiang/pup@latest
         echo "$HOME/go/bin" >> $GITHUB_PATH  
     - name: Extract doc div using pup (to get rid of illegal characters in XML 1.0)
       run: |
-        for f in hackmd-backup/_fetched/*.xhtml; do
-          sed 's/xmlns="[^"]*"//g' "$f" | pup 'div#doc' < "$f" > "${f%.*}.xhtml" || echo "No div#doc found in $f"
+        for f in hackmd-backup/_fetched/*.html; do
+          pup 'div#doc' < "$f" > "${f%.*}.html" || echo "No div#doc found in $f"
+        done    
+    - run: |
+        for f in hackmd-backup/_fetched/*.html; do
+          java -jar hackmd-backup/tagsoup.jar "$f" > "${f%.*}.xhtml";  
         done
     - run: tree hackmd-backup && ls -l hackmd-backup
     - run: |

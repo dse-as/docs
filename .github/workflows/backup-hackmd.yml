@@ -34,7 +34,7 @@ jobs:
     - name: Extract doc div using pup (to get rid of illegal characters in XML 1.0)
       run: |
         for f in hackmd-backup/_fetched/*.html; do
-          pup 'div#doc' < "$f" > "${f%.*}.html" || echo "No div#doc found in $f"
+          pup 'div#doc' < "$f" > "${f%.*}.htm" || echo "No div#doc found in $f"
         done    
     - run: |
         for f in hackmd-backup/_fetched/*.html; do

@@ -25,6 +25,8 @@ jobs:
     - run: curl -L https://hackmd.io/@DSE-AS/ryMYDZtnA/edit > hackmd-backup/_fetched/interface-model-dseas.html
     - run: curl -L https://hackmd.io/@DSE-AS/SyjEFFl9yg/edit > hackmd-backup/_fetched/register-model-dseas.html
     - run: curl -L https://hackmd.io/@DSE-AS/H1aXACCi1g/edit > hackmd-backup/_fetched/oxygen-docu.html
+
+    - run: cat hackmd-backup/_fetched/interface-model-dseas.html
     - name: Install pup
       run: |
         go install github.com/ericchiang/pup@latest
@@ -45,6 +47,7 @@ jobs:
 #        for f in hackmd-backup/_fetched/*.xhtml; do
 #          xmllint --noout "$f";
 #        done
+    - run: cat hackmd-backup/_fetched/interface-model-dseas.html
     - run: cat hackmd-backup/_fetched/interface-model-dseas.xhtml
     - name: process hackmd.io HTML (XSLT)
       uses: pdaengeli/use-saxon-he-j@12.8.fix

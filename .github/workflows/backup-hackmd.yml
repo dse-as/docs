@@ -29,6 +29,10 @@ jobs:
         for f in hackmd-backup/_fetched/*.html; do
           java -jar hackmd-backup/tagsoup.jar "$f" > "${f%.*}.xhtml";  
         done
+    - run:  |
+        for f in hackmd-backup/_fetched/*.xhtml; do
+          cat "$f";  
+        done
     - name: process hackmd.io HTML (XSLT)
       uses: pdaengeli/use-saxon-he-j@12.8.fix
       with:

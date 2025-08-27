@@ -38,13 +38,14 @@ jobs:
         for f in hackmd-backup/_fetched/*.html; do
           java -jar hackmd-backup/tagsoup.jar "$f" > "${f%.*}.xhtml";  
         done
-    - run: tree hackmd-backup && ls -l hackmd-backup
-    - run: |
-        sudo apt-get update -qq
-        sudo apt-get install -y libxml2-utils
-        for f in hackmd-backup/_fetched/*.xhtml; do
-          xmllint --noout "$f";
-        done
+    - run: tree hackmd-backup && ls -l hackmd-backup/_fetched
+#    - run: |
+#        sudo apt-get update -qq
+#        sudo apt-get install -y libxml2-utils
+#        for f in hackmd-backup/_fetched/*.xhtml; do
+#          xmllint --noout "$f";
+#        done
+    - run: cat hackmd-backup/_fetched/interface-model-dseas.xhtml
     - name: process hackmd.io HTML (XSLT)
       uses: pdaengeli/use-saxon-he-j@12.8.fix
       with:

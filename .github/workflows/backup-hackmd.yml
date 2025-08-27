@@ -30,7 +30,7 @@ jobs:
           java -jar hackmd-backup/tagsoup.jar "$f" > "${f%.*}.xhtml";  
         done
     - name: Escape illegal XML codepoints
-    - run: |
+      run: |
         perl -CS -pe 's/([^\x09\x0A\x0D\x20-\x{D7FF}\x{E000}-\x{FFFD}])/sprintf("_ILLEGAL_%d_", ord($1))/ge' hackmd-backup/_fetched/*.xhtml > "${f%.*}.xhtml"
     - name: process hackmd.io HTML (XSLT)
       uses: pdaengeli/use-saxon-he-j@12.8.fix

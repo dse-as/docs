@@ -18,15 +18,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - run: mkdir -p hackmd-backup/_fetched
-#    - run: curl http://vrici.lojban.org/~cowan/tagsoup/tagsoup-1.2.1.jar -o hackmd-backup/tagsoup.jar
-#    - run: curl https://raw.githubusercontent.com/joansmith3/orbeon-forms/refs/heads/master/lib/tagsoup-1.2.jar -o hackmd-backup/tagsoup.jar
     - run: curl -L https://hackmd.io/@DSE-AS/Editionsmodell/edit > hackmd-backup/_fetched/editionsmodell.html
     - run: curl -L https://hackmd.io/@DSE-AS/Transkribus_Dokumentation/edit > hackmd-backup/_fetched/transkribus-dokumentation.html
     - run: curl -L https://hackmd.io/@DSE-AS/ryMYDZtnA/edit > hackmd-backup/_fetched/interface-model-dseas.html
     - run: curl -L https://hackmd.io/@DSE-AS/SyjEFFl9yg/edit > hackmd-backup/_fetched/register-model-dseas.html
     - run: curl -L https://hackmd.io/@DSE-AS/H1aXACCi1g/edit > hackmd-backup/_fetched/oxygen-docu.html
-
-    - run: cat hackmd-backup/_fetched/interface-model-dseas.html
     - name: Install pup
       run: |
         go install github.com/ericchiang/pup@latest
@@ -38,18 +34,6 @@ jobs:
         done
     - run: cat hackmd-backup/_fetched/interface-model-dseas.html
     - run: cat hackmd-backup/_fetched/interface-model-dseas.xhtml
-#    - run: |
-#        for f in hackmd-backup/_fetched/*.html; do
-#          java -jar hackmd-backup/tagsoup.jar "$f" > "${f%.*}.xhtml";  
-#        done
-    - run: tree hackmd-backup && ls -l hackmd-backup/_fetched
-#    - run: |
-#        sudo apt-get update -qq
-#        sudo apt-get install -y libxml2-utils
-#        for f in hackmd-backup/_fetched/*.xhtml; do
-#          xmllint --noout "$f";
-#        done
-#    - run: cat hackmd-backup/_fetched/interface-model-dseas.xhtml
     - name: process hackmd.io HTML (XSLT)
       uses: pdaengeli/use-saxon-he-j@12.8.fix
       with:

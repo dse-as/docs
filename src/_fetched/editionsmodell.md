@@ -101,6 +101,8 @@ schriftliche Korrektur einer bestimmten Person nachweisbar ist, wird @hand verwe
 `<add place="above" hand="#person">`  
 `<add place="below"` `<add place="right"` `<add place="left"` `<add place="top"` `<add place="bottom>"`
 
+-Von Hand eingefügte Korrekturen, die sich in grosser Anzahl auf das gleiche Phänomen beziehen, werden nicht getaggt. Solche Phänomene sind bspw. von Hand gesetzte Akzente in französischen Typoskrypten
+
 - Auslassungszeichen "..." werden stillschweigend um ein Leerzeichen zu Beginn ergänzt, falls noch nicht vorhanden.
 
 ### Fehlerhafte Schreibweisen

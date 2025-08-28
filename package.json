@@ -12,8 +12,7 @@
   "author": "",
   "type": "module",
   "devDependencies": {
-    "rollup": "^4.32.0",
-    "vitepress": "^1.6.4",
+    "vitepress": "2.0.0-alpha.12",
     "vue": "^3.5.20"
   },
   "engines": {

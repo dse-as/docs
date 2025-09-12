@@ -35,7 +35,7 @@ jobs:
     - run: cat hackmd-backup/_fetched/interface-model-dseas.html
     - run: cat hackmd-backup/_fetched/interface-model-dseas.xhtml
     - name: process hackmd.io HTML (XSLT)
-      uses: pdaengeli/use-saxon-he-j@12.8.fix
+      uses: pdaengeli/use-saxon-he-j@12.9
       with:
         args: -xsl:hackmd-backup/process-hackmd.xsl -it
     - run: mkdir -p src/_fetched/transkribus-dokumentation src/_fetched/editionsmodell src/_fetched/interface-model-dseas src/_fetched/register-model-dseas src/_fetched/oxygen-docu

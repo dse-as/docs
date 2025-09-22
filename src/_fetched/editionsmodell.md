@@ -327,10 +327,16 @@ Für alle Editor:innen-Kommentare (Überischtskommentare und Sachkommentare) gil
 
 ### Kommentar/Fussnote in der Quelle
 
-- Eigene Textregion um die Fussnote setzen. Die Textregion ans Ende aller Textregionen verschieben. 
+- Eigene Textregion um die Fussnote setzen. Die Textregion in Transkribus ans Ende aller Textregionen auf der Seite verschieben. 
 - Muss in Transkribus mit eigenem tagging \fml\ markiert werden (s.u.). 
-- Codierung in Oxygen mit Textanker: 
-...
+- Codierung in Oxygen mit Textanker (vgl. https://tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COXR):
+```xml=
+annotated text <ref target="#o5" type="noteAnchor">⁵</ref>
+<!-- ... -->
+<note xml:id="o5" type="footnote">text of annotation</note>
+```
+-> Die Nummerierung der Fussnoten, d.h.die xml:id im note-element sowie das korrespondierende target-attribut im ref-element werden manuell gesetzt, die Nummerierung beginnt bei "o1". 
+- Im (sehr seltenen) Falle von fussnoten ist der `type="endnote"`, die übrigen Auszeichnung bleibt sich gleich.
 
 ### Transkribus-Tagging
 

@@ -340,6 +340,7 @@ Das listBibl-Element hat eher Metadaten-Charakter und wird hier der Einfachheit 
     
 ```
 
+**Fussnoten/Anmerkungen in Quellen**, siehe Editionsmodell: https://hackmd.io/ccjyBww-TpSE6ivZjWDPig?both#KommentarFussnote-in-der-Quelle
 
 ## 4. Auszeichnungen von Renderings und Texteingriffen (Text- oder Autor-Editor)
 

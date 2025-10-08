@@ -3,7 +3,7 @@
 
 Das vorliegende Dokument führt durch den Editionsprozess in Oxygen, indem es versucht, dessen Arbeitsschritte chronologisch abzubilden. Der Ablauf folgt der Grundregel, dass strukturelle und formale Aspekte vor inhaltlichen Aspekten ediert sein müssen, um keine vorschnelle inhaltliche Schlüsse aus einer vermeintlichen Form zu treffen. 
 
-Die Anleitung führt in Untertiteln auf, ob der Editionsschritt in der Regel im Code (Text-Editor) oder in der Benutzeroberfläche (Autor-Editor bzw. Framework) geschieht. Damit ist primär die arbeitsergonomisch beste Editionsumgebung bezeichnet; abgesehen vom Referenzieren der meisten "externen" Entitäten (die nur im Autor-Editor geschehen kann, weil dort externe Ressourcen abgefragt werden können), sind alle Editionsschritte auch im Text-Editor möglich. Sind sie also einfacher im Autor-Editor zu machen, wird der Code dahinter hier nicht konsequent aufgeführt, er findet sich jedoch immer im [Editionsmodell Edition Annemarie Schwarzenbach](https://hackmd.io/@DSE-AS/Editionsmodell) dokumentiert. Der Einbezug dieses Dokuments erlaubt es bei Ausfall des Autor-Editors komplett im Text-Editor zu edieren.
+Die Anleitung führt in Untertiteln auf, ob der Editionsschritt in der Regel im Code (Text-Editor) oder in der Benutzeroberfläche (Autor-Editor bzw. Framework) geschieht. Damit ist primär die arbeitsergonomisch beste Editionsumgebung bezeichnet; abgesehen vom Referenzieren der meisten "externen" Entitäten (die nur im Autor-Editor geschehen kann, weil dort externe Ressourcen abgefragt werden können), sind alle Editionsschritte auch im Text-Editor möglich. Sind sie also einfacher im Autor-Editor zu machen, wird der Code dahinter hier nicht konsequent aufgeführt, er findet sich jedoch immer im [Editionsmodell Edition Annemarie Schwarzenbach](/@DSE-AS/Editionsmodell) dokumentiert. Der Einbezug dieses Dokuments erlaubt es bei Ausfall des Autor-Editors komplett im Text-Editor zu edieren.
 
 
 [toc]
@@ -29,7 +29,7 @@ Alle Varianten des TEI-Headers: https://dav.annemarie-schwarzenbach.ch/sandbox/e
 - **Fotoreportage**: _Studenten - in drei Ländern_ = smallform_0270
     -  Fotografien (mit Referenzierung auf Fotografien im Archiv)  
     -  Bildunterschriften 
-    -  Von Textblock unterbrochener Haupttext (vgl. [Editionsmodell](https://hackmd.io/ccjyBww-TpSE6ivZjWDPig?view=&stext=23757%3A58%3A0%3A1745934050%3AqDgUrb))
+    -  Von Textblock unterbrochener Haupttext (vgl. [Editionsmodell](/ccjyBww-TpSE6ivZjWDPig?view=&stext=23757%3A58%3A0%3A1745934050%3AqDgUrb))
     -  Kommentierung Intermedialität
 - **Fotografie in Illustrierter**: 
     - Spezialfall einer einzelnen Aufnahme
@@ -340,7 +340,7 @@ Das listBibl-Element hat eher Metadaten-Charakter und wird hier der Einfachheit 
     
 ```
 
-**Fussnoten/Anmerkungen in Quellen**, siehe Editionsmodell: https://hackmd.io/ccjyBww-TpSE6ivZjWDPig?both#KommentarFussnote-in-der-Quelle
+**Fussnoten/Anmerkungen in Quellen**, siehe [Editionsmodell](/ccjyBww-TpSE6ivZjWDPig?both#KommentarFussnote-in-der-Quell)
 
 ## 4. Auszeichnungen von Renderings und Texteingriffen (Text- oder Autor-Editor)
 

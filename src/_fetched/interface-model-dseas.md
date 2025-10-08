@@ -2,10 +2,10 @@
  # Interface-Modell DSE AS
 
 Dieses Dokument klärt die informationellen, editionsphilologischen und technischen Bedürfnisse (*requirements*) von zukünftigen Nutzenden der DSE AS und formuliert auf dieser Grundlage Funktionsaspekte des Interfaces (*specifications*), gegliedert nach ihrer Wichtigkeit und Notwendigkeit. Es beschreibt auf Konzeptebene, Details der Umsetzung werden in weiteren Dokumenten beschrieben, namentlich im: 
-- [Editionsmodell](https://hackmd.io/@DSE-AS/Editionsmodell) (Codierung in TEI/XML) 
-- [Registermodell](https://hackmd.io/@DSE-AS/SyjEFFl9yg) (Erarbeitung der Register und Register-Einzelseiten, div. tools)
-- [Transkribus-Dokumentation](https://hackmd.io/@DSE-AS/Transkribus_Dokumentation) (Erarbeitung der Transkriptionen, Transkriptionsregeln)
-- [Oxygen-Dokumentation](https://hackmd.io/@DSE-AS/H1aXACCi1g) (Erarbeitung der codierten Daten, Codierungsregeln) - noch am Anfang des Entstehens
+- [Editionsmodell](/@DSE-AS/Editionsmodell) (Codierung in TEI/XML) 
+- [Registermodell](/@DSE-AS/SyjEFFl9yg) (Erarbeitung der Register und Register-Einzelseiten, div. tools)
+- [Transkribus-Dokumentation](/@DSE-AS/Transkribus_Dokumentation) (Erarbeitung der Transkriptionen, Transkriptionsregeln)
+- [Oxygen-Dokumentation](/@DSE-AS/H1aXACCi1g) (Erarbeitung der codierten Daten, Codierungsregeln) - noch am Anfang des Entstehens
 
 Mögliche Tools zur Erweiterung dieses Dokumentes (z.B. für erste wireframes): 
 - https://asciiflow.com

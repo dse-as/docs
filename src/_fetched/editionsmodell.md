@@ -33,15 +33,26 @@ Auf der Ebene ganzer Korrspondenzen werden Korrespondenzkommentare verfasst, die
 
 ### Grundsätzliche formale Regeln für Kommentare
 
-- Titel von Primärwerken werden nicht in Anführungszeichen gesetzt
 
 #### Bibliographische Angaben in Kommentaren
 
+**Referenzierung von Primär- und Sekundärquellen**
+- Primär- und Sekundärquellen werden konsequent referenziert. 
+- Lange Formen (interne Edenda) werden via Zotero und nicht via interne ID referenziert.
+- Titel von Sekundärliteratur wird in der Regel nicht ausgeschrieben, sondern inline-Quellenangabe: "Nachname und Erscheinungsjahr, S. X-Y)
+    - Beispiel für inline-Quellenenangabe: Insbesondere die Zeitschrift fungierte "[s]eit Ende der 1920er-Jahre [...] als 'schneller Brüter' einer Geisteshaltung, welche dem Liberalismus abschwor und mit diesem auch den Marxismus, der als verwandt betrachtet wurde, vernichten wollte" (Tanner 2023, S. 53).
+    - Oder: Insbesondere die Zeitschrift fungierte, so Tanner (2023, S. 53), "[s]eit Ende der 1920er-Jahre [...] als 'schneller Brüter' einer Geisteshaltung, welche dem Liberalismus abschwor und mit diesem auch den Marxismus, der als verwandt betrachtet wurde, vernichten wollte".
+- Bei Wiederholung von Quellenangaben ist "(ebd.)" erlaubt und wird ebenfalls referenziert. 
+- Titel von Primärwerken werden nicht in Anführungszeichen (oder kursiv etc.) gesetzt, wenn sie referenziert werden (/ausnahmen, was nicht referenziert werden kann: z.B. ein Reihentitel).
+
+**Referenzierung von Briefen**
+- Mindestangabe: Name der Korrespondent:innen und Datumsangabe
+- Referenziert wird nur die Datumsangabe
+- Datumsangabe: "18. August 1931" (Monat immer ausschreiben)
+
 **Seitenzahlen**
-    - Nachname und Erscheinungsjahr in Klammern: 
-        - 
     - S. 14–15 (Leerschlag nach Seite, Halbgeviertstrich, kein 'f.'/'ff.')
-    - 
+
 
 
 ### Korrespondenzkommentar 
@@ -64,6 +75,9 @@ Vier Kommentarbestandteile werden unterschieden, müssen jedoch nicht in jedem F
         - Im Falle der Briefe: Vom Absendeort abweichende Briefköpfe (= 'falsches' Briefpapier)  
     - Schreibwerkzeug (z.B. hs. Korrekturen in Typoskripten)
     - Spuren (Verunreinigung, Beschädigungen etc.)
+    - Material von (intermedialer) Bedeutung 
+        - Postkarten-Bild bei besonderer Relevanz (z.B. Bild abweichend von Sendeort)
+        - Beilagen bei besonderer Relevanz
 
 
 ### Stellenkommentare

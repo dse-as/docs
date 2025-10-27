@@ -27,6 +27,48 @@ Neben den Personen-, Orts-, Institutions-, Schlagwort- und Werkregistern bietet 
 
 Diese Forschungsperspektiven werden unter anderem durch den drei Bereichen zugeordnete spezifische Schlagworte erschlossen, wobei die Verschlagwortung nicht auf diese Bereiche beschränkt ist.
 
+## Kommentare DSE-AS
+
+Auf der Ebene ganzer Korrspondenzen werden Korrespondenzkommentare verfasst, diese aber auch auf Dokumentebene eingeblenden (ausklappbar). Kleine FormenÜberblickskommentar im TEI-Header und dem Stellenkommentar im Primärtext unterschieden. Im Falle der Briefe werden Überblickskommentare pro Dokument nur punktuell verfasst, da grundlegende Informationen schon im Korrespondenzkommentar gesammelt sind. 
+
+### Grundsätzliche formale Regeln für Kommentare
+
+- Titel von Primärwerken werden nicht in Anführungszeichen gesetzt
+
+#### Bibliographische Angaben in Kommentaren
+
+**Seitenzahlen**
+    - Nachname und Erscheinungsjahr in Klammern: 
+        - 
+    - S. 14–15 (Leerschlag nach Seite, Halbgeviertstrich, kein 'f.'/'ff.')
+    - 
+
+
+### Korrespondenzkommentar 
+
+Der Korrespondenzkommentar wird sowohl auf der Ebene eines Korrespondenzregisters (z.B. Briefe an Klaus Mann) als auch auf der Ebene vom einzelnen Brief anzeigt.
+
+### Überblickskommentare 
+
+Der Überblickskommentar erleichtert das Verständnis des Textes. Es ist kein Regest, das den Text zusammenfasst, darf aber inhaltlich auf diesen zur einleitenden Erklärung schon vorgreifen. 
+Vier Kommentarbestandteile werden unterschieden, müssen jedoch nicht in jedem Fall ausgeführt werden, im Falle der Briefe ist nur die letzte Kategorie 'Materialität' im Vordergrund: 
+
+- Entstehungskontext
+
+- Publikationskontext
+
+- Historischer Kontext
+
+- Materialität. Stärkere Priorität bei den Briefen, nur wenn auffällig.
+    - Papier
+        - Im Falle der Briefe: Vom Absendeort abweichende Briefköpfe (= 'falsches' Briefpapier)  
+    - Schreibwerkzeug (z.B. hs. Korrekturen in Typoskripten)
+    - Spuren (Verunreinigung, Beschädigungen etc.)
+
+
+### Stellenkommentare
+
+
 ## Editionsmodell DSE-AS
 
 ### Allgemeines

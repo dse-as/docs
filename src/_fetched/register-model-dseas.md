@@ -43,7 +43,7 @@ Orttypen:
     - Beruf/Tätigkeit (kontrlliertes Vokabular?)
     - Zentrale Lebensereignisse (freies Feld)
 - AS-Informationen
-    - Beziehung zu AS
+    - Beziehung zu AS (falls nicht schon über Typ und Korrespondenzkommentar geklärt)
 
 **Spezialfälle**
 - Literarische Figuren (z.B. Rotkäppchen: http://d-nb.info/gnd/124113788) - gibt es aber nur sehr selten in GND

@@ -459,15 +459,15 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 ```
 
 - Unleserlicher Poststempel wird nicht erwähnt
-- Postkarten-Aufruck auf der Rückseite: wird nur transkribiert, wenn es in irgend einer Form von Bedeutung ist
+- Postkarten-Abbildung wird direkt nach dem `<pb>` in ein `<figur>`- Element analog der Kleinen Formen verpackt:    
+    
+ `<figure>`  
+    `<head resp="editor">[Von Herausgeber:innen verliehener Titel der Abbildung]</head>`
+    `<byline>[Ggfls. Autor:in der Fotografie. Jedoch nur, wenn bekannte/r Fotograf:in]</byline>`
+    `<p>[Postkarten-Aufdruck, wenn vorhanden, z.B. Grüsse aus Arosa]</p>`
+    `</figure>`   
 
-```xml
-<div type="back">
-  <p>
-    Foto von Max Mustermann.
-  </p>
-</div>
-```
+
 
 - Postkarten-Vorderseite: Aufschriften/Text werden nicht transkribiert
 

@@ -444,8 +444,8 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
          </address>
         </ab>
     </div>
-```
-    
+    ```
+
 - Gibt es auf jeder Briefseite einen Letterhead: `<seg type=letterhead">`. Die einzelnen Zeilen müssen nicht mehr ausgezeichnet werden
     
 - Stempel werden so einfach wie möglich mit Datum und Ort ausgezeichnet; komplexere Beobachtungen an Stempeln (z.B. Bezüge zum Briefinhalt) werden als Kommentar hinterlegt.

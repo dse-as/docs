@@ -51,7 +51,6 @@ ACHTUNG: Nur in der Collection 'as-dse_work' ist die automatische Texterkennung 
 Auch das Ausmaß der **Erstkorrektur und Auszeichnung**, die auf die Transkription erfolgt, hängt von unterschiedlichen Dokumenttypen ([s.u.](##Vorgehen-nach-spezifischen-Dokumenttypen)) ab. Ihnen allen aber sind drei projekteigene tags gemein, die wie alle projekteigenen tags nach dem Export automatisch in eine TEI-XML Codierung konvertiert werden: 
 
 - Paragraphen werden mithilfe des tags `\p\`...`\:p\` gekennzeichnet. Die Anwendung dieses tags kann insbesondere für die Kleinen Formen nützlich sein, ist aber letztlich fakultativ, da sich Absätze auch in Oxygen definieren lassen (dort jedoch ist der Abgleich mit dem Faksimile umständlicher).
-- Leere Zeilen, die Transkribus zuweilen aus Versehen generiert und die sich schwer manuell löschen lassen, werden druch das tag `\del\`(= delete) gekennzeichnte
 - Projekteigene tags, die nur vorübergehend Anwendung finden, wie z.B. Paragraphen-endtags am Ende einer Seite (ohne Paragraphen-Ende, stellt die wohlgeformtheit des TEI-XMLs sicher) werden mit `\fml\` (= fix me later) kombiniert, also z.B. `\fml\\:p\`. 
     
 :::danger

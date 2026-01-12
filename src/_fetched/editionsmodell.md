@@ -343,6 +343,16 @@ Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben
 - Tagging orientiert sich an Personen.
 - Publikationsmedien werden im TEI-header verzeichnet und erhalten einen eigenen Registereintrag, in dem die Einzelpublikationen (nicht die Vorkommnisse im Text) gesammelt werden
 
+### Reisen
+
+- Reisen können direkt im Header angegeben werden
+- Bei den Briefen kommt die Reise-Angabe im Header nur, wenn der Brief von einer Reise aus geschrieben wurde, nicht, wenn er inhaltlich auf die Reise Bezug nimmt
+- Sowohl im Kommentar wie auch bei Erwähnungen im Brief selbst können Reisen wie folgt getaggt werden:
+
+`<rs type="travel" key="travel_0001">`
+
+
+
 ### Schlagworte
 
 ```xml

@@ -292,6 +292,9 @@ Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben
 #### Druckfehler
 - Offensichtliche Druckfehler werden stillschweigend korrigiert (alle anderen belassen und taggen mit orig/reg/corr - [sic] automatisch generieren)  
 
+#### Scharf-S/Eszett
+- Schwarzenbach folgt üblicherweise der Schweizer Schreibweise und macht keine Scharf-S. In wenigen Ausnahmefällen verwendet sie das Scharf-S aber trotzdem. Beide Formen werden diplomatisch wiedergegeben ohne schweizerische oder deutsche Normalisierung.
+
 ### Registereinträge (Personen, Organisationen, Orte, Werke) 
 (framework)
 

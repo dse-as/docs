@@ -23,6 +23,7 @@ jobs:
     - run: curl -L https://hackmd.io/@DSE-AS/ryMYDZtnA/edit > hackmd-backup/_fetched/interface-model-dseas.html
     - run: curl -L https://hackmd.io/@DSE-AS/SyjEFFl9yg/edit > hackmd-backup/_fetched/register-model-dseas.html
     - run: curl -L https://hackmd.io/@DSE-AS/H1aXACCi1g/edit > hackmd-backup/_fetched/oxygen-docu.html
+    - run: curl -L https://hackmd.io/@DSE-AS/By7zZj4UZl/edit > hackmd-backup/_fetched/non-discrimination.html
     - name: Install pup
       run: |
         go install github.com/ericchiang/pup@latest
@@ -38,7 +39,7 @@ jobs:
       uses: pdaengeli/use-saxon-he-j@12.9
       with:
         args: -xsl:hackmd-backup/process-hackmd.xsl -it
-    - run: mkdir -p src/_fetched/transkribus-dokumentation src/_fetched/editionsmodell src/_fetched/interface-model-dseas src/_fetched/register-model-dseas src/_fetched/oxygen-docu
+    - run: mkdir -p src/_fetched/transkribus-dokumentation src/_fetched/editionsmodell src/_fetched/interface-model-dseas src/_fetched/register-model-dseas src/_fetched/oxygen-docu src/_fetched/non-discrimination
     - run: tree hackmd-backup
     - run: cat hackmd-backup/_fetched/img-urls.txt
     - run: curl -L -K hackmd-backup/_fetched/img-urls.txt

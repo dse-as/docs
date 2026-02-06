@@ -58,7 +58,7 @@ Die zu edierenden Texte und Fotografien (Edenda)
 
 ## 2. Präsentation diskriminierender Edenda
 Digitalisate der Edenda werden in der Regel per default in ihrer Erstansicht so originalgetreu wie möglich dargestellt (keine Beschneidung, graphische Hervorhebung oder farbliche Änderung des Digitalisats).
-Die editorischen Eingriffe zur diskriminierungssensiblen Vermittlung der Edenda finden in den sie begleitenden Metadaten, Kommentaren und dem konstitutierten/edierten Texten statt. Diese Eingriffe sind (typo-)graphisch so gestaltet, dass sie nicht übersehen werden können, aber gleichzeitig das Lesen/Betrachten der Edition weiterhin erlauben. 
+Die editorischen Eingriffe zur diskriminierungssensiblen Vermittlung der Edenda finden in den sie begleitenden Metadaten, Kommentaren und den konstitutierten/edierten Texten statt. Diese Eingriffe sind (typo-)graphisch so gestaltet, dass sie nicht übersehen werden können, aber gleichzeitig das Lesen/Betrachten der Edition weiterhin erlauben. 
 
 Eine Ausnahme dieses Grundsatzes stellen diskriminierende Fotografien dar. Solche liegen im Werk Schwarzenbachs hinsichtlich eines kolonialen/rassifizierenden Blickregimes bzw. Bildaufbaus vor (z.B. https://commons.wikimedia.org/wiki/File%3ACH-NB_-_Belgisch-Kongo%2C_Niangara-_Menschen_-_Annemarie_Schwarzenbach_-SLA-Schwarzenbach-A-5-25-250.jpg). Zwar werden auch diese Bilder vollständig in der Edition zugänglich gemacht (unabhängig hiervon sind sie bereits auf wikimedia und e-manuscripta zugänglich). Ihre Erstansicht soll jedoch auf die diskriminierende Problematik aufmerksam machen, indem sie zunächst verschwommen (blurred) oder auf andere Weise maskiert und/oder mit einer verdeckenden CN versehen werden. Durch diesen Verfremdungs- und Aktivierungseffekt wirkt die Edition der Suggestionskraft der Fotografien, insbesondere ihrer latenten Normalisierung von Diskriminierung, entgegen. 
 
@@ -107,7 +107,7 @@ Wie/wo adressieren wir einen möglicherweise problematischen **Entstehungskontex
 
 **Diskriminierende Ausdrücke** in der Beschriftung:
 - CN im im Metadaten-Block an vorderer Stelle und farblich hervorgehoben (ausgeklappt): "Die Beschriftung der Fotografie weist diskriminierende Ausdrücke auf." Verlinkung der CN mit editorialem Kommentar zu rassistischen Begrifflichkeiten.
-- CN als farblich hervorgehobener Stellenkommentar im edierten Text der Beschriftung: "Schwarzenbach verwendete das N-Wort/Z-Wort/I-Wort unreflektiert im Kontext ihrer Zeit. Obschon hinter Schwarzenbachs Verwendung des Wortes nicht zwingend eine rassistsiche Intention lag, nahm sie dadurch an Praktiken teil, die schon zu ihrer Zeit diskriminierend waren." Verlinkung der CN mit editorialem Kommentar zu rassistischen Begrifflichkeiten.
+- CN als farblich hervorgehobener Stellenkommentar im edierten Text der Beschriftung: "Schwarzenbach verwendete das N-Wort/Z-Wort/I-Wort unreflektiert im Kontext ihrer Zeit. Obschon hinter Schwarzenbachs Verwendung des Wortes nicht zwingend eine ~~rassistische~~ feindselige Intention lag, nahm sie dadurch an Praktiken teil, die schon zu ihrer Zeit diskriminierend waren." Verlinkung der CN mit editorialem Kommentar zu rassistischen Begrifflichkeiten.
 
 **Diskriminierenden Diskurse** in den Beschriftungen von Fotografien: 
 - Hinweis auf den auftauchenden diskriminierenden Diskurs an vorderer Stelle im Metadaten-Block, in dem relevante editoriale Kommentare verlinkt sind.
@@ -188,7 +188,7 @@ Dank dem Mapping zu GenderOpen ist der Wechsel auf diese  zu erwägen. Auch soll
 
 ### 4.3 Verlinkung von Edenda untereinander
 
-In der Auswahl der Verlinkung von Edenda in Übersichts- und Stellenkommentaren wird darauf geachtet, dass keine diskriminierende Auswahl entsteht. Dies gilt insbesondere für die Auswahl von Fotografien (z.B. Vermeidung einer Präferenz männlicher, weisser etc. Personen auf 'exemplarischen' Fotografien). 
+In der Auswahl der Verlinkung von Edenda in in Übersichtsseiten, welche Einstiegspfade in die Edition ermöglichen, sowie in Übersichts- und Stellenkommentaren wird darauf geachtet, dass keine diskriminierende Auswahl entsteht. Dies gilt insbesondere für die Auswahl von Fotografien (z.B. Vermeidung einer Präferenz männlicher, weisser etc. Personen auf 'exemplarischen' Fotografien). 
 
 ### 4.4 Entitäten
 

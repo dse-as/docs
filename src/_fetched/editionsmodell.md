@@ -346,6 +346,9 @@ Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben
 - Tagging orientiert sich an Personen.
 - Publikationsmedien werden im TEI-header verzeichnet und erhalten einen eigenen Registereintrag, in dem die Einzelpublikationen (nicht die Vorkommnisse im Text) gesammelt werden
 
+- Wenn ein Werk sich nur schlecht oder gar nicht auf eine bestimmte Ausgabe zurückführen lässt, statdessen einen Minimal-Eintrag in Zotero machen, der die URL der GND-Ressource für dieses Werk enthält (die GND-Ressource ist viel generischer und eignet sich z.B. für 'die Bibel' etc.). Ein Beispiel habt ihr hier: https://www.zotero.org/groups/5746334/dse_as_bibl-id/items/XM8JJSPP/
+    - Titel: "'Werktitel (wie auf GND)' [WORK]"
+
 ### Reisen
 
 - Reisen können direkt im Header angegeben werden

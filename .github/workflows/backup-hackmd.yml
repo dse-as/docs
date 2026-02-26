@@ -24,6 +24,9 @@ jobs:
     - run: curl -L https://hackmd.io/@DSE-AS/SyjEFFl9yg/edit > hackmd-backup/_fetched/register-model-dseas.html
     - run: curl -L https://hackmd.io/@DSE-AS/H1aXACCi1g/edit > hackmd-backup/_fetched/oxygen-docu.html
     - run: curl -L https://hackmd.io/@DSE-AS/By7zZj4UZl/edit > hackmd-backup/_fetched/non-discrimination.html
+    - uses: actions/setup-go@v5
+      with:
+        go-version: '1.25.x'    
     - name: Install pup
       run: |
         go install github.com/ericchiang/pup@latest

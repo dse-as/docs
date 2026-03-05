@@ -91,6 +91,38 @@ Obschon es sich bereits bei den Kleinen Formen um heterogene Genres handelt und 
 
 ### TEI-Header
 Der TEI-Header wird zwar im folgenden Editionsmodell wo relevant erwähnt, das gesamte, detailliert dokumentierte Modell des TEI-Headers wird jedoch in einem zusätzlichen Dokument beschrieben. 
+[Anmerkung 5.3.2026, ez: Obschon zusammen mit Christian Forney grundsätzliche Aspekte des Headers geklärt wurden, sind diese noch nicht in einem HackMD-Dokument zusammengefasst. Relevante Aspekte zur Versionierung, zur Lizenzierung und zur editorischen Urheberschaft/Verantwortung sind noch nicht festgelegt. Im Folgenden werden editorisch wichtige Entscheidungen hier vorgezogen und sollen dann in das geplante Dokument einfliesen].
+
+#### Dokument Titel 
+Betrifft das Header-Element: 
+```xml 
+<titleStmt> 
+    <title></title>
+</titleStmt>
+```
+
+*Brief-Titel*
+- Form: Urheber:in (Vorname Name) an Adressat:in (Vorname Name), Datum (Tageszahl ausgeschriebener Monat Jahreszahl)
+    - Beispiel: Annemarie Schwarzenbach an Klaus Mann, 3. November 1935
+- Spezialfälle: Datum teilweise unklar
+    - Mindestens Einschränkung auf ein Jahr oder einen Monat (so auch in den Daten zu codieren)
+    - Genauest mögliche, frei wählbare Eingrenzung, z.B.: 
+        - Annemarie Schwarzenbach an Klaus Mann, Anfang November 1935
+        - Annemarie Schwarzenbach an Klaus Mann, vor dem 3. November 1935
+        - Annemarie Schwarzenbach an Klaus Mann, zwischen dem 3. und 10. November 1935
+
+*Smallform-Titel*
+Publikation
+- Wortfolge wird aus der Publikation übernommen.
+- Absätze im Originaltitel werden durch Punkte ersetzt.
+- Renderings (Kursivierung, Fettschreibung) werden grundsätzlich weggelassen. 
+    - Ausnahme: Kursivierte Titel von Werke werden durch ein leeres Rendering-Element markiert. 
+
+Typo- oder Manuskript
+- Grundsätzlich dieselben Regeln wie für die Publikationen
+- Texte ohne Titel wird in der Regel der vom Archiv vergebene Titel oder der in früheren Editionen gebräuchliche Titel in eckigen Klammern gesetzt. z.B. [Eine Frau zu sehen]
+    - Diese Titel müssen im Übersichtskommentar erklärt werden.- 
+
 
 ### Zeilen- und Seitenumbrüche, Paragraphen, Leerzeilen 
 - Grundsatz: linebeginnings `lb`, die am Anfang von sog. Block-Elementen (wie p, dateline) stehen, müssen möglichst innerhalb dieses Blockelements platziert werden. Negativ-Beispiel:
@@ -557,7 +589,7 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 
 - Artikel- und Seitennummern, Fortsetzungsverweise ("Fortsetzung auf S. 7"/"Fortsetzung aus Nr. XY") \[[https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild](https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild)\]:  
     
-  - `<fw type="tbd" place="top/inline/etc.">[tbd]</fw>`
+  - `<fw type="continuation" place="top/inline/etc.">Fortsetzung S. 13</fw>`
 
 - Textblock, der einen fortlaufenden Paragraphen unterbricht 
     - mehrheitlich in Fotoreportagen zu erwartendes Phänomen 

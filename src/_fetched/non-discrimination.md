@@ -13,8 +13,8 @@ Die folgende Auswahl ist nicht zwingend zu konsultieren, um die Richtlinien zu v
 
 ### Fotografien
 
-Zur Übersicht über das fotografische Werk Schwarzenbachs ist das EAD des SLA am besten geeignet, da  Metadaten und zeitliche Abfolge am einfachsten ersichtlich sind: https://ead.nb.admin.ch/html/schwarzenbach.html.
-Die 3475 Fotografien befinden sich auch in einer [Kollektion auf e-manuscripta](https://www.e-manuscripta.ch/search/quick?&query=schwarzenbach%2C%20annemarie&facets=collections%3D%2245%22) und einer [Kollektion auf wikimedia](https://commons.wikimedia.org/wiki/Category:CH-NB-Annemarie_Schwarzenbach).
+Zur Übersicht über das fotografische Werk Schwarzenbachs ist das EAD des SLA am besten geeignet, da  Metadaten und zeitliche Abfolge am einfachsten ersichtlich sind: https://ead.nb.admin.ch/html/schwarzenbach.html. Da die Fotografien zeitweise aufgrund ihrer Redigitalisierung nicht abrufbar sind, kann die Seite alternativ [hier](https://web.archive.org/web/20250425054907/https://ead.nb.admin.ch/html/schwarzenbach.html) auf web.archive.org betrachtet werden (die Fotografien laden etwas zeitverzögert).
+Die 3475 Fotografien befinden sich zudem auch in einer [Kollektion auf e-manuscripta](https://www.e-manuscripta.ch/search/quick?&query=schwarzenbach%2C%20annemarie&facets=collections%3D%2245%22) und einer [Kollektion auf wikimedia](https://commons.wikimedia.org/wiki/Category:CH-NB-Annemarie_Schwarzenbach).
 
 
 Rassistisches/kolonial-ethnographisches Bildregime mit kraniologisch-rassifizierender Original-Bildbeschriftung (zugespitzt in den Metadaten):

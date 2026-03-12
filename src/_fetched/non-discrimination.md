@@ -31,14 +31,14 @@ Bilder, die Fragen bezgüglich Entstehungskontext/Consent aufwerfen:
 Wir stellen hier vorläufig edierte Briefe und Kleine Formen (Feuilletons/Reportagen) in Form von PDFs und Links auf die Digitalisate zur Verfügung. Die Dateien sind *work in progress* und besitzen aus technischen Gründen noch keine Context Notes (CN) etc. Die folgende Reihenfolge ist jeweils nicht chronologisch, sondern eine Priorisierung aufgrund der diskriminierenden Textphänomene.
 
 #### Briefe
-- Brief an Erika Mann, 22.11.1941, Leopoldville: [Edition](https://drive.switch.ch/index.php/s/inJONmSFT3yVH5w)/[Digitalisat](https://uv-v4.netlify.app/#?manifest=https://iiif.annemarie-schwarzenbach.ch/presentation/letter_0186.json)
+- Brief an Erika Mann, 22.11.1941, Leopoldville: [Edition](https://drive.switch.ch/index.php/s/IAZubLjq9JNfpiL)/[Digitalisat](https://uv-v4.netlify.app/#?manifest=https://iiif.annemarie-schwarzenbach.ch/presentation/letter_0186.json)
 - [Brief an Carson McCullers, 29.7.1941, Molanda](https://uv-v4.netlify.app/#?manifest=https://iiif.annemarie-schwarzenbach.ch/presentation/letter_0136.json) - dieser Brief ist noch nicht ediert und deshalb nur als Digitalisat zugänglich.
-- Brief an Claude Bourdet, 22. Mai 1934, Bocken: [Edition](https://drive.switch.ch/index.php/s/tB3cRWd8ihogARl)/[Digitalisat](https://uv-v4.netlify.app/#?manifest=https://iiif.annemarie-schwarzenbach.ch/presentation/letter_0033.json)
+- Brief an Claude Bourdet, 22. Mai 1934, Bocken: [Edition](https://drive.switch.ch/index.php/s/oSW3UPIPjsglu3F)/[Digitalisat](https://uv-v4.netlify.app/#?manifest=https://iiif.annemarie-schwarzenbach.ch/presentation/letter_0033.json)
 
 #### Kleine Formen
-- Unbekanntes Washington. In: National-Zeitung Nr. 526, 11.11.1936 (Abendblatt), S. 1-2: [Edition](https://drive.switch.ch/index.php/s/cJd9b70YsqK9Emg)/[Digitalisat](https://uv-v4.netlify.app/#?manifest=https://iiif.annemarie-schwarzenbach.ch/presentation/smallform_0188.json)
-- Eine christliche Stadt im Herzen Persiens. In: National-Zeitung Nr. 529, 14.11.1935 (Abendblatt), S. 1: [Edition](https://drive.switch.ch/index.php/s/sE0kjIm0ka5174e)/[Digitalisat](https://uv-v4.netlify.app/#?manifest=https://iiif.annemarie-schwarzenbach.ch/presentation/smallform_0158.json)  
-- Schweizer Pionierarbeit im Urwald. III. Die Reise nach Molanda. IV. Zwölfhundertfünfzig Hektaren. In: Thurgauer Zeitung Nr. 273, 20.11.1941, 2. Bl: [Edition](https://drive.switch.ch/index.php/s/OYuezSSlJXhkrnX)/[Digitalisat](https://uv-v4.netlify.app/#?manifest=https://iiif.annemarie-schwarzenbach.ch/presentation/smallform_0529.json)
+- Unbekanntes Washington. In: National-Zeitung Nr. 526, 11.11.1936 (Abendblatt), S. 1-2: [Edition](https://drive.switch.ch/index.php/s/3DOGNkqnjRrLhSt)/[Digitalisat](https://uv-v4.netlify.app/#?manifest=https://iiif.annemarie-schwarzenbach.ch/presentation/smallform_0188.json)
+- Eine christliche Stadt im Herzen Persiens. In: National-Zeitung Nr. 529, 14.11.1935 (Abendblatt), S. 1: [Edition](https://drive.switch.ch/index.php/s/njpUnDO7sZILNN6)/[Digitalisat](https://uv-v4.netlify.app/#?manifest=https://iiif.annemarie-schwarzenbach.ch/presentation/smallform_0158.json)  
+- Schweizer Pionierarbeit im Urwald. III. Die Reise nach Molanda. IV. Zwölfhundertfünfzig Hektaren. In: Thurgauer Zeitung Nr. 273, 20.11.1941, 2. Bl: [Edition](https://drive.switch.ch/index.php/s/flcxXXWHzZvjGr1)/[Digitalisat](https://uv-v4.netlify.app/#?manifest=https://iiif.annemarie-schwarzenbach.ch/presentation/smallform_0529.json)
 
 
 

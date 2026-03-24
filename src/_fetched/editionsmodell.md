@@ -29,12 +29,68 @@ Diese Forschungsperspektiven werden unter anderem durch den drei Bereichen zugeo
 
 ## Kommentare DSE-AS
 
-Auf der Ebene ganzer Korrspondenzen werden Korrespondenzkommentare verfasst, diese aber auch auf Dokumentebene eingeblenden (ausklappbar). Kleine FormenÜberblickskommentar im TEI-Header und dem Stellenkommentar im Primärtext unterschieden. Im Falle der Briefe werden Überblickskommentare pro Dokument nur punktuell verfasst, da grundlegende Informationen schon im Korrespondenzkommentar gesammelt sind. 
+Grundsätzliche Zugänge zum Werk werden durch editoriale Kommentare aufgezeigt. Auf der Ebene ganzer Korrspondenzen werden Korrespondenzkommentare verfasst, diese aber auch auf Dokumentebene eingeblenden (ausklappbar). Bei den Kleinen Formen wird zwischen dem 'obligatorischen' Überblickskommentar im TEI-Header und dem Stellenkommentar im Primärtext unterschieden. Im Falle der Briefe werden Überblickskommentare pro Dokument nur punktuell verfasst, da grundlegende Informationen schon im Korrespondenzkommentar gesammelt sind. 
 
 ### Grundsätzliche formale Regeln für Kommentare
 
+### Editoriale Kommentare
+Thematische Schwerpunkte, auf die regelmäßig verwiesen werden muss (insbesondere diskriminierungssensible Themen wie Rassismus/Rassenlehre, Orientalismus, Kolonialismus, s.u.) erhalten einen editorialen, thematischen Kommentar. Dieser sollte in ca. 10 min. lesbar sein (kein Forschungsaufsat). Wie viele dieser editorialen Kommentare geschrieben werden können, hängt von der Zeitökonomie des Projektes ab.
 
-#### Bibliographische Angaben in Kommentaren
+Mögliche Themen: 
+- Netzwerke
+- Reisepraktiken
+- Rollenbilder und Queerness
+- Exil 
+- Archäologie
+- rassistische Bildpraktiken
+    (- potenziell problematischer Entstheungskontext / fehlender Consent)
+- rassistische Begrifflichkeiten
+    - N-Wort
+    - I-Wort
+    - Z-Wort
+- diskriminierende Diskurse (insbesondere auch 'positiver Rassismus', 'white man's burden', paternalistische Diskurse - ev. in Unterkategorien aufteilen)
+    - Rassentheorie
+    - Kolonialismus
+    - Orientalismus
+    (- Antisemitismus)
+
+### Korrespondenzkommentar 
+
+Der Korrespondenzkommentar wird sowohl auf der Ebene eines Korrespondenzregisters (z.B. Briefe an Klaus Mann) als auch auf der Ebene vom einzelnen Brief anzeigt.
+
+### Überblickskommentare 
+
+Der Überblickskommentar ist nur auf Dokumentebene ersichtlich. Es ist kein Regest, das den Text zusammenfasst, darf aber inhaltlich auf diesen zur einleitenden Erklärung schon vorgreifen. 
+Überblickskommentare fokussieren insbesondere auf Kontexte (Ausnahme: Materialität von Manu- und Typoskripten, insbesondere von Briefen). Sie bieten Lesenden Hintergrundinformationen. Aufgrund der ausklappbaren Darstellung werden sie als Angebot wahrnehmbar, das auch übersprungen werden kann. Überblickskommentare können auf interpretatorische Zugänge (insbesondere bestehende Sekundärliteratur zum vorliegenden Edendum) aufmerksam machen, sollten die Interpretation jedoch nicht detailliert ausführen.
+
+Wir unterscheiden zwischen mehreren Formen von Kontexten, die jedoch nicht zwingend im Überblickskommentar abgehandelt werden müssen:
+- Entstehungskontext: Auf welche Reise, Recherche, Vernetzung baut der Text auf? In welchem Zusammenhang wurde er geschrieben?
+- Publikationskontext: Wie ist das Verhältnis zwischen dem Text und dem Medium, in dem es publiziet wurde? Befindet er rch an einer aussergewöhnlichen Stelle 
+- Werkkontext:Welche Verbindungen gibt es zu anderen Werken Schwarzenbachs (insbeondere auch Hinweise auf grosse Formen)
+- Literaturhistorischer Kontext: Welche intertextuellen Bezüge gibt es?
+- Historischer Kontext: Was sind die geschichtlichen Hintergründe (insbesondere Verweis auf relevante Sekundärliteratur).
+
+Im Gegensatz zu Kontextkommentaren ist die Beschreibung von Materialität stärker objektivierbar. 
+
+- Materialität. Stärkere Priorität bei den Briefen, nur wenn auffällig.
+    - Papier
+        - Im Falle der Briefe: Vom Absendeort abweichende Briefköpfe (= 'falsches' Briefpapier)  
+    - Schreibwerkzeug (z.B. hs. Korrekturen in Typoskripten)
+    - Spuren (Verunreinigung, Beschädigungen etc.)
+    - Material von (intermedialer) Bedeutung 
+        - Postkarten-Bild bei besonderer Relevanz (z.B. Bild abweichend von Sendeort)
+        - Beilagen bei besonderer Relevanz
+
+
+### Stellenkommentare
+Stellenkommentare haben zwei grundlegende Funktionen: 
+- Sie erklären schwer verständliche Textstellen mit biographischen oder historischen Hintergrundinformaitonen.
+- Sie verweisen auf Edenda und Fotografien, die dasselbe Thema/Sujet behandeln.
+
+> [!NOTE]Keine interpretatorischen Stellenkommentare
+> Stellenkommentare geben im Gegensatz zu editorialen Kommentaren und Überblickskommentaren keine interpretatorische Zugänge und verweisen zu diesem Zweck auch nicht auf Sekundärliteratur (das hat im     Überblickskommentar zu geschehen).
+
+### Bibliographische Angaben in Kommentaren
 
 **Referenzierung von Primär- und Sekundärquellen**
 - Primär- und Sekundärquellen werden konsequent referenziert. 
@@ -52,36 +108,6 @@ Auf der Ebene ganzer Korrspondenzen werden Korrespondenzkommentare verfasst, die
 
 **Seitenzahlen**
     - S. 14–15 (Leerschlag nach Seite, Halbgeviertstrich, kein 'f.'/'ff.')
-
-
-
-### Korrespondenzkommentar 
-
-Der Korrespondenzkommentar wird sowohl auf der Ebene eines Korrespondenzregisters (z.B. Briefe an Klaus Mann) als auch auf der Ebene vom einzelnen Brief anzeigt.
-
-### Überblickskommentare 
-
-Der Überblickskommentar erleichtert das Verständnis des Textes. Es ist kein Regest, das den Text zusammenfasst, darf aber inhaltlich auf diesen zur einleitenden Erklärung schon vorgreifen. 
-Vier Kommentarbestandteile werden unterschieden, müssen jedoch nicht in jedem Fall ausgeführt werden, im Falle der Briefe ist nur die letzte Kategorie 'Materialität' im Vordergrund: 
-
-- Entstehungskontext
-
-- Publikationskontext
-
-- Historischer Kontext
-
-- Materialität. Stärkere Priorität bei den Briefen, nur wenn auffällig.
-    - Papier
-        - Im Falle der Briefe: Vom Absendeort abweichende Briefköpfe (= 'falsches' Briefpapier)  
-    - Schreibwerkzeug (z.B. hs. Korrekturen in Typoskripten)
-    - Spuren (Verunreinigung, Beschädigungen etc.)
-    - Material von (intermedialer) Bedeutung 
-        - Postkarten-Bild bei besonderer Relevanz (z.B. Bild abweichend von Sendeort)
-        - Beilagen bei besonderer Relevanz
-
-
-### Stellenkommentare
-
 
 ## Editionsmodell DSE-AS
 

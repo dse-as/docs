@@ -149,10 +149,18 @@ Registereinträge
     - Ideenlab 18.08.25: in der diplomatischen Ansicht können Kommentare evtl. nur stilisiert angedeutet werden, z.B. mit einem 🅺 neben der Zeile, auf der ein Kommentar beginnt/endet (wiederum mit Highlighting der Stelle bei hover)
     - Highlighting muss klar von Referenzierungen unterscheidbar sein, ggfls. weniger aufdringlich, da längere Passagen kommentiert werden können.
     - Beim Klicken auf das Highlighting kein Popup sondern Einblendung der Kommentarlaufleiste (s.u.) mit Hervorhebung des relevanten Kommentars 
-- Dokumentkontext/Sequentialisierung (Ideenlab 18.08.25)
-    - Dokumente können Teil einer oder mehrere Sequenzen sein, ein Brief z.B. Teil einer bestimmten Korrespondenz und zugleich Teil der Gesamtkorrespondenz. Solche Zugehörigkeiten werden in Listen festgelegt. Für solche Listen ist eine eigene Ansicht vorgesehen, sie dienen vor allem aber als Rückgrat für eine Navigationsfunktionalität auf der Edendum-Ansicht. Für jedes angezeigte Dokument wird ermittelt, Teil welcher Listen es ist, und in Abhängigkeit davon eine Blätter-Navigation angeboten. Über ein Dropdown o.ä. lässt sich auswählen, wohin ein Klick auf einen Navigations-Pfeil führt (vor/zurück). Wählt man eine bestimmte Korrespondenz, führen die Pfeile zu den vorhergehenden und folgenden Briefen dieser Korrespondenz. Wählt man die Gesamtkorrespondenz oder das gesamte Korpus, ändern die Linkziele entsprechend.
-    - Die grösste Liste ist ein Verzeichnis aller Materialien der Edition. Sie ist hierarchisch gegliedert und wird als Inhaltsverzeichnis (ggf. mit gewissen zusätzlichen Funktionen für clientseitiges Filtern/Facettieren) dargestellt.
 
+- Dokumentkontext/Sequentialisierung (Ideenlab 18.08.25 / ergänzt am 01.04.26)
+    - Dokumente können Teil einer oder mehrere Sequenzen sein, ein Brief z.B. Teil einer bestimmten Korrespondenz und zugleich Teil der Gesamtkorrespondenz. Solche Zugehörigkeiten werden in Listen festgelegt. Für solche Listen ist eine eigene Ansicht vorgesehen, sie dienen vor allem aber als Rückgrat für eine Navigationsfunktionalität auf der Edendum-Ansicht. Für jedes angezeigte Dokument wird ermittelt, Teil welcher Listen es ist, und in Abhängigkeit davon eine Blätter-Navigation angeboten. Über ein Dropdown o.ä. lässt sich auswählen, wohin ein Klick auf einen Navigations-Pfeil führt (vor/zurück). Wählt man eine bestimmte Korrespondenz, führen die Pfeile zu den vorhergehenden und folgenden Briefen dieser Korrespondenz. Wählt man die Gesamtkorrespondenz oder das gesamte Korpus, ändern die Linkziele entsprechend.
+    - **Korrespondenz:** Alle Briefe, die an eine Person geschickt wurden (im Falle von Gegenbriefen dieser Person auch diese) gemäss Korrespondenz-ID (https://dav.annemarie-schwarzenbach.ch/data/meta/lists/correspondences.xml).
+        - Automatische Zuordnung gemäss Adressat:in und Sendedatum im TEI-Header.
+    - **Reise:** Alle Briefe und Smallforms, die einer Reise-ID (https://dav.annemarie-schwarzenbach.ch/data/meta/lists/events.xml) zugeordnet sind, in chronologischer Reihenfolge ihres Sende- oder Publikationsdatums. 
+        - Automatische Zuordnung gemäss TEI-Header: <profileDesc> <keywords ana="travels"> <list> <item sameAs="travel_0015"/>)
+    - **Serie:** Smallforms, die ausdrücklich in einer Serie publiziert wurden und deshalb zwar nicht nacheinander in der Chronolgie auftauchen, aber nacheinander gelesen werden sollten.
+        - Manuelle Zuordnung
+
+- Dokumenteverzeichnis
+    - Die grösste Liste ist ein Verzeichnis aller Materialien der Edition. Sie ist hierarchisch gegliedert und wird als Inhaltsverzeichnis (ggf. mit gewissen zusätzlichen Funktionen für clientseitiges Filtern/Facettieren) dargestellt.
 
 ### 2.2 Anforderungen an Präsentation der Paratexte (Metadaten, Kommentare und Referenzierungen)
 

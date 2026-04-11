@@ -155,7 +155,7 @@ Registereinträge
     - **Korrespondenz:** Alle Briefe, die an eine Person geschickt wurden (im Falle von Gegenbriefen dieser Person auch diese) gemäss Korrespondenz-ID (https://dav.annemarie-schwarzenbach.ch/data/meta/lists/correspondences.xml).
         - Automatische Zuordnung gemäss Adressat:in und Sendedatum im TEI-Header.
     - **Reise:** Alle Briefe und Smallforms, die einer Reise-ID (https://dav.annemarie-schwarzenbach.ch/data/meta/lists/events.xml) zugeordnet sind, in chronologischer Reihenfolge ihres Sende- oder Publikationsdatums. 
-        - Automatische Zuordnung gemäss TEI-Header: <profileDesc> <keywords ana="travels"> <list> <item sameAs="travel_0015"/>)
+        - Automatische Zuordnung gemäss TEI-Header: `<profileDesc> <keywords ana="travels"> <list> <item sameAs="travel_0015"/>`)
     - **Serie:** Smallforms, die ausdrücklich in einer Serie publiziert wurden und deshalb zwar nicht nacheinander in der Chronolgie auftauchen, aber nacheinander gelesen werden sollten.
         - Manuelle Zuordnung
 

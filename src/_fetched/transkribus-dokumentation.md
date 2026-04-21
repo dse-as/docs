@@ -130,37 +130,36 @@ Die handschriftlichen Ergänzungen der Autorin (dabei kann es sich z.B. auch um 
 :::
 
 ### 3. Publikationen mit Spalten (Kleine Formen)
-Wie nicht-horizontale Zeilen kann Transkribus auch Spaltenunterbrüche zwischen Zeilen schwer erkennen. Aus einer direkten Anwendung von ATR auf Publikationen mit Spalten resultieren Transkriptionen, die Spaltenlinien auf derselben Höhe zusammenfasst oder chaotisch nur einzelne Ausschnitte aus den Spalten auswählt. Workaround: 
+Wie nicht-horizontale Zeilen kann Transkribus auch Spaltenunterbrüche zwischen Zeilen schwer erkennen. Aus einer direkten Anwendung von ATR auf Publikationen mit Spalten resultieren Transkriptionen, die Spaltenlinien auf derselben Höhe zusammenfasst oder chaotisch nur einzelne Ausschnitte aus den Spalten auswählt. Workaround:
+
 1. Jede Spalte wird manuell als **Textregion** umrissen, dies geschieht mithilfe des Werkzeugs 'Region hinzufügen' (Taste R) auf dem Bild des Faksimiles (linke Seite).
- 
-    ![Bildschirmfoto 2025-01-14 um 21.02.20](transkribus-dokumentation/SJBZXHNwyl.png)
+![Bildschirmfoto 2025-01-14 um 21.02.20](transkribus-dokumentation/SJBZXHNwyl.png)
+        
 3. Die so entstandenen, noch leeren Textregionen müssen auf ihre korrekte Reihenfolge überprüft und ggfls. auf der Text-Seite in die **richtige Reihenfolge** geschoben werden. Hierfür muss der 'Layout'-Modus auf der rechten Seitenleiste aktiviert sein (siehe Bild unten links), ansonsten lassen sich Textregionen nicht per drag and drop des Sechspunkt-Icons (siehe Bild unten rechts) verschieben.
+![Layout-Modus](transkribus-dokumentation/ByK1ESNvJg.png) 
+![Verschiebbare Region](transkribus-dokumentation/rJ78ESEDJx.png)
 
-    ![Layout-Modus](transkribus-dokumentation/ByK1ESNvJg.png) 
-
-    ![Verschiebbare Region](transkribus-dokumentation/rJ78ESEDJx.png)
-    
-    Grund: Die Reihenfolge, in der Textregionen umrissen werden, entspricht leider nicht zwingend der Reihenfolge, in welcher Transkribus Textregionen automatisch nummeriert.
+Grund: Die Reihenfolge, in der Textregionen umrissen werden, entspricht leider nicht zwingend der Reihenfolge, in welcher Transkribus Textregionen automatisch nummeriert.
 3. Innerhalb dieser Textregionen wird nun eine automatische Zeilenerkennung mit der 'Layout'-Erkennung (s.o.) und dem Modell 'Universal Lines' durchgeführt. Bevor 'Erkennen starten' gedrückt werden kann, müssen jedoch noch die 'Erweiterten Einstellungen' angepasst werden. 
-![grafik](transkribus-dokumentation/HkcTwrND1x.png)
+        ![grafik](transkribus-dokumentation/HkcTwrND1x.png)
 
-    Folgende drei Settings müssen jedes Mal (!) im Falle einer Spalten-Zeilen-Erkennungen ausgewäht werden (deshalb lohnt es sich, mehrere Seiten oder sogar Dokumente aufs Mal erkennen zu lassen)
-    - 'Generieren von Textregionen': 'Vorhandene beibehalten'
-    - 'Bildskalierung': 'Vergrößern'
-    - 'Baseline Options'(Optionsmenü erweitern): 'Split lines on region border'(Kasten aktivieren)
-    -> Jetzt kann die Layout-Erkennung durchgeführt werden.
-4. ATR mit dem Modell 'Transkribus Print M1' oder (bei schlechter Druckqualität) 'The Text Titan I (Super model)'.
+            Folgende drei Settings müssen jedes Mal (!) im Falle einer Spalten-Zeilen-Erkennungen ausgewäht werden (deshalb lohnt es sich, mehrere Seiten oder sogar Dokumente aufs Mal erkennen zu lassen)
+            - 'Generieren von Textregionen': 'Vorhandene beibehalten'
+            - 'Bildskalierung': 'Vergrößern'
+            - 'Baseline Options'(Optionsmenü erweitern): 'Split lines on region border'(Kasten aktivieren)
+            -> Jetzt kann die Layout-Erkennung durchgeführt werden.
+        4. ATR mit dem Modell 'Transkribus Print M1' oder (bei schlechter Druckqualität) 'The Text Titan I (Super model)'.
 
-Auch wenn dieses Vorgehen kompliziert erscheinen mag, bietet es einen Zeitgewinn gegenüber dem manuellen Ziehen von Spaltenzeilen und ermöglicht überdies, die einzelnen Spalten nach der Konversion in TEI-XML weiterhin im Code abbilden zu können.
-Das Vorgehen ist deshalb auch dann anzuwenden, wenn der Text in einem mehrspaltigen Format nur eine Spalte einnimmt (zumal selbst einspaltige Layouts v.a. bei schmalen Spalten nicht gut erkannt werden).
+        Auch wenn dieses Vorgehen kompliziert erscheinen mag, bietet es einen Zeitgewinn gegenüber dem manuellen Ziehen von Spaltenzeilen und ermöglicht überdies, die einzelnen Spalten nach der Konversion in TEI-XML weiterhin im Code abbilden zu können.
+        Das Vorgehen ist deshalb auch dann anzuwenden, wenn der Text in einem mehrspaltigen Format nur eine Spalte einnimmt (zumal selbst einspaltige Layouts v.a. bei schmalen Spalten nicht gut erkannt werden).
 
-Bei der Korrektur von Publikationen mit Spalten ist insbesondere auf fehlende Kommas, Punkte und Hyphen am Ende jeder Zeile achten. Buchstaben am Ende der Zeile werden von der ATR oft fehlinterpretiert (m->n; n->r etc.).  Auch wenn die Linie die ganze Zeile Erfasst, schient die ATR das Zeilenende oftmals nicht zu erkennen. 
+        Bei der Korrektur von Publikationen mit Spalten ist insbesondere auf fehlende Kommas, Punkte und Hyphen am Ende jeder Zeile achten. Buchstaben am Ende der Zeile werden von der ATR oft fehlinterpretiert (m->n; n->r etc.).  Auch wenn die Linie die ganze Zeile Erfasst, schient die ATR das Zeilenende oftmals nicht zu erkennen. 
 
-:::info
-**Sonderfall: Fussnoten**
+        :::info
+        **Sonderfall: Fussnoten**
 
-Um den Fussnoten-Paragraphen wird eine eigene Textregion erzeugt. Diese Textregion wird ans Ende des Dokuments geschoben. Sie kann, muss aber nicht, als Paragraph (`\p\...\:p\`) ausgezeichnet werden. Auf jeden Fall muss sie in Oxygen in der Codierung nachbearbeitet werden. 
-:::
+        Um den Fussnoten-Paragraphen wird eine eigene Textregion erzeugt. Diese Textregion wird ans Ende des Dokuments geschoben. Sie kann, muss aber nicht, als Paragraph (`\p\...\:p\`) ausgezeichnet werden. Auf jeden Fall muss sie in Oxygen in der Codierung nachbearbeitet werden. 
+        :::
 
 ### 4. Publikationen mit Abbildungen und Bildunterschriften (Kleine Formen)
 

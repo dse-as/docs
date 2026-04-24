@@ -335,8 +335,9 @@ Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben
 - Horizontale Striche (Gedankenstriche, Spiegelstriche, Striche in Tabellen, von-bis-Striche) werden unabhängig von der exakten Länge im Original als Halbgeviertstriche wiedergegeben (Unicode: U+2013)  Lediglich sehr lange Striche, die möglicherweise eine Aussage haben könnten, werden mit drei Halbgeviertstrichen wiedergegeben
 -  Leerschlag vor Gedankenstrichen, wenn kein Leerschlag ist (im Typoskript kommt das sehr häufig vor: fehlende oder überflüssige Leerschläge werden stillschweigend normalisiert.  
 - Doppelte Anführungszeichen, die nicht als Zitat sowieso durch Codierung ersetzt werden, werden normalisiert zu "..." (hochgestellt 'englisch').
-- Einfache Anführungszeichen werden zu Apostrophen normalisiert '...'. 
-- Zitate im Zitat, die doppelte Anführungszeichen verwenden, werden stillschweigend zu einfachen Anführungszeichen normalisiert. 
+- Einfache Anführungszeichen werden normalisiert zu '...' (U+0027)
+- Zitate im Zitat, die doppelte Anführungszeichen verwenden, werden stillschweigend zu einfachen Anführungszeichen (U+normalisiert. 
+- Apostrophe werden mit dem Unicode-Zeichen U+2019 wiedergegeben.
 
 #### Buchstaben
 - Die handschriftlichen Anfangsbuchstaben eines Wortes sind oft sowohl von der Grösse als auch der Form her nicht eindeutig als Gross- oder Kleinbuchstaben zu identifizieren. Im Zweifelsfall wird nach den grammatikalischen Regeln entscheiden.

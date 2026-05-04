@@ -455,6 +455,7 @@ Für alle Editor:innen-Kommentare (Überischtskommentare und Sachkommentare) gil
 - Innerhalb der Kommentare soll kein rendering (z.B. kursiv) stattfinden.
 - Sacherklärungen: können frei formuliert werden
 - Worterklärungen: Das zu erklärende Wort wird am Anfang der Note genau wiedergegeben, wie es im Text steht, gefolgt von : 
+- Gendergerechte Sprache: Gender-Doppelpunkt
 
 ### Kommentar/Fussnote in der Quelle
 

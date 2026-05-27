@@ -29,11 +29,11 @@ Diese Forschungsperspektiven werden unter anderem durch den drei Bereichen zugeo
 
 ## Kommentare DSE-AS
 
-Grundsätzliche Zugänge zum Werk werden durch editoriale Kommentare aufgezeigt. Auf der Ebene ganzer Korrspondenzen werden Korrespondenzkommentare verfasst, diese aber auch auf Dokumentebene eingeblenden (ausklappbar). Bei den Kleinen Formen wird zwischen dem 'obligatorischen' Überblickskommentar im TEI-Header und dem Stellenkommentar im Primärtext unterschieden. Im Falle der Briefe werden Überblickskommentare pro Dokument nur punktuell verfasst, da grundlegende Informationen schon im Korrespondenzkommentar gesammelt sind. 
+Grundsätzliche Zugänge zum Werk werden durch editoriale Kommentare aufgezeigt. Eine ähnliche Funktion haben Kommentare zu ganzen Reisen (Reisekommentare), diese sind über über das Reise-Register zugänglich und werden von jedem Edendum, das einer Reise zugeordnet ist, verlinkt. Auf der Ebene ganzer Korrespondenzen werden Korrespondenzkommentare verfasst, diese aber auch auf Dokumentebene eingeblenden (ausklappbar). Bei den Kleinen Formen wird zwischen dem 'obligatorischen' Überblickskommentar im TEI-Header und dem Stellenkommentar im Primärtext unterschieden. Im Falle der Briefe werden Überblickskommentare pro Dokument nur punktuell verfasst, da grundlegende Informationen schon im Korrespondenzkommentar gesammelt sind. 
 
-### Grundsätzliche formale Regeln für Kommentare
+### Kommentare auf Meta-Ebene
 
-### Editoriale Kommentare
+#### 1. Editoriale Kommentare
 Thematische Schwerpunkte, auf die regelmäßig verwiesen werden muss (insbesondere diskriminierungssensible Themen wie Rassismus/Rassenlehre, Orientalismus, Kolonialismus, s.u.) erhalten einen editorialen, thematischen Kommentar. Dieser sollte in ca. 10 min. lesbar sein (kein Forschungsaufsat). Wie viele dieser editorialen Kommentare geschrieben werden können, hängt von der Zeitökonomie des Projektes ab.
 
 Mögliche Themen: 
@@ -54,14 +54,34 @@ Mögliche Themen:
     - Orientalismus
     (- Antisemitismus)
 
-### Korrespondenzkommentar 
+#### 2. Korrespondenz-Kommentar 
 
 Der Korrespondenzkommentar wird sowohl auf der Ebene eines Korrespondenzregisters (z.B. Briefe an Klaus Mann) als auch auf der Ebene vom einzelnen Brief anzeigt.
 
-### Überblickskommentare 
+#### 3. Reise-Kommentar
 
+Jeder Registereintrag zu einer Reise (z.B. 'Venedig 1930') wird durch einen Kommentar zu dieser Reise eingeführt. Nicht jede Reisestation muss rekonstruiert werden, wichtig sind die Eckdaten (Vorbereitung, Hauptstationen, Begleiter:innen und Bekanntschaften, Bedeutung für das Werk).
+
+#### 4. Entitäten-Kommentare
+
+Jede Entität (Ausnahme: Bibliographie) kann im GoogleSheet kurz kommentiert werden (Spalte: 'Bemerkung'). Diese Kommentare sollten v.a. fehlende Informationen betreffen, wenn keine zusätzlichen Metadaten über GND oder geonames abgerufen werden können.
+
+### Kommentare auf TEI-header-Ebene 
+
+Am wichtigsten ist der Überblickskommentar, der partiell immner sichtbar sein sollte. Die weiteren Kommentar-Formen im TEI-Header beziehen sich auf bestimmte Metadaten und müssen nur bei komplett geöffnetem Metadaten-Feld sichtbar sein. 
+
+#### 1. Überblickskommentare 
+
+```xml
+<notesStmt> 
+            <note type="global_comment"> 
+               <p/>
+             </note>
+          </notesStmt>
+          <sourceDesc> 
+```
 Der Überblickskommentar ist nur auf Dokumentebene ersichtlich. Es ist kein Regest, das den Text zusammenfasst, darf aber inhaltlich auf diesen zur einleitenden Erklärung schon vorgreifen. 
-Überblickskommentare fokussieren insbesondere auf Kontexte (Ausnahme: Materialität von Manu- und Typoskripten, insbesondere von Briefen). Sie bieten Lesenden Hintergrundinformationen. Aufgrund der ausklappbaren Darstellung werden sie als Angebot wahrnehmbar, das auch übersprungen werden kann. Überblickskommentare können auf interpretatorische Zugänge (insbesondere bestehende Sekundärliteratur zum vorliegenden Edendum) aufmerksam machen, sollten die Interpretation jedoch nicht detailliert ausführen.
+Überblickskommentare fokussieren insbesondere auf Kontexte (Ausnahme: Textgenese sowie Materialität von Manu- und Typoskripten, insbesondere von Briefen). Sie bieten Lesenden Hintergrundinformationen. Aufgrund der ausklappbaren Darstellung werden sie als Angebot wahrnehmbar, das auch übersprungen werden kann. Überblickskommentare können auf interpretatorische Zugänge (insbesondere bestehende Sekundärliteratur zum vorliegenden Edendum) aufmerksam machen, sollten die Interpretation jedoch nicht detailliert ausführen.
 
 Wir unterscheiden zwischen mehreren Formen von Kontexten, die jedoch nicht zwingend im Überblickskommentar abgehandelt werden müssen:
 - Entstehungskontext: Auf welche Reise, Recherche, Vernetzung baut der Text auf? In welchem Zusammenhang wurde er geschrieben?
@@ -70,7 +90,11 @@ Wir unterscheiden zwischen mehreren Formen von Kontexten, die jedoch nicht zwing
 - Literaturhistorischer Kontext: Welche intertextuellen Bezüge gibt es?
 - Historischer Kontext: Was sind die geschichtlichen Hintergründe (insbesondere Verweis auf relevante Sekundärliteratur).
 
-Im Gegensatz zu Kontextkommentaren ist die Beschreibung von Materialität stärker objektivierbar. 
+Im Gegensatz zu Kontextkommentaren ist die Beschreibung der Textgenese und Materialität stärker objektivierbar. 
+
+- Textgenese. Nur bei Kleinen Formen, nur wenn mehrere Textstufen vorhanden sind – dann bei jeder Textstufe dieselbe Information (ggfls. etwas vertieft für die vorliegende).
+    - Beschreibung der Abfolge und Zusammenhänge zwischen Textstufen (Durchschläge, manuelle Kopien).
+    - Beschreibung des Überarbeitungsgrabes
 
 - Materialität. Stärkere Priorität bei den Briefen, nur wenn auffällig.
     - Papier
@@ -81,8 +105,28 @@ Im Gegensatz zu Kontextkommentaren ist die Beschreibung von Materialität stärk
         - Postkarten-Bild bei besonderer Relevanz (z.B. Bild abweichend von Sendeort)
         - Beilagen bei besonderer Relevanz
 
+#### Kommentare zur Provenienz
 
-### Stellenkommentare
+=> Vermutlich innerhalb des sourceDesc, Codierung muss noch festgelegt werden.
+
+#### Kommentare zu Editionen, Surrogaten, Übersetzungen
+
+```xml
+<listBibl type="related"> 
+   <listBibl type="editions">
+      <bibl>
+        <title key="FGH8VTQ4" level="s">Schwarzenbach (2017): Gespräch [FGH8VTQ4], bookSection</title>
+        <biblScope>S. 153–158</biblScope>
+         <note>Der Titel ist nicht in Anführungszeichen gesetzt, da gemäß Kommentar seine handschriftliche Setzung auf dem
+                         Typoskript-Durchschlag nicht bekannt war.</note>
+      </bibl>
+   </listBibl>
+</listBibl>
+```
+### Edendums-Ebene: Stellenkommentare
+```xml
+<note type="annotation" xml:id="n1" targetEnd="a1">[Stellenkommentar]</note>
+```
 Stellenkommentare haben zwei grundlegende Funktionen: 
 - Sie erklären schwer verständliche Textstellen mit biographischen oder historischen Hintergrundinformaitonen.
 - Sie verweisen auf Edenda und Fotografien, die dasselbe Thema/Sujet behandeln.

@@ -43,7 +43,7 @@ jobs:
       uses: pdaengeli/use-saxon-he-j@13.0.fix
       with:
         args: -xsl:hackmd-backup/process-hackmd.xsl -it
-    - run: mkdir -p src/_fetched/transkribus-dokumentation src/_fetched/editionsmodell src/_fetched/interface-model-dseas src/_fetched/register-model-dseas src/_fetched/oxygen-docu src/_fetched/non-discrimination
+    - run: mkdir -p src/_fetched/transkribus-dokumentation src/_fetched/editionsmodell src/_fetched/interface-model-dseas src/_fetched/register-model-dseas src/_fetched/oxygen-docu src/_fetched/non-discrimination src/_fetched/archival-witnesses
     - run: tree hackmd-backup
     - run: cat hackmd-backup/_fetched/img-urls.txt
     - run: curl -L -K hackmd-backup/_fetched/img-urls.txt

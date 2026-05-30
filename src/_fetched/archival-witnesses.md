@@ -75,9 +75,9 @@ Die Textzeugen werden immer vom frühesten zum spätesten verknüpft. Das heisst
 
 Es lassen sich beliebig viele spätere Textstufen einfügen. Dies bildet Fälle ab, in denen auf der nächsten Stufe keine sinnvolle Reihenfolge, sondern eine Gleichzeitigkeit der Textzeugen angenommen werden muss (was insbesondere bei Duplikaten/Durschlägen der Fall ist, [s.o.](https://hackmd.io/DbuTiVpoRx-XKbVl6Sm6yQ?both#Nicht-Edition-von-Kopien-und-Durchschl%C3%A4gen))  
 
-![image](archival-witnesses/r17fFvBefg.png)
-
-
 ## Kommentierung Textgenetik
 
+TBD: Braucht es einen Kommentar, der alle Textstufen umfasst (ähnlich wie der Korrespondenz-Kommentar, der alle Briefe an eine Person umfasst)? Oder soll der Textgenetik-Kommentar einfach mehrfach wiederholt werden, ggfls. leicht angepasst?
+
 ## Kommentierung Provenienz
+TBD: Auch hier würde sich ein Kommentar auf einer Meta-Ebene anbieten, der für eine bestimmte Anzahl Archivdokumente gilt und mit diesen verknüpft wird.

@@ -113,8 +113,8 @@ Der Aufbau bzw. Inhalt der Register wird unten (siehe [3.3](#33-Register-und-Reg
 
     <!-- Ideenlab 18.08.25: Konzept geändert -->
 - Grundsatz: Primat des Transkripts
-- Es gibt zwei Ansichten, eine Leseansicht und eine diplomatische(re). Beide sind über eine Schaltfläche anwählbar (mit Default Leseansicht).
-    - Initial lädt die **Leseansicht**. Sie zeigt im linken Bereich des Viewports das Transkript mit Digitalisatminiaturen/Thumbnails und im rechten Bereich den Kommentar. Die Kommentare werden im Transkript als Anmerkungsziffern (*"cues"*/*"reference numbers"*) relativ diskret angedeutet, heben bei Interaktion (hover) jedoch die ganze annotierte Stelle hervor. Zugleich scrollt auf der rechten Seite der betroffene Kommentar in den Fokus. Verlinkte Entitäten werden im Text dargestellt (z.B. farbliche Unterstreichung; eher keine typspezifische Icons). Dargestellt werden zudem Seitenumbrüche (z.B. Pipe-Symbol).
+- [x] Es gibt zwei Ansichten, eine Leseansicht und eine diplomatische(re). Beide sind über eine Schaltfläche anwählbar (mit Default Leseansicht).
+    - [x] Initial lädt die **Leseansicht**. Sie zeigt im linken Bereich des Viewports das Transkript mit Digitalisatminiaturen/Thumbnails und im rechten Bereich den Kommentar. Die Kommentare werden im Transkript als Anmerkungsziffern (*"cues"*/*"reference numbers"*) relativ diskret angedeutet, heben bei Interaktion (on hover) jedoch die ganze annotierte Stelle hervor. Zugleich scrollt (on click) auf der rechten Seite der betroffene Kommentar in den Fokus. Verlinkte Entitäten werden im Text dargestellt (z.B. farbliche Unterstreichung; eher keine typspezifische Icons). Dargestellt werden zudem Seitenumbrüche (z.B. Pipe-Symbol "|").
 Registereinträge 
         - Mögliche Adressmuster der Leseansicht sind 
         ```
@@ -131,27 +131,29 @@ Registereinträge
         edition.annemarie-schwarzenbach.ch/letter/0001/reading#register
         edition.annemarie-schwarzenbach.ch/letter/0001?view=reading#register
         ```
-    - Klicken auf eine Seitenvorschau/Thumbnail oder die Schaltfläche "**diplomatisch**"/"diplomatische Ansicht" laden ein detailreicheres Rendering des Dokuments. In dieser Ansicht findet sich das Digitalisat gross auf der linken Seite (IIIF-Viewer mit gängigen Features wie Vollbildansicht, Rotation, Helligkeit/Kontrast usw.). Das diplomatische Rendering lädt rechts. Die Anzeige von Entitäten und Fussnoten ist über einen Toggle ein-/ausschaltbar ("Puristen-Toggle").
-- Jedes Edendum muss per Cmd+F komplett durchsuchbar sein
-- Konkordanz/Highlighting der Zeile im Digitalisat und der Zeile in der diplomatischen Transkription (Vorbild: Escher-Briefedition).
+    - [x] Klicken auf eine Seitenvorschau/Thumbnail oder die Schaltfläche "**diplomatisch**"/"diplomatische Ansicht" laden ein detailreicheres Rendering des Dokuments. In dieser Ansicht findet sich das Digitalisat gross auf der linken Seite (IIIF-Viewer mit gängigen Features wie Vollbildansicht, Rotation, Helligkeit/Kontrast usw.). Das diplomatische Rendering lädt rechts. Die Anzeige von Entitäten und Fussnoten ist über einen Toggle ein-/ausschaltbar ("Puristen-Toggle").
+- [x] Jedes Edendum muss per Cmd+F komplett durchsuchbar sein
+- [ ] Konkordanz/Highlighting der Zeile im Digitalisat und der Zeile in der diplomatischen Transkription (Vorbild: Escher-Briefedition).
     - Vice-Versa: Klicken auf eine Textstelle im Faksimile zeigt die Stelle in der Transkription an (das wäre tatsächlich weitgehend neu).
     - Idealerweise auch ausschaltbar
     - Im Falle der Fotografien auch Konkordanzen von Regionen (s.u.) 
+
 - **Referenzierungen** im Edendum: 
-    - Sowohl in der diplomaptischen Transkription als auch in der Lesefassung default eingeblendet
-    - Bei Wiederholung derselben Entität in der Referenzierung: Ausblenden, wenn im selben Paragraphen mehrfach (die Einheit des Paragraphen scheint mir die sinnvollste, weil übersichtlichste, Seite scheint mir keine sinnvolle Größe)? 
-    - Highlighting durch Hintergrundfarbe 
-    - Popup beim Klicken auf den unterlegten Text (kein Hovertext oder dann 'statischen Hovertext', der aktiv weggeklickt werden muss)
-    - Auf Wunsch ausblendbar
-    - Problem von schönen, aber für Sehbehinderte schwer lesbare Highlights: Ev. Disability-Mode (v.a. falls es schon einfach implementierbare Modelle gibt)?
+    - [ ] Sowohl in der diplomaptischen Transkription als auch in der Lesefassung default eingeblendet
+    - [ ] Bei Wiederholung derselben Entität in der Referenzierung: Ausblenden, wenn im selben Paragraphen mehrfach (die Einheit des Paragraphen scheint mir die sinnvollste, weil übersichtlichste, Seite scheint mir keine sinnvolle Größe)? 
+    - [x] Highlighting durch ~~Hintergrundfarbe~~ Underline
+    - [ ] Popup beim Klicken auf den unterlegten Text (kein Hovertext oder dann 'statischen Hovertext', der aktiv weggeklickt werden muss)
+    - [ ] Auf Wunsch ausblendbar
+    - [ ] Problem von schönen, aber für Sehbehinderte schwer lesbare Highlights: Ev. Disability-Mode (v.a. falls es schon einfach implementierbare Modelle gibt)?
+
 - Markierung der **Stellenkommentare** im Edendum
-    - Sowohl in der diplomaptischen Transkription als auch in der Lesefassung default eingeblendet
-    - Ideenlab 18.08.25: in der diplomatischen Ansicht können Kommentare evtl. nur stilisiert angedeutet werden, z.B. mit einem 🅺 neben der Zeile, auf der ein Kommentar beginnt/endet (wiederum mit Highlighting der Stelle bei hover)
-    - Highlighting muss klar von Referenzierungen unterscheidbar sein, ggfls. weniger aufdringlich, da längere Passagen kommentiert werden können.
-    - Beim Klicken auf das Highlighting kein Popup sondern Einblendung der Kommentarlaufleiste (s.u.) mit Hervorhebung des relevanten Kommentars 
+    - [ ] Sowohl in der diplomaptischen Transkription als auch in der Lesefassung default eingeblendet
+    - [ ] Ideenlab 18.08.25: in der diplomatischen Ansicht können Kommentare evtl. nur stilisiert angedeutet werden, z.B. mit einem 🅺 neben der Zeile, auf der ein Kommentar beginnt/endet (wiederum mit Highlighting der Stelle bei hover)
+    - [x] Highlighting muss klar von Referenzierungen unterscheidbar sein, ggfls. weniger aufdringlich, da längere Passagen kommentiert werden können.
+    - [x] Beim Klicken auf das Highlighting kein Popup sondern Einblendung der Kommentarlaufleiste (s.u.) mit Hervorhebung des relevanten Kommentars 
 
 - Dokumentkontext/Sequentialisierung (Ideenlab 18.08.25 / ergänzt am 01.04.26)
-    - Dokumente können Teil einer oder mehrere Sequenzen sein, ein Brief z.B. Teil einer bestimmten Korrespondenz und zugleich Teil der Gesamtkorrespondenz. Solche Zugehörigkeiten werden in Listen festgelegt. Für solche Listen ist eine eigene Ansicht vorgesehen, sie dienen vor allem aber als Rückgrat für eine Navigationsfunktionalität auf der Edendum-Ansicht. Für jedes angezeigte Dokument wird ermittelt, Teil welcher Listen es ist, und in Abhängigkeit davon eine Blätter-Navigation angeboten. Über ein Dropdown o.ä. lässt sich auswählen, wohin ein Klick auf einen Navigations-Pfeil führt (vor/zurück). Wählt man eine bestimmte Korrespondenz, führen die Pfeile zu den vorhergehenden und folgenden Briefen dieser Korrespondenz. Wählt man die Gesamtkorrespondenz oder das gesamte Korpus, ändern die Linkziele entsprechend.
+    - [x] Dokumente können Teil einer oder mehrere Sequenzen sein, ein Brief z.B. Teil einer bestimmten Korrespondenz und zugleich Teil der Gesamtkorrespondenz. Solche Zugehörigkeiten werden in Listen festgelegt. Für solche Listen ist eine eigene Ansicht vorgesehen, sie dienen vor allem aber als Rückgrat für eine Navigationsfunktionalität auf der Edendum-Ansicht. Für jedes angezeigte Dokument wird ermittelt, Teil welcher Listen es ist, und in Abhängigkeit davon eine Blätter-Navigation angeboten. Über ein Dropdown o.ä. lässt sich auswählen, wohin ein Klick auf einen Navigations-Pfeil führt (vor/zurück). Wählt man eine bestimmte Korrespondenz, führen die Pfeile zu den vorhergehenden und folgenden Briefen dieser Korrespondenz. Wählt man die Gesamtkorrespondenz oder das gesamte Korpus, ändern die Linkziele entsprechend.
     - **Korrespondenz:** Alle Briefe, die an eine Person geschickt wurden (im Falle von Gegenbriefen dieser Person auch diese) gemäss Korrespondenz-ID (https://dav.annemarie-schwarzenbach.ch/data/meta/lists/correspondences.xml).
         - Automatische Zuordnung gemäss Adressat:in und Sendedatum im TEI-Header.
     - **Reise:** Alle Briefe und Smallforms, die einer Reise-ID (https://dav.annemarie-schwarzenbach.ch/data/meta/lists/events.xml) zugeordnet sind, in chronologischer Reihenfolge ihres Sende- oder Publikationsdatums. 
@@ -159,37 +161,37 @@ Registereinträge
     - **Serie:** Smallforms, die ausdrücklich in einer Serie publiziert wurden und deshalb zwar nicht nacheinander in der Chronolgie auftauchen, aber nacheinander gelesen werden sollten.
         - Manuelle Zuordnung
 
-- Dokumenteverzeichnis
-    - Die grösste Liste ist ein Verzeichnis aller Materialien der Edition. Sie ist hierarchisch gegliedert und wird als Inhaltsverzeichnis (ggf. mit gewissen zusätzlichen Funktionen für clientseitiges Filtern/Facettieren) dargestellt.
+- [x] Dokumenteverzeichnis
+    - [x] Die grösste Liste ist ein Verzeichnis aller Materialien der Edition. Sie ist hierarchisch gegliedert und wird als Inhaltsverzeichnis (ggf. mit gewissen zusätzlichen Funktionen für clientseitiges Filtern/Facettieren) dargestellt.
 
 ### 2.2 Anforderungen an Präsentation der Paratexte (Metadaten, Kommentare und Referenzierungen)
 
 Der Platz, wo und wie bestimmte Paratexte stehen, kann ggfls. nach Dokumenttyp variieren (s.u., [2.3](#23-Darstellungsmodi-nach-Dokumenttyp)). 
 
 #### Metadaten
-- Einheitliche Darstellung der Metadaten über oder neben dem Edendum, ggfls. ausklappbar. 
+- [x] Einheitliche Darstellung der Metadaten über oder neben dem Edendum, ggfls. ausklappbar. 
 - Metadaten: Hier sind nur diejenigen Informationen im TEI-header aufgeführt, die als Referenz in die Register oder aus der Edition herausführen. Im Normalfall sind dies auch Informationen, die im Interface ersichtlich werden müssen. 
-- **Gemeinsame Metadaten alle Dokumenttypen**
-    - Schlagworte (Sachbegriffe)
-    - Reise/Ereignis
-    - Ggfls. 'Hauptort', um den sich der Text dreht (ist im Falle der Briefe nicht zwingend identisch mit Absendeort)
-        - Hinter diesen Orten müsste nicht ein distinkter Registereintrag stehen, der sich von den ‘normalen’ Ortsreferenzen unterscheidet. Es wäre aber gut, wenn die Dokumente, die diese ‘Hauptorte’ im TEI-Header führen im Ortsregister besonders hervorgehoben werden und in einer geographischen Karte einen spezifischen Status gegenüber den üblichen Orts-Referenzen erhalten.
-    - Archiverungsort (Verlinkung mit Findmitteln oder Digitalisaten, falls möglich)
-    - Download-Links (TEI, Bild, ggfls. andere Formate)
-    - IIIF-Manifest des Digitalisats
-    - (Perma-)link des Digitalisats (falls nicht schon von Archivierungsort als Digitalisat z.V.g., s.o.); e-manuscripta, e-periodica, e-newpsaperarchive (u.ev.a.)
-- **Metadaten der Briefe**
-    - Absende- und Empfangsort
-    - Absender:in und Empfänger:in
-    - Chronologisch vorhergehender Brief/Folgebrief 
-    - in Korrespondenz vorhergehender Brief/Folgebrief
-- **Metadaten der Kleinen Formen**
-    - Publikationsmedium und Quellennachweis
-    - Verweis auf Vorstufen oder Publikationen des Dokuments
-    - Chronologisch vorhergehende/nächste Kleine Form 
-    - vorhergehende/nächste Kleine Form in einer Serie
-- **Metadaten Bilder**
-    - tbd, wenn Digitalisate vorhanden sind
+    - **Gemeinsame Metadaten alle Dokumenttypen**
+        - Schlagworte (Sachbegriffe)
+        - Reise/Ereignis
+        - Ggfls. 'Hauptort', um den sich der Text dreht (ist im Falle der Briefe nicht zwingend identisch mit Absendeort)
+            - Hinter diesen Orten müsste nicht ein distinkter Registereintrag stehen, der sich von den ‘normalen’ Ortsreferenzen unterscheidet. Es wäre aber gut, wenn die Dokumente, die diese ‘Hauptorte’ im TEI-Header führen im Ortsregister besonders hervorgehoben werden und in einer geographischen Karte einen spezifischen Status gegenüber den üblichen Orts-Referenzen erhalten.
+        - Archiverungsort (Verlinkung mit Findmitteln oder Digitalisaten, falls möglich)
+        - Download-Links (TEI, Bild, ggfls. andere Formate)
+        - IIIF-Manifest des Digitalisats
+        - (Perma-)link des Digitalisats (falls nicht schon von Archivierungsort als Digitalisat z.V.g., s.o.); e-manuscripta, e-periodica, e-newpsaperarchive (u.ev.a.)
+    - **Metadaten der Briefe**
+        - Absende- und Empfangsort
+        - Absender:in und Empfänger:in
+        - Chronologisch vorhergehender Brief/Folgebrief 
+        - in Korrespondenz vorhergehender Brief/Folgebrief
+    - **Metadaten der Kleinen Formen**
+        - Publikationsmedium und Quellennachweis
+        - Verweis auf Vorstufen oder Publikationen des Dokuments
+        - Chronologisch vorhergehende/nächste Kleine Form 
+        - vorhergehende/nächste Kleine Form in einer Serie
+    - **Metadaten Bilder**
+        - tbd, wenn Digitalisate vorhanden sind
 
 #### Kommentare
 - **Übersichtskommentare** sollten unter den Metadaten eingeblendet werden, ggfls ab einer gewissen Länge ausklappbar
@@ -212,13 +214,13 @@ Der Platz, wo und wie bestimmte Paratexte stehen, kann ggfls. nach Dokumenttyp v
         - Nice to have: Heat-Map:  besonders oft erwähnte Orte werden stärker hervorgehoben auf der Karte, das könnte das (z.T. schwierige) Definieren eines 'Hauptortes'(s.o.) teilweise erübrigen.
 
 
-### 2.3 Darstellungsmodi nach Dokumenttyp
+### 2.3 Darstellung der Faksimile nach Dokumenttyp
 
 #### a. Typo- oder Manuskript
-In der Regel wird das Digitalisat gleich gross wie die Transkriptionen eingeblendet.
+- In der Regel wird das Digitalisat gleich gross wie die Transkriptionen eingeblendet.
 
 #### b. Zeitung / Zeitschrift
-In der Regel sollte per default auf den transkribierten Bereich gezoomt werden. Zeitungsseiten können sehr gross sein und der relevante Bereich nimmt z.T. nur inen Viertel oder Fünftel davon ein.
+- In der Regel sollte per default auf den transkribierten Bereich gezoomt werden. Zeitungsseiten können sehr gross sein und der relevante Bereich nimmt z.T. nur einen Viertel oder Fünftel davon ein.
 
 #### c. Fotoreportage / Einzelbild(er) in Illustrierter
 Fotoreportagen sind oftmals komplex aufgebaut; sie sollten zunächst immer ganz eingeblendet sein und je nach Bildschirmgrösse mehr Raum einnehmen als die Transkriptionen, zumal der gedruckte Text oft sehr gut leserlich ist (keine Fraktur). Wie die Transkriptionen eingeblendet werden, muss noch festgelegt werden, ggfls. ist es sinnvoll, mehrere Optionen auszuprobieren und den Nutzenden je nach usecase zur Verfügung zu stellen. 
@@ -236,7 +238,8 @@ Fotoreportagen sind oftmals komplex aufgebaut; sie sollten zunächst immer ganz 
 
 Für die Darstellung der im Archiv vorliegenden Fotografien bzw. Negative ist neben der Einblendung der 
 
-
+#### e. Briefe
+?
 
 
 ### 2.4 Intermediale Verweisen
@@ -259,14 +262,15 @@ Für die Darstellung der im Archiv vorliegenden Fotografien bzw. Negative ist ne
 ### 3.1 Einstieg / Startseite
 
 ### 3.2 Suchfunktionen
-
 Angestrebt wird (SNF-Antrag, S. 14): ein flexibles Suchinterface, mit dem sich neben Volltexten und Metadaten auch der Kommentar durchsuchen lässt. 
 
 ### 3.3 Register (und Registereinträge)
 
 ### 3.4 Landkarte
+- https://github.com/dse-as/frontend/issues/63
 
 ### 3.5 Zeitstrahl
+- https://github.com/dse-as/frontend/issues/64
 
 ### 3.6 Zitierhinweis Gesamtedition 
 

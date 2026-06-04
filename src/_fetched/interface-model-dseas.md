@@ -172,34 +172,35 @@ Der Platz, wo und wie bestimmte Paratexte stehen, kann ggfls. nach Dokumenttyp v
 - [x] Einheitliche Darstellung der Metadaten über oder neben dem Edendum, ggfls. ausklappbar. 
 - Metadaten: Hier sind nur diejenigen Informationen im TEI-header aufgeführt, die als Referenz in die Register oder aus der Edition herausführen. Im Normalfall sind dies auch Informationen, die im Interface ersichtlich werden müssen. 
     - **Gemeinsame Metadaten alle Dokumenttypen**
-        - Schlagworte (Sachbegriffe)
-        - Reise/Ereignis
-        - Ggfls. 'Hauptort', um den sich der Text dreht (ist im Falle der Briefe nicht zwingend identisch mit Absendeort)
+        - [x] Schlagworte (Sachbegriffe)
+        - [x] Reise/Ereignis
+        - [x] Ggfls. 'Hauptort', um den sich der Text dreht (ist im Falle der Briefe nicht zwingend identisch mit Absendeort)
             - Hinter diesen Orten müsste nicht ein distinkter Registereintrag stehen, der sich von den ‘normalen’ Ortsreferenzen unterscheidet. Es wäre aber gut, wenn die Dokumente, die diese ‘Hauptorte’ im TEI-Header führen im Ortsregister besonders hervorgehoben werden und in einer geographischen Karte einen spezifischen Status gegenüber den üblichen Orts-Referenzen erhalten.
-        - Archiverungsort (Verlinkung mit Findmitteln oder Digitalisaten, falls möglich)
-        - Download-Links (TEI, Bild, ggfls. andere Formate)
-        - IIIF-Manifest des Digitalisats
-        - (Perma-)link des Digitalisats (falls nicht schon von Archivierungsort als Digitalisat z.V.g., s.o.); e-manuscripta, e-periodica, e-newpsaperarchive (u.ev.a.)
+        - [x] Archiverungsort (Verlinkung mit Findmitteln oder Digitalisaten, falls möglich)
+        - [x] Download-Links (TEI, Bild, ggfls. andere Formate)
+        - [x] IIIF-Manifest des Digitalisats
+        - [x] (Perma-)link des Digitalisats (falls nicht schon von Archivierungsort als Digitalisat z.V.g., s.o.); e-manuscripta, e-periodica, e-newpsaperarchive (u.ev.a.)
     - **Metadaten der Briefe**
-        - Absende- und Empfangsort
-        - Absender:in und Empfänger:in
+        - [x] Absende- und Empfangsort
+        - [x] Absender:in und Empfänger:in
         - Chronologisch vorhergehender Brief/Folgebrief 
         - in Korrespondenz vorhergehender Brief/Folgebrief
     - **Metadaten der Kleinen Formen**
-        - Publikationsmedium und Quellennachweis
-        - Verweis auf Vorstufen oder Publikationen des Dokuments
+        - [x] Publikationsmedium und Quellennachweis
+        - [x] Verweis auf Vorstufen oder Publikationen des Dokuments
         - Chronologisch vorhergehende/nächste Kleine Form 
         - vorhergehende/nächste Kleine Form in einer Serie
     - **Metadaten Bilder**
-        - tbd, wenn Digitalisate vorhanden sind
+        - [ ] tbd, wenn Digitalisate vorhanden sind
 
 #### Kommentare
 - **Übersichtskommentare** sollten unter den Metadaten eingeblendet werden, ggfls ab einer gewissen Länge ausklappbar
+    - [x] done
 - **Stellenkommentare** als Laufleiste neben dem Edendum (keine Hover-Texte/Popups)
     - Vorbild: Microsoft Word, Kommentarmodus (dort zwei Darstellungmöglichkeiten: Liste oder Kontextbezogen - ev. liesse sich ein Kompromiss zwischne diesen Formen finden, z.B. eine scrollbare Liste, die sich auf knopfdruck wieder zurück zu den Kontexten ordnet?)
-    - Problem der Laufleiste: Einschränkungen bei Mobiltelefonen. Dort könnte man sich am Google-Docs orientieren, die Kommentare in der unteren Bildhälfte einblendet (hier gibt es schon CSS-Skripts). 
-    - Ideenlab 18.08.25: Kommentare werden nicht als unabhängige Boxen dargestellt, sondern als Liste; Scroll-Interaktion funktioniert auch so (vgl. Anne Frank-Edition)
-    - Kommentare können Bilder bzw. Bildlinks enthalten. Diese werden am Ende des Absatzes angezeigt linksbündig zum Kommentar (also keine Ausrückung o.ä.). Bei Hover vergrösserte Anzeige, auf Klick Laden der Bildansicht in einem neuen Tab.
+    - [ ] Problem der Laufleiste: Einschränkungen bei Mobiltelefonen. Dort könnte man sich am Google-Docs orientieren, die Kommentare in der unteren Bildhälfte einblendet (hier gibt es schon CSS-Skripts). 
+    - [x] Ideenlab 18.08.25: Kommentare werden nicht als unabhängige Boxen dargestellt, sondern als Liste; Scroll-Interaktion funktioniert auch so (vgl. Anne Frank-Edition)
+    - [ ] Kommentare können Bilder bzw. Bildlinks enthalten. Diese werden am Ende des Absatzes angezeigt linksbündig zum Kommentar (also keine Ausrückung o.ä.). Bei Hover vergrösserte Anzeige, auf Klick Laden der Bildansicht in einem neuen Tab.
     Evtl. können so auch Bildserien verlinkt werden (über ein Beispielbild/Bildstapel).
 
 #### Entitäten

@@ -7,7 +7,7 @@ Dieses Dokument klärt die informationellen, editionsphilologischen und technisc
 - [Transkribus-Dokumentation](/@DSE-AS/Transkribus_Dokumentation) (Erarbeitung der Transkriptionen, Transkriptionsregeln)
 - [Oxygen-Dokumentation](/@DSE-AS/H1aXACCi1g) (Erarbeitung der codierten Daten, Codierungsregeln) - noch am Anfang des Entstehens
 
-Mögliche Tools zur Erweiterung dieses Dokumentes (z.B. für erste wireframes): 
+Mögliche Tools zur Erweiterung dieses Dokumentes (z.B. für erste wireframes):
 - https://asciiflow.com
 - https://monosketch.io
 - https://www.archimetric.com

@@ -659,9 +659,9 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
   - Bildunterschrift in Transkribus als  \fp\(=figureparagraph)  
     
 
-- Artikel- und Seitennummern, Fortsetzungsverweise ("Fortsetzung auf S. 7"/"Fortsetzung aus Nr. XY") \[[https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild](https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild)\]:  
-    
-  - `<fw type="continuation" place="top/inline/etc.">Fortsetzung S. 13</fw>`
+- Artikel- und Seitennummern, Fortsetzungsverweise ("Fortsetzung auf S. 7"/"Fortsetzung aus Nr. XY") \[[https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild](https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild)\]:
+    - Manuelle Seitenzahl in Typoskript/Manuskript`<fw type="pageNum" place="top">`  
+    - Fortsetzungsverweis:`<fw type="continuation" place="top/inline/etc.">Fortsetzung S. 13</fw>`
 
 - Textblock, der einen fortlaufenden Paragraphen unterbricht 
     - mehrheitlich in Fotoreportagen zu erwartendes Phänomen 

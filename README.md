@@ -4,7 +4,7 @@ This repository contains documentation for the Digital Scholarly Edition _Annema
 
 Content is written in [Markdown](https://en.wikipedia.org/wiki/Markdown) and located in the `src` directory.
 
-The website is built with [VitePress](https://vitepress.dev/). 
+The website is built with [VitePress](https://vitepress.dev/).
 
 ## Development
 
@@ -46,6 +46,11 @@ Deployment on `git push` to the `main` branch.
 
 ## License
 
-* [vitepress](https://vitepress.dev/): MIT License, Copyright (c) 2019-present, Yuxi (Evan) You
+This repository is licensed in two parts:
 
-* [dse-as/docs](https://github.com/dse-as/docs): See [LICENSE](LICENSE)
+* **Software** (VitePress config, theme, build scripts, workflows): MIT License — see [LICENSE](LICENSE).
+* **Documentation content** (Markdown, text and images under `src/`): Creative Commons Attribution 4.0 International (CC BY 4.0) — see [LICENSE-CONTENT](LICENSE-CONTENT).
+
+Third-party:
+
+* [VitePress](https://vitepress.dev/): MIT License, Copyright (c) 2019-present, Yuxi (Evan) You

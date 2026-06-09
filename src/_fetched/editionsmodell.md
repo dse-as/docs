@@ -614,7 +614,7 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 - `<dateline>Ort,Datum</dateline>`  
 - Falls byline/dateline in Zeile des Haupttextes: 
     - `<seg type="byline">Von Autorname</seg>`,   
-    - `<seg type="byline">Ort,Datum</seg>`
+    - `<seg type="dateline">Ort,Datum</seg>`
 - Hauptteil/Absätze (`<div>`, `<p>`)
    
 - Absatzüberschriften

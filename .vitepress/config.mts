@@ -14,6 +14,19 @@ export default defineConfig({
   cleanUrls: true,
   ignoreDeadLinks: true,
   // base: '/docs/',
+
+  lastUpdated: true,
+
+  sitemap: {
+    hostname: 'https://docs.annemarie-schwarzenbach.ch'
+  },
+
+  markdown: {
+    image: {
+      lazyLoading: true
+    }
+  },
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -45,7 +58,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: "Veröffentlicht unter <a style='text-decoration:underline;' href='https://github.com/dse-as/docs/blob/main/LICENSE'>MIT Lizenz</a>.",
+      message: "Inhalt unter <a style='text-decoration:underline;' href='https://github.com/dse-as/docs/blob/main/LICENSE-CONTENT'>CC BY 4.0</a>, Code unter <a style='text-decoration:underline;' href='https://github.com/dse-as/docs/blob/main/LICENSE'>MIT Lizenz</a>.",
       copyright: `Copyright 2024-${new Date().getUTCFullYear()} DSL`
     },
 

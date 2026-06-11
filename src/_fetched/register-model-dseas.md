@@ -51,12 +51,12 @@ Orttypen:
 
 ## Körperschaften
 
-** Ressourcen**
+**Ressourcen**
 - GND
 - Wikipedia/Wikidata?
 
 **Angaben**
-- Gründuungs- /Auflösungsjahr
+- Gründungs- /Auflösungsjahr
 - Generelle Infos u. ev. Infos im Zusammenhang mit AS
 
 ## Reisen/Ereignisse

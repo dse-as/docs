@@ -87,7 +87,30 @@ export default defineConfig({
     darkModeSwitchTitle: 'Zu dunklem Hintergrund wechseln',
 
     search: {
-      provider: "local"
+      provider: "local",
+      options: {
+        translations: {
+          button: {
+            buttonText: 'Suchen',
+            buttonAriaLabel: 'Suchen'
+          },
+          modal: {
+            displayDetails: 'Detailansicht anzeigen',
+            resetButtonTitle: 'Suche zurücksetzen',
+            backButtonTitle: 'Suche schließen',
+            noResultsText: 'Keine Ergebnisse für',
+            footer: {
+              selectText: 'auswählen',
+              selectKeyAriaLabel: 'Eingabetaste',
+              navigateText: 'navigieren',
+              navigateUpKeyAriaLabel: 'Pfeil nach oben',
+              navigateDownKeyAriaLabel: 'Pfeil nach unten',
+              closeText: 'schließen',
+              closeKeyAriaLabel: 'Escape'
+            }
+          }
+        }
+      }
     } 
   }
 })

@@ -41,11 +41,30 @@ jobs:
         with:
           node-version: 20
           cache: yarn # or npm / pnpm
-      # Perparatory step: get framework files to provide them directly from the docu context
-      - name: Download and Prepare Oxygen Framework 
+      # Preparatory step: get framework files to provide them directly from the docu context
+      - name: Resolve latest Oxygen Framework release
+        id: oxygen
         run: |
-          release_url=$(curl -sL https://api.github.com/repos/dse-as/oxygen-framework/releases/latest | jq -r '.zipball_url')
-          wget --quiet $release_url -O src/public/dseas.zip
+          meta=$(curl -sL https://api.github.com/repos/dse-as/oxygen-framework/releases/latest)
+          echo "tag=$(echo "$meta" | jq -r '.tag_name')" >> "$GITHUB_OUTPUT"
+          echo "zipball=$(echo "$meta" | jq -r '.zipball_url')" >> "$GITHUB_OUTPUT"
+      # Cache the raw download, keyed on the release tag, so unchanged releases
+      # are not re-downloaded on every build. The cache path is separate from the
+      # working copy so the later `zip` step does not overwrite the cached file.
+      - name: Cache Oxygen Framework download
+        id: oxygen-cache
+        uses: actions/cache@v4
+        with:
+          path: .oxygen-cache/dseas.zip
+          key: oxygen-framework-${{ steps.oxygen.outputs.tag }}
+      - name: Download Oxygen Framework (cache miss)
+        if: steps.oxygen-cache.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p .oxygen-cache
+          wget --quiet "${{ steps.oxygen.outputs.zipball }}" -O .oxygen-cache/dseas.zip
+      - name: Prepare Oxygen Framework
+        run: |
+          cp .oxygen-cache/dseas.zip src/public/dseas.zip
           unzip src/public/dseas.zip -d "src/public/dseas"
           mv src/public/dseas/dse-as-oxygen-framework-*/* src/public/dseas
           cp src/public/dseas/dseas.xml src/public/

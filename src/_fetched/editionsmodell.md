@@ -74,11 +74,10 @@ Am wichtigsten ist der Überblickskommentar, der partiell immner sichtbar sein s
 
 ```xml
 <notesStmt> 
-            <note type="global_comment"> 
-               <p/>
-             </note>
-          </notesStmt>
-          <sourceDesc> 
+  <note type="global_comment"> 
+    <p/>
+  </note>
+</notesStmt>
 ```
 Der Überblickskommentar ist nur auf Dokumentebene ersichtlich. Es ist kein Regest, das den Text zusammenfasst, darf aber inhaltlich auf diesen zur einleitenden Erklärung schon vorgreifen. 
 Überblickskommentare fokussieren insbesondere auf Kontexte (Ausnahme: Textgenese sowie Materialität von Manu- und Typoskripten, insbesondere von Briefen). Sie bieten Lesenden Hintergrundinformationen. Aufgrund der ausklappbaren Darstellung werden sie als Angebot wahrnehmbar, das auch übersprungen werden kann. Überblickskommentare können auf interpretatorische Zugänge (insbesondere bestehende Sekundärliteratur zum vorliegenden Edendum) aufmerksam machen, sollten die Interpretation jedoch nicht detailliert ausführen.
@@ -555,7 +554,7 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 - Adresse (`<ab>`,`<address>`, `<addrLine>`)  
     
 - Vorgedrucktes Briefpapier (Briefbogen und Briefcouvert):  
-  ```
+  ```xml
   <div type="letterhead">
       <ab>
         <address> 
@@ -620,7 +619,7 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
 - Absatzüberschriften
     DTA schlägt die Verwendung von verschiedenen Ebenen in `div`vor (siehe https://www.deutschestextarchiv.de/doku/basisformat/div.html?hl=%C3%BCberschrift, mit dem Unterschied, dass wir nicht nur verschachtelte, sondern auch serielle Folgen von Überschriften benötigen). Wir verwenden für jeden Zwischentitel ein neues `<div>`, nummerieren sie jedoch nicht.
     
-```xml=
+```xml
 <div type="smallform">
 <head>Überschrift des Artikels</head>`
 <byline>Von Autorname</byline>`,   
@@ -667,7 +666,7 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
     - mehrheitlich in Fotoreportagen zu erwartendes Phänomen 
     - betrifft nicht Unterschriften in einem figure-Element, dieses darf direkt in einem unabgeschlossesnen Paragraphen stehen
     - Codierung: 
-```xml=
+```xml
 <p>
     Haupttext, wird unterbrochen
 

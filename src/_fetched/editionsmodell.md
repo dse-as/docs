@@ -659,7 +659,9 @@ Letter-Wrapper, wird automatisch in der Konversion erzeugt:
     
 
 - Artikel- und Seitennummern, Fortsetzungsverweise ("Fortsetzung auf S. 7"/"Fortsetzung aus Nr. XY") \[[https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild](https://deutschestextarchiv.de/doku/basisformat/seitenFacsNr.html?hl=bild)\]:
-    - Manuelle Seitenzahl in Typoskript/Manuskript`<fw type="pageNum" place="top">`  
+    - Manuelle Seitenzahl in Typoskript/Manuskript`<fw type="pageNum" place="top">` 
+    - Kopfzeile mit (schon zuvor erwähntem) Titel: `<fw type="header" place="top">`
+        - > Falls die Kopfzeile sowohl eine Seitenzahl als auch einen Titel (oder desse Kurzform) beinhaltet, wird beides in ein fw-element type="pageNum" gelegt, da der Titel als Ergänzung zur Seitenzahl verstanden wird. Z.B: `<fw type="pageNum" place="top"> –1–(Marokkanische Erntezeit)</fw>`
     - Fortsetzungsverweis:`<fw type="continuation" place="top/inline/etc.">Fortsetzung S. 13</fw>`
 
 - Textblock, der einen fortlaufenden Paragraphen unterbricht 

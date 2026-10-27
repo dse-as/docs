@@ -371,6 +371,8 @@ Listen und Tabellen werden soweit möglich inhaltlich strukturiert wiedergegeben
 
 \[Einfache Tabellen sind als Listen darzustellen\]
 
+Sonderzeichen in Tabellen: Unterführungszeichen bzw. 'ditto marks', die eine Wiederholung abkürzen, werden als Spezialzeichen eingeführt: `〃` (siehe auch: https://graphemica.com/%E3%80%83)
+
 ### Normalisierungen
 
 #### Satzzeichen 
